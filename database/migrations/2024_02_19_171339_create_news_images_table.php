@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('path');
             $table->string('alt')->nullable(true);
+            $table->integer('order')->nullable(true);
             $table->unsignedBigInteger('news_id')->nullable(false);
             $table->foreign('news_id')->references('id')->on('news');
             $table->timestamps();

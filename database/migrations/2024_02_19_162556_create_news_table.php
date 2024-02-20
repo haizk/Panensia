@@ -17,8 +17,8 @@ return new class extends Migration
             $table->text('content')->nullable(false);
             $table->unsignedBigInteger('user_id')->nullable(true);
             $table->unsignedBigInteger('news_category_id')->nullable(true);
-            // $table->foreign('user_id')->references('id')->on('users');
-            // $table->foreign('news_category_id')->references('id')->on('news_categories');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('news_category_id')->references('id')->on('news_categories');
             $table->timestamps();
         });
     }
