@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import AboutView from '../views/AboutView.vue'
+import HomeView from '../views/home/HomeView.vue'
+import AboutView from '../views/home/AboutView.vue'
+import NewsView from '../views/home/NewsView.vue'
+import NewsDetailView from '../views/home/NewsDetailView.vue'
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -14,6 +16,21 @@ const router = createRouter({
             path: '/about',
             name: 'about',
             component: AboutView
+        },
+        {
+            path: '/news',
+            name: 'news',
+            component: NewsView
+        },
+        {
+            path: '/news/detail/:id',
+            name: 'news.detail',
+            component: NewsDetailView,
+            props: true
+        },
+        {
+            path: '/:pathMatch(.*)*',
+            redirect: { name: 'home' }
         }
     ]
 })

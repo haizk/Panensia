@@ -3,11 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\News;
 
 class NewsController extends Controller
 {
-    public function index()
+    public function getNews()
     {
-        return view('home.news');
+        $news = News::all();
+        return response()->json([
+            'news' => $news
+        ], 200);
     }
 }
