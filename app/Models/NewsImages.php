@@ -10,4 +10,9 @@ class NewsImages extends Model
     use HasFactory;
 
     protected $fillable = ['path', 'alt', 'news_id'];
+
+    public function news()
+    {
+        return $this->belongsTo(News::class);
+    }
 }
