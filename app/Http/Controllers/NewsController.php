@@ -11,13 +11,11 @@ class NewsController extends Controller
 {
     public function getNews()
     {
-        $news = News::all();
-        $images = NewsImages::all();
-        $categories = NewsCategories::all();
+        $news = News::with('newsImages', 'user', 'newsCategory')->get();
+        // $images = NewsImages::all();
+        // $categories = NewsCategories::all();
         return response()->json([
-            'news' => $news,
-            'images' => $images,
-            'categories' => $categories
+            'news' => $news
         ], 200);
     }
 }
