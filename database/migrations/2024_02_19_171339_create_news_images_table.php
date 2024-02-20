@@ -14,10 +14,9 @@ return new class extends Migration
         Schema::create('news_images', function (Blueprint $table) {
             $table->id();
             $table->string('path');
-            $table->string('alt')->nullable(true);
-            $table->integer('order')->nullable(true);
-            $table->unsignedBigInteger('news_id')->nullable(false);
-            $table->foreign('news_id')->references('id')->on('news');
+            $table->string('alt')->nullable();
+            $table->integer('order')->nullable();
+            $table->foreignId('news_id')->constrained('news');
             $table->timestamps();
         });
     }
