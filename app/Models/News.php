@@ -16,12 +16,12 @@ class News extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function NewsCategories()
+    public function newsCategories()
     {
         return $this->belongsTo(NewsCategories::class);
     }
 
-    public function images()
+    public function newsImages()
     {
         return $this->hasMany(NewsImages::class);
     }
