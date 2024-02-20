@@ -1,3 +1,0 @@
-<template>
-    HelloWorld component
-</template>

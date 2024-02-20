@@ -1,3 +1,5 @@
 <template>
-    This is the about view
+    <div>
+        This is the about view
+    </div>
 </template>
