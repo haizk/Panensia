@@ -14,12 +14,10 @@ use App\Http\Controllers\NewsController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/news', [NewsController::class, 'index']);
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('/{any}', function () {
-    return view('welcome');
+    return view('app');
 })->where('any', '.*');
