@@ -9,7 +9,7 @@ class NewsImages extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['path', 'alt', 'news_id'];
+    protected $fillable = ['path', 'alt', 'order', 'news_id'];
 
     public function news()
     {

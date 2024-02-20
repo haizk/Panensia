@@ -8,6 +8,7 @@ let news = ref([])
 onMounted(async () => {
     const response = await axios.get('/api/getNews')
     news.value = response.data.news
+    console.log(news.value)
 })
 </script>
 
@@ -17,12 +18,19 @@ onMounted(async () => {
         <ul v-if="news.length > 0">
             <li v-for="item in news" :key="item.id">
                 <RouterLink :to="{ name: 'news.detail', params: { id: item.id } }">
-                    {{ item.title }}
+                    <h2>{{ item.title }}</h2>
                 </RouterLink>
-                <a :href="`/news/${item.id}`">{{ item.title }}</a>
-                <small>{{ item.news_category_id }}</small>
+                <template v-for="(image, index) in item.news_images" :key="index">
+                    <img
+                        v-if="image.order === 1"
+                        :src="image.path"
+                        :alt="image.alt"
+                        width="100"
+                    /><br v-if="image.order === 1" />
+                </template>
+                <small>{{ item.news_category.name }}</small>
                 <p>{{ item.content }}</p>
-                <p>{{ item.user_id }}</p>
+                <p>{{ item.user.name }}</p>
                 <small>{{ item.created_at }}</small>
             </li>
         </ul>
