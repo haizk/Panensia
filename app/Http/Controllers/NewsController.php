@@ -33,6 +33,14 @@ class NewsController extends Controller
         ], 200);
     }
 
+    public function getNewsCategoryById($id)
+    {
+        $newsCategory = NewsCategories::find($id);
+        return response()->json([
+            'category' => $newsCategory
+        ], 200);
+    }
+
     public function createNews(Request $request)
     {
         $news = new News();
@@ -69,6 +77,40 @@ class NewsController extends Controller
 
         return response()->json([
             'message' => 'News updated successfully'
+        ], 200);
+    }
+
+    public function createNewsCategory(Request $request)
+    {
+        $newsCategory = new NewsCategories();
+        $newsCategory->name = $request->name;
+        $newsCategory->slug = $request->slug;
+        $newsCategory->save();
+
+        return response()->json([
+            'message' => 'News category created successfully'
+        ], 201);
+    }
+
+    public function deleteNewsCategory($id)
+    {
+        $newsCategory = NewsCategories::find($id);
+        $newsCategory->delete();
+
+        return response()->json([
+            'message' => 'News category deleted successfully'
+        ], 200);
+    }
+
+    public function editNewsCategory(Request $request, $id)
+    {
+        $newsCategory = NewsCategories::find($id);
+        $newsCategory->name = $request->name;
+        $newsCategory->slug = $request->slug;
+        $newsCategory->save();
+
+        return response()->json([
+            'message' => 'News category updated successfully'
         ], 200);
     }
 }

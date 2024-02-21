@@ -6,5 +6,6 @@ import { RouterLink } from 'vue-router'
     <nav>
         <RouterLink to="/admin">Dashboard</RouterLink>
         <RouterLink to="/admin/news">News</RouterLink>
+        <RouterLink to="/admin/news_categories">News Category</RouterLink>
     </nav>
 </template>
