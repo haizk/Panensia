@@ -14,12 +14,9 @@ use App\Http\Controllers\NewsController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 // Route::get('/{any}', function () {
 //     return view('app');
 // })->where('any', '.*');
 
-Route::get('/tes', function () { return view('index/dashboard');});
+Route::get('/', function () { return view('index/dashboard');});
+Route::get('/p', function () { return view('welcome');});
