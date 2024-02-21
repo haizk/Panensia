@@ -1,6 +1,15 @@
+<script setup>
+import AdminNavComp from '../../components/AdminNavComp.vue'
+import AdminFooterComp from '../../components/AdminFooterComp.vue'
+</script>
+
 <template>
-    <div>
+    <header>
+        <AdminNavComp />
+    </header>
+    <main>
         <h1>Admin</h1>
         <p>News</p>
-    </div>
+    </main>
+    <AdminFooterComp />
 </template>

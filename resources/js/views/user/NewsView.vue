@@ -2,6 +2,9 @@
 import { onMounted, ref } from 'vue'
 import axios from 'axios'
 
+import NavComp from '../../components/NavComp.vue'
+import FooterComp from '../../components/FooterComp.vue'
+
 let news = ref([])
 
 onMounted(async () => {
@@ -12,7 +15,10 @@ onMounted(async () => {
 </script>
 
 <template>
-    <div>
+    <header>
+        <NavComp />
+    </header>
+    <main>
         <h1>User News {{ news.length }}</h1>
         <ul v-if="news.length > 0">
             <li v-for="item in news" :key="item.id">
@@ -34,5 +40,6 @@ onMounted(async () => {
             </li>
         </ul>
         <p v-else>No news found</p>
-    </div>
+    </main>
+    <FooterComp />
 </template>

@@ -3,6 +3,9 @@ import { useRouter } from 'vue-router'
 import { onMounted, ref } from 'vue'
 import axios from 'axios'
 
+import NavComp from '../../components/NavComp.vue'
+import FooterComp from '../../components/FooterComp.vue'
+
 let props = defineProps(['id'])
 let news = ref(null)
 let router = useRouter()
@@ -19,7 +22,10 @@ onMounted(async () => {
 </script>
 
 <template>
-    <div>
+    <header>
+        <NavComp />
+    </header>
+    <main>
         <h1>User News Detail</h1>
         <div v-if="news">
             <p>id: {{ news.id }}</p>
@@ -35,5 +41,6 @@ onMounted(async () => {
             <p>created_at: {{ news.created_at }}</p>
             <p>updated_at: {{ news.updated_at }}</p>
         </div>
-    </div>
+    </main>
+    <FooterComp />
 </template>
