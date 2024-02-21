@@ -20,7 +20,9 @@ onMounted(async () => {
     </header>
     <main>
         <h1>Admin News {{ news.length }}</h1>
-        <button>Create</button>
+        <RouterLink to="/admin/news/create">
+            <button>Create</button>
+        </RouterLink>
         <table v-if="news.length > 0" width="100%">
             <thead>
                 <tr>
@@ -50,7 +52,8 @@ table {
     border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
     border: 1px solid black;
     text-align: center;
     width: 20%;

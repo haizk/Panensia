@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
+use Monolog\Handler\RotatingFileHandler;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/getNews', [NewsController::class, 'getNews']);
 Route::get('/getNewsById/{id}', [NewsController::class, 'getNewsById']);
+Route::get('/getNewsCategories', [NewsController::class, 'getNewsCategories']);
+
+Route::post('/createNews', [NewsController::class, 'createNews']);
