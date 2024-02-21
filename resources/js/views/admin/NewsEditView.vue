@@ -67,7 +67,7 @@ const editNews = async () => {
             </option>
         </select>
         <p v-else>No category</p>
-        <button @click="editNews()">Create</button>
+        <button @click="editNews()">Edit</button>
     </main>
     <AdminFooterComp />
 </template>
