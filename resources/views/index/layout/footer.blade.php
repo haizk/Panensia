@@ -1,5 +1,4 @@
-<footer class="gap no-bottom" style="background-color: #363636;">
-		<div class="container">
+<div class="container">
 			<div class="row">
 				<div class="col-lg-5 col-md-6 col-sm-12">
 					<div class="footer-description">
@@ -66,4 +65,4 @@
 				</div>
 			</div>
 		</div>
-	</footer>
+	

@@ -1,5 +1,4 @@
-<header>
-		<div class="container">
+<div class="container">
 			<div class="row align-items-center">
 				<div class="col-xl-2">
 					<div class="header-style">
@@ -162,4 +161,4 @@
       </div>
 		</div>
 	   </div>
-  </header>
+
