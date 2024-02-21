@@ -12,6 +12,24 @@ onMounted(async () => {
     news.value = response.data.news
     console.log(news.value)
 })
+
+const deleteNews = async (id) => {
+    // Add validation / CSRF token
+
+    if (window.confirm('Are you sure you want to delete this news?') === false) {
+        return
+    }
+
+    try {
+        const response = await axios.delete(`/api/deleteNews/${id}`)
+        console.log(response.data)
+        alert('News deleted')
+        news.value = news.value.filter((item) => item.id !== id)
+    } catch (error) {
+        console.error(error)
+        alert(error.response.data.message)
+    }
+}
 </script>
 
 <template>
@@ -39,7 +57,9 @@ onMounted(async () => {
                     <td>{{ item.news_category.name }}</td>
                     <td>{{ item.user.name }}</td>
                     <td>{{ item.updated_at }}</td>
-                    <td><button>Edit</button><button>Delete</button></td>
+                    <td>
+                        <button>Edit</button><button @click="deleteNews(item.id)">Delete</button>
+                    </td>
                 </tr>
             </tbody>
         </table>

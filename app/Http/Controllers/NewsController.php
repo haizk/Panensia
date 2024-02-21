@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\News;
 use App\Models\NewsCategories;
+use App\Models\NewsImages;
 
 class NewsController extends Controller
 {
@@ -44,5 +45,16 @@ class NewsController extends Controller
         return response()->json([
             'message' => 'News created successfully'
         ], 201);
+    }
+
+    public function deleteNews($id)
+    {
+        $news = News::find($id);
+        NewsImages::where('news_id', $id)->delete();
+        $news->delete();
+
+        return response()->json([
+            'message' => 'News deleted successfully'
+        ], 200);
     }
 }

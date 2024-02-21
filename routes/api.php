@@ -25,3 +25,4 @@ Route::get('/getNewsById/{id}', [NewsController::class, 'getNewsById']);
 Route::get('/getNewsCategories', [NewsController::class, 'getNewsCategories']);
 
 Route::post('/createNews', [NewsController::class, 'createNews']);
+Route::delete('/deleteNews/{id}', [NewsController::class, 'deleteNews']);
