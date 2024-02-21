@@ -4,6 +4,7 @@
 					<div class="footer-description">
 						<a href="/">
 							<!-- replace logo -->
+							o
 						</a>
 						<h2>The Best Restaurants
 								in Your  Home</h2>

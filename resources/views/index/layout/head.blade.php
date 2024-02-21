@@ -1,6 +1,6 @@
 <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quickeat - index</title>
+    <title>{{$title}}</title>
 
     <link rel="icon" href="{{ asset('assets/img/fav-icon.png') }}">
     <!-- CSS only -->

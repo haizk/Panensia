@@ -2,7 +2,7 @@
 					<nav class="navbar">
 				      <ul class="navbar-links">
 				        <li class="navbar-dropdown active">
-				          <a href="index.html">Home</a>
+				          <a href="/">Home</a>
 				        </li>
 				        <li class="navbar-dropdown">
 				          <a href="about.html">About Us</a>
@@ -27,8 +27,8 @@
 				            <a href="404.html">404</a>
 				          </div>
 				        </li>
-				        <li class="navbar-dropdown">
-				          <a href="contacts.html">Contacts</a>
+				        <li class="navbar-dropdown ">
+				          <a href="/kontak">Contacts</a>
 				        </li>
 				      </ul>
 				    </nav>
