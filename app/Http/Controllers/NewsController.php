@@ -14,4 +14,12 @@ class NewsController extends Controller
             'news' => $news
         ], 200);
     }
+
+    public function getNewsById($id)
+    {
+        $news = News::with('newsImages', 'user', 'newsCategory')->find($id);
+        return response()->json([
+            'news' => $news
+        ], 200);
+    }
 }
