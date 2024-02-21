@@ -58,7 +58,10 @@ const deleteNews = async (id) => {
                     <td>{{ item.user.name }}</td>
                     <td>{{ item.updated_at }}</td>
                     <td>
-                        <button>Edit</button><button @click="deleteNews(item.id)">Delete</button>
+                        <RouterLink :to="{ name: 'admin.news.edit', params: { id: item.id } }">
+                            <button>Edit</button>
+                        </RouterLink>
+                        <button @click="deleteNews(item.id)">Delete</button>
                     </td>
                 </tr>
             </tbody>

@@ -57,4 +57,18 @@ class NewsController extends Controller
             'message' => 'News deleted successfully'
         ], 200);
     }
+
+    public function editNews(Request $request, $id)
+    {
+        $news = News::find($id);
+        $news->title = $request->title;
+        $news->content = $request->content;
+        $news->news_category_id = $request->news_category_id;
+        $news->user_id = $request->user_id;
+        $news->save();
+
+        return response()->json([
+            'message' => 'News updated successfully'
+        ], 200);
+    }
 }
