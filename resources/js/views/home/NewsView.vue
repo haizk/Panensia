@@ -20,7 +20,7 @@ onMounted(async () => {
                 <RouterLink :to="{ name: 'news.detail', params: { id: item.id } }">
                     <h2>{{ item.title }}</h2>
                 </RouterLink>
-                <template v-for="(image, index) in item.news_images" :key="index">
+                <template v-for="image in item.news_images" :key="image.id">
                     <img
                         v-if="image.order === 1"
                         :src="image.path"
