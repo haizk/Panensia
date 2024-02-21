@@ -20,7 +20,7 @@ onMounted(async () => {
 
 <template>
     <div>
-        <h1>News Details</h1>
+        <h1>User News Detail</h1>
         <div v-if="news">
             <p>id: {{ news.id }}</p>
             <p>title: {{ news.title }}</p>

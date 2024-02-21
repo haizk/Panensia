@@ -13,7 +13,7 @@ onMounted(async () => {
 
 <template>
     <div>
-        <h1>News {{ news.length }}</h1>
+        <h1>User News {{ news.length }}</h1>
         <ul v-if="news.length > 0">
             <li v-for="item in news" :key="item.id">
                 <RouterLink :to="{ name: 'news.detail', params: { id: item.id } }">
