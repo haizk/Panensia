@@ -16,7 +16,7 @@ use App\Http\Controllers\NewsController;
 |
 */
 
-Route::get('/{any}', function () {
+Route::get('/qw', function () {
     return view('app');
 })->where('any', '.*');
 
