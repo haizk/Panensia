@@ -9,6 +9,7 @@ import AdminFooterComp from '../../components/AdminFooterComp.vue'
 let props = defineProps(['id'])
 let news_categories = ref([])
 let news = ref(null)
+let files = ref(null)
 let title = ref('')
 let content = ref('')
 let news_category_id = ref('')
@@ -31,20 +32,29 @@ onMounted(async () => {
 const editNews = async () => {
     // Add validation / CSRF token
 
-    const newsData = {
-        title: title.value,
-        content: content.value,
-        news_category_id: news_category_id.value,
-        user_id: 1 // Hardcoded for now
+    const formData = new FormData()
+    formData.append('title', title.value)
+    formData.append('content', content.value)
+    formData.append('news_category_id', news_category_id.value)
+    formData.append('user_id', 1) // Hardcoded for now
+
+    if (files.value) {
+        for (let i = 0; i < files.value.length; i++) {
+            formData.append(`files[${i}]`, files.value[i])
+        }
     }
 
     try {
-        const response = await axios.post(`/api/editNews/${props.id}`, newsData)
+        const response = await axios.post(`/api/editNews/${props.id}`, formData, {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+        })
         console.log(response.data)
         alert('News edited')
         router.push('/admin/news')
     } catch (error) {
-        console.error(error)
+        console.error(error.response.data)
         alert('Error editing news')
     }
 }
@@ -67,6 +77,8 @@ const editNews = async () => {
             </option>
         </select>
         <p v-else>No category</p>
+        <p>add files</p>
+        <input type="file" multiple @change="files = $event.target.files" />
         <button @click="editNews()">Edit</button>
     </main>
     <AdminFooterComp />

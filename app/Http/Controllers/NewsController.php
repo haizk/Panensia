@@ -94,8 +94,32 @@ class NewsController extends Controller
         $news->user_id = $request->user_id;
         $news->save();
 
+        $filePaths = [];
+        if ($request->hasfile('files')) {
+
+            foreach ($request->file('files') as $file) {
+                $path = $file->store('public/news_images');
+                $filePaths[] = str_replace('public/', '', $path);
+            }
+        }
+
+        if (count($filePaths) > 0) {
+            $images = NewsImages::where('news_id', $news->id)->get();
+            $orderStart = count($images) + 1;
+
+            foreach ($filePaths as $order => $path) {
+                $newsImage = new NewsImages();
+                $newsImage->path = $path;
+                $newsImage->alt = 'News image';
+                $newsImage->order = $orderStart + $order;
+                $newsImage->news_id = $news->id;
+                $newsImage->save();
+            }
+        }
+
         return response()->json([
-            'message' => 'News updated successfully'
+            'message' => 'News updated successfully',
+            'filePaths' => $filePaths
         ], 200);
     }
 
