@@ -13,12 +13,10 @@ return new class extends Migration
     {
         Schema::create('news', function (Blueprint $table) {
             $table->id();
-            $table->string('title')->nullable(false);
-            $table->text('content')->nullable(false);
-            $table->unsignedBigInteger('user_id')->nullable(true);
-            $table->unsignedBigInteger('news_category_id')->nullable(true);
-            // $table->foreign('user_id')->references('id')->on('users');
-            // $table->foreign('news_category_id')->references('id')->on('news_categories');
+            $table->string('title');
+            $table->text('content');
+            $table->foreignId('user_id')->constrained('users');
+            $table->foreignId('news_category_id')->constrained('news_categories');
             $table->timestamps();
         });
     }
