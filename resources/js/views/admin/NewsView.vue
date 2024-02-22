@@ -47,6 +47,7 @@ const deleteNews = async (id) => {
                     <th>Title</th>
                     <th>Category</th>
                     <th>Author</th>
+                    <th>Images</th>
                     <th>Updated At</th>
                     <th>Action</th>
                 </tr>
@@ -56,6 +57,12 @@ const deleteNews = async (id) => {
                     <td>{{ item.title }}</td>
                     <td>{{ item.news_category.name }}</td>
                     <td>{{ item.user.name }}</td>
+                    <td>
+                        <span v-for="image in item.news_images" :key="image.id">
+                            {{ image.path }}
+                            <img :src="`/storage/${image.path}`" width="100" />
+                        </span>
+                    </td>
                     <td>{{ item.updated_at }}</td>
                     <td>
                         <RouterLink :to="{ name: 'admin.news.edit', params: { id: item.id } }">
@@ -79,6 +86,6 @@ th,
 td {
     border: 1px solid black;
     text-align: center;
-    width: 20%;
+    width: 16%;
 }
 </style>

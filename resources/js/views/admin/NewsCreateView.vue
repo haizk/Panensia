@@ -10,6 +10,7 @@ let news_categories = ref([])
 let title = ref('')
 let content = ref('')
 let news_category_id = ref('')
+let files = ref(null)
 const router = useRouter()
 
 onMounted(async () => {
@@ -21,20 +22,29 @@ onMounted(async () => {
 const createNews = async () => {
     // Add validation / CSRF token
 
-    const newsData = {
-        title: title.value,
-        content: content.value,
-        news_category_id: news_category_id.value,
-        user_id: 1 // Hardcoded for now
+    const formData = new FormData()
+    formData.append('title', title.value)
+    formData.append('content', content.value)
+    formData.append('news_category_id', news_category_id.value)
+    formData.append('user_id', 1) // Hardcoded for now
+
+    if (files.value) {
+        for (let i = 0; i < files.value.length; i++) {
+            formData.append(`files[${i}]`, files.value[i])
+        }
     }
 
     try {
-        const response = await axios.post('/api/createNews', newsData)
+        const response = await axios.post('/api/createNews', formData, {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+        })
         console.log(response.data)
         alert('News created')
         router.push('/admin/news')
     } catch (error) {
-        console.error(error)
+        console.error(error.response.data)
         alert('Error creating news')
     }
 }
@@ -57,6 +67,8 @@ const createNews = async () => {
             </option>
         </select>
         <p v-else>No category</p>
+        <p>files</p>
+        <input type="file" multiple @change="files = $event.target.files" />
         <button @click="createNews()">Create</button>
     </main>
     <AdminFooterComp />

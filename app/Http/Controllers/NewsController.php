@@ -50,8 +50,27 @@ class NewsController extends Controller
         $news->user_id = $request->user_id;
         $news->save();
 
+        $filePaths = [];
+        if ($request->hasfile('files')) {
+
+            foreach ($request->file('files') as $file) {
+                $path = $file->store('public/news_images');
+                $filePaths[] = str_replace('public/', '', $path);
+            }
+        }
+
+        foreach ($filePaths as $order => $path) {
+            $newsImage = new NewsImages();
+            $newsImage->path = $path;
+            $newsImage->alt = 'News image';
+            $newsImage->order = $order + 1;
+            $newsImage->news_id = $news->id;
+            $newsImage->save();
+        }
+
         return response()->json([
-            'message' => 'News created successfully'
+            'message' => 'News created successfully',
+            'filePaths' => $filePaths
         ], 201);
     }
 
