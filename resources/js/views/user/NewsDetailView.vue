@@ -31,7 +31,7 @@ onMounted(async () => {
             <p>id: {{ news.id }}</p>
             <p>title: {{ news.title }}</p>
             <template v-for="image in news.news_images" :key="image.id">
-                <img :src="image.path" :alt="image.alt" width="100" />
+                <img :src="`/storage/${image.path}`" width="100" />
             </template>
             <p>content: {{ news.content }}</p>
             <p>category id: {{ news.news_category.id }}</p>
