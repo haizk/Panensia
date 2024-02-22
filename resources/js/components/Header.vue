@@ -15,7 +15,7 @@
                     </div>
                 </div>
             </div>
-            
+            <NavComponent></NavComponent>
             <div class="col-lg-3">
                 <div class="extras bag">
        <a href="javascript:void(0)" id="desktop-menu" class="menu-btn">
@@ -149,3 +149,13 @@
 
 
 </template>
+        <script>
+                import NavComponent from './Nav.vue';
+
+                export default {
+                    name: 'App',
+                    components: {
+                        NavComponent
+                    }
+                }
+            </script>

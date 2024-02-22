@@ -1,5 +1,5 @@
 <template>
-    
+	<body class="menu-layer">
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-lg-6" data-aos="fade-up"  data-aos-delay="200" data-aos-duration="300">
@@ -47,4 +47,5 @@
 				</div>
 			</div>
 		</div>
+	</body>
 </template>
