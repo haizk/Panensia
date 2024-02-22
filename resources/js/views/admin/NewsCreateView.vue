@@ -32,6 +32,9 @@ const createNews = async () => {
         for (let i = 0; i < files.value.length; i++) {
             formData.append(`files[${i}]`, files.value[i])
         }
+    } else {
+        alert('No files selected')
+        return
     }
 
     try {
