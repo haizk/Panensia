@@ -19,10 +19,10 @@
 					<div class="menu">
 						<h4>Panensia</h4>
 						<ul class="footer-menu">
-							<li><a href="index.html">Home<i class="fa-solid fa-arrow-right"></i></a></li>
-							<li><a href="about.html">About us<i class="fa-solid fa-arrow-right"></i></a></li>
-							<li><a href="restaurants.html">Produk<i class="fa-solid fa-arrow-right"></i></a></li>
-							<li><a href="contacts.html">Contacts<i class="fa-solid fa-arrow-right"></i></a></li>
+							<li><RouterLink to="/">Home<i class="fa-solid fa-arrow-right"></i></RouterLink></li>
+							<li><RouterLink to="/tentang">About us<i class="fa-solid fa-arrow-right"></i></RouterLink></li>
+							<li><RouterLink to="/produk">Produk<i class="fa-solid fa-arrow-right"></i></RouterLink></li>
+							<li><RouterLink to="/kontak">Contacts<i class="fa-solid fa-arrow-right"></i></RouterLink></li>
 						</ul>
 					</div>
 				</div>
@@ -31,8 +31,7 @@
 						<h4>Contacts</h4>
 						<div class="footer-location">
 							<i class="fa-solid fa-location-dot"></i>
-							<p>1717 Harrison St, San Francisco, CA 94103,
-									United States</p>
+							<p>Surakarta</p>
 						</div>
 						<a href="mailto:quickeat@mail.net"><i class="fa-solid fa-envelope"></i>panensia@gmail.com</a>
 						<a href="callto:+14253261627"><i class="fa-solid fa-phone"></i>+1 425 326 16 27</a>

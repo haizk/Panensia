@@ -43,7 +43,7 @@
                             <p>Scelerisque purus semper eget duis at. Tincidunt ornare massa eget egestas purus viverra.
                                 Morbi enim nunc faucibus a pellentesque. Lobortis elementum nibh tellus molestie nunc non...
                             </p>
-                            <a href="#">Read More<i class="fa-solid fa-arrow-right"></i></a>
+                            <RouterLink to="/detailberita">Read More<i class="fa-solid fa-arrow-right"></i></RouterLink>
                             <ul class="data">
                                 <li>
                                     <h6><i class="fa-solid fa-user"></i>by Quickeat</h6>
@@ -69,7 +69,7 @@
                         <h3>With Quickeat you can order food for the whole day</h3>
                         <p>Scelerisque purus semper eget duis at. Tincidunt ornare massa eget egestas purus viverra. Morbi
                             enim nunc faucibus a pellentesque. Lobortis elementum nibh tellus molestie nunc non...</p>
-                        <a href="#">Read More<i class="fa-solid fa-arrow-right"></i></a>
+                            <RouterLink to="/detailberita">Read More<i class="fa-solid fa-arrow-right"></i></RouterLink>
                         <ul class="data">
                             <li>
                                 <h6><i class="fa-solid fa-user"></i>by Quickeat</h6>
@@ -95,7 +95,7 @@
                         <h3>127+ Couriers On Our Team Big Food Trends</h3>
                         <p>Scelerisque purus semper eget duis at. Tincidunt ornare massa eget egestas purus viverra. Morbi
                             enim nunc faucibus a pellentesque. Lobortis elementum nibh tellus molestie nunc non...</p>
-                        <a href="#">Read More<i class="fa-solid fa-arrow-right"></i></a>
+                            <RouterLink to="/detailberita">Read More<i class="fa-solid fa-arrow-right"></i></RouterLink>
                         <ul class="data">
                             <li>
                                 <h6><i class="fa-solid fa-user"></i>by Quickeat</h6>
@@ -121,7 +121,7 @@
                         <h3>Why You Should Optimize Your Menu for Delivery</h3>
                         <p>Scelerisque purus semper eget duis at. Tincidunt ornare massa eget egestas purus viverra. Morbi
                             enim nunc faucibus a pellentesque. Lobortis elementum nibh tellus molestie nunc non...</p>
-                        <a href="#">Read More<i class="fa-solid fa-arrow-right"></i></a>
+                            <RouterLink to="/detailberita">Read More<i class="fa-solid fa-arrow-right"></i></RouterLink>
                         <ul class="data">
                             <li>
                                 <h6><i class="fa-solid fa-user"></i>by Quickeat</h6>
@@ -147,7 +147,7 @@
                         <h3>How Restaurants Can Engage with Millennials in 2022</h3>
                         <p>Scelerisque purus semper eget duis at. Tincidunt ornare massa eget egestas purus viverra. Morbi
                             enim nunc faucibus a pellentesque. Lobortis elementum nibh tellus molestie nunc non...</p>
-                        <a href="#">Read More<i class="fa-solid fa-arrow-right"></i></a>
+                            <RouterLink to="/detailberita">Read More<i class="fa-solid fa-arrow-right"></i></RouterLink>
                         <ul class="data">
                             <li>
                                 <h6><i class="fa-solid fa-user"></i>by Quickeat</h6>
@@ -173,7 +173,7 @@
                         <h3>Why You Should Optimize Your Menu for Delivery</h3>
                         <p>Scelerisque purus semper eget duis at. Tincidunt ornare massa eget egestas purus viverra. Morbi
                             enim nunc faucibus a pellentesque. Lobortis elementum nibh tellus molestie nunc non...</p>
-                        <a href="#">Read More<i class="fa-solid fa-arrow-right"></i></a>
+                            <RouterLink to="/detailberita">Read More<i class="fa-solid fa-arrow-right"></i></RouterLink>
                         <ul class="data">
                             <li>
                                 <h6><i class="fa-solid fa-user"></i>by Quickeat</h6>
@@ -199,7 +199,7 @@
                         <h3>5 Big food Trends Coming Your Way in 2022</h3>
                         <p>Scelerisque purus semper eget duis at. Tincidunt ornare massa eget egestas purus viverra. Morbi
                             enim nunc faucibus a pellentesque. Lobortis elementum nibh tellus molestie nunc non...</p>
-                        <a href="#">Read More<i class="fa-solid fa-arrow-right"></i></a>
+                            <RouterLink to="/detailberita">Read More<i class="fa-solid fa-arrow-right"></i></RouterLink>
                         <ul class="data">
                             <li>
                                 <h6><i class="fa-solid fa-user"></i>by Quickeat</h6>
@@ -221,26 +221,6 @@
         </div>
     </section>
     <!-- subscribe-section -->
-    <section class="subscribe-section gap" style="background:#fcfcfc">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6" data-aos="flip-up" data-aos-delay="200" data-aos-duration="300">
-                    <div class="img-subscribe">
-                        <img alt="Illustration" src="https://via.placeholder.com/676x403">
-                    </div>
-                </div>
-                <div class="col-lg-5 offset-lg-1" data-aos="flip-up" data-aos-delay="300" data-aos-duration="400">
-                    <div class="get-the-menu">
-                        <h2>Get the menu of your favorite restaurants every day</h2>
-                        <form>
-                            <i class="fa-regular fa-bell"></i>
-                            <input type="text" name="email" placeholder="Enter email address">
-                            <button class="button button-2">Subscribe</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
 </template>
