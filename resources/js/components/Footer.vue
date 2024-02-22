@@ -34,7 +34,7 @@
 							<p>1717 Harrison St, San Francisco, CA 94103,
 									United States</p>
 						</div>
-						<a href="mailto:quickeat@mail.net"><i class="fa-solid fa-envelope"></i>quickeat@mail.net</a>
+						<a href="mailto:quickeat@mail.net"><i class="fa-solid fa-envelope"></i>panensia@gmail.com</a>
 						<a href="callto:+14253261627"><i class="fa-solid fa-phone"></i>+1 425 326 16 27</a>
 					</div>
 					<ul class="social-media">
@@ -45,10 +45,10 @@
 				</div>
 			</div>
 			<div class="footer-two gap no-bottom">
-				<p>Copyright © 2 Panensia. All rights reserved.</p>
+				<p>Copyright © {{ new Date().getFullYear() }} Panensia. All rights reserved.</p>
 				<div class="privacy">
-					<a href="#">Privacy Policy</a>
-					<a href="#">Terms & Services</a>
+					<RouterLink to="#">Privacy Policy</RouterLink>
+					<RouterLink to="#">Terms & Services</RouterLink>
 				</div>
 			</div>
 		</div>
