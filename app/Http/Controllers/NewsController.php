@@ -123,6 +123,37 @@ class NewsController extends Controller
         ], 200);
     }
 
+    public function getNewsImageByNewsId($id)
+    {
+        $images = NewsImages::where('news_id', $id)->get();
+        return response()->json([
+            'images' => $images
+        ], 200);
+    }
+
+    public function editNewsImageOrder(Request $request, $id)
+    {
+        $images = NewsImages::where('news_id', $id)->get();
+        foreach ($images as $index => $image) {
+            $image->order = $request->images[$index]['order'];
+            $image->save();
+        }
+
+        return response()->json([
+            'message' => 'Image order updated successfully'
+        ], 200);
+    }
+
+    public function deleteNewsImage($id)
+    {
+        $image = NewsImages::find($id);
+        $image->delete();
+
+        return response()->json([
+            'message' => 'Image deleted successfully'
+        ], 200);
+    }
+
     public function createNewsCategory(Request $request)
     {
         $newsCategory = new NewsCategories();

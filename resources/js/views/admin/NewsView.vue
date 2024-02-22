@@ -65,6 +65,11 @@ const deleteNews = async (id) => {
                     </td>
                     <td>{{ item.updated_at }}</td>
                     <td>
+                        <RouterLink
+                            :to="{ name: 'admin.news_images.edit', params: { id: item.id } }"
+                        >
+                            <button>Edit Images</button>
+                        </RouterLink>
                         <RouterLink :to="{ name: 'admin.news.edit', params: { id: item.id } }">
                             <button>Edit</button>
                         </RouterLink>

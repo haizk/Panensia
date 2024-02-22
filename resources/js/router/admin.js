@@ -7,6 +7,7 @@ import AdminNewsCreateView from '../views/admin/NewsCreateView.vue'
 import AdminNewsCategoriesView from '../views/admin/NewsCategoriesView.vue'
 import AdminNewsCategoriesCreateView from '../views/admin/NewsCategoriesCreateView.vue'
 import AdminNewsCategoriesEditView from '../views/admin/NewsCategoriesEditView.vue'
+import AdminImagesEditView from '../views/admin/NewsImagesEditView.vue'
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -49,6 +50,12 @@ const router = createRouter({
             path: '/admin/news_categories/edit/:id',
             name: 'admin.news_categories.edit',
             component: AdminNewsCategoriesEditView,
+            props: true
+        },
+        {
+            path: '/admin/news_images/edit/:id',
+            name: 'admin.news_images.edit',
+            component: AdminImagesEditView,
             props: true
         }
     ]
