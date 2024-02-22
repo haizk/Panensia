@@ -1,5 +1,5 @@
 <template>
-    <section class="hero-section about gap">
+    <section class="hero-section about ">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-xl-6 col-lg-12" data-aos="fade-up" data-aos-delay="200" data-aos-duration="300">
