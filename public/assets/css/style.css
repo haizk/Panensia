@@ -399,6 +399,7 @@ header {
 
 .cafa-button a {
     padding: 5px 15px;
+    margin-right: 5px;
     border: 1px solid #f29f05;
     border-radius: 10px;
     font-size: 14px;
@@ -1461,6 +1462,12 @@ ul.paragraph li i {
     margin-top: 40px;
     background-color: white;
 }
+.food-dish {
+    width: 369px; /* Lebar kontainer maksimum */
+    height: 236px; /* Tinggi kontainer maksimum */
+    overflow: hidden; /* Menghilangkan bagian gambar yang terpotong */
+    object-fit: contain;
+}
 .dish img {
     padding-bottom: 20px;
 }
@@ -1612,6 +1619,7 @@ header.two {
 }
 .price h2 {
     font-weight: bold;
+    font-size: 20px;
 }
 .qty-input .product-qty {
     width: 50px;
