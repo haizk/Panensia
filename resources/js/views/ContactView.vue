@@ -1,12 +1,12 @@
 <template>
-    <section class="hero-section about ">
+    <section class="hero-section about gap">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-xl-6 col-lg-12" data-aos="fade-up" data-aos-delay="200" data-aos-duration="300">
                     <div class="about-text">
                         <ul class="crumbs d-flex">
-                            <li><a href="index.html">Home</a></li>
-                            <li class="two"><a href="index.html"><i class="fa-solid fa-right-long"></i>Contacts</a></li>
+                            <li><RouterLink to="/">Home</RouterLink></li>
+                            <li class="two"><RouterLink to="/kontak"><i class="fa-solid fa-right-long"></i>Contact</RouterLink></li>
                         </ul>
                         <h2>Contact us</h2>
                         <p>Egestas sed tempus urna et pharetra pharetra massa. Fermentum posuere urna nec tincidunt praesent

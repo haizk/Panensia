@@ -15,7 +15,7 @@ import Loader from './components/Loader.vue'
     <Loader />
     <main>
         <RouterView />
-    </main>
+    </main> 
 
     <Footer />
 </template>
