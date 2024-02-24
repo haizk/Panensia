@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
     <footer class="gap no-bottom" style="background-color: #363636;">
         <div class="container">
@@ -8,8 +9,9 @@
 							<!-- replace logo -->
 							o
 						</a>
-						<h2>The Best Restaurants
-								in Your  Home</h2>
+						<h2>Supplier 
+							Rempah-Rempah
+							& Bumbu Dapur</h2>
 						<p>Vitae congue mauris rhoncus aenean. Enim nulla
 							 aliquet porttitor lacus luctus accumsan
 								tortor posuere. Tempus egestas sed sed risus pretium quam.</p>
