@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
 use Monolog\Handler\RotatingFileHandler;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,3 +33,11 @@ Route::delete('/deleteNews/{id}', [NewsController::class, 'deleteNews']);
 Route::post('/createNewsCategory', [NewsController::class, 'createNewsCategory']);
 Route::post('/editNewsCategory/{id}', [NewsController::class, 'editNewsCategory']);
 Route::delete('/deleteNewsCategory/{id}', [NewsController::class, 'deleteNewsCategory']);
+
+Route::get('/getProducts', [ProductController::class, 'getProducts']);
+Route::get('/getProductById/{id}', [ProductController::class, 'getProductById']);
+Route::get('/getProductByShopId/{id}', [ProductController::class, 'getProductByShopId']);
+
+Route::post('/createProduct', [ProductController::class, 'createProduct']);
+Route::post('/editProduct/{id}', [ProductController::class, 'editProduct']);
+Route::delete('/deleteProduct/{id}', [ProductController::class, 'deleteProduct']);
