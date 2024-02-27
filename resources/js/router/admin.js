@@ -61,6 +61,11 @@ const router = createRouter({
             component: AdminShopsView,
         },
         {
+            path: '/admin/shops/:id',
+            name: 'admin.shops.detail',
+            component: () => import('../views/admin/ShopDetailView.vue'),
+        },
+        {
             path: '/admin/shops/create',
             name: 'admin.shops.create',
             component: AdminShopsCreateView,
@@ -75,6 +80,11 @@ const router = createRouter({
             path: '/admin/contacts',
             name: 'admin.contacts',
             component: AdminContactsView,
+        },
+        {
+            path: '/admin/contacts/:id',
+            name: 'admin.contacts.detail',
+            component: () => import('../views/admin/ContactDetailView.vue'), // Sesuaikan dengan path yang benar
         },
     ]
 })
