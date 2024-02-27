@@ -4,7 +4,7 @@ import HomeView from '../views/user/HomeView.vue'
 import AboutView from '../views/user/AboutView.vue'
 import NewsView from '../views/user/NewsView.vue'
 import NewsDetailView from '../views/user/NewsDetailView.vue'
-import ProductDetailView from '../views/user/ProductDetailView.vue'
+import ContactsView from '../views/user/ContactsView.vue'
 
 const userRouter = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -35,10 +35,9 @@ const userRouter = createRouter({
             redirect: { name: 'home' }
         },
         {
-            path: '/product/detail/:id',
-            name: 'product.detail',
-            component: ProductDetailView,
-            props: true
+            path: '/contact',
+            name: 'contacts.create',
+            component: ContactsView
         }
     ]
 })
