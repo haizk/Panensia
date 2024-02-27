@@ -1,39 +1,31 @@
 <script setup>
-import { RouterLink } from 'vue-router'
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
 </script>
 
 <template>
     <div class="col-lg-7">
         <nav class="navbar">
           <ul class="navbar-links">
-            <li class="navbar-dropdown active">
+            <li :class="{ 'navbar-dropdown active': route.path === '/' }">
                 <RouterLink to="/">Home</RouterLink>
             </li>
-            <li class="navbar-dropdown">
+            <li :class="{ 'navbar-dropdown active': route.path === '/about' }">
                 <RouterLink to="/about">About</RouterLink>
             </li>
-            <li class="navbar-dropdown">
-              <a href="#">Restaurants</a>
+            <li :class="{ 'navbar-dropdown active': route.path === '/berita' }">
+              <RouterLink to="/berita">News</RouterLink>
+            </li>
+            <li :class="route.path === '/produk' || route.path === '/beritaproduk' ? 'navbar-dropdown active' : 'navbar-dropdown'">
+              <RouterLink to="#">Product</RouterLink>
               <div class="dropdown">
-                <a href="restaurants.html">Restaurants</a>
-                <a href="restaurant-card.html">Restaurant Card</a>
-                <a href="checkout.html">Checkout</a>
+                <RouterLink to="/produk">Product Catalog</RouterLink>
+                <RouterLink to="/beritaproduk">Product News</RouterLink>
               </div>
             </li>
-            <li class="navbar-dropdown">
-              <a href="#">Pages</a>
-              <div class="dropdown">
-                <a href="blog.html">Blog</a>
-                <a href="single-blog.html">Single Blog</a>
-                <a href="services.html">Services</a>
-                <a href="faq.html">FAQ</a>
-                <a href="pricing-table.html">Pricing Table</a>
-                <a href="become-partner.html">Become A Partner</a>
-                <a href="404.html">404</a>
-              </div>
-            </li>
-            <li class="navbar-dropdown ">
-              <a href="/kontak">Contacts</a>
+            <li :class="{ 'navbar-dropdown active': route.path === '/kontak' }">
+              <RouterLink to="/kontak">Contact</RouterLink>
             </li>
           </ul>
         </nav>

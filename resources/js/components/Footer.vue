@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
     <footer class="gap no-bottom" style="background-color: #363636">
         <div class="container">
