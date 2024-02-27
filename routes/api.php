@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
 use Monolog\Handler\RotatingFileHandler;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ShopController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,3 +43,15 @@ Route::get('/getProductByShopId/{id}', [ProductController::class, 'getProductByS
 Route::post('/createProduct', [ProductController::class, 'createProduct']);
 Route::post('/editProduct/{id}', [ProductController::class, 'editProduct']);
 Route::delete('/deleteProduct/{id}', [ProductController::class, 'deleteProduct']);
+
+Route::get('/shops', [ShopController::class, 'index']);
+Route::post('/shops', [ShopController::class, 'store']);
+Route::get('/shops/{shop}', [ShopController::class, 'show']);
+Route::put('/shops/{shop}', [ShopController::class, 'update']);
+Route::post('/shops/{shop}/upload-logo', [ShopController::class, 'uploadLogo']);
+Route::post('/shops/upload-logo', [ShopController::class, 'uploadLogo']);
+Route::delete('/shops/{shop}', [ShopController::class, 'destroy']);
+
+Route::get('/contacts', [ContactController::class, 'index']);
+Route::post('/contacts', [ContactController::class, 'store']);
+Route::get('/contacts/{contact}', [ContactController::class, 'show']);

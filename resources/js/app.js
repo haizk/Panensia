@@ -9,6 +9,6 @@ const app = createApp(App)
 
 app.use(router)
 
-alert('app.js is working!')
+// alert('app.js is working!')
 
 app.mount('#app')

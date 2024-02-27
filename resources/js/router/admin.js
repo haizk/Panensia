@@ -7,6 +7,10 @@ import AdminNewsCreateView from '../views/admin/NewsCreateView.vue'
 import AdminNewsCategoriesView from '../views/admin/NewsCategoriesView.vue'
 import AdminNewsCategoriesCreateView from '../views/admin/NewsCategoriesCreateView.vue'
 import AdminNewsCategoriesEditView from '../views/admin/NewsCategoriesEditView.vue'
+import AdminShopsView from '../views/admin/ShopsView.vue'
+import AdminShopsEditView from '../views/admin/ShopsEditView.vue'
+import AdminShopsCreateView from '../views/admin/ShopsCreateView.vue'
+import AdminContactsView from '../views/admin/ContactsView.vue'
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -50,7 +54,38 @@ const router = createRouter({
             name: 'admin.news_categories.edit',
             component: AdminNewsCategoriesEditView,
             props: true
-        }
+        },
+        {
+            path: '/admin/shops',
+            name: 'admin.shops',
+            component: AdminShopsView,
+        },
+        {
+            path: '/admin/shops/:id',
+            name: 'admin.shops.detail',
+            component: () => import('../views/admin/ShopDetailView.vue'),
+        },
+        {
+            path: '/admin/shops/create',
+            name: 'admin.shops.create',
+            component: AdminShopsCreateView,
+        },
+        {
+            path: '/admin/shops/edit/:id',
+            name: 'admin.shops.edit',
+            component: AdminShopsEditView,
+            props: true
+        },
+        {
+            path: '/admin/contacts',
+            name: 'admin.contacts',
+            component: AdminContactsView,
+        },
+        {
+            path: '/admin/contacts/:id',
+            name: 'admin.contacts.detail',
+            component: () => import('../views/admin/ContactDetailView.vue'), // Sesuaikan dengan path yang benar
+        },
     ]
 })
 
