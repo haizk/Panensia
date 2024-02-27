@@ -23,9 +23,11 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call([
-            NewsCategoriesSeeder::class,
-            NewsImagesSeeder::class,
-            NewsSeeder::class,
+            // NewsCategoriesSeeder::class,
+            // NewsImagesSeeder::class,
+            // NewsSeeder::class,
+            ShopSeeder::class,
+            ProductSeeder::class
         ]);
     }
 }

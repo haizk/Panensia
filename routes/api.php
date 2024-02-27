@@ -35,6 +35,7 @@ Route::post('/editNewsCategory/{id}', [NewsController::class, 'editNewsCategory'
 Route::delete('/deleteNewsCategory/{id}', [NewsController::class, 'deleteNewsCategory']);
 
 Route::get('/getProducts', [ProductController::class, 'getProducts']);
+Route::get('/getShops', [ProductController::class, 'getShops']);
 Route::get('/getProductById/{id}', [ProductController::class, 'getProductById']);
 Route::get('/getProductByShopId/{id}', [ProductController::class, 'getProductByShopId']);
 

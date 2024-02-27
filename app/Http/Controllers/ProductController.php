@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use App\Models\ProductImage;
+use App\Models\Shop;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -37,9 +38,10 @@ class ProductController extends Controller
     public function createProduct(Request $request)
     {
         $product = new Product();
-        $product->validate([]);
+        // $product->validate([]);
         $product->name = $request->name;
         $product->desc = $request->desc;
+        $product->shop_id = $request->shop_id;
         $product->link_tokped = $request->link_tokped;
         $product->link_shopee = $request->link_shopee;
         $product->save();
@@ -85,7 +87,7 @@ class ProductController extends Controller
         $product->desc = $request->desc;
         $product->link_tokped = $request->link_tokped;
         $product->link_shopee = $request->link_shopee;
-        $product->product_shop_id = $request->product_shop_id;
+        $product->shop_id = $request->shop_id;
         $product->save();
 
         $filePaths = [];
@@ -113,6 +115,14 @@ class ProductController extends Controller
         return response()->json([
             'message' => 'Product updated successfully',
             'filePaths' => $filePaths
+        ], 200);
+    }
+
+    public function getShops()
+    {
+        $shops = Shop::all();
+        return response()->json([
+            'shops' => $shops
         ], 200);
     }
 }

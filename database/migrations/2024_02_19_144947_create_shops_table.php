@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->text('desc');
-            $table->string('logo_path');
+            $table->string('logo_path')->nullable();
             $table->string('address');
             $table->string('link_ig')->nullable();
             $table->timestamps();
