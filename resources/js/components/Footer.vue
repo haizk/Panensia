@@ -6,15 +6,12 @@
 				<div class="col-lg-5 col-md-6 col-sm-12">
 					<div class="footer-description">
 						<a href="/">
-							<!-- replace logo -->
-							o
+							<img src="http://localhost:8000/assets/img/Panensia-wt.png" alt="" style="width: 100px;" >
 						</a>
-						<h2>Supplier 
+						<h2>PANENSIA</h2>
+						<p>Supplier 
 							Rempah-Rempah
-							& Bumbu Dapur</h2>
-						<p>Vitae congue mauris rhoncus aenean. Enim nulla
-							 aliquet porttitor lacus luctus accumsan
-								tortor posuere. Tempus egestas sed sed risus pretium quam.</p>
+							& Bumbu Dapur</p>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 col-sm-12">

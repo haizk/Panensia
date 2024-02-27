@@ -4,6 +4,7 @@
             <div class="col-xl-2">
                 <div class="header-style">
                     <a href="index.html">
+                        <img src="http://localhost:8000/assets/img/Panensia.png" alt="" style="width: 50px;" >
                     </a>
                     <div class="extras bag">
                            <a href="javascript:void(0)" class="menu-btn">
