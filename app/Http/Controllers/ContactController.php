@@ -8,52 +8,32 @@ class ContactController extends Controller
 {
     public function index()
     {
-        $contacts = Contact::all();
-        return view('contacts.index', compact('contacts'));
-    }
-
-    public function create()
-    {
-        return view('contacts.create');
+        return Contact::latest()->get();
     }
 
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'type' => 'required',
-            'name' => 'required',
-            'email' => 'required|email',
-            'message' => 'required',
-        ]);
+        $contact = Contact::create($request->all());
 
-        Contact::create($validatedData);
-
-        return redirect()->route('contacts.index')->with('success', 'Contact created successfully');
+        return response()->json($contact, 201);
     }
 
-    public function edit(Contact $contact)
+    public function show(Contact $contact)
     {
-        return view('contacts.edit', compact('contact'));
+        return $contact;
     }
 
     public function update(Request $request, Contact $contact)
     {
-        $validatedData = $request->validate([
-            'type' => 'required',
-            'name' => 'required',
-            'email' => 'required|email',
-            'message' => 'required',
-        ]);
+        $contact->update($request->all());
 
-        $contact->update($validatedData);
-
-        return redirect()->route('contacts.index')->with('success', 'Contact updated successfully');
+        return response()->json($contact, 200);
     }
 
     public function destroy(Contact $contact)
     {
         $contact->delete();
 
-        return redirect()->route('contacts.index')->with('success', 'Contact deleted successfully');
+        return response()->json(null, 204);
     }
 }

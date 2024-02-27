@@ -8,54 +8,32 @@ class ShopController extends Controller
 {
     public function index()
     {
-        $shops = Shop::with('products')->get();
-        return view('shops.index', compact('shops'));
-    }
-
-    public function create()
-    {
-        return view('shops.create');
+        return Shop::latest()->get();
     }
 
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'name' => 'required',
-            'desc' => 'required',
-            'logo_path' => 'required',
-            'address' => 'required',
-            'link_ig' => 'nullable',
-        ]);
+        $shop = Shop::create($request->all());
 
-        $shop = Shop::create($validatedData);
-
-        return redirect()->route('shops.index')->with('success', 'Shop created successfully');
+        return response()->json($shop, 201);
     }
 
-    public function edit(Shop $shop)
+    public function show(Shop $shop)
     {
-        return view('shops.edit', compact('shop'));
+        return $shop;
     }
 
     public function update(Request $request, Shop $shop)
     {
-        $validatedData = $request->validate([
-            'name' => 'required',
-            'desc' => 'required',
-            'logo_path' => 'required',
-            'address' => 'required',
-            'link_ig' => 'nullable',
-        ]);
+        $shop->update($request->all());
 
-        $shop->update($validatedData);
-
-        return redirect()->route('shops.index')->with('success', 'Shop updated successfully');
+        return response()->json($shop, 200);
     }
 
     public function destroy(Shop $shop)
     {
         $shop->delete();
 
-        return redirect()->route('shops.index')->with('success', 'Shop deleted successfully');
+        return response()->json(null, 204);
     }
 }
