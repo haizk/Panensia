@@ -129,6 +129,6 @@
                 </div>
             </div>
         </div>
->>>>>>> eab4e09411b093893f45d6cf4fd74b34375c09d7
+>>>>>>> eab4e09411b093893f45d6cf4fd74b34375c09d
     </footer>
 </template>
