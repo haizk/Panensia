@@ -7,6 +7,7 @@ use Illuminate\Database\Seeder;
 use App\Models\News;
 use App\Models\NewsCategories;
 use App\Models\NewsImages;
+use App\Models\User;
 
 class DatabaseSeeder extends Seeder
 {
@@ -27,7 +28,8 @@ class DatabaseSeeder extends Seeder
             // NewsImagesSeeder::class,
             // NewsSeeder::class,
             ShopSeeder::class,
-            ProductSeeder::class
+            ProductSeeder::class,
+            UserSeeder::class
         ]);
     }
 }
