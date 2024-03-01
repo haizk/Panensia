@@ -8,6 +8,7 @@ use Monolog\Handler\RotatingFileHandler;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\AdminsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -59,3 +60,9 @@ Route::delete('/shops/{shop}', [ShopController::class, 'destroy']);
 Route::get('/contacts', [ContactController::class, 'index']);
 Route::post('/contacts', [ContactController::class, 'store']);
 Route::get('/contacts/{contact}', [ContactController::class, 'show']);
+
+Route::get('/admins', [AdminsController::class, 'getAdmin']);
+Route::get('/admins/{id}', [AdminsController::class, 'getAdminById']);
+Route::post('/admins', [AdminsController::class, 'createAdmin']);
+Route::post('/admins/{id}', [AdminsController::class, 'editAdmin']);
+Route::delete('/admins/{id}', [AdminsController::class, 'deleteAdmin']);

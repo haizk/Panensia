@@ -14,6 +14,9 @@ import AdminContactsView from '../views/admin/ContactsView.vue'
 import AdminProductsView from '../views/admin/ProductsView.vue'
 import AdminProductEditView from '../views/admin/ProductEditView.vue'
 import AdminProductCreateView from '../views/admin/ProductCreateView.vue'
+import AdminsView from '../views/admin/AdminsView.vue'
+import AdminsCreateView from '../views/admin/AdminsCreateView.vue'
+import AdminsEditView from '../views/admin/AdminsEditView.vue'
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -104,8 +107,39 @@ const router = createRouter({
             name: 'admin.product.edit',
             component: AdminProductEditView,
             props: true
+        },
+        {
+            path: '/admin/admins',
+            name: 'admin.admins',
+            component: AdminsView,
+            meta: { requiresSuperAdmin: true },
+        },
+        {
+            path: '/admin/admins/create',
+            name: 'admin.admins.create',
+            component: AdminsCreateView,
+        },
+        {
+            path: '/admin/admins/edit/:id',
+            name: 'admin.admins.edit',
+            component: AdminsEditView,
+            props: true
         }
     ]
 })
+
+router.beforeEach((to, from, next) => {
+    const loggedIn = localStorage.getItem('loggedIn');
+    
+    if (to.matched.some(record => record.meta.requiresSuperAdmin)) {
+        if (loggedIn && localStorage.getItem('is_superAdmin') === '1') {
+        next();
+        } else {
+        next({ name: 'login' });
+        }
+    } else {
+        next();
+    }
+});
 
 export default router

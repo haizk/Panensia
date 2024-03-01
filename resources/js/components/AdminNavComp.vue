@@ -29,6 +29,7 @@ onMounted(() => {
         <RouterLink to="/admin/shops" v-if="loggedIn">Shops</RouterLink>
         <RouterLink to="/admin/contacts" v-if="loggedIn">Contacts</RouterLink>
         <RouterLink to="/admin/products" v-if="loggedIn">Products</RouterLink>
+        <RouterLink to="/admin/admins" v-if="loggedIn">Administrators</RouterLink>
         <RouterLink to="/login" v-if="loggedIn" @click="logout">Logout</RouterLink>
     </nav>
 </template>
