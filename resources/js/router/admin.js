@@ -8,6 +8,16 @@ import AdminNewsCategoriesView from '../views/admin/NewsCategoriesView.vue'
 import AdminNewsCategoriesCreateView from '../views/admin/NewsCategoriesCreateView.vue'
 import AdminNewsCategoriesEditView from '../views/admin/NewsCategoriesEditView.vue'
 import AdminImagesEditView from '../views/admin/NewsImagesEditView.vue'
+import AdminShopsView from '../views/admin/ShopsView.vue'
+import AdminShopsEditView from '../views/admin/ShopsEditView.vue'
+import AdminShopsCreateView from '../views/admin/ShopsCreateView.vue'
+import AdminContactsView from '../views/admin/ContactsView.vue'
+import AdminProductsView from '../views/admin/ProductsView.vue'
+import AdminProductEditView from '../views/admin/ProductEditView.vue'
+import AdminProductCreateView from '../views/admin/ProductCreateView.vue'
+import AdminsView from '../views/admin/AdminsView.vue'
+import AdminsCreateView from '../views/admin/AdminsCreateView.vue'
+import AdminsEditView from '../views/admin/AdminsEditView.vue'
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -15,10 +25,10 @@ const router = createRouter({
         {
             path: '/admin',
             name: 'dashboard',
-            component: DashboardView
-            // meta: {
-            //     requiresAuth: true
-            // }
+            component: DashboardView,
+            meta: {
+                requiresAuth: true
+            }
         },
         {
             path: '/admin/news',
@@ -57,8 +67,86 @@ const router = createRouter({
             name: 'admin.news_images.edit',
             component: AdminImagesEditView,
             props: true
+        },
+        {
+            path: '/admin/shops',
+            name: 'admin.shops',
+            component: AdminShopsView
+        },
+        {
+            path: '/admin/shops/:id',
+            name: 'admin.shops.detail',
+            component: () => import('../views/admin/ShopDetailView.vue')
+        },
+        {
+            path: '/admin/shops/create',
+            name: 'admin.shops.create',
+            component: AdminShopsCreateView
+        },
+        {
+            path: '/admin/shops/edit/:id',
+            name: 'admin.shops.edit',
+            component: AdminShopsEditView,
+            props: true
+        },
+        {
+            path: '/admin/contacts',
+            name: 'admin.contacts',
+            component: AdminContactsView
+        },
+        {
+            path: '/admin/contacts/:id',
+            name: 'admin.contacts.detail',
+            component: () => import('../views/admin/ContactDetailView.vue') // Sesuaikan dengan path yang benar
+        },
+        {
+            path: '/admin/products',
+            name: 'admin.products',
+            component: AdminProductsView
+        },
+        {
+            path: '/admin/product/create',
+            name: 'admin.product.create',
+            component: AdminProductCreateView
+        },
+        {
+            path: '/admin/product/edit/:id',
+            name: 'admin.product.edit',
+            component: AdminProductEditView,
+            props: true
+        },
+        {
+            path: '/admin/admins',
+            name: 'admin.admins',
+            component: AdminsView,
+            meta: { requiresSuperAdmin: true },
+        },
+        {
+            path: '/admin/admins/create',
+            name: 'admin.admins.create',
+            component: AdminsCreateView,
+        },
+        {
+            path: '/admin/admins/edit/:id',
+            name: 'admin.admins.edit',
+            component: AdminsEditView,
+            props: true
         }
     ]
 })
+
+router.beforeEach((to, from, next) => {
+    const loggedIn = localStorage.getItem('loggedIn');
+    
+    if (to.matched.some(record => record.meta.requiresSuperAdmin)) {
+        if (loggedIn && localStorage.getItem('is_superAdmin') === '1') {
+        next();
+        } else {
+        next({ name: 'login' });
+        }
+    } else {
+        next();
+    }
+});
 
 export default router

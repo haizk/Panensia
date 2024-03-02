@@ -7,6 +7,7 @@ use Illuminate\Database\Seeder;
 use App\Models\News;
 use App\Models\NewsCategories;
 use App\Models\NewsImages;
+use App\Models\User;
 
 class DatabaseSeeder extends Seeder
 {
@@ -23,9 +24,12 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call([
-            NewsCategoriesSeeder::class,
-            NewsImagesSeeder::class,
-            NewsSeeder::class,
+            // NewsCategoriesSeeder::class,
+            // NewsImagesSeeder::class,
+            // NewsSeeder::class,
+            ShopSeeder::class,
+            ProductSeeder::class,
+            UserSeeder::class
         ]);
     }
 }
