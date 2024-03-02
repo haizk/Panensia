@@ -1,21 +1,16 @@
 <script setup>
 import { RouterView } from 'vue-router'
 import Footer from './components/Footer.vue'
-import Header from './components/Header.vue'
-import Loader from './components/Loader.vue'
+import HeaderComp from './components/Header.vue'
 
 
 </script>
 
 
 <template>
-    <header>
-        <Header />
-    </header>
-    <Loader />
-    <main>
-        <RouterView />
-    </main> 
-
-    <Footer />
+    <div id="pageWrapper">
+            <HeaderComp />
+            <RouterView />
+        <Footer />
+    </div>
 </template>

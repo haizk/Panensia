@@ -1,1366 +1,459 @@
 <template>
-    <section class="hero-section about gap" style="background-image: url(assets/img/background-1.png);">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300" data-aos-duration="400">
-                    <div class="about-text">
-                        <ul class="crumbs d-flex">
-                            <!-- <li><a href="index.html">Home</a></li> -->
-                            <li><a href="index.html"><i class="fa-solid fa-right-long"></i>Product</a></li>
-                            <li class="two"><a href="index.html"><i class="fa-solid fa-right-long"></i>Best Product</a>
-                            </li>
-                        </ul>
-                        <div class="logo-detail">
-                            <img alt="logo" src="https://www.panensia.co.id/wp-content/uploads/2023/10/bunga-lawang.jpg">
-                            <h2>Bunga Lawang</h2>
-                        </div>
-                        <div class="rate">
-                            <span>Rate:</span>
-                            <div class="star">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star-half-stroke"></i>
-                            </div>
-                            <span>CATEGORY:</span>
-                            <div class="cafa-button">
-                                <a href="#">spice</a>
-                                <a href="#">aromatic</a>
-                                <a href="#">herbs</a>
-                            </div>
-                            <span>DESCRIPTION:</span>
-                            <p>Bunga lawang (Illicium verum) is a spice native to China and Vietnam that comes from the fruit of the Chinese pine tree. 
-                                This spice is often used as a cooking flavoring and has a taste that is almost similar to licorice and anise.</p>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400" data-aos-duration="500">
-                    <div class="about-img">
-                        <img alt="man" src="https://www.panensia.co.id/wp-content/uploads/2023/10/bunga-lawang.jpg">
-                        <!-- <div class="hours">
-                            <i class="fa-regular fa-clock"></i>
-                            <h4>9am – 12pm<br><span>Hours</span></h4>
-                        </div>
-                        <div class="hours two">
-                            <i class="fa-solid fa-utensils"></i>
-                            <h4>Breakfast, Lunch, Dinner<br><span>Meals</span></h4>
-                        </div> -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- tabs -->
-    <section class="tabs gap">
-
-        <div class="container">
-
-            <div class="tabs-img-back">
-
+    <main>
+        <!-- introBannerHolder -->
+        <section class="introBannerHolder d-flex w-100 bgCover" style="background-image: url(http://placehold.it/1920x300);">
+            <div class="container">
                 <div class="row">
-
-                    <div class="col-lg-12">
-
-                        <div class="Provides" data-aos="fade-up" data-aos-delay="200" data-aos-duration="300">
-
-
-                            <div class="nav nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                                <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
-                                    data-bs-target="#v-pills-home" type="button" role="tab"
-                                    aria-controls="v-pills-home" aria-selected="true">Product Catalog</button>
-                                <!-- <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
-                                    data-bs-target="#v-pills-profile" type="button" role="tab"
-                                    aria-controls="v-pills-profile" aria-selected="false">Lunch</button>
-                                <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
-                                    data-bs-target="#v-pills-messages" type="button" role="tab"
-                                    aria-controls="v-pills-messages" aria-selected="false">Dinner</button> -->
-
-                            </div>
-                            <!-- <div class="like-meal">
-                                <a href="#"><i class="fa-solid fa-heart"></i>Like Meals</a>
-                            </div> -->
-
-                        </div>
-
+                    <div class="col-12 pt-lg-23 pt-md-15 pt-sm-10 pt-6 text-center">
+                        <h1 class="headingIV fwEbold playfair mb-4">Shop</h1>
+                        <ul class="list-unstyled breadCrumbs d-flex justify-content-center">
+                            <li class="mr-2"><a href="home.html">Home</a></li>
+                            <li class="mr-2">/</li>
+                            <li class="active">Shop</li>
+                        </ul>
                     </div>
-
-                    <div class="col-lg-12">
-
-                        <div class="tab-content" id="v-pills-tabContent">
-
-                            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
-                                aria-labelledby="v-pills-home-tab">
-                                <div class="row">
-                                    <div class="col-xl-4 col-lg-6" data-aos="flip-up" data-aos-delay="200"
-                                        data-aos-duration="300">
-                                        <div class="dish">
-                                            <img class="food-dish" alt="food-dish" src="https://www.panensia.co.id/wp-content/uploads/2023/10/buah-bit.jpg">
-                                            <div class="dish-foods">
-                                                <h3>Buah Bit</h3>
-                                                <div class="dish-icon">
-                                                    <div class="cafa-button">
-                                                        <a href="#">Fruit</a>
-                                                        <a href="#">Antioxidant</a>
-                                                    </div>
-                                                    <div class="dish-icon end">
-                                                        <i class="info fa-solid fa-circle-info"></i>
-                                                        <div class="star">
-                                                            <a href="#"><i class="fa-solid fa-heart"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="price">
-                                                    <h2>Rp40.000/kg</h2>
-                                                    <div class="qty-input">
-                                                        <button class="qty-count qty-count--minus" data-action="minus"
-                                                            type="button">-</button>
-                                                        <input class="product-qty" type="number" name="product-qty"
-                                                            min="0" value="1">
-                                                        <button class="qty-count qty-count--add" data-action="add"
-                                                            type="button">+</button>
-                                                    </div>
-                                                </div>
-                                                <button class="button-price">Add to Basket<i
-                                                        class="fa-solid fa-bag-shopping"></i></button>
-                                            </div>
-                                            <div class="dish-info" style="display: none;">
-                                                <i class="info2 fa-solid fa-xmark"></i>
-                                                <h5>
-                                                    Potatoes with pork and dried fruits
-                                                </h5>
-                                                <div class="cafa-button">
-                                                    <a href="#">Breakfast</a>
-                                                    <a href="#">Brunch</a>
-                                                </div>
-                                                <p>In egestas erat imperdiet sed euismod nisi porta. Ultrices sagittis orci
-                                                    a scelerisque. Diam quam nulla porttitor.</p>
-                                                <ul class="menu-dish">
-                                                    <li>Nulla porttitor massa id;</li>
-                                                    <li>Aliquam vestibulum morbi;</li>
-                                                    <li>Blandit donec adipiscing;</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-4 col-lg-6" data-aos="flip-up" data-aos-delay="300"
-                                        data-aos-duration="400">
-                                        <div class="dish">
-                                            <img class="food-dish" alt="food-dish" src="https://www.panensia.co.id/wp-content/uploads/2023/10/bunga-lawang.jpg">
-                                            <div class="dish-foods">
-                                                <h3>Bunga Lawang</h3>
-                                                <div class="dish-icon">
-                                                    <div class="cafa-button">
-                                                        <a href="#">Spice</a>
-                                                        <a href="#">Herbs</a>
-                                                    </div>
-                                                    <div class="dish-icon end">
-
-                                                        <i class="info fa-solid fa-circle-info"></i>
-                                                        <div class="star">
-                                                            <a href="#"><i class="fa-solid fa-heart"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="price">
-                                                    <h2>Rp139.000/kg</h2>
-                                                    <div class="qty-input">
-                                                        <button class="qty-count qty-count--minus" data-action="minus"
-                                                            type="button">-</button>
-                                                        <input class="product-qty" type="number" name="product-qty"
-                                                            min="0" value="1">
-                                                        <button class="qty-count qty-count--add" data-action="add"
-                                                            type="button">+</button>
-                                                    </div>
-                                                </div>
-                                                <button class="button-price">Add to Basket<i
-                                                        class="fa-solid fa-bag-shopping"></i></button>
-                                            </div>
-                                            <div class="dish-info" style="display: none;">
-                                                <i class="info2 fa-solid fa-xmark"></i>
-                                                <h5>
-                                                    Potatoes with pork and dried fruits
-                                                </h5>
-                                                <div class="cafa-button">
-                                                    <a href="#">Breakfast</a>
-                                                    <a href="#">Brunch</a>
-                                                </div>
-                                                <p>In egestas erat imperdiet sed euismod nisi porta. Ultrices sagittis orci
-                                                    a scelerisque. Diam quam nulla porttitor.</p>
-                                                <ul class="menu-dish">
-                                                    <li>Nulla porttitor massa id;</li>
-                                                    <li>Aliquam vestibulum morbi;</li>
-                                                    <li>Blandit donec adipiscing;</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-4 col-lg-6" data-aos="flip-up" data-aos-delay="400"
-                                        data-aos-duration="500">
-                                        <div class="dish">
-                                            <img class="food-dish" alt="food-dish" src="https://www.panensia.co.id/wp-content/uploads/2023/10/bunga-telang.jpg">
-                                            <div class="dish-foods">
-                                                <h3>Bunga Telang</h3>
-                                                <div class="dish-icon">
-                                                    <div class="cafa-button">
-                                                        <a href="#">Flower</a>
-                                                        <a href="#">Tea</a>
-                                                    </div>
-                                                    <div class="dish-icon end">
-
-                                                        <i class="info fa-solid fa-circle-info"></i>
-                                                        <div class="star">
-                                                            <a href="#"><i class="fa-solid fa-heart"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="price">
-                                                    <h2>Rp89.999/kg</h2>
-                                                    <div class="qty-input">
-                                                        <button class="qty-count qty-count--minus" data-action="minus"
-                                                            type="button">-</button>
-                                                        <input class="product-qty" type="number" name="product-qty"
-                                                            min="0" value="1">
-                                                        <button class="qty-count qty-count--add" data-action="add"
-                                                            type="button">+</button>
-                                                    </div>
-                                                </div>
-                                                <button class="button-price">Add to Basket<i
-                                                        class="fa-solid fa-bag-shopping"></i></button>
-                                            </div>
-                                            <div class="dish-info" style="display: none;">
-                                                <i class="info2 fa-solid fa-xmark"></i>
-                                                <h5>
-                                                    Rice with shrimps and kiwi
-                                                </h5>
-                                                <div class="cafa-button">
-                                                    <a href="#">Breakfast</a>
-                                                    <a href="#">Brunch</a>
-                                                </div>
-                                                <p>In egestas erat imperdiet sed euismod nisi porta. Ultrices sagittis orci
-                                                    a scelerisque. Diam quam nulla porttitor.</p>
-                                                <ul class="menu-dish">
-                                                    <li>Nulla porttitor massa id;</li>
-                                                    <li>Aliquam vestibulum morbi;</li>
-                                                    <li>Blandit donec adipiscing;</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-4 col-lg-6" data-aos="flip-up" data-aos-delay="200"
-                                        data-aos-duration="300">
-                                        <div class="dish">
-                                            <img class="food-dish" alt="food-dish" src="https://www.panensia.co.id/wp-content/uploads/2023/10/cengkeh-600x600.jpg">
-                                            <div class="dish-foods">
-                                                <h3>Cengkeh</h3>
-                                                <div class="dish-icon">
-                                                    <div class="cafa-button">
-                                                        <a href="#">Spice</a>
-                                                        <a href="#">Herbs</a>
-                                                    </div>
-                                                    <div class="dish-icon end">
-
-                                                        <i class="info fa-solid fa-circle-info"></i>
-                                                        <div class="star">
-                                                            <a href="#"><i class="fa-solid fa-heart"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="price">
-                                                    <h2>Rp170.000/kg</h2>
-                                                    <div class="qty-input">
-                                                        <button class="qty-count qty-count--minus" data-action="minus"
-                                                            type="button">-</button>
-                                                        <input class="product-qty" type="number" name="product-qty"
-                                                            min="0" value="1">
-                                                        <button class="qty-count qty-count--add" data-action="add"
-                                                            type="button">+</button>
-                                                    </div>
-                                                </div>
-                                                <button class="button-price">Add to Basket<i
-                                                        class="fa-solid fa-bag-shopping"></i></button>
-                                            </div>
-                                            <div class="dish-info" style="display: none;">
-                                                <i class="info2 fa-solid fa-xmark"></i>
-                                                <h5>
-                                                    Spaghetti with mushrooms and...
-                                                </h5>
-                                                <div class="cafa-button">
-                                                    <a href="#">Breakfast</a>
-                                                    <a href="#">Brunch</a>
-                                                </div>
-                                                <p>In egestas erat imperdiet sed euismod nisi porta. Ultrices sagittis orci
-                                                    a scelerisque. Diam quam nulla porttitor.</p>
-                                                <ul class="menu-dish">
-                                                    <li>Nulla porttitor massa id;</li>
-                                                    <li>Aliquam vestibulum morbi;</li>
-                                                    <li>Blandit donec adipiscing;</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-4 col-lg-6" data-aos="flip-up" data-aos-delay="300"
-                                        data-aos-duration="400">
-                                        <div class="dish">
-                                            <img class="food-dish" alt="food-dish" src="https://www.panensia.co.id/wp-content/uploads/2023/10/cumin-600x600.jpg">
-                                            <div class="dish-foods">
-                                                <h3>Cumin</h3>
-                                                <div class="dish-icon">
-                                                    <div class="cafa-button">
-                                                        <a href="#">Spice</a>
-                                                        <a href="#">Herbs</a>
-                                                    </div>
-                                                    <div class="dish-icon end">
-
-                                                        <i class="info fa-solid fa-circle-info"></i>
-                                                        <div class="star">
-                                                            <a href="#"><i class="fa-solid fa-heart"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="price">
-                                                    <h2>Rp80.000/kg</h2>
-                                                    <div class="qty-input">
-                                                        <button class="qty-count qty-count--minus" data-action="minus"
-                                                            type="button">-</button>
-                                                        <input class="product-qty" type="number" name="product-qty"
-                                                            min="0" value="1">
-                                                        <button class="qty-count qty-count--add" data-action="add"
-                                                            type="button">+</button>
-                                                    </div>
-                                                </div>
-                                                <button class="button-price">Add to Basket<i
-                                                        class="fa-solid fa-bag-shopping"></i></button>
-                                            </div>
-                                            <div class="dish-info" style="display: none;">
-                                                <i class="info2 fa-solid fa-xmark"></i>
-                                                <h5>
-                                                    Sliced pork, avocado and...
-                                                </h5>
-                                                <div class="cafa-button">
-                                                    <a href="#">Breakfast</a>
-                                                    <a href="#">Brunch</a>
-                                                </div>
-                                                <p>In egestas erat imperdiet sed euismod nisi porta. Ultrices sagittis orci
-                                                    a scelerisque. Diam quam nulla porttitor.</p>
-                                                <ul class="menu-dish">
-                                                    <li>Nulla porttitor massa id;</li>
-                                                    <li>Aliquam vestibulum morbi;</li>
-                                                    <li>Blandit donec adipiscing;</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-4 col-lg-6" data-aos="flip-up" data-aos-delay="400"
-                                        data-aos-duration="500">
-                                        <div class="dish">
-                                            <img class="food-dish" alt="food-dish" src="https://www.panensia.co.id/wp-content/uploads/2023/10/daun-kari-600x600.jpg">
-                                            <div class="dish-foods">
-                                                <h3>Daun Kari</h3>
-                                                <div class="dish-icon">
-                                                    <div class="cafa-button">
-                                                        <a href="#">Leaf</a>
-                                                        <a href="#">Herbs</a>
-                                                    </div>
-                                                    <div class="dish-icon end">
-
-                                                        <i class="info fa-solid fa-circle-info"></i>
-                                                        <div class="star">
-                                                            <a href="#"><i class="fa-solid fa-heart"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="price">
-                                                    <h2>Rp95.000/kg</h2>
-                                                    <div class="qty-input">
-                                                        <button class="qty-count qty-count--minus" data-action="minus"
-                                                            type="button">-</button>
-                                                        <input class="product-qty" type="number" name="product-qty"
-                                                            min="0" value="1">
-                                                        <button class="qty-count qty-count--add" data-action="add"
-                                                            type="button">+</button>
-                                                    </div>
-                                                </div>
-                                                <button class="button-price">Add to Basket<i
-                                                        class="fa-solid fa-bag-shopping"></i></button>
-                                            </div>
-                                            <div class="dish-info" style="display: none;">
-                                                <i class="info2 fa-solid fa-xmark"></i>
-                                                <h5>
-                                                    Veal meat, tomatoes and...
-                                                </h5>
-                                                <div class="cafa-button">
-                                                    <a href="#">Breakfast</a>
-                                                    <a href="#">Brunch</a>
-                                                </div>
-                                                <p>In egestas erat imperdiet sed euismod nisi porta. Ultrices sagittis orci
-                                                    a scelerisque. Diam quam nulla porttitor.</p>
-                                                <ul class="menu-dish">
-                                                    <li>Nulla porttitor massa id;</li>
-                                                    <li>Aliquam vestibulum morbi;</li>
-                                                    <li>Blandit donec adipiscing;</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-4 col-lg-6" data-aos="flip-up" data-aos-delay="400"
-                                        data-aos-duration="500">
-                                        <div class="dish">
-                                            <img class="food-dish" alt="food-dish" src="https://www.panensia.co.id/wp-content/uploads/2023/10/jahe-600x600.jpg">
-                                            <div class="dish-foods">
-                                                <h3>Jahe</h3>
-                                                <div class="dish-icon">
-                                                    <div class="cafa-button">
-                                                        <a href="#">Spice</a>
-                                                        <a href="#">Herbs</a>
-                                                    </div>
-                                                    <div class="dish-icon end">
-
-                                                        <i class="info fa-solid fa-circle-info"></i>
-                                                        <div class="star">
-                                                            <a href="#"><i class="fa-solid fa-heart"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="price">
-                                                    <h2>Rp95.000/kg</h2>
-                                                    <div class="qty-input">
-                                                        <button class="qty-count qty-count--minus" data-action="minus"
-                                                            type="button">-</button>
-                                                        <input class="product-qty" type="number" name="product-qty"
-                                                            min="0" value="1">
-                                                        <button class="qty-count qty-count--add" data-action="add"
-                                                            type="button">+</button>
-                                                    </div>
-                                                </div>
-                                                <button class="button-price">Add to Basket<i
-                                                        class="fa-solid fa-bag-shopping"></i></button>
-                                            </div>
-                                            <div class="dish-info" style="display: none;">
-                                                <i class="info2 fa-solid fa-xmark"></i>
-                                                <h5>
-                                                    Veal meat, tomatoes and...
-                                                </h5>
-                                                <div class="cafa-button">
-                                                    <a href="#">Breakfast</a>
-                                                    <a href="#">Brunch</a>
-                                                </div>
-                                                <p>In egestas erat imperdiet sed euismod nisi porta. Ultrices sagittis orci
-                                                    a scelerisque. Diam quam nulla porttitor.</p>
-                                                <ul class="menu-dish">
-                                                    <li>Nulla porttitor massa id;</li>
-                                                    <li>Aliquam vestibulum morbi;</li>
-                                                    <li>Blandit donec adipiscing;</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-4 col-lg-6" data-aos="flip-up" data-aos-delay="400"
-                                        data-aos-duration="500">
-                                        <div class="dish">
-                                            <img class="food-dish" alt="food-dish" src="https://www.panensia.co.id/wp-content/uploads/2023/10/kapulaga-hijau-600x600.jpg">
-                                            <div class="dish-foods">
-                                                <h3>Kapulaga Hijau</h3>
-                                                <div class="dish-icon">
-                                                    <div class="cafa-button">
-                                                        <a href="#">Spice</a>
-                                                        <a href="#">Herbs</a>
-                                                    </div>
-                                                    <div class="dish-icon end">
-
-                                                        <i class="info fa-solid fa-circle-info"></i>
-                                                        <div class="star">
-                                                            <a href="#"><i class="fa-solid fa-heart"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="price">
-                                                    <h2>Rp76.000/kg</h2>
-                                                    <div class="qty-input">
-                                                        <button class="qty-count qty-count--minus" data-action="minus"
-                                                            type="button">-</button>
-                                                        <input class="product-qty" type="number" name="product-qty"
-                                                            min="0" value="1">
-                                                        <button class="qty-count qty-count--add" data-action="add"
-                                                            type="button">+</button>
-                                                    </div>
-                                                </div>
-                                                <button class="button-price">Add to Basket<i
-                                                        class="fa-solid fa-bag-shopping"></i></button>
-                                            </div>
-                                            <div class="dish-info" style="display: none;">
-                                                <i class="info2 fa-solid fa-xmark"></i>
-                                                <h5>
-                                                    Veal meat, tomatoes and...
-                                                </h5>
-                                                <div class="cafa-button">
-                                                    <a href="#">Breakfast</a>
-                                                    <a href="#">Brunch</a>
-                                                </div>
-                                                <p>In egestas erat imperdiet sed euismod nisi porta. Ultrices sagittis orci
-                                                    a scelerisque. Diam quam nulla porttitor.</p>
-                                                <ul class="menu-dish">
-                                                    <li>Nulla porttitor massa id;</li>
-                                                    <li>Aliquam vestibulum morbi;</li>
-                                                    <li>Blandit donec adipiscing;</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-4 col-lg-6" data-aos="flip-up" data-aos-delay="400"
-                                        data-aos-duration="500">
-                                        <div class="dish">
-                                            <img class="food-dish" alt="food-dish" src="https://www.panensia.co.id/wp-content/uploads/2023/10/kayu-manis-600x600.jpg">
-                                            <div class="dish-foods">
-                                                <h3>Kayu Manis</h3>
-                                                <div class="dish-icon">
-                                                    <div class="cafa-button">
-                                                        <a href="#">Spice</a>
-                                                        <a href="#">Herbs</a>
-                                                    </div>
-                                                    <div class="dish-icon end">
-
-                                                        <i class="info fa-solid fa-circle-info"></i>
-                                                        <div class="star">
-                                                            <a href="#"><i class="fa-solid fa-heart"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="price">
-                                                    <h2>Rp88.000/kg</h2>
-                                                    <div class="qty-input">
-                                                        <button class="qty-count qty-count--minus" data-action="minus"
-                                                            type="button">-</button>
-                                                        <input class="product-qty" type="number" name="product-qty"
-                                                            min="0" value="1">
-                                                        <button class="qty-count qty-count--add" data-action="add"
-                                                            type="button">+</button>
-                                                    </div>
-                                                </div>
-                                                <button class="button-price">Add to Basket<i
-                                                        class="fa-solid fa-bag-shopping"></i></button>
-                                            </div>
-                                            <div class="dish-info" style="display: none;">
-                                                <i class="info2 fa-solid fa-xmark"></i>
-                                                <h5>
-                                                    Veal meat, tomatoes and...
-                                                </h5>
-                                                <div class="cafa-button">
-                                                    <a href="#">Breakfast</a>
-                                                    <a href="#">Brunch</a>
-                                                </div>
-                                                <p>In egestas erat imperdiet sed euismod nisi porta. Ultrices sagittis orci
-                                                    a scelerisque. Diam quam nulla porttitor.</p>
-                                                <ul class="menu-dish">
-                                                    <li>Nulla porttitor massa id;</li>
-                                                    <li>Aliquam vestibulum morbi;</li>
-                                                    <li>Blandit donec adipiscing;</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-4 col-lg-6" data-aos="flip-up" data-aos-delay="400"
-                                        data-aos-duration="500">
-                                        <div class="dish">
-                                            <img class="food-dish" alt="food-dish" src="https://www.panensia.co.id/wp-content/uploads/2023/10/kunyit-600x600.jpg">
-                                            <div class="dish-foods">
-                                                <h3>Kunyit</h3>
-                                                <div class="dish-icon">
-                                                    <div class="cafa-button">
-                                                        <a href="#">Color</a>
-                                                        <a href="#">Herbs</a>
-                                                    </div>
-                                                    <div class="dish-icon end">
-
-                                                        <i class="info fa-solid fa-circle-info"></i>
-                                                        <div class="star">
-                                                            <a href="#"><i class="fa-solid fa-heart"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="price">
-                                                    <h2>Rp76.000/kg</h2>
-                                                    <div class="qty-input">
-                                                        <button class="qty-count qty-count--minus" data-action="minus"
-                                                            type="button">-</button>
-                                                        <input class="product-qty" type="number" name="product-qty"
-                                                            min="0" value="1">
-                                                        <button class="qty-count qty-count--add" data-action="add"
-                                                            type="button">+</button>
-                                                    </div>
-                                                </div>
-                                                <button class="button-price">Add to Basket<i
-                                                        class="fa-solid fa-bag-shopping"></i></button>
-                                            </div>
-                                            <div class="dish-info" style="display: none;">
-                                                <i class="info2 fa-solid fa-xmark"></i>
-                                                <h5>
-                                                    Veal meat, tomatoes and...
-                                                </h5>
-                                                <div class="cafa-button">
-                                                    <a href="#">Breakfast</a>
-                                                    <a href="#">Brunch</a>
-                                                </div>
-                                                <p>In egestas erat imperdiet sed euismod nisi porta. Ultrices sagittis orci
-                                                    a scelerisque. Diam quam nulla porttitor.</p>
-                                                <ul class="menu-dish">
-                                                    <li>Nulla porttitor massa id;</li>
-                                                    <li>Aliquam vestibulum morbi;</li>
-                                                    <li>Blandit donec adipiscing;</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
-                                aria-labelledby="v-pills-profile-tab">
-                                <div class="row">
-                                    <div class="col-xl-4 col-lg-6">
-                                        <div class="dish">
-                                            <img alt="food-dish" src="https://via.placeholder.com/369x236">
-                                            <div class="dish-foods">
-                                                <h3>Spaghetti with mushrooms and...</h3>
-                                                <div class="dish-icon">
-                                                    <div class="cafa-button">
-                                                        <a href="#">Breakfast</a>
-                                                        <a href="#">Brunch</a>
-                                                    </div>
-                                                    <div class="dish-icon end">
-
-                                                        <i class="info fa-solid fa-circle-info"></i>
-                                                        <div class="star">
-                                                            <a href="#"><i class="fa-solid fa-heart"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="price">
-                                                    <h2>$49</h2>
-                                                    <div class="qty-input">
-                                                        <button class="qty-count qty-count--minus" data-action="minus"
-                                                            type="button">-</button>
-                                                        <input class="product-qty" type="number" name="product-qty"
-                                                            min="0" value="1">
-                                                        <button class="qty-count qty-count--add" data-action="add"
-                                                            type="button">+</button>
-                                                    </div>
-                                                </div>
-                                                <button class="button-price">Add to Basket<i
-                                                        class="fa-solid fa-bag-shopping"></i></button>
-                                            </div>
-                                            <div class="dish-info" style="display: none;">
-                                                <i class="info2 fa-solid fa-xmark"></i>
-                                                <h5>
-                                                    Spaghetti with mushrooms and...
-                                                </h5>
-                                                <div class="cafa-button">
-                                                    <a href="#">Breakfast</a>
-                                                    <a href="#">Brunch</a>
-                                                </div>
-                                                <p>In egestas erat imperdiet sed euismod nisi porta. Ultrices sagittis orci
-                                                    a scelerisque. Diam quam nulla porttitor.</p>
-                                                <ul class="menu-dish">
-                                                    <li>Nulla porttitor massa id;</li>
-                                                    <li>Aliquam vestibulum morbi;</li>
-                                                    <li>Blandit donec adipiscing;</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-4 col-lg-6">
-                                        <div class="dish">
-                                            <img alt="food-dish" src="https://via.placeholder.com/369x236">
-                                            <div class="dish-foods">
-                                                <h3>Veal meat, tomatoes and...</h3>
-                                                <div class="dish-icon">
-                                                    <div class="cafa-button">
-                                                        <a href="#">Breakfast</a>
-                                                        <a href="#">Brunch</a>
-                                                    </div>
-                                                    <div class="dish-icon end">
-
-                                                        <i class="info fa-solid fa-circle-info"></i>
-                                                        <div class="star">
-                                                            <a href="#"><i class="fa-solid fa-heart"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="price">
-                                                    <h2>$49</h2>
-                                                    <div class="qty-input">
-                                                        <button class="qty-count qty-count--minus" data-action="minus"
-                                                            type="button">-</button>
-                                                        <input class="product-qty" type="number" name="product-qty"
-                                                            min="0" value="1">
-                                                        <button class="qty-count qty-count--add" data-action="add"
-                                                            type="button">+</button>
-                                                    </div>
-                                                </div>
-                                                <button class="button-price">Add to Basket<i
-                                                        class="fa-solid fa-bag-shopping"></i></button>
-                                            </div>
-                                            <div class="dish-info" style="display: none;">
-                                                <i class="info2 fa-solid fa-xmark"></i>
-                                                <h5>
-                                                    Veal meat, tomatoes and...
-                                                </h5>
-                                                <div class="cafa-button">
-                                                    <a href="#">Breakfast</a>
-                                                    <a href="#">Brunch</a>
-                                                </div>
-                                                <p>In egestas erat imperdiet sed euismod nisi porta. Ultrices sagittis orci
-                                                    a scelerisque. Diam quam nulla porttitor.</p>
-                                                <ul class="menu-dish">
-                                                    <li>Nulla porttitor massa id;</li>
-                                                    <li>Aliquam vestibulum morbi;</li>
-                                                    <li>Blandit donec adipiscing;</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-4 col-lg-6">
-                                        <div class="dish">
-                                            <img alt="food-dish" src="https://via.placeholder.com/369x236">
-                                            <div class="dish-foods">
-                                                <h3>Sliced pork, avocado and...</h3>
-                                                <div class="dish-icon">
-                                                    <div class="cafa-button">
-                                                        <a href="#">Breakfast</a>
-                                                        <a href="#">Brunch</a>
-                                                    </div>
-                                                    <div class="dish-icon end">
-
-                                                        <i class="info fa-solid fa-circle-info"></i>
-                                                        <div class="star">
-                                                            <a href="#"><i class="fa-solid fa-heart"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="price">
-                                                    <h2>$39</h2>
-                                                    <div class="qty-input">
-                                                        <button class="qty-count qty-count--minus" data-action="minus"
-                                                            type="button">-</button>
-                                                        <input class="product-qty" type="number" name="product-qty"
-                                                            min="0" value="1">
-                                                        <button class="qty-count qty-count--add" data-action="add"
-                                                            type="button">+</button>
-                                                    </div>
-                                                </div>
-                                                <button class="button-price">Add to Basket<i
-                                                        class="fa-solid fa-bag-shopping"></i></button>
-                                            </div>
-                                            <div class="dish-info" style="display: none;">
-                                                <i class="info2 fa-solid fa-xmark"></i>
-                                                <h5>
-                                                    Sliced pork, avocado and...
-                                                </h5>
-                                                <div class="cafa-button">
-                                                    <a href="#">Breakfast</a>
-                                                    <a href="#">Brunch</a>
-                                                </div>
-                                                <p>In egestas erat imperdiet sed euismod nisi porta. Ultrices sagittis orci
-                                                    a scelerisque. Diam quam nulla porttitor.</p>
-                                                <ul class="menu-dish">
-                                                    <li>Nulla porttitor massa id;</li>
-                                                    <li>Aliquam vestibulum morbi;</li>
-                                                    <li>Blandit donec adipiscing;</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-4 col-lg-6">
-                                        <div class="dish">
-                                            <img alt="food-dish" src="https://via.placeholder.com/369x236">
-                                            <div class="dish-foods">
-                                                <h3>Pasta, kiwi
-                                                    and sauce chilli</h3>
-                                                <div class="dish-icon">
-                                                    <div class="cafa-button">
-                                                        <a href="#">Breakfast</a>
-                                                        <a href="#">Brunch</a>
-                                                    </div>
-                                                    <div class="dish-icon end">
-
-                                                        <i class="info fa-solid fa-circle-info"></i>
-                                                        <div class="star">
-                                                            <a href="#"><i class="fa-solid fa-heart"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="price">
-                                                    <h2>$39</h2>
-                                                    <div class="qty-input">
-                                                        <button class="qty-count qty-count--minus" data-action="minus"
-                                                            type="button">-</button>
-                                                        <input class="product-qty" type="number" name="product-qty"
-                                                            min="0" value="1">
-                                                        <button class="qty-count qty-count--add" data-action="add"
-                                                            type="button">+</button>
-                                                    </div>
-                                                </div>
-                                                <button class="button-price">Add to Basket<i
-                                                        class="fa-solid fa-bag-shopping"></i></button>
-                                            </div>
-                                            <div class="dish-info" style="display: none;">
-                                                <i class="info2 fa-solid fa-xmark"></i>
-                                                <h5>
-                                                    Potatoes with pork and dried fruits
-                                                </h5>
-                                                <div class="cafa-button">
-                                                    <a href="#">Breakfast</a>
-                                                    <a href="#">Brunch</a>
-                                                </div>
-                                                <p>In egestas erat imperdiet sed euismod nisi porta. Ultrices sagittis orci
-                                                    a scelerisque. Diam quam nulla porttitor.</p>
-                                                <ul class="menu-dish">
-                                                    <li>Nulla porttitor massa id;</li>
-                                                    <li>Aliquam vestibulum morbi;</li>
-                                                    <li>Blandit donec adipiscing;</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-4 col-lg-6">
-                                        <div class="dish">
-                                            <img alt="food-dish" src="https://via.placeholder.com/369x236">
-                                            <div class="dish-foods">
-                                                <h3>Potatoes with pork
-                                                    and dried fruits</h3>
-                                                <div class="dish-icon">
-                                                    <div class="cafa-button">
-                                                        <a href="#">Breakfast</a>
-                                                        <a href="#">Brunch</a>
-                                                    </div>
-                                                    <div class="dish-icon end">
-
-                                                        <i class="info fa-solid fa-circle-info"></i>
-                                                        <div class="star">
-                                                            <a href="#"><i class="fa-solid fa-heart"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="price">
-                                                    <h2>$46</h2>
-                                                    <div class="qty-input">
-                                                        <button class="qty-count qty-count--minus" data-action="minus"
-                                                            type="button">-</button>
-                                                        <input class="product-qty" type="number" name="product-qty"
-                                                            min="0" value="1">
-                                                        <button class="qty-count qty-count--add" data-action="add"
-                                                            type="button">+</button>
-                                                    </div>
-                                                </div>
-                                                <button class="button-price">Add to Basket<i
-                                                        class="fa-solid fa-bag-shopping"></i></button>
-                                            </div>
-                                            <div class="dish-info" style="display: none;">
-                                                <i class="info2 fa-solid fa-xmark"></i>
-                                                <h5>
-                                                    Potatoes with pork and dried fruits
-                                                </h5>
-                                                <div class="cafa-button">
-                                                    <a href="#">Breakfast</a>
-                                                    <a href="#">Brunch</a>
-                                                </div>
-                                                <p>In egestas erat imperdiet sed euismod nisi porta. Ultrices sagittis orci
-                                                    a scelerisque. Diam quam nulla porttitor.</p>
-                                                <ul class="menu-dish">
-                                                    <li>Nulla porttitor massa id;</li>
-                                                    <li>Aliquam vestibulum morbi;</li>
-                                                    <li>Blandit donec adipiscing;</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
-                                aria-labelledby="v-pills-messages-tab">
-                                <div class="row">
-
-                                    <div class="col-xl-4 col-lg-6">
-                                        <div class="dish">
-                                            <img alt="food-dish" src="https://via.placeholder.com/369x236">
-                                            <div class="dish-foods">
-                                                <h3>Pasta, kiwi
-                                                    and sauce chilli</h3>
-                                                <div class="dish-icon">
-                                                    <div class="cafa-button">
-                                                        <a href="#">Breakfast</a>
-                                                        <a href="#">Brunch</a>
-                                                    </div>
-                                                    <div class="dish-icon end">
-
-                                                        <i class="info fa-solid fa-circle-info"></i>
-                                                        <div class="star">
-                                                            <a href="#"><i class="fa-solid fa-heart"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="price">
-                                                    <h2>$39</h2>
-                                                    <div class="qty-input">
-                                                        <button class="qty-count qty-count--minus" data-action="minus"
-                                                            type="button">-</button>
-                                                        <input class="product-qty" type="number" name="product-qty"
-                                                            min="0" value="1">
-                                                        <button class="qty-count qty-count--add" data-action="add"
-                                                            type="button">+</button>
-                                                    </div>
-                                                </div>
-                                                <button class="button-price">Add to Basket<i
-                                                        class="fa-solid fa-bag-shopping"></i></button>
-                                            </div>
-                                            <div class="dish-info" style="display: none;">
-                                                <i class="info2 fa-solid fa-xmark"></i>
-                                                <h5>
-                                                    Potatoes with pork and dried fruits
-                                                </h5>
-                                                <div class="cafa-button">
-                                                    <a href="#">Breakfast</a>
-                                                    <a href="#">Brunch</a>
-                                                </div>
-                                                <p>In egestas erat imperdiet sed euismod nisi porta. Ultrices sagittis orci
-                                                    a scelerisque. Diam quam nulla porttitor.</p>
-                                                <ul class="menu-dish">
-                                                    <li>Nulla porttitor massa id;</li>
-                                                    <li>Aliquam vestibulum morbi;</li>
-                                                    <li>Blandit donec adipiscing;</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-4 col-lg-6">
-                                        <div class="dish">
-                                            <img alt="food-dish" src="https://via.placeholder.com/369x236">
-                                            <div class="dish-foods">
-                                                <h3>Sliced pork, avocado and...</h3>
-                                                <div class="dish-icon">
-                                                    <div class="cafa-button">
-                                                        <a href="#">Breakfast</a>
-                                                        <a href="#">Brunch</a>
-                                                    </div>
-                                                    <div class="dish-icon end">
-
-                                                        <i class="info fa-solid fa-circle-info"></i>
-                                                        <div class="star">
-                                                            <a href="#"><i class="fa-solid fa-heart"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="price">
-                                                    <h2>$39</h2>
-                                                    <div class="qty-input">
-                                                        <button class="qty-count qty-count--minus" data-action="minus"
-                                                            type="button">-</button>
-                                                        <input class="product-qty" type="number" name="product-qty"
-                                                            min="0" value="1">
-                                                        <button class="qty-count qty-count--add" data-action="add"
-                                                            type="button">+</button>
-                                                    </div>
-                                                </div>
-                                                <button class="button-price">Add to Basket<i
-                                                        class="fa-solid fa-bag-shopping"></i></button>
-                                            </div>
-                                            <div class="dish-info" style="display: none;">
-                                                <i class="info2 fa-solid fa-xmark"></i>
-                                                <h5>
-                                                    Sliced pork, avocado and...
-                                                </h5>
-                                                <div class="cafa-button">
-                                                    <a href="#">Breakfast</a>
-                                                    <a href="#">Brunch</a>
-                                                </div>
-                                                <p>In egestas erat imperdiet sed euismod nisi porta. Ultrices sagittis orci
-                                                    a scelerisque. Diam quam nulla porttitor.</p>
-                                                <ul class="menu-dish">
-                                                    <li>Nulla porttitor massa id;</li>
-                                                    <li>Aliquam vestibulum morbi;</li>
-                                                    <li>Blandit donec adipiscing;</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-4 col-lg-6">
-                                        <div class="dish">
-                                            <img alt="food-dish" src="https://via.placeholder.com/369x236">
-                                            <div class="dish-foods">
-                                                <h3>Veal meat, tomatoes and...</h3>
-                                                <div class="dish-icon">
-                                                    <div class="cafa-button">
-                                                        <a href="#">Breakfast</a>
-                                                        <a href="#">Brunch</a>
-                                                    </div>
-                                                    <div class="dish-icon end">
-
-                                                        <i class="info fa-solid fa-circle-info"></i>
-                                                        <div class="star">
-                                                            <a href="#"><i class="fa-solid fa-heart"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="price">
-                                                    <h2>$49</h2>
-                                                    <div class="qty-input">
-                                                        <button class="qty-count qty-count--minus" data-action="minus"
-                                                            type="button">-</button>
-                                                        <input class="product-qty" type="number" name="product-qty"
-                                                            min="0" value="1">
-                                                        <button class="qty-count qty-count--add" data-action="add"
-                                                            type="button">+</button>
-                                                    </div>
-                                                </div>
-                                                <button class="button-price">Add to Basket<i
-                                                        class="fa-solid fa-bag-shopping"></i></button>
-                                            </div>
-                                            <div class="dish-info" style="display: none;">
-                                                <i class="info2 fa-solid fa-xmark"></i>
-                                                <h5>
-                                                    Veal meat, tomatoes and...
-                                                </h5>
-                                                <div class="cafa-button">
-                                                    <a href="#">Breakfast</a>
-                                                    <a href="#">Brunch</a>
-                                                </div>
-                                                <p>In egestas erat imperdiet sed euismod nisi porta. Ultrices sagittis orci
-                                                    a scelerisque. Diam quam nulla porttitor.</p>
-                                                <ul class="menu-dish">
-                                                    <li>Nulla porttitor massa id;</li>
-                                                    <li>Aliquam vestibulum morbi;</li>
-                                                    <li>Blandit donec adipiscing;</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-4 col-lg-6">
-                                        <div class="dish">
-                                            <img alt="food-dish" src="https://via.placeholder.com/369x236">
-                                            <div class="dish-foods">
-                                                <h3>Potatoes with pork
-                                                    and dried fruits</h3>
-                                                <div class="dish-icon">
-                                                    <div class="cafa-button">
-                                                        <a href="#">Breakfast</a>
-                                                        <a href="#">Brunch</a>
-                                                    </div>
-                                                    <div class="dish-icon end">
-
-                                                        <i class="info fa-solid fa-circle-info"></i>
-                                                        <div class="star">
-                                                            <a href="#"><i class="fa-solid fa-heart"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="price">
-                                                    <h2>$46</h2>
-                                                    <div class="qty-input">
-                                                        <button class="qty-count qty-count--minus" data-action="minus"
-                                                            type="button">-</button>
-                                                        <input class="product-qty" type="number" name="product-qty"
-                                                            min="0" value="1">
-                                                        <button class="qty-count qty-count--add" data-action="add"
-                                                            type="button">+</button>
-                                                    </div>
-                                                </div>
-                                                <button class="button-price">Add to Basket<i
-                                                        class="fa-solid fa-bag-shopping"></i></button>
-                                            </div>
-                                            <div class="dish-info" style="display: none;">
-                                                <i class="info2 fa-solid fa-xmark"></i>
-                                                <h5>
-                                                    Potatoes with pork and dried fruits
-                                                </h5>
-                                                <div class="cafa-button">
-                                                    <a href="#">Breakfast</a>
-                                                    <a href="#">Brunch</a>
-                                                </div>
-                                                <p>In egestas erat imperdiet sed euismod nisi porta. Ultrices sagittis orci
-                                                    a scelerisque. Diam quam nulla porttitor.</p>
-                                                <ul class="menu-dish">
-                                                    <li>Nulla porttitor massa id;</li>
-                                                    <li>Aliquam vestibulum morbi;</li>
-                                                    <li>Blandit donec adipiscing;</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-4 col-lg-6">
-                                        <div class="dish">
-                                            <img alt="food-dish" src="https://via.placeholder.com/369x236">
-                                            <div class="dish-foods">
-                                                <h3>Rice with shrimps and kiwi</h3>
-                                                <div class="dish-icon">
-                                                    <div class="cafa-button">
-                                                        <a href="#">Breakfast</a>
-                                                        <a href="#">Brunch</a>
-                                                    </div>
-                                                    <div class="dish-icon end">
-
-                                                        <i class="info fa-solid fa-circle-info"></i>
-                                                        <div class="star">
-                                                            <a href="#"><i class="fa-solid fa-heart"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="price">
-                                                    <h2>$49</h2>
-                                                    <div class="qty-input">
-                                                        <button class="qty-count qty-count--minus" data-action="minus"
-                                                            type="button">-</button>
-                                                        <input class="product-qty" type="number" name="product-qty"
-                                                            min="0" value="1">
-                                                        <button class="qty-count qty-count--add" data-action="add"
-                                                            type="button">+</button>
-                                                    </div>
-                                                </div>
-                                                <button class="button-price">Add to Basket<i
-                                                        class="fa-solid fa-bag-shopping"></i></button>
-                                            </div>
-                                            <div class="dish-info" style="display: none;">
-                                                <i class="info2 fa-solid fa-xmark"></i>
-                                                <h5>
-                                                    Rice with shrimps and kiwi
-                                                </h5>
-                                                <div class="cafa-button">
-                                                    <a href="#">Breakfast</a>
-                                                    <a href="#">Brunch</a>
-                                                </div>
-                                                <p>In egestas erat imperdiet sed euismod nisi porta. Ultrices sagittis orci
-                                                    a scelerisque. Diam quam nulla porttitor.</p>
-                                                <ul class="menu-dish">
-                                                    <li>Nulla porttitor massa id;</li>
-                                                    <li>Aliquam vestibulum morbi;</li>
-                                                    <li>Blandit donec adipiscing;</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-4 col-lg-6">
-                                        <div class="dish">
-                                            <img alt="food-dish" src="https://via.placeholder.com/369x236">
-                                            <div class="dish-foods">
-                                                <h3>Spaghetti with mushrooms and...</h3>
-                                                <div class="dish-icon">
-                                                    <div class="cafa-button">
-                                                        <a href="#">Breakfast</a>
-                                                        <a href="#">Brunch</a>
-                                                    </div>
-                                                    <div class="dish-icon end">
-
-                                                        <i class="info fa-solid fa-circle-info"></i>
-                                                        <div class="star">
-                                                            <a href="#"><i class="fa-solid fa-heart"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="price">
-                                                    <h2>$49</h2>
-                                                    <div class="qty-input">
-                                                        <button class="qty-count qty-count--minus" data-action="minus"
-                                                            type="button">-</button>
-                                                        <input class="product-qty" type="number" name="product-qty"
-                                                            min="0" value="1">
-                                                        <button class="qty-count qty-count--add" data-action="add"
-                                                            type="button">+</button>
-                                                    </div>
-                                                </div>
-                                                <button class="button-price">Add to Basket<i
-                                                        class="fa-solid fa-bag-shopping"></i></button>
-                                            </div>
-                                            <div class="dish-info" style="display: none;">
-                                                <i class="info2 fa-solid fa-xmark"></i>
-                                                <h5>
-                                                    Spaghetti with mushrooms and...
-                                                </h5>
-                                                <div class="cafa-button">
-                                                    <a href="#">Breakfast</a>
-                                                    <a href="#">Brunch</a>
-                                                </div>
-                                                <p>In egestas erat imperdiet sed euismod nisi porta. Ultrices sagittis orci
-                                                    a scelerisque. Diam quam nulla porttitor.</p>
-                                                <ul class="menu-dish">
-                                                    <li>Nulla porttitor massa id;</li>
-                                                    <li>Aliquam vestibulum morbi;</li>
-                                                    <li>Blandit donec adipiscing;</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                        </div>
-
-                    </div>
-
                 </div>
-
             </div>
-
-        </div>
-
-    </section>
-    <!-- Lunch Section -->
-    <!--
-    <section class="lunch-section gap" style="background:#fcfcfc">
-        <div class="container">
-            <h2 data-aos="fade-up" data-aos-delay="300" data-aos-duration="400">See also category Lunch</h2>
+        </section>
+        <!-- twoColumns -->
+        <div class="twoColumns container pt-lg-23 pb-lg-20 pt-md-16 pb-md-4 pt-10 pb-4">
             <div class="row">
-                <div class="col-xl-4 col-lg-6" data-aos="flip-up" data-aos-delay="200" data-aos-duration="300">
-                    <div class="dish">
-                        <img alt="food-dish" src="https://via.placeholder.com/369x236">
-                        <div class="dish-foods">
-                            <h3>Fruits with rice chips</h3>
-                            <div class="dish-icon">
-                                <div class="cafa-button">
-                                    <a href="#">Breakfast</a>
-                                    <a href="#">Brunch</a>
-                                </div>
-                                <div class="dish-icon end">
-
-                                    <i class="info fa-solid fa-circle-info"></i>
-                                    <div class="star">
-                                        <a href="#"><i class="fa-solid fa-heart"></i></a>
+                <div class="col-12 col-lg-9 order-lg-3">
+                    <!-- content -->
+                    <article id="content">
+                        <!-- show-head -->
+                        <header class="show-head d-flex flex-wrap justify-content-between mb-7">
+                            <ul class="list-unstyled viewFilterLinks d-flex flex-nowrap align-items-center">
+                                <li class="mr-2"><a href="javascript:void(0);" class="active"><i class="fas fa-th-large"></i></a></li>
+                                <li class="mr-2"><a href="javascript:void(0);"><i class="fas fa-list"></i></a></li>
+                                <li class="mr-2">Showing 1–9 of 24 results</li>
+                            </ul>
+                            <!-- sortGroup -->
+                            <div class="sortGroup">
+                                <div class="d-flex flex-nowrap align-items-center">
+                                    <strong class="groupTitle mr-2">Sort by:</strong>
+                                    <div class="dropdown">
+                                        <button class="dropdown-toggle buttonReset" type="button" id="sortGroup" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Default sorting</button>
+                                        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="sortGroup">
+                                            <li><a href="javascript:void(0);">Default Order</a></li>
+                                            <li><a href="javascript:void(0);">Default Order</a></li>
+                                            <li><a href="javascript:void(0);">Default Order</a></li>
+                                            <li><a href="javascript:void(0);">Default Order</a></li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
-                            <div class="price">
-                                <h2>$39</h2>
-                                <div class="qty-input">
-                                    <button class="qty-count qty-count--minus" data-action="minus"
-                                        type="button">-</button>
-                                    <input class="product-qty" type="number" name="product-qty" min="0"
-                                        value="1">
-                                    <button class="qty-count qty-count--add" data-action="add" type="button">+</button>
+                        </header>
+                        <div class="row">
+                            <!-- featureCol -->
+                            <div class="col-12 col-sm-6 col-lg-4 featureCol mb-7">
+                                <div class="border">
+                                    <div class="imgHolder position-relative w-100 overflow-hidden">
+                                        <img src="http://placehold.it/270x300" alt="image description" class="img-fluid w-100">
+                                        <ul class="list-unstyled postHoverLinskList d-flex justify-content-center m-0">
+                                            <li class="mr-2 overflow-hidden"><RouterLink to="/detailproduk" class="icon-heart d-block"></RouterLink></li>
+                                            <li class="mr-2 overflow-hidden"><RouterLink to="/detailproduk" class="icon-heart d-block"></RouterLink></li>
+                                            <li class="mr-2 overflow-hidden"><RouterLink to="/detailproduk" class="icon-heart d-block"></RouterLink></li>
+                                            <li class="overflow-hidden"><RouterLink to="/detailproduk" class="icon-heart d-block"></RouterLink></li>
+                                        </ul>
+                                    </div>
+                                    <div class="text-center py-5 px-4">
+                                        <span class="title d-block mb-2"><a href="shop-detail.html">Pellentesque aliquet</a></span>
+                                        <span class="price d-block fwEbold"><del>80.50 $</del>68.00 $</span>
+                                        <span class="hotOffer fwEbold text-uppercase text-white position-absolute d-block">HOT</span>
+                                        <span class="hotOffer green fwEbold text-uppercase text-white position-absolute d-block ml-8">Sale</span>
+                                    </div>
                                 </div>
                             </div>
-                            <button class="button-price">Add to Basket<i class="fa-solid fa-bag-shopping"></i></button>
-                        </div>
-                        <div class="dish-info" style="display: none;">
-                            <i class="info2 fa-solid fa-xmark"></i>
-                            <h5>
-                                Fruits with rice chips
-                            </h5>
-                            <div class="cafa-button">
-                                <a href="#">Breakfast</a>
-                                <a href="#">Brunch</a>
+                            <!-- featureCol -->
+                            <div class="col-12 col-sm-6 col-lg-4 featureCol mb-7">
+                                <div class="border">
+                                    <div class="imgHolder position-relative w-100 overflow-hidden">
+                                        <img src="http://placehold.it/270x300" alt="image description" class="img-fluid w-100">
+                                        <ul class="list-unstyled postHoverLinskList d-flex justify-content-center m-0">
+                                            <li class="mr-2 overflow-hidden"><RouterLink to="/detailproduk" class="icon-heart d-block"></RouterLink></li>
+                                            <li class="mr-2 overflow-hidden"><RouterLink to="/detailproduk" class="icon-heart d-block"></RouterLink></li>
+                                            <li class="mr-2 overflow-hidden"><RouterLink to="/detailproduk" class="icon-heart d-block"></RouterLink></li>
+                                            <li class="overflow-hidden"><RouterLink to="/detailproduk" class="icon-heart d-block"></RouterLink></li>
+                                        </ul>
+                                    </div>
+                                    <div class="text-center py-5 px-4">
+                                        <span class="title d-block mb-2"><a href="shop-detail.html">Pellentesque aliquet</a></span>
+                                        <span class="price d-block fwEbold">58.00 $</span>
+                                    </div>
+                                </div>
                             </div>
-                            <p>In egestas erat imperdiet sed euismod nisi porta. Ultrices sagittis orci a scelerisque. Diam
-                                quam nulla porttitor.</p>
-                            <ul class="menu-dish">
-                                <li>Nulla porttitor massa id;</li>
-                                <li>Aliquam vestibulum morbi;</li>
-                                <li>Blandit donec adipiscing;</li>
-                            </ul>
+                            <!-- featureCol -->
+                            <div class="col-12 col-sm-6 col-lg-4 featureCol mb-7">
+                                <div class="border">
+                                    <div class="imgHolder position-relative w-100 overflow-hidden">
+                                        <img src="http://placehold.it/270x300" alt="image description" class="img-fluid w-100">
+                                        <ul class="list-unstyled postHoverLinskList d-flex justify-content-center m-0">
+                                            <li class="mr-2 overflow-hidden"><RouterLink to="/detailproduk" class="icon-heart d-block"></RouterLink></li>
+                                            <li class="mr-2 overflow-hidden"><RouterLink to="/detailproduk" class="icon-heart d-block"></RouterLink></li>
+                                            <li class="mr-2 overflow-hidden"><RouterLink to="/detailproduk" class="icon-heart d-block"></RouterLink></li>
+                                            <li class="overflow-hidden"><RouterLink to="/detailproduk" class="icon-heart d-block"></RouterLink></li>
+                                        </ul>
+                                    </div>
+                                    <div class="text-center py-5 px-4">
+                                        <span class="title d-block mb-2"><a href="shop-detail.html">Pellentesque aliquet</a></span>
+                                        <span class="price d-block fwEbold">60.00 $</span>
+                                        <span class="hotOffer fwEbold text-uppercase text-white position-absolute d-block">HOT</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- featureCol -->
+                            <div class="col-12 col-sm-6 col-lg-4 featureCol mb-7">
+                                <div class="border">
+                                    <div class="imgHolder position-relative w-100 overflow-hidden">
+                                        <img src="http://placehold.it/270x300" alt="image description" class="img-fluid w-100">
+                                        <ul class="list-unstyled postHoverLinskList d-flex justify-content-center m-0">
+                                            <li class="mr-2 overflow-hidden"><RouterLink to="/detailproduk" class="icon-heart d-block"></RouterLink></li>
+                                            <li class="mr-2 overflow-hidden"><RouterLink to="/detailproduk" class="icon-heart d-block"></RouterLink></li>
+                                            <li class="mr-2 overflow-hidden"><RouterLink to="/detailproduk" class="icon-heart d-block"></RouterLink></li>
+                                            <li class="overflow-hidden"><RouterLink to="/detailproduk" class="icon-heart d-block"></RouterLink></li>
+                                        </ul>
+                                    </div>
+                                    <div class="text-center py-5 px-4">
+                                        <span class="title d-block mb-2"><a href="shop-detail.html">Pellentesque aliquet</a></span>
+                                        <span class="price d-block fwEbold"><del>80.50 $</del>68.00 $</span>
+                                        <span class="hotOffer green fwEbold text-uppercase text-white position-absolute d-block">Sale</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- featureCol -->
+                            <div class="col-12 col-sm-6 col-lg-4 featureCol mb-7">
+                                <div class="border">
+                                    <div class="imgHolder position-relative w-100 overflow-hidden">
+                                        <img src="http://placehold.it/270x300" alt="image description" class="img-fluid w-100">
+                                        <ul class="list-unstyled postHoverLinskList d-flex justify-content-center m-0">
+                                            <li class="mr-2 overflow-hidden"><RouterLink to="/detailproduk" class="icon-heart d-block"></RouterLink></li>
+                                            <li class="mr-2 overflow-hidden"><RouterLink to="/detailproduk" class="icon-heart d-block"></RouterLink></li>
+                                            <li class="mr-2 overflow-hidden"><RouterLink to="/detailproduk" class="icon-heart d-block"></RouterLink></li>
+                                            <li class="overflow-hidden"><RouterLink to="/detailproduk" class="icon-heart d-block"></RouterLink></li>
+                                        </ul>
+                                    </div>
+                                    <div class="text-center py-5 px-4">
+                                        <span class="title d-block mb-2"><a href="shop-detail.html">Pellentesque aliquet</a></span>
+                                        <span class="price d-block fwEbold">58.00 $</span>
+                                        <span class="hotOffer green fwEbold text-uppercase text-white position-absolute d-block">Sale</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- featureCol -->
+                            <div class="col-12 col-sm-6 col-lg-4 featureCol mb-7">
+                                <div class="border">
+                                    <div class="imgHolder position-relative w-100 overflow-hidden">
+                                        <img src="http://placehold.it/270x300" alt="image description" class="img-fluid w-100">
+                                        <ul class="list-unstyled postHoverLinskList d-flex justify-content-center m-0">
+                                            <li class="mr-2 overflow-hidden"><RouterLink to="/detailproduk" class="icon-heart d-block"></RouterLink></li>
+                                            <li class="mr-2 overflow-hidden"><RouterLink to="/detailproduk" class="icon-heart d-block"></RouterLink></li>
+                                            <li class="mr-2 overflow-hidden"><RouterLink to="/detailproduk" class="icon-heart d-block"></RouterLink></li>
+                                            <li class="overflow-hidden"><RouterLink to="/detailproduk" class="icon-heart d-block"></RouterLink></li>
+                                        </ul>
+                                    </div>
+                                    <div class="text-center py-5 px-4">
+                                        <span class="title d-block mb-2"><a href="shop-detail.html">Pellentesque aliquet</a></span>
+                                        <span class="price d-block fwEbold">60.00 $</span>
+                                        <span class="hotOffer fwEbold text-uppercase text-white position-absolute d-block">HOT</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- featureCol -->
+                            <div class="col-12 col-sm-6 col-lg-4 featureCol mb-7">
+                                <div class="border">
+                                    <div class="imgHolder position-relative w-100 overflow-hidden">
+                                        <img src="http://placehold.it/270x300" alt="image description" class="img-fluid w-100">
+                                        <ul class="list-unstyled postHoverLinskList d-flex justify-content-center m-0">
+                                            <li class="mr-2 overflow-hidden"><RouterLink to="/detailproduk" class="icon-heart d-block"></RouterLink></li>
+                                            <li class="mr-2 overflow-hidden"><RouterLink to="/detailproduk" class="icon-heart d-block"></RouterLink></li>
+                                            <li class="mr-2 overflow-hidden"><RouterLink to="/detailproduk" class="icon-heart d-block"></RouterLink></li>
+                                            <li class="overflow-hidden"><RouterLink to="/detailproduk" class="icon-heart d-block"></RouterLink></li>
+                                        </ul>
+                                    </div>
+                                    <div class="text-center py-5 px-4">
+                                        <span class="title d-block mb-2"><a href="shop-detail.html">Pellentesque aliquet</a></span>
+                                        <span class="price d-block fwEbold">68.00 $</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- featureCol -->
+                            <div class="col-12 col-sm-6 col-lg-4 featureCol mb-7">
+                                <div class="border">
+                                    <div class="imgHolder position-relative w-100 overflow-hidden">
+                                        <img src="http://placehold.it/270x300" alt="image description" class="img-fluid w-100">
+                                        <ul class="list-unstyled postHoverLinskList d-flex justify-content-center m-0">
+                                            <li class="mr-2 overflow-hidden"><RouterLink to="/detailproduk" class="icon-heart d-block"></RouterLink></li>
+                                            <li class="mr-2 overflow-hidden"><RouterLink to="/detailproduk" class="icon-cart d-block"></RouterLink></li>
+                                            <li class="mr-2 overflow-hidden"><RouterLink to="/detailproduk" class="icon-heart d-block"></RouterLink></li>
+                                            <li class="overflow-hidden"><RouterLink to="/detailproduk" class="icon-heart d-block"></RouterLink></li>
+                                        </ul>
+                                    </div>
+                                    <div class="text-center py-5 px-4">
+                                        <span class="title d-block mb-2"><a href="shop-detail.html">Pellentesque aliquet</a></span>
+                                        <span class="price d-block fwEbold">58.00 $</span>
+                                        <span class="hotOffer fwEbold text-uppercase text-white position-absolute d-block">Hot</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- featureCol -->
+                            <div class="col-12 col-sm-6 col-lg-4 featureCol mb-7">
+                                <div class="border">
+                                    <div class="imgHolder position-relative w-100 overflow-hidden">
+                                        <img src="http://placehold.it/270x300" alt="image description" class="img-fluid w-100">
+                                        <ul class="list-unstyled postHoverLinskList d-flex justify-content-center m-0">
+                                            <li class="mr-2 overflow-hidden"><RouterLink to="/detailproduk" class="icon-heart d-block"></RouterLink></li>
+                                            <li class="mr-2 overflow-hidden"><RouterLink to="/detailproduk" class="icon-heart d-block"></RouterLink></li>
+                                            <li class="mr-2 overflow-hidden"><RouterLink to="/detailproduk" class="icon-eye d-block"></RouterLink></li>
+                                            <li class="overflow-hidden"><RouterLink to="/detailproduk" class="icon-heart d-block"></RouterLink></li>
+                                        </ul>
+                                    </div>
+                                    <div class="text-center py-5 px-4">
+                                        <span class="title d-block mb-2"><a href="shop-detail.html">Pellentesque aliquet</a></span>
+                                        <span class="price d-block fwEbold"><del>80.50 $</del>68.00 $</span>
+                                        <span class="hotOffer green fwEbold text-uppercase text-white position-absolute d-block">Sale</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- featureCol -->
+                            <div class="col-12 col-sm-6 col-lg-4 featureCol mb-7">
+                                <div class="border">
+                                    <div class="imgHolder position-relative w-100 overflow-hidden">
+                                        <img src="http://placehold.it/270x300" alt="image description" class="img-fluid w-100">
+                                        <ul class="list-unstyled postHoverLinskList d-flex justify-content-center m-0">
+                                            <li class="mr-2 overflow-hidden"><RouterLink to="/detailproduk" class="icon-heart d-block"></RouterLink></li>
+                                            <li class="mr-2 overflow-hidden"><RouterLink to="/detailproduk" class="icon-heart d-block"></RouterLink></li>
+                                            <li class="mr-2 overflow-hidden"><RouterLink to="/detailproduk" class="icon-heart d-block"></RouterLink></li>
+                                            <li class="overflow-hidden"><RouterLink to="/detailproduk" class="icon-arrow d-block"></RouterLink></li>
+                                        </ul>
+                                    </div>
+                                    <div class="text-center py-5 px-4">
+                                        <span class="title d-block mb-2"><a href="shop-detail.html">Pellentesque aliquet</a></span>
+                                        <span class="price d-block fwEbold"><del>80.50 $</del>68.00 $</span>
+                                        <span class="hotOffer green fwEbold text-uppercase text-white position-absolute d-block">Sale</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- featureCol -->
+                            <div class="col-12 col-sm-6 col-lg-4 featureCol mb-7">
+                                <div class="border">
+                                    <div class="imgHolder position-relative w-100 overflow-hidden">
+                                        <img src="http://placehold.it/270x300" alt="image description" class="img-fluid w-100">
+                                        <ul class="list-unstyled postHoverLinskList d-flex justify-content-center m-0">
+                                            <li class="mr-2 overflow-hidden"><RouterLink to="/detailproduk" class="icon-heart d-block"></RouterLink></li>
+                                            <li class="mr-2 overflow-hidden"><RouterLink to="/detailproduk" class="icon-heart d-block"></RouterLink></li>
+                                            <li class="mr-2 overflow-hidden"><RouterLink to="/detailproduk" class="icon-heart d-block"></RouterLink></li>
+                                            <li class="overflow-hidden"><RouterLink to="/detailproduk" class="icon-heart d-block"></RouterLink></li>
+                                        </ul>
+                                    </div>
+                                    <div class="text-center py-5 px-4">
+                                        <span class="title d-block mb-2"><a href="shop-detail.html">Pellentesque aliquet</a></span>
+                                        <span class="price d-block fwEbold">58.00 $</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- featureCol -->
+                            <div class="col-12 col-sm-6 col-lg-4 featureCol mb-7">
+                                <div class="border">
+                                    <div class="imgHolder position-relative w-100 overflow-hidden">
+                                        <img src="http://placehold.it/270x300" alt="image description" class="img-fluid w-100">
+                                        <ul class="list-unstyled postHoverLinskList d-flex justify-content-center m-0">
+                                            <li class="mr-2 overflow-hidden"><RouterLink to="/detailproduk" class="icon-heart d-block"></RouterLink></li>
+                                            <li class="mr-2 overflow-hidden"><RouterLink to="/detailproduk" class="icon-heart d-block"></RouterLink></li>
+                                            <li class="mr-2 overflow-hidden"><RouterLink to="/detailproduk" class="icon-heart d-block"></RouterLink></li>
+                                            <li class="overflow-hidden"><RouterLink to="/detailproduk" class="icon-heart d-block"></RouterLink></li>
+                                        </ul>
+                                    </div>
+                                    <div class="text-center py-5 px-4">
+                                        <span class="title d-block mb-2"><a href="shop-detail.html">Pellentesque aliquet</a></span>
+                                        <span class="price d-block fwEbold">58.00 $</span>
+                                        <span class="hotOffer fwEbold text-uppercase text-white position-absolute d-block">Hot</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 pt-3 mb-lg-0 mb-md-6 mb-3">
+                                <!-- pagination -->
+                                <ul class="list-unstyled pagination d-flex justify-content-center align-items-end">
+                                    <li><a href="javascript:void(0);"><i class="fas fa-chevron-left"></i></a></li>
+                                    <li class="active"><a href="javascript:void(0);">1</a></li>
+                                    <li><a href="javascript:void(0);">2</a></li>
+                                    <li>...</li>
+                                    <li><a href="javascript:void(0);"><i class="fas fa-chevron-right"></i></a></li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
+                    </article>
                 </div>
-                <div class="col-xl-4 col-lg-6" data-aos="flip-up" data-aos-delay="300" data-aos-duration="400">
-                    <div class="dish">
-                        <img alt="food-dish" src="https://via.placeholder.com/369x236">
-                        <div class="dish-foods">
-                            <h3>Vegetables with rice chips</h3>
-                            <div class="dish-icon">
-                                <div class="cafa-button">
-                                    <a href="#">Breakfast</a>
-                                    <a href="#">Brunch</a>
-                                </div>
-                                <div class="dish-icon end">
-
-                                    <i class="info fa-solid fa-circle-info"></i>
-                                    <div class="star">
-                                        <a href="#"><i class="fa-solid fa-heart"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="price">
-                                <h2>$35</h2>
-                                <div class="qty-input">
-                                    <button class="qty-count qty-count--minus" data-action="minus"
-                                        type="button">-</button>
-                                    <input class="product-qty" type="number" name="product-qty" min="0"
-                                        value="1">
-                                    <button class="qty-count qty-count--add" data-action="add" type="button">+</button>
-                                </div>
-                            </div>
-                            <button class="button-price">Add to Basket<i class="fa-solid fa-bag-shopping"></i></button>
-                        </div>
-                        <div class="dish-info" style="display: none;">
-                            <i class="info2 fa-solid fa-xmark"></i>
-                            <h5>
-                                Vegetables with rice chips
-                            </h5>
-                            <div class="cafa-button">
-                                <a href="#">Breakfast</a>
-                                <a href="#">Brunch</a>
-                            </div>
-                            <p>In egestas erat imperdiet sed euismod nisi porta. Ultrices sagittis orci a scelerisque. Diam
-                                quam nulla porttitor.</p>
-                            <ul class="menu-dish">
-                                <li>Nulla porttitor massa id;</li>
-                                <li>Aliquam vestibulum morbi;</li>
-                                <li>Blandit donec adipiscing;</li>
+                <div class="col-12 col-lg-3 order-lg-1">
+                    <!-- sidebar -->
+                    <aside id="sidebar">
+                        <!-- widget -->
+                        <section class="widget overflow-hidden mb-9">
+                            <form action="javascript:void(0);" class="searchForm position-relative border">
+                                <fieldset>
+                                    <input type="search" class="form-control" placeholder="Search product...">
+                                    <button class="position-absolute"><i class="icon-search"></i></button>
+                                </fieldset>
+                            </form>
+                        </section>
+                        <!-- widget -->
+                        <section class="widget overflow-hidden mb-9">
+                            <h3 class="headingVII fwEbold text-uppercase mb-5">PRODUCT CATEGORIES</h3>
+                            <ul class="list-unstyled categoryList mb-0">
+                                <li class="mb-5 overflow-hidden"><a href="javascript:void(0);">Dried <span class="num border float-right">6</span></a></li>
+                                <li class="mb-5 overflow-hidden"><a href="javascript:void(0);">Vegetables <span class="num border float-right">8</span></a></li>
+                                <li class="mb-4 overflow-hidden"><a href="javascript:void(0);">Fruits <span class="num border float-right">9</span></a></li>
+                                <li class="mb-5 overflow-hidden"><a href="javascript:void(0);">Juice <span class="num border float-right">6</span></a></li>
+                                <li class="overflow-hidden"><a href="javascript:void(0);">Uncategorized <span class="num border float-right">1</span></a></li>
                             </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-6" data-aos="flip-up" data-aos-delay="400" data-aos-duration="500">
-                    <div class="dish">
-                        <img alt="food-dish" src="https://via.placeholder.com/369x236">
-                        <div class="dish-foods">
-                            <h3>Pork with vegetables and...</h3>
-                            <div class="dish-icon">
-                                <div class="cafa-button">
-                                    <a href="#">Breakfast</a>
-                                    <a href="#">Brunch</a>
+                        </section>
+                        <!-- widget -->
+                        <section class="widget mb-9">
+                            <h3 class="headingVII fwEbold text-uppercase mb-6">Filter by price</h3>
+                            <!-- filter ranger form -->
+                            <form action="javascript:void(0);" class="filter-ranger-form">
+                                <div id="slider-range"></div>
+                                <input type="hidden" id="amount1" name="amount1">
+                                <input type="hidden" id="amount2" name="amount2">
+                                <div class="get-results-wrap d-flex align-items-center justify-content-between">
+                                    <button type="button" class="btn btnTheme btn-shop fwEbold md-round px-3 pt-1 pb-2 text-uppercase">Filter</button>
+                                    <p id="amount" class="mb-0"></p>
                                 </div>
-                                <div class="dish-icon end">
-
-                                    <i class="info fa-solid fa-circle-info"></i>
-                                    <div class="star">
-                                        <a href="#"><i class="fa-solid fa-heart"></i></a>
+                            </form>
+                        </section>
+                        <!-- widget -->
+                        <section class="widget mb-9">
+                            <h3 class="headingVII fwEbold text-uppercase mb-6">top rate</h3>
+                            <ul class="list-unstyled recentListHolder mb-0 overflow-hidden">
+                                <li class="mb-6 d-flex flex-nowrap">
+                                    <div class="alignleft">
+                                        <a href="shop-detail.html"><img src="http://placehold.it/70x80" alt="image description" class="img-fluid"></a>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="price">
-                                <h2>$45</h2>
-                                <div class="qty-input">
-                                    <button class="qty-count qty-count--minus" data-action="minus"
-                                        type="button">-</button>
-                                    <input class="product-qty" type="number" name="product-qty" min="0"
-                                        value="1">
-                                    <button class="qty-count qty-count--add" data-action="add" type="button">+</button>
-                                </div>
-                            </div>
-                            <button class="button-price">Add to Basket<i class="fa-solid fa-bag-shopping"></i></button>
-                        </div>
-                        <div class="dish-info" style="display: none;">
-                            <i class="info2 fa-solid fa-xmark"></i>
-                            <h5>
-                                Pork with vegetables and...
-                            </h5>
-                            <div class="cafa-button">
-                                <a href="#">Breakfast</a>
-                                <a href="#">Brunch</a>
-                            </div>
-                            <p>In egestas erat imperdiet sed euismod nisi porta. Ultrices sagittis orci a scelerisque. Diam
-                                quam nulla porttitor.</p>
-                            <ul class="menu-dish">
-                                <li>Nulla porttitor massa id;</li>
-                                <li>Aliquam vestibulum morbi;</li>
-                                <li>Blandit donec adipiscing;</li>
+                                    <div class="description-wrap pl-1">
+                                        <h4 class="headingVII mb-1"><a href="shop-detail.html">Vitamin C face wash</a></h4>
+                                        <strong class="price fwEbold d-block;">21.00 $</strong>
+                                    </div>
+                                </li>
+                                <li class="mb-6 d-flex flex-nowrap">
+                                    <div class="alignleft">
+                                        <a href="shop-detail.html"><img src="http://placehold.it/70x80" alt="image description" class="img-fluid"></a>
+                                    </div>
+                                    <div class="description-wrap pl-1">
+                                        <h4 class="headingVII mb-1"><a href="shop-detail.html">Organic vegetables</a></h4>
+                                        <strong class="price fwEbold d-block;">21.00 $</strong>
+                                    </div>
+                                </li>
+                                <li class="mb-6 d-flex flex-nowrap">
+                                    <div class="alignleft">
+                                        <a href="shop-detail.html"><img src="http://placehold.it/70x80" alt="image description" class="img-fluid"></a>
+                                    </div>
+                                    <div class="description-wrap pl-1">
+                                        <h4 class="headingVII mb-1"><a href="shop-detail.html">Organic cabbage</a></h4>
+                                        <strong class="price fwEbold d-block;">21.00 $</strong>
+                                    </div>
+                                </li>
+                                <li class="mb-6 d-flex flex-nowrap">
+                                    <div class="alignleft">
+                                        <a href="shop-detail.html"><img src="http://placehold.it/70x80" alt="image description" class="img-fluid"></a>
+                                    </div>
+                                    <div class="description-wrap pl-1">
+                                        <h4 class="headingVII mb-1"><a href="shop-detail.html">Organic vegetables</a></h4>
+                                        <strong class="price fwEbold d-block;">21.00 $</strong>
+                                    </div>
+                                </li>
+                                <li class="d-flex flex-nowrap">
+                                    <div class="alignleft">
+                                        <a href="shop-detail.html"><img src="http://placehold.it/70x80" alt="image description" class="img-fluid"></a>
+                                    </div>
+                                    <div class="description-wrap pl-1">
+                                        <h4 class="headingVII mb-1"><a href="shop-detail.html">Vitamin C face wash</a></h4>
+                                        <strong class="price fwEbold d-block;">21.00 $</strong>
+                                    </div>
+                                </li>
                             </ul>
-                        </div>
-                    </div>
+                        </section>
+                        <!-- widget -->
+                        <section class="widget mb-9">
+                            <h3 class="headingVII fwEbold text-uppercase mb-5">product tags</h3>
+                            <ul class="list-unstyled tagNavList d-flex flex-wrap mb-0">
+                                <li class="text-center"><a href="javascript:void(0);" class="md-round d-block">Plant</a></li>
+                                <li class="text-center"><a href="javascript:void(0);" class="md-round d-block">Floor</a></li>
+                                <li class="text-center"><a href="javascript:void(0);" class="md-round d-block">Indoor</a></li>
+                                <li class="text-center"><a href="javascript:void(0);" class="md-round d-block">Green</a></li>
+                                <li class="text-center"><a href="javascript:void(0);" class="md-round d-block">Healthy</a></li>
+                                <li class="text-center"><a href="javascript:void(0);" class="md-round d-block">Cactus</a></li>
+                                <li class="text-center"><a href="javascript:void(0);" class="md-round d-block">House plant</a></li>
+                                <li class="text-center"><a href="javascript:void(0);" class="md-round d-block">Office tree</a></li>
+                            </ul>
+                        </section>
+                    </aside>
                 </div>
             </div>
         </div>
-    </section>
--->
+        <div class="container mb-lg-24 mb-md-16 mb-10">
+            <!-- subscribeSecBlock -->
+            <section class="subscribeSecBlock bgCover col-12 pt-lg-24 pb-lg-12 pt-md-16 pb-md-8 py-10" style="background-image: url(http://placehold.it/1170x465)">
+                <header class="col-12 mainHeader mb-9 text-center">
+                    <h1 class="headingIV playfair fwEblod mb-4">Subscribe Our Newsletter</h1>
+                    <span class="headerBorder d-block mb-5"><img src="" alt="Header Border" class="img-fluid img-bdr"></span>
+                    <p class="mb-6">Enter Your email address to join our mailing list and keep yourself update</p>
+                </header>
+                <form class="emailForm1 mx-auto overflow-hidden d-flex flex-wrap">
+                    <input type="email" class="form-control px-4 border-0" placeholder="Enter your mail...">
+                    <button type="submit" class="btn btnTheme btnShop fwEbold text-white py-3 px-4 py-md-3 px-md-4">Shop Now <i class="fas fa-arrow-right ml-2"></i></button>
+                </form>
+            </section>
+        </div>
+        <!-- footerHolder -->
+        <aside class="footerHolder overflow-hidden bg-lightGray pt-xl-23 pb-xl-8 pt-lg-10 pb-lg-8 pt-md-12 pb-md-8 pt-10">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-lg-4 mb-lg-0 mb-4">
+                        <h3 class="headingVI fwEbold text-uppercase mb-7">Contact Us</h3>
+                        <ul class="list-unstyled footerContactList mb-3">
+                            <li class="mb-3 d-flex flex-nowrap pr-xl-20 pr-0"><span class="icon icon-place mr-3"></span> <address class="fwEbold m-0">Address: London Oxford Street, 012 United Kingdom.</address></li>
+                            <li class="mb-3 d-flex flex-nowrap"><span class="icon icon-phone mr-3"></span> <span class="leftAlign">Phone : <a href="javascript:void(0);">(+032) 3456 7890</a></span></li>
+                            <li class="email d-flex flex-nowrap"><span class="icon icon-email mr-2"></span> <span class="leftAlign">Email:  <a href="javascript:void(0);">Botanicalstore@gmail.com</a></span></li>
+                        </ul>
+                        <ul class="list-unstyled followSocailNetwork d-flex flex-nowrap">
+                            <li class="fwEbold mr-xl-11 mr-md-8 mr-3">Follow  us:</li>
+                            <li class="mr-xl-6 mr-md-5 mr-2"><a href="javascript:void(0);" class="fab fa-facebook-f"></a></li>
+                            <li class="mr-xl-6 mr-md-5 mr-2"><a href="javascript:void(0);" class="fab fa-twitter"></a></li>
+                            <li class="mr-xl-6 mr-md-5 mr-2"><a href="javascript:void(0);" class="fab fa-pinterest"></a></li>
+                            <li class="mr-2"><a href="javascript:void(0);" class="fab fa-google-plus-g"></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3 pl-xl-14 mb-lg-0 mb-4">
+                        <h3 class="headingVI fwEbold text-uppercase mb-6">Information</h3>
+                        <ul class="list-unstyled footerNavList">
+                            <li class="mb-1"><a href="javascript:void(0);">New Products</a></li>
+                            <li class="mb-2"><a href="javascript:void(0);">Top Sellers</a></li>
+                            <li class="mb-2"><a href="javascript:void(0);">Our Blog</a></li>
+                            <li class="mb-2"><a href="javascript:void(0);">About Our Shop</a></li>
+                            <li><a href="javascript:void(0);">Privacy policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3 pl-xl-12 mb-lg-0 mb-4">
+                        <h3 class="headingVI fwEbold text-uppercase mb-7">My Account</h3>
+                        <ul class="list-unstyled footerNavList">
+                            <li class="mb-1"><a href="javascript:void(0);">My account</a></li>
+                            <li class="mb-2"><a href="javascript:void(0);">Discount</a></li>
+                            <li class="mb-2"><a href="javascript:void(0);">Orders history</a></li>
+                            <li><a href="javascript:void(0);">Personal information</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-2 pl-xl-18 mb-lg-0 mb-4">
+                        <h3 class="headingVI fwEbold text-uppercase mb-5">PRODUCTS</h3>
+                        <ul class="list-unstyled footerNavList">
+                            <li class="mb-2"><a href="javascript:void(0);">Delivery</a></li>
+                            <li class="mb-2"><a href="javascript:void(0);">Legal notice</a></li>
+                            <li class="mb-2"><a href="javascript:void(0);">Prices drop</a></li>
+                            <li class="mb-2"><a href="javascript:void(0);">New products</a></li>
+                            <li><a href="javascript:void(0);">Best sales</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
 </template>

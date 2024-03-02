@@ -1,192 +1,83 @@
-<template>
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-xl-2">
-                <div class="header-style">
-<<<<<<< HEAD
-                    <a href="index.html">
-                        <img src="http://localhost:8000/assets/img/Panensia.png" alt="" style="width: 50px;" >
-                    </a>
-=======
-                    <a href="index.html"> </a>
->>>>>>> eab4e09411b093893f45d6cf4fd74b34375c09d7
-                    <div class="extras bag">
-                        <a href="javascript:void(0)" class="menu-btn">
-                            <i class="fa-solid fa-bag-shopping"></i>
-                        </a>
-                        <div class="bar-menu">
-                            <i class="fa-solid fa-bars"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <NavComponent></NavComponent>
-            <div class="col-lg-3">
-                <!-- <div class="extras bag">
-                    <a href="javascript:void(0)" id="desktop-menu" class="menu-btn">
-                        <i class="fa-solid fa-bag-shopping"></i
-                    ></a>
-                    <a href="#" class="button button-2">Order Now</a>
-                </div> -->
-            </div>
-            <div class="menu-wrap">
-                <div class="menu-inner ps ps--active-x ps--active-y">
-                    <span class="menu-cls-btn"
-                        ><i class="cls-leftright"></i><i class="cls-rightleft"></i
-                    ></span>
-                    <div class="checkout-order">
-                        <div class="title-checkout">
-                            <h2>My Orders</h2>
-                        </div>
-                        <div class="banner-wilmington">
-                            <img alt="logo" src="https://via.placeholder.com/50x50" />
-                            <h6>Kennington Lane Cafe</h6>
-                        </div>
-                        <ul>
-                            <li class="price-list">
-                                <i class="closeButton fa-solid fa-xmark"></i>
-                                <div class="counter-container">
-                                    <div class="counter-food">
-                                        <img alt="food" src="https://via.placeholder.com/100x67" />
-                                        <h4>Pasta, kiwi and sauce chilli</h4>
-                                    </div>
-                                    <h3>$39</h3>
-                                </div>
-                                <div class="price">
-                                    <div>
-                                        <h2>$39</h2>
-                                        <span>Sum</span>
-                                    </div>
-                                    <div>
-                                        <div class="qty-input">
-                                            <button
-                                                class="qty-count qty-count--minus"
-                                                data-action="minus"
-                                                type="button"
-                                            >
-                                                -
-                                            </button>
-                                            <input
-                                                class="product-qty"
-                                                type="number"
-                                                name="product-qty"
-                                                min="0"
-                                                value="1"
-                                            />
-                                            <button
-                                                class="qty-count qty-count--add"
-                                                data-action="add"
-                                                type="button"
-                                            >
-                                                +
-                                            </button>
-                                        </div>
-                                        <span>Quantity</span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="price-list">
-                                <i class="closeButton fa-solid fa-xmark"></i>
-                                <div class="counter-container">
-                                    <div class="counter-food">
-                                        <img alt="food" src="https://via.placeholder.com/100x67" />
-                                        <h4>Rice with shrimps and kiwi</h4>
-                                    </div>
-                                    <h3>$49</h3>
-                                </div>
-                                <div class="price">
-                                    <div>
-                                        <h2>$49</h2>
-                                        <span>Sum</span>
-                                    </div>
-                                    <div>
-                                        <div class="qty-input">
-                                            <button
-                                                class="qty-count qty-count--minus"
-                                                data-action="minus"
-                                                type="button"
-                                            >
-                                                -
-                                            </button>
-                                            <input
-                                                class="product-qty"
-                                                type="number"
-                                                name="product-qty"
-                                                min="0"
-                                                value="1"
-                                            />
-                                            <button
-                                                class="qty-count qty-count--add"
-                                                data-action="add"
-                                                type="button"
-                                            >
-                                                +
-                                            </button>
-                                        </div>
-                                        <span>Quantity</span>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="totel-price">
-                            <span>Total order:</span>
-                            <h5>$137</h5>
-                        </div>
-                        <div class="totel-price">
-                            <span>To pay:</span>
-                            <h2>$137</h2>
-                        </div>
-                        <button class="button-price">Checkout</button>
-                    </div>
-                </div>
-            </div>
-            <div class="mobile-nav hmburger-menu" id="mobile-nav" style="display: block">
-                <div class="res-log">
-                    <a href="index.html"> </a>
-                </div>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
+<!-- eslint-disable vue/multi-word-component-names -->
+<script setup>
+import { useRoute } from 'vue-router'
 
-                    <li><a href="about.html">About Us</a></li>
-
-                    <li class="menu-item-has-children">
-                        <a href="JavaScript:void(0)">Restaurants</a>
-
-                        <ul class="sub-menu">
-                            <li><a href="restaurants.html">Restaurants</a></li>
-                            <li><a href="restaurant-card.html">Restaurant Card</a></li>
-                            <li><a href="checkout.html">Checkout</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="JavaScript:void(0)">Pages</a>
-
-                        <ul class="sub-menu">
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="single-blog.html">Single Blog</a></li>
-                            <li><a href="services.html">Services</a></li>
-                            <li><a href="faq.html">FAQ</a></li>
-                            <li><a href="pricing-table.html">Pricing Table</a></li>
-                            <li><a href="become-partner.html">Become A Partner</a></li>
-                            <li><a href="404.html">404</a></li>
-                        </ul>
-                    </li>
-
-                    <li><a href="contact.html">contacts</a></li>
-                </ul>
-
-                <a href="JavaScript:void(0)" id="res-cross"></a>
-            </div>
-        </div>
-    </div>
-</template>
-<script>
-import NavComponent from './Nav.vue'
-
-export default {
-    name: 'App',
-    components: {
-        NavComponent
-    }
-}
+const route = useRoute()
 </script>
+
+<template>
+    <header id="header" class="position-relative">
+        
+			<div class="headerHolderCol pt-lg-4 pb-lg-5 py-3">
+				<div class="container">
+					<div class="row">
+						<div class="col-12 col-sm-4">
+							<a href="javascript:void(0);" class="tel d-flex align-items-end"><i class="icon-call mr-2"></i>  Hotline: (602) 462 8889</a>
+						</div>
+						<div class="col-12 col-sm-4 text-center">
+							<span class="txt d-block">Welcome to Panensia</span>
+						</div>
+					</div>
+				</div>
+			</div>
+            
+			<div class="headerHolder container pt-lg-5 pb-lg-7 py-4">
+				<div class="row">
+					<div class="col-6 col-sm-2">
+						<!-- mainLogo -->
+						<div class="logo">
+							<a href="home.html"><img src="https://www.panensia.co.id/wp-content/uploads/2023/11/logo-panensia-rev.png" alt="Botanical" class="img-fluid"></a>
+						</div>
+					</div>
+					<div class="col-6 col-sm-7 col-lg-8 static-block">
+						<!-- mainHolder -->
+						<div class="mainHolder pt-lg-5 pt-3 justify-content-center">
+							<!-- pageNav2 -->
+							<nav class="navbar navbar-expand-lg navbar-light p-0 pageNav2 position-static">
+								<button type="button" class="navbar-toggle collapsed position-relative" data-toggle="collapse" data-target="#navbarNav" aria-expanded="false">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+								<div class="collapse navbar-collapse" id="navbarNav">
+									<ul class="navbar-nav mx-auto text-uppercase d-inline-block">
+                                        <li :class="{ 'nav-item active': route.path === '/' }">
+                                            <RouterLink to="/" class="dropdown-toggle d-block" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">home</RouterLink>
+                                        </li>
+                                        <li :class="{ 'nav-item active': route.path === '/produk' || route.path === '/detailproduk' }">
+                                            <RouterLink to="/produk" class="dropdown-toggle d-block" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produk</RouterLink>
+                                        </li>
+                                        <li :class="{ 'nav-item active': route.path === '/berita' || route.path === '/detailberita' }">
+                                            <RouterLink to="/berita" class=" d-block" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Berita</RouterLink>
+                                        </li>
+                                        <li :class="{ 'nav-item active': route.path === '/tentangKami' }">
+                                            <RouterLink to="/tentangKami" class="d-block" >Tentang Kami</RouterLink>
+                                        </li>
+                                        <!-- <li class="nav-item dropdown">
+                                            <a class="dropdown-toggle d-block" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog</a>
+                                            <ul class="list-unstyled text-capitalize border-right border-bottom border-left dropdown-menu mt-0 py-0">
+                                                <li class="d-block mx-0"><a href="blog.html">Blog Left Sidebar</a></li>
+                                                <li class="d-block mx-0"><a href="blog-detail.html">Blog Detail</a></li>
+                                            </ul>
+                                        </li> -->
+                                        <li :class="{ 'nav-item active': route.path === '/kontak' }">
+                                            <RouterLink to="/kontak" class="d-block">Kontak</RouterLink>
+                                        </li>
+                                    </ul>
+								</div>
+							</nav>
+						</div>
+					</div>
+					<div class="col-sm-3 col-lg-2">
+						<!-- wishListII -->
+						<ul class="nav nav-tabs wishListII pt-5 justify-content-end border-bottom-0">
+							<li class="nav-item ml-0"><a class="nav-link icon-search" href="javascript:void(0);"></a></li>
+							<li class="nav-item"><a class="nav-link position-relative icon-cart" href="javascript:void(0);"><span class="num rounded d-block">2</span></a></li>
+							<li class="nav-item"><a class="nav-link icon-profile" href="javascript:void(0);"></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+    </header>
+</template>

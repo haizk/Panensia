@@ -1,226 +1,224 @@
 <template>
-    <!-- hero-section -->
-    <section class="hero-section about gap" style="background-image: url(assets/img/background.png);">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200" data-aos-duration="300">
-                    <div class="about-text">
-                        <ul class="crumbs d-flex">
-                            <li><a href="index.html">Home</a></li>
-                            <li class="two"><a href="index.html"><i class="fa-solid fa-right-long"></i>Blog Page</a></li>
+    <main>
+        <!-- introBannerHolder -->
+        <section class="introBannerHolder d-flex w-100 bgCover" style="background-image: url(http://placehold.it/1920x300);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 pt-lg-23 pt-md-15 pt-sm-10 pt-6 text-center">
+                        <h1 class="headingIV fwEbold playfair mb-4">Berita</h1>
+                        <ul class="list-unstyled breadCrumbs d-flex justify-content-center">
+                            <li class="mr-2"><a href="home.html">Home</a></li>
+                            <li class="mr-2">/</li>
+                            <li class="active">Berita</li>
                         </ul>
-                        <h2>Current news about Us</h2>
-                        <p>Egestas sed tempus urna et pharetra pharetra massa. Fermentum posuere urna nec tincidunt praesent
-                            semper.</p>
-                    </div>
-                </div>
-                <div class="col-lg-6" data-aos="flip-up" data-aos-delay="300" data-aos-duration="400">
-                    <div class="restaurants-girl-img blog food-photo-section">
-                        <img alt="man" src="https://via.placeholder.com/546x516">
-                        <a href="#" class="one"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="two"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="three"><i class="fa-brands fa-twitter"></i></a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- posts-section-blog -->
-    <section class="posts-section-blog gap">
-        <div class="container">
+        </section>
+        <!-- twoColumns -->
+        <div class="twoColumns container pt-lg-23 pb-lg-20 pt-md-16 pb-md-4 pt-10 pb-4">
             <div class="row">
-                <div class="col-lg-12" data-aos="fade-up" data-aos-delay="200" data-aos-duration="300">
-                    <div class="news-posts-one full">
-                        <div class="blog-post-data-img">
-                            <img alt="man" src="https://via.placeholder.com/680x450">
-                            <div class="quickeat">
-                                <a href="#">news</a>
-                                <a href="#">quickeat</a>
+                <div class="col-12 col-lg-9 order-lg-3">
+                    <!-- content -->
+                    <article id="content">
+                        <!-- newsBlogColumn -->
+                        <div class="newsBlogColumn mb-md-9 mb-6">
+                            <div class="imgHolder position-relative mb-6">
+                                <RouterLink to="/detailberita">
+                                    <img src="http://placehold.it/870x450" alt="image description" class="img-fluid">
+                                    
+                                </RouterLink>
+                            </div>
+                            <div class="textHolder d-flex align-items-start">
+                                <time class="time text-center text-uppercase py-sm-3 py-1 px-1" datetime="2019-02-03 20:00"> <strong class="fwEbold d-block mb-1">20</strong> Sep</time>
+                                <div class="alignLeft pl-sm-6 pl-3">
+                                    <h2 class="headingV fwEbold mb-2"><a href="blog-detail.html">Aptent taciti soci litora cianpen</a></h2>
+                                    <span class="postBy d-block pb-sm-6 pb-2 mb-3">Post by: <a href="blog-detail.html">Jane doe</a></span>
+                                    <p class="mb-0">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout...</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="blog-post-data-img">
-                            <h3>We Have Received An Award For The Quality Of Our Work</h3>
-                            <p>Scelerisque purus semper eget duis at. Tincidunt ornare massa eget egestas purus viverra.
-                                Morbi enim nunc faucibus a pellentesque. Lobortis elementum nibh tellus molestie nunc non...
-                            </p>
-                            <RouterLink to="/detailberita">Read More<i class="fa-solid fa-arrow-right"></i></RouterLink>
-                            <ul class="data">
-                                <li>
-                                    <h6><i class="fa-solid fa-user"></i>by Quickeat</h6>
-                                </li>
-                                <li>
-                                    <h6><i class="fa-regular fa-calendar-days"></i>01.Jan. 2022</h6>
-                                </li>
-                                <li>
-                                    <h6><i class="fa-solid fa-eye"></i>132</h6>
-                                </li>
+                        <!-- newsBlogColumn -->
+                        <div class="newsBlogColumn mb-md-9 mb-6">
+                            <div class="imgHolder position-relative mb-6">
+                                <a href="blog-detail.html">
+                                    <img src="http://placehold.it/870x450" alt="image description" class="img-fluid">
+                                </a>
+                            </div>
+                            <div class="textHolder d-flex align-items-start">
+                                <time class="time text-center text-uppercase py-sm-3 py-1 px-1" datetime="2019-02-03 20:00"> <strong class="fwEbold d-block mb-1">20</strong> Sep</time>
+                                <div class="alignLeft pl-sm-6 pl-3">
+                                    <h2 class="headingV fwEbold mb-2"><a href="blog-detail.html">Aptent taciti soci litora cianpen</a></h2>
+                                    <span class="postBy d-block pb-sm-6 pb-2 mb-3">Post by: <a href="blog-detail.html">Jane doe</a></span>
+                                    <p class="mb-0">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout...</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- newsBlogColumn -->
+                        <div class="newsBlogColumn mb-md-9 mb-6">
+                            <div class="imgHolder position-relative mb-6">
+                                <a href="blog-detail.html">
+                                    <img src="http://placehold.it/870x450" alt="image description" class="img-fluid">
+                                </a>
+                            </div>
+                            <div class="textHolder d-flex align-items-start">
+                                <time class="time text-center text-uppercase py-sm-3 py-1 px-1" datetime="2019-02-03 20:00"> <strong class="fwEbold d-block mb-1">20</strong> Sep</time>
+                                <div class="alignLeft pl-sm-6 pl-3">
+                                    <h2 class="headingV fwEbold mb-2"><a href="blog-detail.html">Aptent taciti soci litora cianpen</a></h2>
+                                    <span class="postBy d-block pb-sm-6 pb-2 mb-3">Post by: <a href="blog-detail.html">Jane doe</a></span>
+                                    <p class="mb-0">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout...</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-sm-0 mb-6">
+                            <!-- pagination -->
+                            <ul class="list-unstyled pagination d-flex justify-content-center align-items-end">
+                                <li><a href="javascript:void(0);"><i class="fas fa-chevron-left"></i></a></li>
+                                <li class="active"><a href="javascript:void(0);">1</a></li>
+                                <li><a href="javascript:void(0);">2</a></li>
+                                <li>...</li>
+                                <li><a href="javascript:void(0);"><i class="fas fa-chevron-right"></i></a></li>
                             </ul>
                         </div>
-                    </div>
+                    </article>
                 </div>
-                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12" data-aos="flip-up" data-aos-delay="200"
-                    data-aos-duration="300">
-                    <div class="news-posts-one blog">
-                        <img alt="man" src="https://via.placeholder.com/443x295">
-                        <div class="quickeat">
-                            <a href="#">news</a>
-                            <a href="#">quickeat</a>
-                        </div>
-                        <h3>With Quickeat you can order food for the whole day</h3>
-                        <p>Scelerisque purus semper eget duis at. Tincidunt ornare massa eget egestas purus viverra. Morbi
-                            enim nunc faucibus a pellentesque. Lobortis elementum nibh tellus molestie nunc non...</p>
-                            <RouterLink to="/detailberita">Read More<i class="fa-solid fa-arrow-right"></i></RouterLink>
-                        <ul class="data">
-                            <li>
-                                <h6><i class="fa-solid fa-user"></i>by Quickeat</h6>
-                            </li>
-                            <li>
-                                <h6><i class="fa-regular fa-calendar-days"></i>01.Jan. 2022</h6>
-                            </li>
-                            <li>
-                                <h6><i class="fa-solid fa-eye"></i>132</h6>
-                            </li>
-                        </ul>
-
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12" data-aos="flip-up" data-aos-delay="300"
-                    data-aos-duration="400">
-                    <div class="news-posts-one blog">
-                        <img alt="man" src="https://via.placeholder.com/443x295">
-                        <div class="quickeat">
-                            <a href="#">news</a>
-                            <a href="#">quickeat</a>
-                        </div>
-                        <h3>127+ Couriers On Our Team Big Food Trends</h3>
-                        <p>Scelerisque purus semper eget duis at. Tincidunt ornare massa eget egestas purus viverra. Morbi
-                            enim nunc faucibus a pellentesque. Lobortis elementum nibh tellus molestie nunc non...</p>
-                            <RouterLink to="/detailberita">Read More<i class="fa-solid fa-arrow-right"></i></RouterLink>
-                        <ul class="data">
-                            <li>
-                                <h6><i class="fa-solid fa-user"></i>by Quickeat</h6>
-                            </li>
-                            <li>
-                                <h6><i class="fa-regular fa-calendar-days"></i>01.Jan. 2022</h6>
-                            </li>
-                            <li>
-                                <h6><i class="fa-solid fa-eye"></i>132</h6>
-                            </li>
-                        </ul>
-
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12" data-aos="flip-up" data-aos-delay="400"
-                    data-aos-duration="500">
-                    <div class="news-posts-one blog">
-                        <img alt="man" src="https://via.placeholder.com/443x295">
-                        <div class="quickeat">
-                            <a href="#">news</a>
-                            <a href="#">quickeat</a>
-                        </div>
-                        <h3>Why You Should Optimize Your Menu for Delivery</h3>
-                        <p>Scelerisque purus semper eget duis at. Tincidunt ornare massa eget egestas purus viverra. Morbi
-                            enim nunc faucibus a pellentesque. Lobortis elementum nibh tellus molestie nunc non...</p>
-                            <RouterLink to="/detailberita">Read More<i class="fa-solid fa-arrow-right"></i></RouterLink>
-                        <ul class="data">
-                            <li>
-                                <h6><i class="fa-solid fa-user"></i>by Quickeat</h6>
-                            </li>
-                            <li>
-                                <h6><i class="fa-regular fa-calendar-days"></i>01.Jan. 2022</h6>
-                            </li>
-                            <li>
-                                <h6><i class="fa-solid fa-eye"></i>132</h6>
-                            </li>
-                        </ul>
-
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12" data-aos="flip-up" data-aos-delay="200"
-                    data-aos-duration="300">
-                    <div class="news-posts-one blog">
-                        <img alt="man" src="https://via.placeholder.com/443x295">
-                        <div class="quickeat">
-                            <a href="#">news</a>
-                            <a href="#">quickeat</a>
-                        </div>
-                        <h3>How Restaurants Can Engage with Millennials in 2022</h3>
-                        <p>Scelerisque purus semper eget duis at. Tincidunt ornare massa eget egestas purus viverra. Morbi
-                            enim nunc faucibus a pellentesque. Lobortis elementum nibh tellus molestie nunc non...</p>
-                            <RouterLink to="/detailberita">Read More<i class="fa-solid fa-arrow-right"></i></RouterLink>
-                        <ul class="data">
-                            <li>
-                                <h6><i class="fa-solid fa-user"></i>by Quickeat</h6>
-                            </li>
-                            <li>
-                                <h6><i class="fa-regular fa-calendar-days"></i>01.Jan. 2022</h6>
-                            </li>
-                            <li>
-                                <h6><i class="fa-solid fa-eye"></i>132</h6>
-                            </li>
-                        </ul>
-
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12" data-aos="flip-up" data-aos-delay="300"
-                    data-aos-duration="400">
-                    <div class="news-posts-one blog">
-                        <img alt="man" src="https://via.placeholder.com/443x295">
-                        <div class="quickeat">
-                            <a href="#">news</a>
-                            <a href="#">quickeat</a>
-                        </div>
-                        <h3>Why You Should Optimize Your Menu for Delivery</h3>
-                        <p>Scelerisque purus semper eget duis at. Tincidunt ornare massa eget egestas purus viverra. Morbi
-                            enim nunc faucibus a pellentesque. Lobortis elementum nibh tellus molestie nunc non...</p>
-                            <RouterLink to="/detailberita">Read More<i class="fa-solid fa-arrow-right"></i></RouterLink>
-                        <ul class="data">
-                            <li>
-                                <h6><i class="fa-solid fa-user"></i>by Quickeat</h6>
-                            </li>
-                            <li>
-                                <h6><i class="fa-regular fa-calendar-days"></i>01.Jan. 2022</h6>
-                            </li>
-                            <li>
-                                <h6><i class="fa-solid fa-eye"></i>132</h6>
-                            </li>
-                        </ul>
-
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12" data-aos="flip-up" data-aos-delay="400"
-                    data-aos-duration="500">
-                    <div class="news-posts-one blog">
-                        <img alt="man" src="https://via.placeholder.com/443x295">
-                        <div class="quickeat">
-                            <a href="#">news</a>
-                            <a href="#">quickeat</a>
-                        </div>
-                        <h3>5 Big food Trends Coming Your Way in 2022</h3>
-                        <p>Scelerisque purus semper eget duis at. Tincidunt ornare massa eget egestas purus viverra. Morbi
-                            enim nunc faucibus a pellentesque. Lobortis elementum nibh tellus molestie nunc non...</p>
-                            <RouterLink to="/detailberita">Read More<i class="fa-solid fa-arrow-right"></i></RouterLink>
-                        <ul class="data">
-                            <li>
-                                <h6><i class="fa-solid fa-user"></i>by Quickeat</h6>
-                            </li>
-                            <li>
-                                <h6><i class="fa-regular fa-calendar-days"></i>01.Jan. 2022</h6>
-                            </li>
-                            <li>
-                                <h6><i class="fa-solid fa-eye"></i>132</h6>
-                            </li>
-                        </ul>
-
-                    </div>
-                </div>
-                <div class="button-gap" data-aos="fade-up" data-aos-delay="200" data-aos-duration="300">
-                    <a href="#" class="button button-2 non">See All<i class="fa-solid fa-arrow-right"></i></a>
+                <div class="col-12 col-lg-3 order-lg-1">
+                    <!-- sidebar -->
+                    <aside id="sidebar">
+                        <!-- widget -->
+                        <section class="widget overflow-hidden mb-md-9 mb-6">
+                            <h3 class="headingVII fwEbold text-uppercase mb-4">Search</h3>
+                            <form action="javascript:void(0);" class="searchForm position-relative border">
+                                <fieldset>
+                                    <input type="search" class="form-control" placeholder="Search product...">
+                                    <button class="position-absolute"><i class="icon-search"></i></button>
+                                </fieldset>
+                            </form>
+                        </section>
+                        <!-- widget -->
+                        <section class="widget overflow-hidden mb-md-9 mb-6">
+                            <h3 class="headingVII fwEbold text-uppercase mb-2">RECENT POSTS</h3>
+                            <ul class="list-unstyled recentPostList mb-0">
+                                <li><a href="javascript:void(0);" class="py-2 d-block">Blog image post</a></li>
+                                <li><a href="javascript:void(0);" class="py-2 d-block">Post with Gallery</a></li>
+                                <li><a href="javascript:void(0);" class="py-2 d-block">Post with Audio</a></li>
+                                <li><a href="javascript:void(0);" class="py-2 d-block">Post with Video</a></li>
+                                <li><a href="javascript:void(0);" class="py-2 d-block">Maecenas ultricies</a></li>
+                            </ul>
+                        </section>
+                        <!-- widget -->
+                        <section class="widget overflow-hidden mb-md-9 mb-6">
+                            <h3 class="headingVII fwEbold text-uppercase mb-2">RECENT COMMENTS</h3>
+                            <ul class="list-unstyled recentPostList mb-0">
+                                <li><a href="javascript:void(0);" class="py-2 d-block">Admin on Vivamus blandit</a></li>
+                                <li><a href="javascript:void(0);" class="py-2 d-block">Admin on Vivamus blandit</a></li>
+                                <li><a href="javascript:void(0);" class="py-2 d-block">Admin on Vivamus blandit</a></li>
+                                <li><a href="javascript:void(0);" class="py-2 d-block">Admin on Vivamus blandit</a></li>
+                                <li><a href="javascript:void(0);" class="py-2 d-block">Admin on Vivamus blandit</a></li>
+                            </ul>
+                        </section>
+                        <!-- widget -->
+                        <section class="widget overflow-hidden mb-md-6 mb-3">
+                            <h3 class="headingVII fwEbold text-uppercase mb-4">ARCHIVES</h3>
+                            <ul class="list-unstyled archiveList mb-0">
+                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">March 2018</a></li>
+                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">December 2018</a></li>
+                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">November 2018</a></li>
+                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">September 2018</a></li>
+                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">August 2018</a></li>
+                            </ul>
+                        </section>
+                        <!-- widget -->
+                        <section class="widget overflow-hidden mb-md-5 mb-3">
+                            <h3 class="headingVII fwEbold text-uppercase mb-4">CATEGORIES</h3>
+                            <ul class="list-unstyled archiveList mb-0">
+                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">Creative</a></li>
+                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">Fashion</a></li>
+                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">Image</a></li>
+                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">Photography</a></li>
+                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">Travel</a></li>
+                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">Videos</a></li>
+                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">WordPress</a></li>
+                            </ul>
+                        </section>
+                        <!-- widget -->
+                        <section class="widget overflow-hidden mb-md-9 mb-6">
+                            <h3 class="headingVII fwEbold text-uppercase mb-4">META</h3>
+                            <ul class="list-unstyled archiveList mb-0">
+                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">Log in</a></li>
+                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">Entries RSS</a></li>
+                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">Comments RSS</a></li>
+                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">WordPress.org</a></li>
+                            </ul>
+                        </section>
+                    </aside>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- subscribe-section -->
-    
-
+        <div class="container mb-lg-24 mb-md-16 mb-10">
+            <!-- subscribeSecBlock -->
+            <section class="subscribeSecBlock bgCover col-12 pt-lg-24 pb-lg-12 pt-md-16 pb-md-8 py-10" style="background-image: url(http://placehold.it/1170x465)">
+                <header class="col-12 mainHeader mb-9 text-center">
+                    <h1 class="headingIV playfair fwEblod mb-4">Subscribe Our Newsletter</h1>
+                    <span class="headerBorder d-block mb-5"><img src="" alt="Header Border" class="img-fluid img-bdr"></span>
+                    <p class="mb-6">Enter Your email address to join our mailing list and keep yourself update</p>
+                </header>
+                <form class="emailForm1 mx-auto overflow-hidden d-flex flex-wrap">
+                    <input type="email" class="form-control px-4 border-0" placeholder="Enter your mail...">
+                    <button type="submit" class="btn btnTheme btnShop fwEbold text-white py-3 px-4 py-md-3 px-md-4">Shop Now <i class="fas fa-arrow-right ml-2"></i></button>
+                </form>
+            </section>
+        </div>
+        <!-- footerHolder -->
+        <aside class="footerHolder overflow-hidden bg-lightGray pt-xl-23 pb-xl-8 pt-lg-10 pb-lg-8 pt-md-12 pb-md-8 pt-10">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-lg-4 mb-lg-0 mb-4">
+                        <h3 class="headingVI fwEbold text-uppercase mb-7">Contact Us</h3>
+                        <ul class="list-unstyled footerContactList mb-3">
+                            <li class="mb-3 d-flex flex-nowrap pr-xl-20 pr-0"><span class="icon icon-place mr-3"></span> <address class="fwEbold m-0">Address: London Oxford Street, 012 United Kingdom.</address></li>
+                            <li class="mb-3 d-flex flex-nowrap"><span class="icon icon-phone mr-3"></span> <span class="leftAlign">Phone : <a href="javascript:void(0);">(+032) 3456 7890</a></span></li>
+                            <li class="email d-flex flex-nowrap"><span class="icon icon-email mr-2"></span> <span class="leftAlign">Email:  <a href="javascript:void(0);">Botanicalstore@gmail.com</a></span></li>
+                        </ul>
+                        <ul class="list-unstyled followSocailNetwork d-flex flex-nowrap">
+                            <li class="fwEbold mr-xl-11 mr-md-8 mr-3">Follow  us:</li>
+                            <li class="mr-xl-6 mr-md-5 mr-2"><a href="javascript:void(0);" class="fab fa-facebook-f"></a></li>
+                            <li class="mr-xl-6 mr-md-5 mr-2"><a href="javascript:void(0);" class="fab fa-twitter"></a></li>
+                            <li class="mr-xl-6 mr-md-5 mr-2"><a href="javascript:void(0);" class="fab fa-pinterest"></a></li>
+                            <li class="mr-2"><a href="javascript:void(0);" class="fab fa-google-plus-g"></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3 pl-xl-14 mb-lg-0 mb-4">
+                        <h3 class="headingVI fwEbold text-uppercase mb-6">Information</h3>
+                        <ul class="list-unstyled footerNavList">
+                            <li class="mb-1"><a href="javascript:void(0);">New Products</a></li>
+                            <li class="mb-2"><a href="javascript:void(0);">Top Sellers</a></li>
+                            <li class="mb-2"><a href="javascript:void(0);">Our Blog</a></li>
+                            <li class="mb-2"><a href="javascript:void(0);">About Our Shop</a></li>
+                            <li><a href="javascript:void(0);">Privacy policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3 pl-xl-12 mb-lg-0 mb-4">
+                        <h3 class="headingVI fwEbold text-uppercase mb-7">My Account</h3>
+                        <ul class="list-unstyled footerNavList">
+                            <li class="mb-1"><a href="javascript:void(0);">My account</a></li>
+                            <li class="mb-2"><a href="javascript:void(0);">Discount</a></li>
+                            <li class="mb-2"><a href="javascript:void(0);">Orders history</a></li>
+                            <li><a href="javascript:void(0);">Personal information</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-2 pl-xl-18 mb-lg-0 mb-4">
+                        <h3 class="headingVI fwEbold text-uppercase mb-5">PRODUCTS</h3>
+                        <ul class="list-unstyled footerNavList">
+                            <li class="mb-2"><a href="javascript:void(0);">Delivery</a></li>
+                            <li class="mb-2"><a href="javascript:void(0);">Legal notice</a></li>
+                            <li class="mb-2"><a href="javascript:void(0);">Prices drop</a></li>
+                            <li class="mb-2"><a href="javascript:void(0);">New products</a></li>
+                            <li><a href="javascript:void(0);">Best sales</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
 </template>

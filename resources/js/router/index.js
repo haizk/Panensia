@@ -5,6 +5,7 @@ import BeritaView from '../views/BeritaView.vue'
 import ContactView from '../views/ContactView.vue'
 import BeritaDetail from '../views/BeritaDetail.vue'
 import Produk from '../views/ProdukView.vue'
+import ProdukDetail from '../views/ProdukDetailView.vue'
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -15,8 +16,8 @@ const router = createRouter({
             component: HomeView
         },
         {
-            path: '/about',
-            name: 'about',
+            path: '/tentangKami',
+            name: 'tentang',
             component: AboutView
         },
         {
@@ -33,6 +34,11 @@ const router = createRouter({
             path: '/detailberita',
             name: 'beritadetail',
             component: BeritaDetail
+        },
+        {
+            path: '/detailproduk',
+            name: 'detailproduk',
+            component: ProdukDetail
         },
         {
             path: '/produk',
