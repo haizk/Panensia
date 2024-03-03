@@ -31,7 +31,8 @@ const editCategory = async () => {
 
     const newsData = {
         name: name.value,
-        slug: slug
+        slug: slug,
+        user_id: 1 // Hardcoded for now
     }
 
     try {

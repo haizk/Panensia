@@ -64,6 +64,7 @@ class NewsController extends Controller
             $newsImage->path = $path;
             $newsImage->alt = 'News image';
             $newsImage->order = $order + 1;
+            $newsImage->user_id = $news->user_id;
             $newsImage->news_id = $news->id;
             $newsImage->save();
         }
@@ -159,6 +160,7 @@ class NewsController extends Controller
         $newsCategory = new NewsCategories();
         $newsCategory->name = $request->name;
         $newsCategory->slug = $request->slug;
+        $newsCategory->user_id = $request->user_id;
         $newsCategory->save();
 
         return response()->json([
@@ -181,6 +183,7 @@ class NewsController extends Controller
         $newsCategory = NewsCategories::find($id);
         $newsCategory->name = $request->name;
         $newsCategory->slug = $request->slug;
+        $newsCategory->user_id = $request->user_id;
         $newsCategory->save();
 
         return response()->json([

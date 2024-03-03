@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('path');
             $table->string('alt')->nullable();
             $table->integer('order')->nullable();
+            $table->foreignId('user_id')->constrained('users');
             $table->foreignId('news_id')->constrained('news');
             $table->timestamps();
         });
