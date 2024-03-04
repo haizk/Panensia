@@ -1503,6 +1503,7 @@ a {
   line-height: 33px;
   color: #333333;
   letter-spacing: 2px;
+  padding-bottom: 20px;
 }
 
 .productTextHolder .ratingList {
@@ -2827,4 +2828,22 @@ a {
 
 .copyRightHolder.v-II p a {
   color: #fff;
+}
+
+.e-commerce{
+  height: 16px;
+  width: auto;
+  margin-right: 16px;
+}
+
+.productSliderImage .img-fluid{
+  height: 500px;
+  width: 500px;
+  object-fit: cover;
+}
+
+.imgBlock .img-fluid{
+  height: 150px;
+  width: 15r0px;
+  object-fit: cover;
 }
