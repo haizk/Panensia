@@ -9,9 +9,9 @@
                         <ul class="list-unstyled breadCrumbs d-flex justify-content-center">
                             <li class="mr-sm-2 mr-1"><a href="home.html">Home</a></li>
                             <li class="mr-sm-2 mr-1">/</li>
-                            <li class="mr-sm-2 mr-1"><a href="blog.html">Blog</a></li>
+                            <li class="mr-sm-2 mr-1"><a href="/detailberita">Blog</a></li>
                             <li class="mr-sm-2 mr-1">/</li>
-                            <li class="active">Aptent taciti soci litora cianpen</li>
+                            <li class="active">6 Manfaat Minum Air Jahe saat Perut Kosong di Pagi Hari</li>
                         </ul>
                     </div>
                 </div>
@@ -29,12 +29,12 @@
                         <div class="textHolder d-flex align-items-start mb-1">
                             <time class="time text-center text-uppercase py-sm-3 py-1 px-1" datetime="2019-02-03 20:00"> <strong class="fwEbold d-block mb-1">20</strong> Sep</time>
                             <div class="alignLeft pl-6 w-100">
-                                <h2 class="headingV fwEbold mb-2">Aptent taciti soci litora cianpen</h2>
+                                <h2 class="headingV fwEbold mb-2">6 Manfaat Minum Air Jahe saat Perut Kosong di Pagi Hari</h2>
                                 <span class="postBy d-block pb-6 mb-3">Post by: Jane doe</span>
                             </div>
                         </div>
                         <p class="mb-5"><span class="d-block">The standard Lorem Ipsum passage, used since the 1500s</span>
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                            Minum air jahe saat perut kosong di pagi hari memiliki sejumlah manfaat yang dapat bermanfaat bagi kesehatan. Berikut adalah enam manfaat utama yang dapat Anda dapatkan:</p>
                         <p class="mb-5"><span class="d-block">Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC</span>
                         "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
                         <div class="imgHolder mb-5">
@@ -57,7 +57,7 @@
                             </form>
                         </section>
                         <!-- widget -->
-                        <section class="widget overflow-hidden mb-md-9 mb-6">
+                        <!-- <section class="widget overflow-hidden mb-md-9 mb-6">
                             <h3 class="headingVII fwEbold text-uppercase mb-2">RECENT POSTS</h3>
                             <ul class="list-unstyled recentPostList mb-0">
                                 <li><a href="javascript:void(0);" class="py-2 d-block">Blog image post</a></li>
@@ -66,9 +66,9 @@
                                 <li><a href="javascript:void(0);" class="py-2 d-block">Post with Video</a></li>
                                 <li><a href="javascript:void(0);" class="py-2 d-block">Maecenas ultricies</a></li>
                             </ul>
-                        </section>
+                        </section> -->
                         <!-- widget -->
-                        <section class="widget overflow-hidden mb-md-9 mb-6">
+                        <!-- <section class="widget overflow-hidden mb-md-9 mb-6">
                             <h3 class="headingVII fwEbold text-uppercase mb-2">RECENT COMMENTS</h3>
                             <ul class="list-unstyled recentPostList mb-0">
                                 <li><a href="javascript:void(0);" class="py-2 d-block">Admin on Vivamus blandit</a></li>
@@ -77,9 +77,9 @@
                                 <li><a href="javascript:void(0);" class="py-2 d-block">Admin on Vivamus blandit</a></li>
                                 <li><a href="javascript:void(0);" class="py-2 d-block">Admin on Vivamus blandit</a></li>
                             </ul>
-                        </section>
+                        </section> -->
                         <!-- widget -->
-                        <section class="widget overflow-hidden mb-md-6 mb-3">
+                        <!-- <section class="widget overflow-hidden mb-md-6 mb-3">
                             <h3 class="headingVII fwEbold text-uppercase mb-4">ARCHIVES</h3>
                             <ul class="list-unstyled archiveList mb-0">
                                 <li class="mb-3"><a href="javascript:void(0);" class="d-block">March 2018</a></li>
@@ -88,22 +88,22 @@
                                 <li class="mb-3"><a href="javascript:void(0);" class="d-block">September 2018</a></li>
                                 <li class="mb-3"><a href="javascript:void(0);" class="d-block">August 2018</a></li>
                             </ul>
-                        </section>
+                        </section> -->
                         <!-- widget -->
                         <section class="widget overflow-hidden mb-md-5 mb-3">
                             <h3 class="headingVII fwEbold text-uppercase mb-4">CATEGORIES</h3>
                             <ul class="list-unstyled archiveList mb-0">
-                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">Creative</a></li>
-                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">Fashion</a></li>
-                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">Image</a></li>
-                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">Photography</a></li>
-                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">Travel</a></li>
-                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">Videos</a></li>
-                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">WordPress</a></li>
+                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">Slimming</a></li>
+                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">Detox</a></li>
+                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">Imun dan Stamina</a></li>
+                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">Kulit dan Kecantikan</a></li>
+                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">Diabeter dan Gula Darah</a></li>
+                                <!-- <li class="mb-3"><a href="javascript:void(0);" class="d-block">Videos</a></li>
+                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">WordPress</a></li> -->
                             </ul>
                         </section>
                         <!-- widget -->
-                        <section class="widget overflow-hidden mb-md-9 mb-6">
+                        <!-- <section class="widget overflow-hidden mb-md-9 mb-6">
                             <h3 class="headingVII fwEbold text-uppercase mb-4">META</h3>
                             <ul class="list-unstyled archiveList mb-0">
                                 <li class="mb-3"><a href="javascript:void(0);" class="d-block">Log in</a></li>
@@ -111,7 +111,7 @@
                                 <li class="mb-3"><a href="javascript:void(0);" class="d-block">Comments RSS</a></li>
                                 <li class="mb-3"><a href="javascript:void(0);" class="d-block">WordPress.org</a></li>
                             </ul>
-                        </section>
+                        </section> -->
                     </aside>
                 </div>
             </div>

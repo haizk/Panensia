@@ -1,7 +1,7 @@
 <template>
     <main>
         <!-- introBannerHolder -->
-        <section class="introBannerHolder d-flex w-100 bgCover" style="background-image: url(http://placehold.it/1920x300);">
+        <section class="introBannerHolder d-flex w-100 bgCover" style="background-image: url(https://i.pinimg.com/564x/ef/eb/c2/efebc2e2e3edd936a890a93a7657b4a0.jpg); ">
             <div class="container">
                 <div class="row">
                     <div class="col-12 pt-lg-23 pt-md-15 pt-sm-10 pt-6 text-center">
@@ -25,16 +25,32 @@
                         <div class="newsBlogColumn mb-md-9 mb-6">
                             <div class="imgHolder position-relative mb-6">
                                 <RouterLink to="/detailberita">
-                                    <img src="http://placehold.it/870x450" alt="image description" class="img-fluid">
+                                    <img src="https://i.pinimg.com/564x/b7/29/c8/b729c892ce5ccbee699a47c944653ffa.jpg" alt="image description" class="img-fluid" style="height: 450px; width: 800px;">
                                     
                                 </RouterLink>
                             </div>
                             <div class="textHolder d-flex align-items-start">
                                 <time class="time text-center text-uppercase py-sm-3 py-1 px-1" datetime="2019-02-03 20:00"> <strong class="fwEbold d-block mb-1">20</strong> Sep</time>
                                 <div class="alignLeft pl-sm-6 pl-3">
-                                    <h2 class="headingV fwEbold mb-2"><a href="blog-detail.html">Aptent taciti soci litora cianpen</a></h2>
+                                    <h2 class="headingV fwEbold mb-2"><a href="/detailberita">6 Manfaat Minum Air Jahe saat Perut Kosong di Pagi Hari</a></h2>
                                     <span class="postBy d-block pb-sm-6 pb-2 mb-3">Post by: <a href="blog-detail.html">Jane doe</a></span>
-                                    <p class="mb-0">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout...</p>
+                                    <p class="mb-0">Dalam pengobatan kuno, jahe digunakan sebagai ramuan untuk mengurangi risiko berbagai penyakit. Jadi, jika Anda ingin tubuh lebih sehat, pertimbangkan untuk minum air jahe di pagi hari agar semua manfaat jahe terserap ke dalam tubuh....</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- newsBlogColumn -->
+                        <div class="newsBlogColumn mb-md-9 mb-6">
+                            <div class="imgHolder position-relative mb-6">
+                                <a href="/detailberita">
+                                    <img src="https://i.pinimg.com/736x/fd/7d/aa/fd7daa7696a09d4e964f1eaba244518c.jpg" alt="image description" class="img-fluid" style="height: 450px; width: 800px;">
+                                </a>
+                            </div>
+                            <div class="textHolder d-flex align-items-start">
+                                <time class="time text-center text-uppercase py-sm-3 py-1 px-1" datetime="2019-02-03 20:00"> <strong class="fwEbold d-block mb-1">20</strong> Sep</time>
+                                <div class="alignLeft pl-sm-6 pl-3">
+                                    <h2 class="headingV fwEbold mb-2"><a href="blog-detail.html">Temulawak, Obat Tradisional Indonesia Dengan Banyak Manfaat</a></h2>
+                                    <span class="postBy d-block pb-sm-6 pb-2 mb-3">Post by: <a href="blog-detail.html">Jane doe</a></span>
+                                    <p class="mb-0">Banyak manfaatnya, ini khasiat dari obat tradisional dan herbal temulawak...</p>
                                 </div>
                             </div>
                         </div>
@@ -42,31 +58,15 @@
                         <div class="newsBlogColumn mb-md-9 mb-6">
                             <div class="imgHolder position-relative mb-6">
                                 <a href="blog-detail.html">
-                                    <img src="http://placehold.it/870x450" alt="image description" class="img-fluid">
+                                    <img src="https://i.pinimg.com/564x/9e/28/12/9e2812682c51b7b9b7d2a224f7580812.jpg" alt="image description" class="img-fluid" style="height: 450px; width: 800px;">
                                 </a>
                             </div>
                             <div class="textHolder d-flex align-items-start">
                                 <time class="time text-center text-uppercase py-sm-3 py-1 px-1" datetime="2019-02-03 20:00"> <strong class="fwEbold d-block mb-1">20</strong> Sep</time>
                                 <div class="alignLeft pl-sm-6 pl-3">
-                                    <h2 class="headingV fwEbold mb-2"><a href="blog-detail.html">Aptent taciti soci litora cianpen</a></h2>
+                                    <h2 class="headingV fwEbold mb-2"><a href="blog-detail.html">Kiat Meningkatkan Daya Tahan Tubuh Ketika Serbuan Virus Menyerang</a></h2>
                                     <span class="postBy d-block pb-sm-6 pb-2 mb-3">Post by: <a href="blog-detail.html">Jane doe</a></span>
-                                    <p class="mb-0">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout...</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- newsBlogColumn -->
-                        <div class="newsBlogColumn mb-md-9 mb-6">
-                            <div class="imgHolder position-relative mb-6">
-                                <a href="blog-detail.html">
-                                    <img src="http://placehold.it/870x450" alt="image description" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="textHolder d-flex align-items-start">
-                                <time class="time text-center text-uppercase py-sm-3 py-1 px-1" datetime="2019-02-03 20:00"> <strong class="fwEbold d-block mb-1">20</strong> Sep</time>
-                                <div class="alignLeft pl-sm-6 pl-3">
-                                    <h2 class="headingV fwEbold mb-2"><a href="blog-detail.html">Aptent taciti soci litora cianpen</a></h2>
-                                    <span class="postBy d-block pb-sm-6 pb-2 mb-3">Post by: <a href="blog-detail.html">Jane doe</a></span>
-                                    <p class="mb-0">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout...</p>
+                                    <p class="mb-0">Setiap bagian tubuh Anda, termasuk sistem kekebalan Anda, berfungsi lebih baik bila dilindungi dari serangan lingkungan dan didukung oleh strategi hidup sehat...</p>
                                 </div>
                             </div>
                         </div>
@@ -96,7 +96,7 @@
                             </form>
                         </section>
                         <!-- widget -->
-                        <section class="widget overflow-hidden mb-md-9 mb-6">
+                        <!-- <section class="widget overflow-hidden mb-md-9 mb-6">
                             <h3 class="headingVII fwEbold text-uppercase mb-2">RECENT POSTS</h3>
                             <ul class="list-unstyled recentPostList mb-0">
                                 <li><a href="javascript:void(0);" class="py-2 d-block">Blog image post</a></li>
@@ -105,9 +105,9 @@
                                 <li><a href="javascript:void(0);" class="py-2 d-block">Post with Video</a></li>
                                 <li><a href="javascript:void(0);" class="py-2 d-block">Maecenas ultricies</a></li>
                             </ul>
-                        </section>
+                        </section> -->
                         <!-- widget -->
-                        <section class="widget overflow-hidden mb-md-9 mb-6">
+                        <!-- <section class="widget overflow-hidden mb-md-9 mb-6">
                             <h3 class="headingVII fwEbold text-uppercase mb-2">RECENT COMMENTS</h3>
                             <ul class="list-unstyled recentPostList mb-0">
                                 <li><a href="javascript:void(0);" class="py-2 d-block">Admin on Vivamus blandit</a></li>
@@ -116,9 +116,9 @@
                                 <li><a href="javascript:void(0);" class="py-2 d-block">Admin on Vivamus blandit</a></li>
                                 <li><a href="javascript:void(0);" class="py-2 d-block">Admin on Vivamus blandit</a></li>
                             </ul>
-                        </section>
+                        </section> -->
                         <!-- widget -->
-                        <section class="widget overflow-hidden mb-md-6 mb-3">
+                        <!-- <section class="widget overflow-hidden mb-md-6 mb-3">
                             <h3 class="headingVII fwEbold text-uppercase mb-4">ARCHIVES</h3>
                             <ul class="list-unstyled archiveList mb-0">
                                 <li class="mb-3"><a href="javascript:void(0);" class="d-block">March 2018</a></li>
@@ -127,22 +127,22 @@
                                 <li class="mb-3"><a href="javascript:void(0);" class="d-block">September 2018</a></li>
                                 <li class="mb-3"><a href="javascript:void(0);" class="d-block">August 2018</a></li>
                             </ul>
-                        </section>
+                        </section> -->
                         <!-- widget -->
                         <section class="widget overflow-hidden mb-md-5 mb-3">
                             <h3 class="headingVII fwEbold text-uppercase mb-4">CATEGORIES</h3>
                             <ul class="list-unstyled archiveList mb-0">
-                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">Creative</a></li>
-                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">Fashion</a></li>
-                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">Image</a></li>
-                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">Photography</a></li>
-                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">Travel</a></li>
-                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">Videos</a></li>
-                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">WordPress</a></li>
+                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">Slimming</a></li>
+                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">Detox</a></li>
+                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">Imun dan Stamina</a></li>
+                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">Kulit dan Kecantikan</a></li>
+                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">Diabeter dan Gula Darah</a></li>
+                                <!-- <li class="mb-3"><a href="javascript:void(0);" class="d-block">Videos</a></li>
+                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">WordPress</a></li> -->
                             </ul>
                         </section>
                         <!-- widget -->
-                        <section class="widget overflow-hidden mb-md-9 mb-6">
+                        <!-- <section class="widget overflow-hidden mb-md-9 mb-6">
                             <h3 class="headingVII fwEbold text-uppercase mb-4">META</h3>
                             <ul class="list-unstyled archiveList mb-0">
                                 <li class="mb-3"><a href="javascript:void(0);" class="d-block">Log in</a></li>
@@ -150,7 +150,7 @@
                                 <li class="mb-3"><a href="javascript:void(0);" class="d-block">Comments RSS</a></li>
                                 <li class="mb-3"><a href="javascript:void(0);" class="d-block">WordPress.org</a></li>
                             </ul>
-                        </section>
+                        </section> -->
                     </aside>
                 </div>
             </div>
