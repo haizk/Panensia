@@ -1,7 +1,7 @@
 <template>
     <main>
         <!-- introBannerHolder -->
-        <section class="introBannerHolder d-flex w-100 bgCover" style="background-image: url(http://placehold.it/1920x300);">
+        <section class="introBannerHolder d-flex w-100 bgCover"  style="background-image: linear-gradient(to right , #ffffff,#ffffff, #5ba515);">
             <div class="container">
                 <div class="row">
                     <div class="col-12 pt-lg-23 pt-md-15 pt-sm-10 pt-6 text-center">
@@ -9,9 +9,9 @@
                         <ul class="list-unstyled breadCrumbs d-flex justify-content-center">
                             <li class="mr-sm-2 mr-1"><a href="home.html">Home</a></li>
                             <li class="mr-sm-2 mr-1">/</li>
-                            <li class="mr-sm-2 mr-1"><a href="blog.html">Blog</a></li>
+                            <li class="mr-sm-2 mr-1"><a href="/detailberita">Blog</a></li>
                             <li class="mr-sm-2 mr-1">/</li>
-                            <li class="active">Aptent taciti soci litora cianpen</li>
+                            <li class="active">/</li>
                         </ul>
                     </div>
                 </div>
@@ -23,25 +23,28 @@
                 <div class="col-12 col-lg-9 order-lg-3">
                     <!-- newsBlogColumn -->
                     <div class="newsBlogColumn mb-9">
-                        <div class="imgHolder mb-6">
-                            <img src="http://placehold.it/870x450" alt="image description" class="img-fluid">
-                        </div>
-                        <div class="textHolder d-flex align-items-start mb-1">
-                            <time class="time text-center text-uppercase py-sm-3 py-1 px-1" datetime="2019-02-03 20:00"> <strong class="fwEbold d-block mb-1">20</strong> Sep</time>
-                            <div class="alignLeft pl-6 w-100">
-                                <h2 class="headingV fwEbold mb-2">Aptent taciti soci litora cianpen</h2>
-                                <span class="postBy d-block pb-6 mb-3">Post by: Jane doe</span>
+                        <div class="textHolder d-flex align-items-start mb-4">
+                            <div class="center pl-6">
+                                <h1 class=" fwEbold mb-3" style="display: block; margin-left: auto; margin-right: auto;">6 Manfaat Minum Air Jahe saat Perut Kosong di Pagi Hari</h1>
+                                <div class="postMeta d-flex align-items-center mb-3">
+                                    <span class="postBy mr-3">Posted by: Jane Doe  20 Sep</span>
+                                    <!-- <time class=" text-uppercase" datetime="2019-02-03 20:00">
+                                        <strong class="fwEbold d-block">20</strong> Sep
+                                    </time> -->
+                                </div>
                             </div>
                         </div>
+                        <div class="imgHolder mb-6">
+                            <img src="https://i.pinimg.com/564x/b7/29/c8/b729c892ce5ccbee699a47c944653ffa.jpg" alt="image description" class="img-fluid" style="display: block; margin-left: auto; margin-right: auto;">
+                        </div>
+                    
+
+
                         <p class="mb-5"><span class="d-block">The standard Lorem Ipsum passage, used since the 1500s</span>
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                            Minum air jahe saat perut kosong di pagi hari memiliki sejumlah manfaat yang dapat bermanfaat bagi kesehatan. Berikut adalah enam manfaat utama yang dapat Anda dapatkan:</p>
                         <p class="mb-5"><span class="d-block">Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC</span>
                         "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
-                        <div class="imgHolder mb-5">
-                            <img src="http://placehold.it/870x450" alt="image description" class="img-fluid">
-                        </div>
-                        <p class="mb-5">On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.</p>
-                    </div>
+                       </div>
                 </div>
                 <div class="col-12 col-lg-3 order-lg-1">
                     <!-- sidebar -->
@@ -57,7 +60,7 @@
                             </form>
                         </section>
                         <!-- widget -->
-                        <section class="widget overflow-hidden mb-md-9 mb-6">
+                        <!-- <section class="widget overflow-hidden mb-md-9 mb-6">
                             <h3 class="headingVII fwEbold text-uppercase mb-2">RECENT POSTS</h3>
                             <ul class="list-unstyled recentPostList mb-0">
                                 <li><a href="javascript:void(0);" class="py-2 d-block">Blog image post</a></li>
@@ -66,9 +69,9 @@
                                 <li><a href="javascript:void(0);" class="py-2 d-block">Post with Video</a></li>
                                 <li><a href="javascript:void(0);" class="py-2 d-block">Maecenas ultricies</a></li>
                             </ul>
-                        </section>
+                        </section> -->
                         <!-- widget -->
-                        <section class="widget overflow-hidden mb-md-9 mb-6">
+                        <!-- <section class="widget overflow-hidden mb-md-9 mb-6">
                             <h3 class="headingVII fwEbold text-uppercase mb-2">RECENT COMMENTS</h3>
                             <ul class="list-unstyled recentPostList mb-0">
                                 <li><a href="javascript:void(0);" class="py-2 d-block">Admin on Vivamus blandit</a></li>
@@ -77,9 +80,9 @@
                                 <li><a href="javascript:void(0);" class="py-2 d-block">Admin on Vivamus blandit</a></li>
                                 <li><a href="javascript:void(0);" class="py-2 d-block">Admin on Vivamus blandit</a></li>
                             </ul>
-                        </section>
+                        </section> -->
                         <!-- widget -->
-                        <section class="widget overflow-hidden mb-md-6 mb-3">
+                        <!-- <section class="widget overflow-hidden mb-md-6 mb-3">
                             <h3 class="headingVII fwEbold text-uppercase mb-4">ARCHIVES</h3>
                             <ul class="list-unstyled archiveList mb-0">
                                 <li class="mb-3"><a href="javascript:void(0);" class="d-block">March 2018</a></li>
@@ -88,22 +91,22 @@
                                 <li class="mb-3"><a href="javascript:void(0);" class="d-block">September 2018</a></li>
                                 <li class="mb-3"><a href="javascript:void(0);" class="d-block">August 2018</a></li>
                             </ul>
-                        </section>
+                        </section> -->
                         <!-- widget -->
                         <section class="widget overflow-hidden mb-md-5 mb-3">
                             <h3 class="headingVII fwEbold text-uppercase mb-4">CATEGORIES</h3>
                             <ul class="list-unstyled archiveList mb-0">
-                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">Creative</a></li>
-                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">Fashion</a></li>
-                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">Image</a></li>
-                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">Photography</a></li>
-                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">Travel</a></li>
-                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">Videos</a></li>
-                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">WordPress</a></li>
+                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">Slimming</a></li>
+                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">Detox</a></li>
+                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">Imun dan Stamina</a></li>
+                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">Kulit dan Kecantikan</a></li>
+                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">Diabeter dan Gula Darah</a></li>
+                                <!-- <li class="mb-3"><a href="javascript:void(0);" class="d-block">Videos</a></li>
+                                <li class="mb-3"><a href="javascript:void(0);" class="d-block">WordPress</a></li> -->
                             </ul>
                         </section>
                         <!-- widget -->
-                        <section class="widget overflow-hidden mb-md-9 mb-6">
+                        <!-- <section class="widget overflow-hidden mb-md-9 mb-6">
                             <h3 class="headingVII fwEbold text-uppercase mb-4">META</h3>
                             <ul class="list-unstyled archiveList mb-0">
                                 <li class="mb-3"><a href="javascript:void(0);" class="d-block">Log in</a></li>
@@ -111,7 +114,7 @@
                                 <li class="mb-3"><a href="javascript:void(0);" class="d-block">Comments RSS</a></li>
                                 <li class="mb-3"><a href="javascript:void(0);" class="d-block">WordPress.org</a></li>
                             </ul>
-                        </section>
+                        </section> -->
                     </aside>
                 </div>
             </div>
@@ -134,7 +137,7 @@
                         <h4 class="headingVII text-uppercase mb-5">3 COMMENTS</h4>
                         <!-- commentArea -->
                         <article class="commentArea overflow-hidden d-flex align-items-start mb-6">
-                            <a href="javascript:void(0);" class="img rounded pr-5"><img src="http://placehold.it/70x70" alt="image description" class="img-fluid"></a>
+                            <a href="javascript:void(0);" class="img rounded pr-5"><img src="https://i.pinimg.com/564x/e8/7a/b0/e87ab0a15b2b65662020e614f7e05ef1.jpg" alt="image description" class="img-fluid"></a>
                             <div class="txtHolder border px-2 py-2">
                                 <span class="commentDate d-block mb-2"><a href="javascript:void(0);">Admin</a> Post authorOctober 6, 2014 at 1:38 am	<a href="javascript:void(0);" class="link text-green">Reply</a></span>
                                 <p class="mb-1">just a nice post</p>
@@ -143,7 +146,7 @@
                         <!-- comment one level of the page -->
                         <div class="commentOneLevel pl-md-20 pl-sm-10 pl-0 mb-9">
                             <article class="commentArea overflow-hidden d-flex align-items-start mb-2">
-                                <a href="javascript:void(0);" class="img rounded pr-5"><img src="http://placehold.it/70x70" alt="image description" class="img-fluid"></a>
+                                <a href="javascript:void(0);" class="img rounded pr-5"><img src="https://i.pinimg.com/564x/7e/c8/7e/7ec87e93394f77e27b93ee7dbe407ce6.jpg" alt="image description" class="img-fluid"></a>
                                 <div class="txtHolder border px-2 py-2">
                                     <span class="commentDate d-block mb-2"><a href="javascript:void(0);">Admin</a> Post authorOctober 6, 2014 at 1:38 am	<a href="javascript:void(0);" class="link text-green">Reply</a></span>
                                     <p class="mb-1">Quisque semper nunc vitae erat pellentesque, ac placerat arcu consectetur</p>
@@ -152,7 +155,7 @@
                         </div>
                         <!-- comment area of the page -->
                         <article class="commentArea overflow-hidden d-flex align-items-start mb-6">
-                            <a href="javascript:void(0);" class="img rounded pr-5"><img src="http://placehold.it/70x70" alt="image description" class="img-fluid"></a>
+                            <a href="javascript:void(0);" class="img rounded pr-5"><img src="https://i.pinimg.com/564x/9f/99/61/9f9961e2086884023420b16d360d0f62.jpg" alt="image description" class="img-fluid"></a>
                             <div class="txtHolder border px-2 py-2">
                                 <span class="commentDate d-block mb-2"><a href="javascript:void(0);">Admin</a> Post authorOctober 6, 2014 at 1:38 am	<a href="javascript:void(0);" class="link text-green">Reply</a></span>
                                 <p class="mb-1">Quisque orci nibh, porta vitae sagittis sit amet, vehicula vel mauris. Aenean at justo dolor. Fusce ac sapien bibendum, scelerisque libero nec Quisque orci nibh, porta vitae sagittis sit amet, vehicula vel mauris. Aenean at justo dolor. Fusce ac sapien bibendum, scelerisque libero nec</p>
@@ -190,6 +193,47 @@
                 </div>
             </div>
         </div>
+
+        <!-- Add this section below the commentsFormArea but before the subscribeSecBlock -->
+<section class="recommendedNewsBlock container mb-lg-24 mb-md-16 mb-10">
+    <h2 class="headingVII text-uppercase mb-5">Recommended News</h2>
+    <div class="row">
+        <!-- Recommended News Card 1 -->
+        <div class="col-md-4 mb-md-0 mb-4">
+            <div class="card">
+                <img src="http://placehold.it/350x200" class="card-img-top" alt="Image">
+                <div class="card-body">
+                    <h5 class="card-title">Recommended News Title 1</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btnTheme btnShop md-round fwEbold text-white">Read More</a>
+                </div>
+            </div>
+        </div>
+        <!-- Recommended News Card 2 -->
+        <div class="col-md-4 mb-md-0 mb-4">
+            <div class="card">
+                <img src="http://placehold.it/350x200" class="card-img-top" alt="Image">
+                <div class="card-body">
+                    <h5 class="card-title">Recommended News Title 2</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btnTheme btnShop md-round fwEbold text-white">Read More</a>
+                </div>
+            </div>
+        </div>
+        <!-- Recommended News Card 3 -->
+        <div class="col-md-4 mb-md-0 mb-4">
+            <div class="card">
+                <img src="http://placehold.it/350x200" class="card-img-top" alt="Image">
+                <div class="card-body">
+                    <h5 class="card-title">Recommended News Title 3</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btnTheme btnShop md-round fwEbold text-white">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
         <div class="container mb-lg-24 mb-md-16 mb-10">
             <!-- subscribeSecBlock -->
             <section class="subscribeSecBlock bgCover col-12 pt-lg-24 pb-lg-12 pt-md-16 pb-md-8 py-10" style="background-image: url(http://placehold.it/1170x465)">
@@ -204,56 +248,6 @@
                 </form>
             </section>
         </div>
-        <!-- footerHolder -->
-        <aside class="footerHolder overflow-hidden bg-lightGray pt-xl-23 pb-xl-8 pt-lg-10 pb-lg-8 pt-md-12 pb-md-8 pt-10">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-sm-6 col-lg-4 mb-lg-0 mb-4">
-                        <h3 class="headingVI fwEbold text-uppercase mb-7">Contact Us</h3>
-                        <ul class="list-unstyled footerContactList mb-3">
-                            <li class="mb-3 d-flex flex-nowrap pr-xl-20 pr-0"><span class="icon icon-place mr-3"></span> <address class="fwEbold m-0">Address: London Oxford Street, 012 United Kingdom.</address></li>
-                            <li class="mb-3 d-flex flex-nowrap"><span class="icon icon-phone mr-3"></span> <span class="leftAlign">Phone : <a href="javascript:void(0);">(+032) 3456 7890</a></span></li>
-                            <li class="email d-flex flex-nowrap"><span class="icon icon-email mr-2"></span> <span class="leftAlign">Email:  <a href="javascript:void(0);">Botanicalstore@gmail.com</a></span></li>
-                        </ul>
-                        <ul class="list-unstyled followSocailNetwork d-flex flex-nowrap">
-                            <li class="fwEbold mr-xl-11 mr-md-8 mr-3">Follow  us:</li>
-                            <li class="mr-xl-6 mr-md-5 mr-2"><a href="javascript:void(0);" class="fab fa-facebook-f"></a></li>
-                            <li class="mr-xl-6 mr-md-5 mr-2"><a href="javascript:void(0);" class="fab fa-twitter"></a></li>
-                            <li class="mr-xl-6 mr-md-5 mr-2"><a href="javascript:void(0);" class="fab fa-pinterest"></a></li>
-                            <li class="mr-2"><a href="javascript:void(0);" class="fab fa-google-plus-g"></a></li>
-                        </ul>
-                    </div>
-                    <div class="col-12 col-sm-6 col-lg-3 pl-xl-14 mb-lg-0 mb-4">
-                        <h3 class="headingVI fwEbold text-uppercase mb-6">Information</h3>
-                        <ul class="list-unstyled footerNavList">
-                            <li class="mb-1"><a href="javascript:void(0);">New Products</a></li>
-                            <li class="mb-2"><a href="javascript:void(0);">Top Sellers</a></li>
-                            <li class="mb-2"><a href="javascript:void(0);">Our Blog</a></li>
-                            <li class="mb-2"><a href="javascript:void(0);">About Our Shop</a></li>
-                            <li><a href="javascript:void(0);">Privacy policy</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-12 col-sm-6 col-lg-3 pl-xl-12 mb-lg-0 mb-4">
-                        <h3 class="headingVI fwEbold text-uppercase mb-7">My Account</h3>
-                        <ul class="list-unstyled footerNavList">
-                            <li class="mb-1"><a href="javascript:void(0);">My account</a></li>
-                            <li class="mb-2"><a href="javascript:void(0);">Discount</a></li>
-                            <li class="mb-2"><a href="javascript:void(0);">Orders history</a></li>
-                            <li><a href="javascript:void(0);">Personal information</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-12 col-sm-6 col-lg-2 pl-xl-18 mb-lg-0 mb-4">
-                        <h3 class="headingVI fwEbold text-uppercase mb-5">PRODUCTS</h3>
-                        <ul class="list-unstyled footerNavList">
-                            <li class="mb-2"><a href="javascript:void(0);">Delivery</a></li>
-                            <li class="mb-2"><a href="javascript:void(0);">Legal notice</a></li>
-                            <li class="mb-2"><a href="javascript:void(0);">Prices drop</a></li>
-                            <li class="mb-2"><a href="javascript:void(0);">New products</a></li>
-                            <li><a href="javascript:void(0);">Best sales</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </aside>
+        
     </main>
 </template>
