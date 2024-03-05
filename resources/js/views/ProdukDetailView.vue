@@ -53,15 +53,22 @@
 							<li class="mb-2">Bebas biaya ongkir se-Indonesia</li>
 						</ul>
 						<strong class="price d-block mb-5 text-green">Rp55.000</strong>
+						<span class="text-uppercase mr-2">Dapatkan Di:</span>
+						<br><br>
 						<ul class="list-unstyled socialNetwork d-flex flex-wrap mb-sm-11 mb-4">
-							<li class="text-uppercase mr-2">PRODUK TERSEDIA DI:</li>
-							<li>
-								<img src="https://www.freepnglogos.com/uploads/logo-tokopedia-png/tokopedia-nursing-pillow-archives-baby-loop-7.png" class="e-commerce" alt="">
-							</li>
-							<li>
-								<img src="https://freelogopng.com/images/all_img/1656181199icon-shopee-png.png" class="e-commerce" alt="">
-							</li>
+							<div class="socialNetworkLink">
+								<a href="https://shopee.co.id/Buah-Bit-Beet-Root-Segar-Fresh-1-kg-i.310974882.20693736613?sp_atk=b107b1a8-4e6f-42e8-970a-8d60d2655608&xptdk=b107b1a8-4e6f-42e8-970a-8d60d2655608" target="_blank"
+									class="btn btnShoppe btnShop fwEbold text-white py-2 px-2 mb-3">
+									<img src="https://freelogopng.com/images/all_img/1656181199icon-shopee-png.png" alt="" style="width:20px;"> Shoppe
+								</a>
+								<br>
+								<a href="https://shopee.co.id/Buah-Bit-Beet-Root-Segar-Fresh-1-kg-i.310974882.20693736613?sp_atk=b107b1a8-4e6f-42e8-970a-8d60d2655608&xptdk=b107b1a8-4e6f-42e8-970a-8d60d2655608" target="_blank"
+									class="btn btnTokped btnShop fwEbold text-white py-2 px-2">
+									<img src="https://www.freepnglogos.com/uploads/logo-tokopedia-png/tokopedia-nursing-pillow-archives-baby-loop-7.png" alt="" style="width:20px;"> Shoppe
+								</a>
+							</div>
 						</ul>
+						
 						<div>
 							<div id="accordion" class="accordionList pt-lg-0">
 								<div class="card mb-2">

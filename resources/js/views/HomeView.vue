@@ -1,3 +1,5 @@
+
+import { RouterLink } from 'vue-router';
 <template>
 		<main>
 			<!-- introBlock -->
@@ -164,12 +166,24 @@
 
 			<!-- productOfferSec -->
 			<div class="productOfferSec container overflow-hidden py-xl-12 py-lg-10 py-md-8 py-5">
+				<header class="col-12 mainHeader mb-7 text-center">
+					<h1 class="headingIV playfair fwEblod mb-5">Panensia New Product</h1>
+				</header>
 				<div class="row">
-					<div class="col-12 col-sm-6 mb-sm-0 mb-2">
-						<a href="shop.html" class="w-100"><img src="https://i.ibb.co/YZVkLcm/woman-shopping-vegetables-at-farmers-market-2023-11-27-05-36-02-utc.jpg" alt="image description" class="img-fluid"></a>
+					<div class="col-12 col-sm-4 mb-sm-0 mb-2">
+						<RouterLink to="/produk" class="w-100">
+							<img src="https://i.ibb.co/fHf8BbY/image-review-2.jpg" alt="image description" class="img-fluid" style="width: 500px;">
+						</RouterLink>
 					</div>
-					<div class="col-12 col-sm-6">
-						<a href="shop.html" class="w-100"><img src="https://i.ibb.co/YZVkLcm/woman-shopping-vegetables-at-farmers-market-2023-11-27-05-36-02-utc.jpg" alt="image description" class="img-fluid"></a>
+					<div class="col-12 col-sm-4">
+						<RouterLink to="/produk" class="w-100">
+							<img src="https://i.ibb.co/fHf8BbY/image-review-2.jpg" alt="image description" class="img-fluid" style="width: 500px;">
+						</RouterLink>
+					</div>
+					<div class="col-12 col-sm-4">
+						<RouterLink to="/produk" class="w-100">
+							<img src="https://i.ibb.co/fHf8BbY/image-review-2.jpg" alt="image description" class="img-fluid" style="width: 500px;">
+						</RouterLink>
 					</div>
 				</div>
 			</div>
@@ -177,9 +191,8 @@
 			<section class="dealSecHolder container-fluid overflow-hidden py-xl-12 py-lg-10 py-md-8 py-5">
 				<!-- mainHeader -->
 				<header class="col-12 mainHeader mb-7 text-center">
-					<h1 class="headingIV playfair fwEblod mb-5">Daily Deal</h1>
 					<span class="headerBorder d-block mb-md-5 mb-3"><img src="https://www.panensia.co.id/wp-content/uploads/2023/11/logo-panensia-rev.png" alt="Header Border" class="img-fluid img-bdr"></span>
-					<p class="mb-6">There are many variations of passages of lorem ipsum available.</p>
+					<p class="mb-6">Produk dengan penawaran terbatas</p>
 					<div id="defaultCountdown" class="comming-timer"></div>
 				</header>
 				<!-- dealSlider -->
@@ -369,8 +382,8 @@
 				<section class="subscribeSecBlock bgCover col-12 pt-xl-24 pb-xl-12 pt-lg-20 pt-md-16 pt-10 pb-md-8 pb-5" style="background-image: url(https://i.ibb.co/ZhxJBFx/top-view-of-farm-lands-with-agricultural-machines-2023-11-28-15-48-38-utc.jpg)">
 					
 					<header class="col-12 mainHeader mb-sm-9 mb-6 text-center">
-						<h1 class="headingIV playfair fwEblod mb-4 text-white">Subscribe Our Newsletter</h1>
-						<p class="mb-sm-6 mb-3 text-white">Enter Your email address to join our mailing list and keep yourself update</p>
+						<h1 class="headingIV playfair fwEblod mb-4 text-white">Langganan Produk Kami</h1>
+						<p class="mb-sm-6 mb-3 text-white">Masukkan email mu untuk mendapatkan produk terbaru dari kami</p>
 					</header>
 					<form class="emailForm1 mx-auto overflow-hidden d-flex flex-wrap">
 						<input type="email" class="form-control px-4 border-0" placeholder="Enter your mail...">

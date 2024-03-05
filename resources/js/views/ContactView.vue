@@ -58,13 +58,17 @@
                     <form class="contactForm">
                         <div class="d-flex flex-wrap row1 mb-md-1">
                             <div class="form-group coll mb-5">
+                                <select name="" class="form-control">
+                                    <option value="0">-- Pilih Masukan --</option>
+                                    <option value="saran">Saran</option>
+                                    <option value="kritik">Kritik</option>
+                                </select>
+                            </div>
+                            <div class="form-group coll mb-5">
                                 <input type="text" id="name" class="form-control" name="name" placeholder="Nama *">
                             </div>
                             <div class="form-group coll mb-5">
                                 <input type="email" class="form-control" id="email" name="Email" placeholder="Email  *">
-                            </div>
-                            <div class="form-group coll mb-5">
-                                <input type="tel" class="form-control" id="tel" name="tel" placeholder="No WA *">
                             </div>
                         </div>
                         <div class="form-group w-100 mb-6">

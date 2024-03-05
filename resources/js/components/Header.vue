@@ -11,11 +11,10 @@ const route = useRoute()
 			<div class="headerHolderCol pt-lg-4 pb-lg-5 py-3">
 				<div class="container">
 					<div class="row">
-						<div class="col-12 col-sm-4">
-							<a href="javascript:void(0);" class="tel d-flex align-items-end"><i class="icon-call mr-2"></i>  Hotline: (602) 462 8889</a>
-						</div>
-						<div class="col-12 col-sm-4 text-center">
-							<span class="txt d-block">Welcome to Panensia</span>
+						<div class="col-12 col-sm-12">
+							<span class="txt d-block running-text">
+								Welcome to Panensia ||  penyuplai terbaik untuk kebutuhan rempah-rempah dan bumbu masak yang diproduksi sendiri, memberikan aroma dan rasa terbaik untuk masakan Anda.
+							</span>
 						</div>
 					</div>
 				</div>

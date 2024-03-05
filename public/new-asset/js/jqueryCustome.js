@@ -12,11 +12,11 @@ $(document).ready(function() {
     initCountDown();
     // count down init
     function initCountDown() {
-        var newDate = new Date(2024, 2, 6);
-
+        var newDate = new Date(2024, 2, 5, 20, 0, 0); // Tanggal 6 Maret 2024 pukul 12:00:00
+    
         jQuery("#defaultCountdown").countdown({until: newDate});
     }
-
+    
     initSlickSlider();
     // Slick Slider init
     function initSlickSlider() {

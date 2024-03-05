@@ -77,12 +77,36 @@
 	<link rel="stylesheet" href="{{ asset('new-asset/css/color.css') }}">
 	<!-- include theme responsive setting stylesheet -->
 	<link rel="stylesheet" href="{{ asset('new-asset/css/responsive.css') }}">
+    <style>
+        .running-text {
+            display: inline-block;
+            animation: running-text-animation 30s linear infinite;
+        }
+
+        @keyframes running-text-animation {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+        .btnShoppe{
+            background-color: #ea501f;
+        }
+        .btnTokped{
+            background-color: #84c567;
+        }
+        .socialNetworkLink {
+            margin-bottom: 10px; /* Jarak antar link */
+        }
+    </style>
 </head>
 
 
 <body>
     <div id="pageWrapper">
-        <div id="app">app.blade.php</div>
+        <div id="app"></div>
         @vite('resources/js/app.js')
     </div>
 </body>
