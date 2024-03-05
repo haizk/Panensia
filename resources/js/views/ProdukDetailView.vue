@@ -64,7 +64,7 @@
 								<br>
 								<a href="https://shopee.co.id/Buah-Bit-Beet-Root-Segar-Fresh-1-kg-i.310974882.20693736613?sp_atk=b107b1a8-4e6f-42e8-970a-8d60d2655608&xptdk=b107b1a8-4e6f-42e8-970a-8d60d2655608" target="_blank"
 									class="btn btnTokped btnShop fwEbold text-white py-2 px-2">
-									<img src="https://www.freepnglogos.com/uploads/logo-tokopedia-png/tokopedia-nursing-pillow-archives-baby-loop-7.png" alt="" style="width:30px; padding-right: 10px; padding-bottom: 8px;"> Tokopedia
+									<img src="https://www.freepnglogos.com/uploads/logo-tokopedia-png/tokopedia-nursing-pillow-archives-baby-loop-7.png" alt="" style="width:30px; padding-right: 10px; padding-bottom: 8px;">Tokopedia
 								</a>
 							</div>
 						</ul>
