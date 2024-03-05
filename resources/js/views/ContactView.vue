@@ -1,40 +1,41 @@
 <template>
     <main>
         <!-- introBannerHolder -->
-        <section class="introBannerHolder d-flex w-100 bgCover" style="background-image: url(http://placehold.it/1920x300);">
+        <section class="introBannerHolder d-flex w-100 bgCover" style="background-image: url(https://i.ibb.co/9wmwSHB/indian-garam-masala-powder-and-colourful-spices-s-2023-11-27-05-18-00-utc.jpg);">
             <div class="container">
-                <div class="row">
-                    <div class="col-12 pt-lg-23 pt-md-15 pt-sm-10 pt-6 text-center">
-                        <h1 class="headingIV fwEbold playfair mb-4">Contact</h1>
-                        <ul class="list-unstyled breadCrumbs d-flex justify-content-center">
-                            <li class="mr-2"><a href="home.html">Home</a></li>
-                            <li class="mr-2">/</li>
-                            <li class="active">Contact</li>
-                        </ul>
-                    </div>
+              <div class="row">
+                <div class="col-12 pt-lg-23 pt-md-15 pt-sm-10 pt-6 text-center">
+                  <h1 class="headingIV fwEbold playfair mb-4 text-white">Kontak</h1>
+                  <ul class="list-unstyled breadCrumbs d-flex justify-content-center">
+                    <li class="mr-2">
+                      <RouterLink to="/" class="text-white-50">Home /</RouterLink>
+                    </li>
+                    <li class="mr-2">
+                        <RouterLink to="#" class="active text-white">Kontak</RouterLink>
+                    </li>
+                  </ul>
                 </div>
+              </div>
             </div>
-        </section>
+          </section>
         <div class="contactSec container pt-xl-24 pb-xl-23 py-lg-20 pt-md-16 pb-md-10 pt-10 pb-0">
             <div class="row">
                 <div class="col-12">
                     <ul class="list-unstyled contactListHolder mb-0 d-flex flex-wrap text-center">
                         <li class="mb-lg-0 mb-6">
                             <span class="icon d-block mx-auto bg-lightGray py-4 mb-4"><i class="fas fa-map-marker-alt"></i></span>
-                            <strong class="title text-uppercase playfair mb-5 d-block">address</strong>
-                            <address class="mb-0">7th floor - Palace Building - 221B Walk of Fame -<span class="d-block"> London - UK</span></address>
+                            <strong class="title text-uppercase playfair mb-5 d-block">Alamat</strong>
+                            <address class="mb-0">Jl. Kartika , Gulon RT 2 RW 21 Gang Awan No. 131<span class="d-block">  Jebres, Surakarta 57126</span></address>
                         </li>
                         <li class="mb-lg-0 mb-6">
                             <span class="icon d-block mx-auto bg-lightGray py-4 mb-3"><i class="fas fa-headphones"></i></span>
-                            <strong class="title text-uppercase playfair mb-5 d-block">phone</strong>
-                            <a href="tel:84123456789" class="d-block">(+84) - 123 - 456 - 789</a>
-                            <a href="tel:84321654987" class="d-block">(+84) - 321 - 654 - 987</a>
+                            <strong class="title text-uppercase playfair mb-5 d-block">Whatsapp</strong>
+                            <a href="tel:84123456789" class="d-block">+62 857-2874-9413</a>
                         </li>
                         <li class="mb-lg-0 mb-6">
                             <span class="icon d-block mx-auto bg-lightGray py-5 mb-3"><i class="fas fa-envelope"></i></span>
-                            <strong class="title text-uppercase playfair mb-5 d-block">email</strong>
-                            <a href="#" class="d-block">Two-support@Two.lnk</a>
-                            <a href="#" class="d-block">info@Two.lnk</a>
+                            <strong class="title text-uppercase playfair mb-5 d-block">Email</strong>
+                            <a href="#" class="d-block">panensiaofficial@gmail.com</a>
                         </li>
                     </ul>
                 </div>
@@ -42,14 +43,14 @@
         </div>
         <!-- mapHolder -->
         <div class="mapHolder">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.91477127143!2d-74.11976341808828!3d40.697403441901386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1573223498837!5m2!1sen!2s" style="border:0;" allowfullscreen="">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.2117408190893!2d110.86086397476348!3d-7.5518754924618055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a171c9d0b2579%3A0x522ce6228633356a!2sJl.%20Kartika%2C%20Jebres%2C%20Kec.%20Jebres%2C%20Kota%20Surakarta%2C%20Jawa%20Tengah%2057126!5e0!3m2!1sen!2sid!4v1709624862988!5m2!1sen!2sid" style="border:0;" allowfullscreen="">
             </iframe>
         </div>
         <section class="contactSecBlock container pt-xl-23 pb-xl-24 pt-lg-20 pb-lg-10 pt-md-16 pb-md-8 py-10">
             <div class="row">
                 <header class="col-12 mainHeader mb-10 text-center">
-                    <h1 class="headingIV playfair fwEblod mb-7">Get In Touch</h1>
-                    <p>Lorem ipsum dolor consectetuer adipiscing elit sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna<br class="d-block"> aliquam erat volutpatcommodo consequat.</p>
+                    <h1 class="headingIV playfair fwEblod mb-7">Kritik dan Saran</h1>
+                    <p>Berikan masukan anda untuk kemajuan Panensia<br class="d-block"> Masukan anda sangat berarti.</p>
                 </header>
             </div>
             <div class="row">
@@ -57,13 +58,13 @@
                     <form class="contactForm">
                         <div class="d-flex flex-wrap row1 mb-md-1">
                             <div class="form-group coll mb-5">
-                                <input type="text" id="name" class="form-control" name="name" placeholder="Your name  *">
+                                <input type="text" id="name" class="form-control" name="name" placeholder="Nama *">
                             </div>
                             <div class="form-group coll mb-5">
-                                <input type="email" class="form-control" id="email" name="Email" placeholder="Your email  *">
+                                <input type="email" class="form-control" id="email" name="Email" placeholder="Email  *">
                             </div>
                             <div class="form-group coll mb-5">
-                                <input type="tel" class="form-control" id="tel" name="tel" placeholder="Telephone number  *">
+                                <input type="tel" class="form-control" id="tel" name="tel" placeholder="No WA *">
                             </div>
                         </div>
                         <div class="form-group w-100 mb-6">
@@ -76,56 +77,5 @@
                 </div>
             </div>
         </section>
-        <!-- footerHolder -->
-        <aside class="footerHolder overflow-hidden bg-lightGray pt-xl-23 pb-xl-8 pt-lg-10 pb-lg-8 pt-md-12 pb-md-8 pt-10">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-sm-6 col-lg-4 mb-lg-0 mb-4">
-                        <h3 class="headingVI fwEbold text-uppercase mb-7">Contact Us</h3>
-                        <ul class="list-unstyled footerContactList mb-3">
-                            <li class="mb-3 d-flex flex-nowrap pr-xl-20 pr-0"><span class="icon icon-place mr-3"></span> <address class="fwEbold m-0">Address: London Oxford Street, 012 United Kingdom.</address></li>
-                            <li class="mb-3 d-flex flex-nowrap"><span class="icon icon-phone mr-3"></span> <span class="leftAlign">Phone : <a href="javascript:void(0);">(+032) 3456 7890</a></span></li>
-                            <li class="email d-flex flex-nowrap"><span class="icon icon-email mr-2"></span> <span class="leftAlign">Email:  <a href="javascript:void(0);">Botanicalstore@gmail.com</a></span></li>
-                        </ul>
-                        <ul class="list-unstyled followSocailNetwork d-flex flex-nowrap">
-                            <li class="fwEbold mr-xl-11 mr-md-8 mr-3">Follow  us:</li>
-                            <li class="mr-xl-6 mr-md-5 mr-2"><a href="javascript:void(0);" class="fab fa-facebook-f"></a></li>
-                            <li class="mr-xl-6 mr-md-5 mr-2"><a href="javascript:void(0);" class="fab fa-twitter"></a></li>
-                            <li class="mr-xl-6 mr-md-5 mr-2"><a href="javascript:void(0);" class="fab fa-pinterest"></a></li>
-                            <li class="mr-2"><a href="javascript:void(0);" class="fab fa-google-plus-g"></a></li>
-                        </ul>
-                    </div>
-                    <div class="col-12 col-sm-6 col-lg-3 pl-xl-14 mb-lg-0 mb-4">
-                        <h3 class="headingVI fwEbold text-uppercase mb-6">Information</h3>
-                        <ul class="list-unstyled footerNavList">
-                            <li class="mb-1"><a href="javascript:void(0);">New Products</a></li>
-                            <li class="mb-2"><a href="javascript:void(0);">Top Sellers</a></li>
-                            <li class="mb-2"><a href="javascript:void(0);">Our Blog</a></li>
-                            <li class="mb-2"><a href="javascript:void(0);">About Our Shop</a></li>
-                            <li><a href="javascript:void(0);">Privacy policy</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-12 col-sm-6 col-lg-3 pl-xl-12 mb-lg-0 mb-4">
-                        <h3 class="headingVI fwEbold text-uppercase mb-7">My Account</h3>
-                        <ul class="list-unstyled footerNavList">
-                            <li class="mb-1"><a href="javascript:void(0);">My account</a></li>
-                            <li class="mb-2"><a href="javascript:void(0);">Discount</a></li>
-                            <li class="mb-2"><a href="javascript:void(0);">Orders history</a></li>
-                            <li><a href="javascript:void(0);">Personal information</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-12 col-sm-6 col-lg-2 pl-xl-18 mb-lg-0 mb-4">
-                        <h3 class="headingVI fwEbold text-uppercase mb-5">PRODUCTS</h3>
-                        <ul class="list-unstyled footerNavList">
-                            <li class="mb-2"><a href="javascript:void(0);">Delivery</a></li>
-                            <li class="mb-2"><a href="javascript:void(0);">Legal notice</a></li>
-                            <li class="mb-2"><a href="javascript:void(0);">Prices drop</a></li>
-                            <li class="mb-2"><a href="javascript:void(0);">New products</a></li>
-                            <li><a href="javascript:void(0);">Best sales</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </aside>
     </main>
 </template>

@@ -1,14 +1,19 @@
+
+import { RouterLink } from 'vue-router';
 <template>
     <main>
-        <section class="introBannerHolder d-flex w-100 bgCover"  style="background-image: linear-gradient(to right , #ffffff,#ffffff, #5ba515);">
+      <section class="introBannerHolder d-flex w-100 bgCover" style="background-image: url(https://i.ibb.co/9wmwSHB/indian-garam-masala-powder-and-colourful-spices-s-2023-11-27-05-18-00-utc.jpg);">
         <div class="container">
           <div class="row">
             <div class="col-12 pt-lg-23 pt-md-15 pt-sm-10 pt-6 text-center">
-              <h1 class="headingIV fwEbold playfair mb-4">Berita</h1>
+              <h1 class="headingIV fwEbold playfair mb-4 text-white">Berita</h1>
               <ul class="list-unstyled breadCrumbs d-flex justify-content-center">
-                <li class="mr-2"><a href="home.html">Home</a></li>
-                <li class="mr-2">/</li>
-                <li class="active">Berita</li>
+                <li class="mr-2">
+                  <RouterLink to="/" class="text-white-50">Home /</RouterLink>
+                </li>
+                <li class="mr-2">
+                  <RouterLink to="/produk" class="active text-white">Berita</RouterLink>
+                </li>
               </ul>
             </div>
           </div>
@@ -26,7 +31,7 @@
                     <div class="card-body" style ="display: flex; flex-direction: column;">
                       <h5 class="card-title" style ="flex-grow: 1;">6 Manfaat Minum Air Jahe saat Perut Kosong di Pagi Hari</h5>
                       <p class="card-text" style ="flex-grow: 1;">Dalam pengobatan kuno, jahe digunakan sebagai ramuan</p>
-                      <a href="BeritaDetail.vue" class="btn btnTheme btnShop md-round fwEbold text-white" style="color: #ffffff; background-color: #5ba515; border-color: #5ba515;">Baca Selengkapnya</a>
+                      <RouterLink to="/detailberita" class="btn btnTheme btnShop md-round fwEbold text-white" style="color: #ffffff; background-color: #5ba515; border-color: #5ba515;">Baca Selengkapnya</RouterLink>
                     </div>
                   </div>
                 </div>
@@ -37,7 +42,7 @@
                     <div class="card-body" style ="display: flex; flex-direction: column;">
                       <h5 class="card-title" style ="flex-grow: 1;">Kegunaan Temulawak</h5>
                       <p class="card-text" style ="flex-grow: 1;">Dalam pengobatan kuno, jahe digunakan sebagai ramuan</p>
-                      <a href="/detailberita" class="btn btnTheme btnShop md-round fwEbold text-white" style="color: #ffffff; background-color: #5ba515; border-color: #5ba515;">Baca Selengkapnya</a>
+                      <RouterLink to="/detailberita" class="btn btnTheme btnShop md-round fwEbold text-white" style="color: #ffffff; background-color: #5ba515; border-color: #5ba515;">Baca Selengkapnya</RouterLink>
                     </div>
                   </div>
                 </div>
@@ -48,9 +53,7 @@
                     <div class="card-body" style ="display: flex; flex-direction: column;">
                       <h5 class="card-title" style ="flex-grow: 1;">Kegunaan Temulawak</h5>
                       <p class="card-text" style ="flex-grow: 1;">Dalam pengobatan kuno, jahe digunakan sebagai ramuan</p>
-                      <RouterLink to="/detailberita">
-                      <a href="/detailberita" class="btn btnTheme btnShop md-round fwEbold text-white" style="color: #ffffff; background-color: #5ba515; border-color: #5ba515;">Baca Selengkapnya</a>
-                    </RouterLink>
+                      <RouterLink to="/detailberita" class="btn btnTheme btnShop md-round fwEbold text-white" style="color: #ffffff; background-color: #5ba515; border-color: #5ba515;">Baca Selengkapnya</RouterLink>
                     </div>
                   </div>
                 </div>

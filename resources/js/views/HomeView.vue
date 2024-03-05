@@ -128,7 +128,7 @@
 			<section class="chooseUs-sec container pt-xl-22 pt-lg-20 pt-md-16 pt-10 pb-xl-12 pb-md-7 pb-2">
 				<div class="row">
 					<div class="col-12 col-lg-6 mb-lg-0 mb-4">
-						<img src="https://i.ibb.co/YZVkLcm/woman-shopping-vegetables-at-farmers-market-2023-11-27-05-36-02-utc.jpg" alt="image description" class="img-fluid">
+						<img src="https://i.ibb.co/7SkPb4D/happy-multiracial-farmers-working-inside-greenhous-2023-11-27-04-50-09-utc-1.jpg" alt="image description" class="img-fluid">
 					</div>
 					<div class="col-12 col-lg-6 pr-4">
 						<h2 class="headingII fwEbold playfair position-relative mb-6 pb-5">Kenapa Kami ?</h2>
@@ -166,10 +166,10 @@
 			<div class="productOfferSec container overflow-hidden py-xl-12 py-lg-10 py-md-8 py-5">
 				<div class="row">
 					<div class="col-12 col-sm-6 mb-sm-0 mb-2">
-						<a href="shop.html" class="w-100"><img src="http://placehold.it/570x350" alt="image description" class="img-fluid"></a>
+						<a href="shop.html" class="w-100"><img src="https://i.ibb.co/YZVkLcm/woman-shopping-vegetables-at-farmers-market-2023-11-27-05-36-02-utc.jpg" alt="image description" class="img-fluid"></a>
 					</div>
 					<div class="col-12 col-sm-6">
-						<a href="shop.html" class="w-100"><img src="http://placehold.it/570x350" alt="image description" class="img-fluid"></a>
+						<a href="shop.html" class="w-100"><img src="https://i.ibb.co/YZVkLcm/woman-shopping-vegetables-at-farmers-market-2023-11-27-05-36-02-utc.jpg" alt="image description" class="img-fluid"></a>
 					</div>
 				</div>
 			</div>
@@ -189,7 +189,7 @@
 						<div class="featureCol position-relative w-100 px-3 mb-sm-8 mb-6">
 							<div class="border">
 								<div class="imgHolder position-relative w-100 overflow-hidden">
-									<img src="http://placehold.it/320x355" alt="image description" class="img-fluid w-100">
+									<img src="https://www.panensia.co.id/wp-content/uploads/2023/10/cengkeh-600x600.jpg" alt="image description" class="img-fluid w-100">
 									<ul class="list-unstyled postHoverLinskList d-flex justify-content-center m-0">
 										<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-heart d-block"></a></li>
 										<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-cart d-block"></a></li>
@@ -233,7 +233,7 @@
 						<div class="featureCol position-relative w-100 px-3 mb-sm-8 mb-6">
 							<div class="border">
 								<div class="imgHolder position-relative w-100 overflow-hidden">
-									<img src="http://placehold.it/320x355" alt="image description" class="img-fluid w-100">
+									<img src="https://www.panensia.co.id/wp-content/uploads/2023/10/cengkeh-600x600.jpg" alt="image description" class="img-fluid w-100">
 									<ul class="list-unstyled postHoverLinskList d-flex justify-content-center m-0">
 										<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-heart d-block"></a></li>
 										<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-cart d-block"></a></li>
@@ -277,7 +277,7 @@
 						<div class="featureCol position-relative w-100 px-3 mb-sm-8 mb-6">
 							<div class="border">
 								<div class="imgHolder position-relative w-100 overflow-hidden">
-									<img src="http://placehold.it/320x355" alt="image description" class="img-fluid w-100">
+									<img src="https://www.panensia.co.id/wp-content/uploads/2023/10/cengkeh-600x600.jpg" alt="image description" class="img-fluid w-100">
 									<ul class="list-unstyled postHoverLinskList d-flex justify-content-center m-0">
 										<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-heart d-block"></a></li>
 										<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-cart d-block"></a></li>
@@ -321,7 +321,7 @@
 						<div class="featureCol position-relative w-100 px-3 mb-sm-8 mb-6">
 							<div class="border">
 								<div class="imgHolder position-relative w-100 overflow-hidden">
-									<img src="http://placehold.it/320x355" alt="image description" class="img-fluid w-100">
+									<img src="https://www.panensia.co.id/wp-content/uploads/2023/10/cengkeh-600x600.jpg" alt="image description" class="img-fluid w-100">
 									<ul class="list-unstyled postHoverLinskList d-flex justify-content-center m-0">
 										<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-heart d-block"></a></li>
 										<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-cart d-block"></a></li>
@@ -363,57 +363,14 @@
 				</div>
 			</section>
 			<!-- partnerSec -->
-			<div class="partnerSec container overflow-hidden pt-xl-12 pb-xl-23 pt-lg-10 pt-md-8 pt-5 pb-lg-20 pb-md-16 pb-10">
-				<div class="row">
-					<div class="col-12">
-						<!-- partnerSlider -->
-						<div class="partnerSlider d-flex flex-wrap">
-							<div>
-								<div class="logoColumn d-flex align-items-center justify-content-center">
-									<a href="javascript:void(0);"><img src="http://placehold.it/105x59" alt="Partner Logo" class="img-fluid"></a>
-								</div>
-							</div>
-							<div>
-								<div class="logoColumn d-flex align-items-center justify-content-center">
-									<a href="javascript:void(0);"><img src="http://placehold.it/105x59" alt="Partner Logo" class="img-fluid"></a>
-								</div>
-							</div>
-							<div>
-								<div class="logoColumn d-flex align-items-center justify-content-center">
-									<a href="javascript:void(0);"><img src="http://placehold.it/105x59" alt="Partner Logo" class="img-fluid"></a>
-								</div>
-							</div>
-							<div>
-								<div class="logoColumn d-flex align-items-center justify-content-center">
-									<a href="javascript:void(0);"><img src="http://placehold.it/105x59" alt="Partner Logo" class="img-fluid"></a>
-								</div>
-							</div>
-							<div>
-								<div class="logoColumn d-flex align-items-center justify-content-center">
-									<a href="javascript:void(0);"><img src="http://placehold.it/105x59" alt="Partner Logo" class="img-fluid"></a>
-								</div>
-							</div>
-							<div>
-								<div class="logoColumn d-flex align-items-center justify-content-center">
-									<a href="javascript:void(0);"><img src="http://placehold.it/105x59" alt="Partner Logo" class="img-fluid"></a>
-								</div>
-							</div>
-							<div>
-								<div class="logoColumn d-flex align-items-center justify-content-center">
-									<a href="javascript:void(0);"><img src="http://placehold.it/105x59" alt="Partner Logo" class="img-fluid"></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+			
 			<div class="container-fluid px-xl-20 px-lg-14">
 				<!-- subscribeSecBlock -->
-				<section class="subscribeSecBlock bgCover col-12 pt-xl-24 pb-xl-12 pt-lg-20 pt-md-16 pt-10 pb-md-8 pb-5" style="background-image: url(http://placehold.it/1720x465)">
+				<section class="subscribeSecBlock bgCover col-12 pt-xl-24 pb-xl-12 pt-lg-20 pt-md-16 pt-10 pb-md-8 pb-5" style="background-image: url(https://i.ibb.co/ZhxJBFx/top-view-of-farm-lands-with-agricultural-machines-2023-11-28-15-48-38-utc.jpg)">
+					
 					<header class="col-12 mainHeader mb-sm-9 mb-6 text-center">
-						<h1 class="headingIV playfair fwEblod mb-4">Subscribe Our Newsletter</h1>
-						<span class="headerBorder d-block mb-md-5 mb-3"><img src="https://www.panensia.co.id/wp-content/uploads/2023/11/logo-panensia-rev.png" alt="Header Border" class="img-fluid img-bdr"></span>
-						<p class="mb-sm-6 mb-3">Enter Your email address to join our mailing list and keep yourself update</p>
+						<h1 class="headingIV playfair fwEblod mb-4 text-white">Subscribe Our Newsletter</h1>
+						<p class="mb-sm-6 mb-3 text-white">Enter Your email address to join our mailing list and keep yourself update</p>
 					</header>
 					<form class="emailForm1 mx-auto overflow-hidden d-flex flex-wrap">
 						<input type="email" class="form-control px-4 border-0" placeholder="Enter your mail...">

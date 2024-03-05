@@ -1,22 +1,24 @@
 <template>
     <main>
         <!-- introBannerHolder -->
-        <section class="introBannerHolder d-flex w-100 bgCover"  style="background-image: linear-gradient(to right , #ffffff,#ffffff, #5ba515);">
+        <section class="introBannerHolder d-flex w-100 bgCover" style="background-image: url(https://i.ibb.co/9wmwSHB/indian-garam-masala-powder-and-colourful-spices-s-2023-11-27-05-18-00-utc.jpg);">
             <div class="container">
-                <div class="row">
-                    <div class="col-12 pt-lg-23 pt-md-15 pt-sm-10 pt-6 text-center">
-                        <h1 class="headingIV fwEbold playfair mb-4">Blog</h1>
-                        <ul class="list-unstyled breadCrumbs d-flex justify-content-center">
-                            <li class="mr-sm-2 mr-1"><a href="home.html">Home</a></li>
-                            <li class="mr-sm-2 mr-1">/</li>
-                            <li class="mr-sm-2 mr-1"><a href="/detailberita">Blog</a></li>
-                            <li class="mr-sm-2 mr-1">/</li>
-                            <li class="active">/</li>
-                        </ul>
-                    </div>
+              <div class="row">
+                <div class="col-12 pt-lg-23 pt-md-15 pt-sm-10 pt-6 text-center">
+                  <h1 class="headingIV fwEbold playfair mb-4 text-white">Berita</h1>
+                  <ul class="list-unstyled breadCrumbs d-flex justify-content-center">
+                    <li class="mr-2">
+                      <RouterLink to="/" class="text-white-50">Home /</RouterLink>
+                    </li>
+                    <li class="mr-2">
+                        <RouterLink to="/berita" class="text-white-50">Berita /</RouterLink>
+                    </li>
+                    <li class="active text-white">6 Manfaat Minum Air Jahe saat Perut Kosong di Pagi Hari</li>
+                  </ul>
                 </div>
+              </div>
             </div>
-        </section>
+          </section>
         <!-- twoColumns -->
         <div class="twoColumns container pt-xl-23 pb-xl-20 py-lg-20 py-md-16 py-10">
             <div class="row border-bottom mb-9">

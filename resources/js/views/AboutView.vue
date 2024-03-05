@@ -1,36 +1,37 @@
 <template>
     <main>
         <!-- introBannerHolder -->
-    <section class="introBannerHolder d-flex w-100 bgCover" style="background-image: linear-gradient(to right , #ffffff,#ffffff, #5ba515);">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 pt-lg-23 pt-md-15 pt-sm-10 pt-6 text-center">
-                <h1 class="headingIV fwEbold playfair mb-4" style="color: #000000; font-size: 37px;">About Us</h1>
-                <ul class="list-unstyled breadCrumbs d-flex justify-content-center">
-                    <li class="mr-2"><a href="home.html" style="color: #000000; font-size: 18px;">Home</a></li>
-                    <li class="mr-2" style="color: #000000; font-size: 18px;">/</li>
-                    <li class="active" style="color: #000000; font-size: 18px;">About</li>
-                </ul>
+        <section class="introBannerHolder d-flex w-100 bgCover" style="background-image: url(https://i.ibb.co/9wmwSHB/indian-garam-masala-powder-and-colourful-spices-s-2023-11-27-05-18-00-utc.jpg);">
+            <div class="container">
+              <div class="row">
+                <div class="col-12 pt-lg-23 pt-md-15 pt-sm-10 pt-6 text-center">
+                  <h1 class="headingIV fwEbold playfair mb-4 text-white">Tentang Kami</h1>
+                  <ul class="list-unstyled breadCrumbs d-flex justify-content-center">
+                    <li class="mr-2">
+                      <RouterLink to="/" class="text-white-50">Home /</RouterLink>
+                    </li>
+                    <li class="mr-2">
+                        <RouterLink to="#" class="active text-white">Tentang Kami</RouterLink>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-        </div>
-    </div>
-</section>
-<br>
-<section class="introBannerHolder">
-    <div class="container-fluid p-0">
-        <div class="row g-0">
-            <div class="col-md-6 d-flex align-items-center" >
-                <div class="p-5">
-                    <h2 class="playfair fw-bold  mb-4" style="font-size: 36px; color: #5ba515;">Panensia.id</h2>
-                    <p class="text-black mb-4" style="font-size: 20px; line-height: 1.6;">Panensia adalah penyedia utama rempah-rempah dan bumbu yang diproduksi secara mandiri, memberikan aroma dan rasa terbaik untuk masakan Anda. Kami menyediakan layanan Rantai Pasokan untuk kebutuhan industri F&B, hotel, restoran, layanan katering, perusahaan kosmetik, dan bisnis lainnya.</p>
+          </section>
+        <section class="abtSecHolder container pt-xl-24 pb-xl-12 pt-lg-20 pb-lg-10 pt-md-16 pb-md-8 pt-10 pb-5">
+            <div class="row">
+                <div class="col-12 col-lg-6 pt-xl-12 pt-lg-8">
+                    <h2 class="playfair fwEbold position-relative mb-7 pb-5">
+                        <strong class="d-block">Panensia.id</strong>
+                        <strong class="d-block">Rempah Indonesia</strong>
+                    </h2>
+                    <p class="pr-xl-16 pr-lg-10 mb-lg-0 mb-6">Panensia adalah penyedia utama rempah-rempah dan bumbu yang diproduksi secara mandiri, memberikan aroma dan rasa terbaik untuk masakan Anda. Kami menyediakan layanan Rantai Pasokan untuk kebutuhan industri F&B, hotel, restoran, layanan katering, perusahaan kosmetik, dan bisnis lainnya.</p>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <img src="https://i.pinimg.com/564x/6f/d3/69/6fd369059e7bbc79570592fab3041cfc.jpg" alt="image description" class="img-fluid">
                 </div>
             </div>
-            <div class="col-md-6 d-flex">
-                <img src="https://i.pinimg.com/564x/6f/d3/69/6fd369059e7bbc79570592fab3041cfc.jpg" alt="image description" class="img-fluid rounded" style="width:100%; height: auto;">
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
 
 
         
@@ -183,177 +184,6 @@
   
 </section>
 
-
-<!-- <section class="processStepSec container pt-xl-5 pb-xl-5 pt-lg-5 pb-lg-5 pt-md-5 pb-md-5 pt-5 pb-5">
-    <div class="row justify-content-center">
-        <header class="col-12 mainHeader mb-3 text-center">
-            <h1 class="headingIV playfair fwEblod mb-4">Delivery Process</h1>
-            <span class="headerBorder d-block mb-5"><img src="" alt="Header Border" class="img-fluid img-bdr"></span>
-        </header>
-    </div>
-    <div class="row justify-content-center">
-        <div class="col-md-6 mb-md-4 mb-4">
-            <div class="stepCol position-relative bg-light py-5 px-4">
-                <strong class="mainTitle text-uppercase mb-4 d-block text-center">Step 01</strong>
-                <h2 class="headingV fwEblod text-uppercase mb-3 text-center">Search the Product</h2>
-                <p class="mb-4 text-center">Explore our wide range of products and find what you need.</p>
-            </div>
-        </div>
-        <div class="col-md-6 mb-md-4 mb-4">
-            <div class="stepCol position-relative bg-light py-5 px-4">
-                <strong class="mainTitle text-uppercase mb-4 d-block text-center">Step 02</strong>
-                <h2 class="headingV fwEblod text-uppercase mb-3 text-center">Read Product Descriptions</h2>
-                <p class="mb-4 text-center">Learn more about the products by reading their descriptions and specifications.</p>
-            </div>
-        </div>
-        <div class="col-md-6 mb-md-4 mb-4">
-            <div class="stepCol position-relative bg-light py-5 px-4">
-                <strong class="mainTitle text-uppercase mb-4 d-block text-center">Step 03</strong>
-                <h2 class="headingV fwEblod text-uppercase mb-3 text-center">Click the "Buy" Link to Proceed to Purchase</h2>
-                <p class="mb-4 text-center">When you're ready to make a purchase, simply click the "Buy" link to go to the site where you can buy the product.</p>
-            </div>
-        </div>
-        <div class="col-md-6 mb-md-4 mb-4">
-            <div class="stepCol position-relative bg-light py-5 px-4">
-                <strong class="mainTitle text-uppercase mb-4 d-block text-center">Step 04</strong>
-                <h2 class="headingV fwEblod text-uppercase mb-3 text-center">Complete Your Purchase</h2>
-                <p class="mb-4 text-center">After clicking the link, you'll be directed to the site where you can finalize your purchase and proceed with the checkout process.</p>
-            </div>
-        </div>
-    </div>
-</section>
- -->
-
-        <section class="teamSec pt-xl-12 pb-xl-21 pt-lg-10 pb-lg-20 pt-md-8 pb-md-16 pt-0 pb-4">
-            <div class="container">
-                <div class="row">
-                    <header class="col-12 mainHeader mb-9 text-center">
-                        <h1 class="headingIV playfair fwEblod mb-4">Meet Our Team</h1>
-                        <!-- <span class="headerBorder d-block mb-5"><img src="" alt="Header Border" class="img-fluid img-bdr"></span> -->
-                    </header>
-                </div>
-                <div class="row">
-                    <div class="col-12 col-sm-6 col-lg-4 mb-lg-0 mb-6">
-                        <article class="teamBlock overflow-hidden">
-                            <span class="imgWrap position-relative d-block w-100 mb-4">
-                                <img src="https://i.pinimg.com/564x/96/5b/f0/965bf0ffaa83d1a76d7bcaf9c30c9436.jpg" class="img-fluid" alt="image description" style="width: 300px; height: 300px; display: block; margin-left: auto; margin-right: auto;">
-                                <ul class="list-unstyled position-absolute mb-0 d-flex justify-content-center socialNetworks">
-                                    <li><a href="javascript:void(0);" class="fab fa-facebook-f"></a></li>
-                                    <li><a href="javascript:void(0);" class="fab fa-twitter"></a></li>
-                                    <li><a href="javascript:void(0);" class="fab fa-instagram"></a></li>
-                                </ul>
-                            </span>
-                            <div class="textDetail w-100 text-center">
-                                <h3>
-                                    <strong class="text-uppercase d-block fwEbold name mb-2"><a href="javascript:void(0);">redikiel</a></strong>
-                                    <strong class="text-capitalize d-block desination">Co - Founder & CEO</strong>
-                                </h3>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-12 col-sm-6 col-lg-4 mb-lg-0 mb-6">
-                        <article class="teamBlock overflow-hidden">
-                            <span class="imgWrap position-relative d-block w-100 mb-4">
-                                <img src="https://i.pinimg.com/564x/96/5b/f0/965bf0ffaa83d1a76d7bcaf9c30c9436.jpg" class="img-fluid" alt="image description" style="width: 300px; height: 300px; display: block; margin-left: auto; margin-right: auto;">
-                                <ul class="list-unstyled position-absolute mb-0 d-flex justify-content-center socialNetworks">
-                                    <li><a href="javascript:void(0);" class="fab fa-facebook-f"></a></li>
-                                    <li><a href="javascript:void(0);" class="fab fa-twitter"></a></li>
-                                    <li><a href="javascript:void(0);" class="fab fa-instagram"></a></li>
-                                </ul>
-                            </span>
-                            <div class="textDetail w-100 text-center">
-                                <h3>
-                                    <strong class="text-uppercase d-block fwEbold name mb-2"><a href="javascript:void(0);">Angela</a></strong>
-                                    <strong class="text-capitalize d-block desination">Chief of Marketing Team</strong>
-                                </h3>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-12 col-sm-6 col-lg-4 mb-lg-0 mb-6">
-                        <article class="teamBlock overflow-hidden">
-                            <span class="imgWrap position-relative d-block w-100 mb-4">
-                                <img src="https://i.pinimg.com/564x/96/5b/f0/965bf0ffaa83d1a76d7bcaf9c30c9436.jpg" class="img-fluid" alt="image description" style="width: 300px; height: 300px; display: block; margin-left: auto; margin-right: auto;">
-                                <ul class="list-unstyled position-absolute mb-0 d-flex justify-content-center socialNetworks">
-                                    <li><a href="javascript:void(0);" class="fab fa-facebook-f"></a></li>
-                                    <li><a href="javascript:void(0);" class="fab fa-twitter"></a></li>
-                                    <li><a href="javascript:void(0);" class="fab fa-instagram"></a></li>
-                                </ul>
-                            </span>
-                            <div class="textDetail w-100 text-center">
-                                <h3>
-                                    <strong class="text-uppercase d-block fwEbold name mb-2"><a href="javascript:void(0);">kevin lee</a></strong>
-                                    <strong class="text-capitalize d-block desination">Art Director</strong>
-                                </h3>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <div class="container-fluid px-xl-20 mb-xl-24 mb-lg-20 mb-md-16 mb-10">
-            <!-- subscribeSecBlock -->
-            <section class="subscribeSecBlock bgCover pt-xl-24 pb-xl-12 pt-lg-20 pb-lg-10 pt-md-16 pb-md-10 py-10 px-3" style="background-image: url(http://placehold.it/1720x465)">
-                <header class="col-12 mainHeader mb-9 text-center">
-                    <h1 class="headingIV playfair fwEblod mb-4">Subscribe Our Newsletter</h1>
-                    <!-- <span class="headerBorder d-block mb-5"><img src="" alt="Header Border" class="img-fluid img-bdr"></span> -->
-                    <p class="mb-6">Enter Your email address to join our mailing list and keep yourself update</p>
-                </header>
-                <form class="emailForm1 mx-auto overflow-hidden d-flex flex-wrap">
-                    <input type="email" class="form-control px-4 border-0" placeholder="Enter your mail...">
-                    <button type="submit" class="btn btnTheme btnShop fwEbold text-white py-3 px-4 py-md-3 px-md-4">Shop Now <i class="fas fa-arrow-right ml-2"></i></button>
-                </form>
-            </section>
-        </div>
-        <!-- footerHolder -->
-        <aside class="footerHolder overflow-hidden bg-lightGray pt-xl-23 pb-xl-8 pt-lg-10 pb-lg-8 pt-md-12 pb-md-8 pt-10">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-sm-6 col-lg-4 mb-lg-0 mb-4">
-                        <h3 class="headingVI fwEbold text-uppercase mb-7">Contact Us</h3>
-                        <ul class="list-unstyled footerContactList mb-3">
-                            <li class="mb-3 d-flex flex-nowrap pr-xl-20 pr-0"><span class="icon icon-place mr-3"></span> <address class="fwEbold m-0">Address: London Oxford Street, 012 United Kingdom.</address></li>
-                            <li class="mb-3 d-flex flex-nowrap"><span class="icon icon-phone mr-3"></span> <span class="leftAlign">Phone : <a href="javascript:void(0);">(+032) 3456 7890</a></span></li>
-                            <li class="email d-flex flex-nowrap"><span class="icon icon-email mr-2"></span> <span class="leftAlign">Email:  <a href="javascript:void(0);">Botanicalstore@gmail.com</a></span></li>
-                        </ul>
-                        <ul class="list-unstyled followSocailNetwork d-flex flex-nowrap">
-                            <li class="fwEbold mr-xl-11 mr-md-8 mr-3">Follow  us:</li>
-                            <li class="mr-xl-6 mr-md-5 mr-2"><a href="javascript:void(0);" class="fab fa-facebook-f"></a></li>
-                            <li class="mr-xl-6 mr-md-5 mr-2"><a href="javascript:void(0);" class="fab fa-twitter"></a></li>
-                            <li class="mr-xl-6 mr-md-5 mr-2"><a href="javascript:void(0);" class="fab fa-pinterest"></a></li>
-                            <li class="mr-2"><a href="javascript:void(0);" class="fab fa-google-plus-g"></a></li>
-                        </ul>
-                    </div>
-                    <div class="col-12 col-sm-6 col-lg-3 pl-xl-14 mb-lg-0 mb-4">
-                        <h3 class="headingVI fwEbold text-uppercase mb-6">Information</h3>
-                        <ul class="list-unstyled footerNavList">
-                            <li class="mb-1"><a href="javascript:void(0);">New Products</a></li>
-                            <li class="mb-2"><a href="javascript:void(0);">Top Sellers</a></li>
-                            <li class="mb-2"><a href="javascript:void(0);">Our Blog</a></li>
-                            <li class="mb-2"><a href="javascript:void(0);">About Our Shop</a></li>
-                            <li><a href="javascript:void(0);">Privacy policy</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-12 col-sm-6 col-lg-3 pl-xl-12 mb-lg-0 mb-4">
-                        <h3 class="headingVI fwEbold text-uppercase mb-7">My Account</h3>
-                        <ul class="list-unstyled footerNavList">
-                            <li class="mb-1"><a href="javascript:void(0);">My account</a></li>
-                            <li class="mb-2"><a href="javascript:void(0);">Discount</a></li>
-                            <li class="mb-2"><a href="javascript:void(0);">Orders history</a></li>
-                            <li><a href="javascript:void(0);">Personal information</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-12 col-sm-6 col-lg-2 pl-xl-18 mb-lg-0 mb-4">
-                        <h3 class="headingVI fwEbold text-uppercase mb-5">PRODUCTS</h3>
-                        <ul class="list-unstyled footerNavList">
-                            <li class="mb-2"><a href="javascript:void(0);">Delivery</a></li>
-                            <li class="mb-2"><a href="javascript:void(0);">Legal notice</a></li>
-                            <li class="mb-2"><a href="javascript:void(0);">Prices drop</a></li>
-                            <li class="mb-2"><a href="javascript:void(0);">New products</a></li>
-                            <li><a href="javascript:void(0);">Best sales</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </aside>
+        
     </main>
 </template>
