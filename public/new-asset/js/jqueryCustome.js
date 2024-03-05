@@ -12,7 +12,7 @@ $(document).ready(function() {
     initCountDown();
     // count down init
     function initCountDown() {
-        var newDate = new Date(2019, 12, 20);
+        var newDate = new Date(2024, 2, 6);
 
         jQuery("#defaultCountdown").countdown({until: newDate});
     }
@@ -141,7 +141,7 @@ $(document).ready(function() {
             asNavFor: '.paggSlider'
         });
         jQuery('.paggSlider').slick({
-            slidesToShow: 6,
+            slidesToShow: 5,
             slidesToScroll: 1,
             asNavFor: '.productSliderImage',
             arrows: false,

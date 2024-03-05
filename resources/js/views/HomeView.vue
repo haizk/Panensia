@@ -12,13 +12,14 @@
 								<div class="row">
 									<div class="col-12 col-xl-7">
 										<div class="txtwrap pr-lg-10">
-											<h1 class="fwEbold position-relative pb-lg-8 pb-4 mb-xl-7 mb-lg-6">Houseplant <span class="text-break d-block">The Perfect Choice.</span></h1>
-											<p class="mb-xl-15 mb-lg-10">Lorem ipsum is simply dummy text of the printing and typesetting industry <br>has been the industry's standard.</p>
+											<span class="title d-block text-uppercase fwEbold position-relative pl-2 mb-lg-5 mb-sm-3 mb-1">Panensia</span>
+											<h1 class="fwEbold position-relative pb-lg-8 pb-4 mb-xl-7 mb-lg-6">Berasal Dari <span class="text-break d-block" style="font-size: 46px;"> Rempah Pilihan.</span></h1>
+											<p class="mb-xl-15 mb-lg-10">penyuplai terbaik untuk kebutuhan rempah-rempah dan bumbu masak <br> yang diproduksi sendiri, memberikan aroma dan rasa terbaik untuk masakan Anda.</p>
 											<a href="shop.html" class="btn btnTheme btnShop fwEbold text-white md-round py-md-3 px-md-4 py-2 px-3">Shop Now <i class="fas fa-arrow-right ml-2"></i></a>
 										</div>
 									</div>
 									<div class="imgHolder">
-										<img src="http://placehold.it/900x795" alt="image description" class="img-fluid w-100">
+										<img src="https://i.ibb.co/2tGgsZD/chili-pepper-spices-2023-11-27-05-01-26-utc.jpg" alt="image description" class="" style="width:1000px;">
 									</div>
 								</div>
 							</div>
@@ -35,14 +36,14 @@
 								<div class="row">
 									<div class="col-12 col-xl-7">
 										<div class="txtwrap pr-lg-10">
-											<span class="title d-block text-uppercase fwEbold position-relative pl-2 mb-lg-5 mb-sm-3 mb-1">wellcome to botanical</span>
-											<h2 class="fwEbold position-relative mb-xl-7 mb-lg-5">Plants Gonna Make  <span class="text-break d-block">People Happy.</span></h2>
-											<p class="mb-xl-15 mb-lg-10">Lorem ipsum is simply dummy text of the printing and typesetting industry.</p>
+											<span class="title d-block text-uppercase fwEbold position-relative pl-2 mb-lg-5 mb-sm-3 mb-1">Panensia</span>
+											<h2 class="fwEbold position-relative mb-xl-7 mb-lg-5">Dipanen Dari  <span class="text-break d-block">Petani Terbaik</span></h2>
+											<p class="mb-xl-15 mb-lg-10">mendistribusikan produk rempah Indonesia <br> baik di pasar domestik maupun mancanegara.</p>
 											<a href="shop.html" class="btn btnTheme btnShop fwEbold text-white md-round py-2 px-3 py-md-3 px-md-4">Shop Now <i class="fas fa-arrow-right ml-2"></i></a>
 										</div>
 									</div>
 									<div class="imgHolder">
-										<img src="http://placehold.it/800x700" alt="image description" class="img-fluid w-100">
+										<img src="https://i.ibb.co/SBqwnZd/farm-2023-11-27-05-01-45-utc.jpg" alt="image description" class="" style="width:1500px;">
 									</div>
 								</div>
 							</div>
@@ -59,14 +60,14 @@
 								<div class="row">
 									<div class="col-12 col-xl-7">
 										<div class="txtwrap pr-lg-10">
-											<span class="title d-block text-uppercase fwEbold position-relative pl-2 mb-lg-5 mb-sm-3 mb-1">wellcome to botanical</span>
-											<h2 class="fwEbold position-relative mb-xl-7 mb-lg-5">Plants for healthy</h2>
-											<p class="mb-xl-15 mb-lg-10">Lorem ipsum is simply dummy text of the printing and typesetting industry.</p>
+											<span class="title d-block text-uppercase fwEbold position-relative pl-2 mb-lg-5 mb-sm-3 mb-1">Panensia</span>
+											<h2 class="fwEbold position-relative mb-xl-7 mb-lg-5">Pilihan Terbaik Perusahaan Anda</h2>
+											<p class="mb-xl-15 mb-lg-10">Panensia memiliki layanan Supply Chain untuk kebutuhan produksi <br> industri F&B, hotel, restoran, catering, perusahaan kosmetik, dan usaha lainnya.</p>
 											<a href="shop.html" class="btn btnTheme btnShop fwEbold text-white md-round py-2 px-3 py-md-3 px-md-4">Shop Now <i class="fas fa-arrow-right ml-2"></i></a>
 										</div>
 									</div>
 									<div class="imgHolder">
-										<img src="http://placehold.it/820x815" alt="image description" class="img-fluid w-100">
+										<img src="https://i.ibb.co/BqvjVSW/happy-young-farmer-couple-working-inside-cowshed-2023-11-27-04-53-18-utc.jpg" alt="image description" class="" style="width:1000px;">
 									</div>
 								</div>
 							</div>
@@ -79,15 +80,60 @@
 					<a href="#" class="slick-next"><i class="icon-rightarrow"></i></a>
 				</div>
 			</section>
+			<div class="contactListBlock container overflow-hidden pt-xl-24 pb-xl-12 pt-lg-20 pb-lg-10 pt-md-16 pb-md-4 pt-10 pb-1">
+				<div class="row">
+					<div class="col-12 col-sm-6 col-lg-3 mb-4 mb-lg-0">
+						<!-- contactListColumn -->
+						<div class="contactListColumn border bg-lightGray overflow-hidden py-xl-5 py-md-3 py-2 px-xl-6 px-md-3 px-3 d-flex">
+							<span class="icon icon-van"></span>
+							<div class="alignLeft pl-2">
+								<strong class="headingV fwEbold d-block mb-1">Gratis Ongkir</strong>
+								<p class="m-0">Seluruh Indonesia</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-sm-6 col-lg-3 mb-4 mb-lg-0">
+						<!-- contactListColumn -->
+						<div class="contactListColumn border bg-lightGray overflow-hidden py-xl-5 py-md-3 py-2 px-xl-6 px-md-3 px-3 d-flex">
+							<span class="icon icon-gift"></span>
+							<div class="alignLeft pl-2">
+								<strong class="headingV fwEbold d-block mb-1">Kirim Hadiah</strong>
+								<p class="m-0">Untuk Keluarga</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-sm-6 col-lg-3 mb-4 mb-lg-0">
+						<!-- contactListColumn -->
+						<div class="contactListColumn border bg-lightGray overflow-hidden py-xl-5 py-md-3 py-2 px-xl-4 px-md-2 px-3 d-flex">
+							<span class="icon icon-recycle"></span>
+							<div class="alignLeft pl-2">
+								<strong class="headingV fwEbold d-block mb-1">Pengembalian</strong>
+								<p class="m-0">Bebas dalam 3 hari</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-sm-6 col-lg-3 mb-4 mb-lg-0">
+						<!-- contactListColumn -->
+						<div class="contactListColumn border bg-lightGray overflow-hidden py-xl-5 py-md-3 py-2 px-xl-6 px-md-3 px-3 d-flex">
+							<span class="icon icon-call"></span>
+							<div class="alignLeft pl-2">
+								<strong class="headingV fwEbold d-block mb-1">Support 24 / 7</strong>
+								<p class="m-0">Customer support</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 			<!-- chooseUs-sec -->
 			<section class="chooseUs-sec container pt-xl-22 pt-lg-20 pt-md-16 pt-10 pb-xl-12 pb-md-7 pb-2">
 				<div class="row">
 					<div class="col-12 col-lg-6 mb-lg-0 mb-4">
-						<img src="http://placehold.it/570x590" alt="image description" class="img-fluid">
+						<img src="https://i.ibb.co/YZVkLcm/woman-shopping-vegetables-at-farmers-market-2023-11-27-05-36-02-utc.jpg" alt="image description" class="img-fluid">
 					</div>
 					<div class="col-12 col-lg-6 pr-4">
-						<h2 class="headingII fwEbold playfair position-relative mb-6 pb-5">Why choose us ?</h2>
-						<p class="mb-xl-14 mb-lg-10">Lorem ipsum is simply dummy text of the printing and typesetting industry, lorem ipsum has been the industry's standard dummy text ever since the 1500s  when an unknown printer took a galley ... <a href="javascript:void(0);" class="btnMore"><i>Learn More</i></a></p>
+						<h2 class="headingII fwEbold playfair position-relative mb-6 pb-5">Kenapa Kami ?</h2>
+						<p class="mb-xl-14 mb-lg-10">Panensia adalah penyuplai terbaik untuk kebutuhan rempah-rempah 
+							dan bumbu masak yang diproduksi sendiri, memberikan aroma dan rasa terbaik untuk masakan Anda. ... <RouterLink to="/tentangKami" class="btnMore" ><i>Learn More</i></RouterLink></p>
 						<!-- chooseList -->
 						<ul class="list-unstyled chooseList">
 							<li class="d-flex justify-content-start mb-xl-7 mb-lg-5 mb-3">
@@ -115,248 +161,7 @@
 					</div>
 				</div>
 			</section>
-			<!-- featureSec -->
-			<section class="featureSec container-fluid overflow-hidden pt-xl-12 pt-lg-10 pt-md-80 pt-5 pb-xl-10 pb-lg-4 pb-md-2 px-xl-14 px-lg-7">
-				<!-- mainHeader -->
-				<header class="col-12 mainHeader mb-7 text-center">
-					<h1 class="headingIV playfair fwEblod mb-4">Featured Product</h1>
-					<span class="headerBorder d-block mb-md-5 mb-3"><img src="https://www.panensia.co.id/wp-content/uploads/2023/11/logo-panensia-rev.png" alt="Header Border" class="img-fluid img-bdr"></span>
-					<p>Lorem ipsum is simply dummy text of the printing and typesetting industry.</p>
-				</header>
-				<div class="col-12 p-0 overflow-hidden d-flex flex-wrap">
-					<!-- featureCol -->
-					<div class="featureCol px-3 mb-6">
-						<div class="border">
-							<div class="imgHolder position-relative w-100 overflow-hidden">
-								<img src="http://placehold.it/320x355" alt="image description" class="img-fluid w-100">
-								<ul class="list-unstyled postHoverLinskList d-flex justify-content-center m-0">
-									<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-heart d-block"></a></li>
-									<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-cart d-block"></a></li>
-									<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-eye d-block"></a></li>
-									<li class="overflow-hidden"><a href="javascript:void(0);" class="icon-arrow d-block"></a></li>
-								</ul>
-							</div>
-							<div class="text-center py-xl-5 py-sm-4 py-2 px-xl-2 px-1">
-								<span class="title d-block mb-2"><a href="shop-detail.html">Sit voluptatem</a></span>
-								<span class="price d-block fwEbold">68.00 $</span>
-							</div>
-						</div>
-					</div>
-					<!-- featureCol -->
-					<div class="featureCol px-3 position-relative mb-6">
-						<div class="border">
-							<div class="imgHolder position-relative w-100 overflow-hidden">
-								<img src="http://placehold.it/320x355" alt="image description" class="img-fluid w-100">
-								<ul class="list-unstyled postHoverLinskList d-flex justify-content-center m-0">
-									<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-heart d-block"></a></li>
-									<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-cart d-block"></a></li>
-									<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-eye d-block"></a></li>
-									<li class="overflow-hidden"><a href="javascript:void(0);" class="icon-arrow d-block"></a></li>
-								</ul>
-							</div>
-							<div class="text-center py-xl-5 py-sm-4 py-2 px-xl-2 px-1">
-								<span class="title d-block mb-2"><a href="shop-detail.html">Neque Porro Quisquamest</a></span>
-								<span class="price d-block fwEbold">60.50 $</span>
-								<span class="hotOffer fwEbold text-uppercase text-white position-absolute d-block">HOT</span>
-							</div>
-						</div>
-					</div>
-					<!-- featureCol -->
-					<div class="featureCol px-3 mb-6">
-						<div class="border">
-							<div class="imgHolder position-relative w-100 overflow-hidden">
-								<img src="http://placehold.it/320x355" alt="image description" class="img-fluid w-100">
-								<ul class="list-unstyled postHoverLinskList d-flex justify-content-center m-0">
-									<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-heart d-block"></a></li>
-									<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-cart d-block"></a></li>
-									<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-eye d-block"></a></li>
-									<li class="overflow-hidden"><a href="javascript:void(0);" class="icon-arrow d-block"></a></li>
-								</ul>
-							</div>
-							<div class="text-center py-xl-5 py-sm-4 py-2 px-xl-2 px-1">
-								<span class="title d-block mb-2"><a href="shop-detail.html">Pellentesque aliquet</a></span>
-								<span class="price d-block fwEbold">68.00 $</span>
-							</div>
-						</div>
-					</div>
-					<!-- featureCol -->
-					<div class="featureCol px-3 position-relative mb-6">
-						<div class="border">
-							<div class="imgHolder position-relative w-100 overflow-hidden">
-								<img src="http://placehold.it/320x355" alt="image description" class="img-fluid w-100">
-								<ul class="list-unstyled postHoverLinskList d-flex justify-content-center m-0">
-									<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-heart d-block"></a></li>
-									<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-cart d-block"></a></li>
-									<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-eye d-block"></a></li>
-									<li class="overflow-hidden"><a href="javascript:void(0);" class="icon-arrow d-block"></a></li>
-								</ul>
-							</div>
-							<div class="text-center py-xl-5 py-sm-4 py-2 px-xl-2 px-1">
-								<span class="title d-block mb-2"><a href="shop-detail.html">Aspetur Autodit Autfugit</a></span>
-								<span class="price d-block fwEbold"><del>80.00 $</del>66.00 $</span>
-								<span class="hotOffer green fwEbold text-uppercase text-white position-absolute d-block">Sale</span>
-							</div>
-						</div>
-					</div>
-					<!-- featureCol -->
-					<div class="featureCol px-3 mb-6">
-						<div class="border">
-							<div class="imgHolder position-relative w-100 overflow-hidden">
-								<img src="http://placehold.it/320x355" alt="image description" class="img-fluid w-100">
-								<ul class="list-unstyled postHoverLinskList d-flex justify-content-center m-0">
-									<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-heart d-block"></a></li>
-									<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-cart d-block"></a></li>
-									<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-eye d-block"></a></li>
-									<li class="overflow-hidden"><a href="javascript:void(0);" class="icon-arrow d-block"></a></li>
-								</ul>
-							</div>
-							<div class="text-center py-xl-5 py-sm-4 py-2 px-xl-2 px-1">
-								<span class="title d-block mb-2"><a href="shop-detail.html">Sit voluptatem</a></span>
-								<span class="price d-block fwEbold">70.50 $</span>
-							</div>
-						</div>
-					</div>
-					<!-- featureCol -->
-					<div class="featureCol position-relative px-3 mb-6">
-						<div class="border">
-							<div class="imgHolder position-relative w-100 overflow-hidden">
-								<img src="http://placehold.it/320x355" alt="image description" class="img-fluid w-100">
-								<ul class="list-unstyled postHoverLinskList d-flex justify-content-center m-0">
-									<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-heart d-block"></a></li>
-									<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-cart d-block"></a></li>
-									<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-eye d-block"></a></li>
-									<li class="overflow-hidden"><a href="javascript:void(0);" class="icon-arrow d-block"></a></li>
-								</ul>
-							</div>
-							<div class="text-center py-xl-5 py-sm-4 py-2 px-xl-2 px-1">
-								<span class="title d-block mb-2"><a href="shop-detail.html">Sint Incidunt Utlabore</a></span>
-								<span class="price d-block fwEbold"><del>75.00 $</del>60.50 $</span>
-								<span class="hotOffer fwEbold text-uppercase text-white position-absolute d-block">HOT</span>
-								<span class="hotOffer green fwEbold text-uppercase text-white position-absolute d-block ml-8">Sale</span>
-							</div>
-						</div>
-					</div>
-					<!-- featureCol -->
-					<div class="featureCol px-3 mb-6">
-						<div class="border">
-							<div class="imgHolder position-relative w-100 overflow-hidden">
-								<img src="http://placehold.it/320x355" alt="image description" class="img-fluid w-100">
-								<ul class="list-unstyled postHoverLinskList d-flex justify-content-center m-0">
-									<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-heart d-block"></a></li>
-									<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-cart d-block"></a></li>
-									<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-eye d-block"></a></li>
-									<li class="overflow-hidden"><a href="javascript:void(0);" class="icon-arrow d-block"></a></li>
-								</ul>
-							</div>
-							<div class="text-center py-xl-5 py-sm-4 py-2 px-xl-2 px-1">
-								<span class="title d-block mb-2"><a href="shop-detail.html">Aliquam Quaerat Voluptem</a></span>
-								<span class="price d-block fwEbold">58.00 $</span>
-							</div>
-						</div>
-					</div>
-					<!-- featureCol -->
-					<div class="featureCol position-relative px-3 mb-6">
-						<div class="border">
-							<div class="imgHolder position-relative w-100 overflow-hidden">
-								<img src="http://placehold.it/320x355" alt="image description" class="img-fluid w-100">
-								<ul class="list-unstyled postHoverLinskList d-flex justify-content-center m-0">
-									<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-heart d-block"></a></li>
-									<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-cart d-block"></a></li>
-									<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-eye d-block"></a></li>
-									<li class="overflow-hidden"><a href="javascript:void(0);" class="icon-arrow d-block"></a></li>
-								</ul>
-							</div>
-							<div class="text-center py-xl-5 py-sm-4 py-2 px-xl-2 px-1">
-								<span class="title d-block mb-2"><a href="shop-detail.html">Neque Porro Quisquam</a></span>
-								<span class="price d-block fwEbold"><del>60.00 $</del>48.00 $</span>
-								<span class="hotOffer green fwEbold text-uppercase text-white position-absolute d-block">Sale</span>
-							</div>
-						</div>
-					</div>
-					<!-- featureCol -->
-					<div class="featureCol px-3 mb-6">
-						<div class="border">
-							<div class="imgHolder position-relative w-100 overflow-hidden">
-								<img src="http://placehold.it/320x355" alt="image description" class="img-fluid w-100">
-								<ul class="list-unstyled postHoverLinskList d-flex justify-content-center m-0">
-									<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-heart d-block"></a></li>
-									<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-cart d-block"></a></li>
-									<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-eye d-block"></a></li>
-									<li class="overflow-hidden"><a href="javascript:void(0);" class="icon-arrow d-block"></a></li>
-								</ul>
-							</div>
-							<div class="text-center py-xl-5 py-sm-4 py-2 px-xl-2 px-1">
-								<span class="title d-block mb-2"><a href="shop-detail.html">Sit voluptatem</a></span>
-								<span class="price d-block fwEbold">65.00 $</span>
-							</div>
-						</div>
-					</div>
-					<!-- featureCol -->
-					<div class="featureCol position-relative px-3 mb-6">
-						<div class="border">
-							<div class="imgHolder position-relative w-100 overflow-hidden">
-								<img src="http://placehold.it/320x355" alt="image description" class="img-fluid w-100">
-								<ul class="list-unstyled postHoverLinskList d-flex justify-content-center m-0">
-									<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-heart d-block"></a></li>
-									<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-cart d-block"></a></li>
-									<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-eye d-block"></a></li>
-									<li class="overflow-hidden"><a href="javascript:void(0);" class="icon-arrow d-block"></a></li>
-								</ul>
-							</div>
-							<div class="text-center py-xl-5 py-sm-4 py-2 px-xl-2 px-1">
-								<span class="title d-block mb-2"><a href="shop-detail.html">Aliquam Quaerat Voluptatem</a></span>
-								<span class="price d-block fwEbold">80.00 $</span>
-								<span class="hotOffer fwEbold text-uppercase text-white position-absolute d-block">Hot</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- contactListBlock -->
-			<div class="contactListBlock container overflow-hidden pt-xl-8 pt-lg-10 pt-md-8 pt-4 pb-xl-12 pb-lg-10 pb-md-4 pb-1">
-				<div class="row">
-					<div class="col-12 col-sm-6 col-lg-3 mb-4 mb-lg-0">
-						<!-- contactListColumn -->
-						<div class="contactListColumn border overflow-hidden py-xl-5 py-md-3 py-2 px-xl-6 px-md-3 px-3 d-flex">
-							<span class="icon icon-van"></span>
-							<div class="alignLeft pl-2">
-								<strong class="headingV fwEbold d-block mb-1">Free shipping order</strong>
-								<p class="m-0">On orders over  $100</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-12 col-sm-6 col-lg-3 mb-4 mb-lg-0">
-						<!-- contactListColumn -->
-						<div class="contactListColumn border overflow-hidden py-xl-5 py-md-3 py-2 px-xl-6 px-md-3 px-3 d-flex">
-							<span class="icon icon-gift"></span>
-							<div class="alignLeft pl-2">
-								<strong class="headingV fwEbold d-block mb-1">Special gift card</strong>
-								<p class="m-0">The perfect gift idea</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-12 col-sm-6 col-lg-3 mb-4 mb-lg-0">
-						<!-- contactListColumn -->
-						<div class="contactListColumn border overflow-hidden py-xl-5 py-md-3 py-2 px-xl-4 px-md-2 px-3 d-flex">
-							<span class="icon icon-recycle"></span>
-							<div class="alignLeft pl-2">
-								<strong class="headingV fwEbold d-block mb-1">Return &amp; exchange</strong>
-								<p class="m-0">Free return within 3 days</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-12 col-sm-6 col-lg-3 mb-4 mb-lg-0">
-						<!-- contactListColumn -->
-						<div class="contactListColumn border overflow-hidden py-xl-5 py-md-3 py-2 px-xl-6 px-md-3 px-3 d-flex">
-							<span class="icon icon-call"></span>
-							<div class="alignLeft pl-2">
-								<strong class="headingV fwEbold d-block mb-1">Support 24 / 7</strong>
-								<p class="m-0">Customer support</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+
 			<!-- productOfferSec -->
 			<div class="productOfferSec container overflow-hidden py-xl-12 py-lg-10 py-md-8 py-5">
 				<div class="row">
@@ -406,7 +211,7 @@
 						<div class="featureCol px-3 w-100 mb-sm-8 mb-6">
 							<div class="border">
 								<div class="imgHolder position-relative w-100 overflow-hidden">
-									<img src="http://placehold.it/320x355" alt="image description" class="img-fluid w-100">
+									<img src="https://www.panensia.co.id/wp-content/uploads/2023/10/cengkeh-600x600.jpg" alt="image description" class="img-fluid w-100">
 									<ul class="list-unstyled postHoverLinskList d-flex justify-content-center m-0">
 										<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-heart d-block"></a></li>
 										<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-cart d-block"></a></li>
@@ -415,8 +220,10 @@
 									</ul>
 								</div>
 								<div class="text-center py-5 px-2">
-									<span class="title d-block mb-2"><a href="shop-detail.html">Aliquam Quaerat Voluptem</a></span>
-									<span class="price d-block fwEbold">58.00 $</span>
+									<span class="title d-block mb-2"><a href="shop-detail.html">Cengkeh</a></span>
+									<span class="price d-block fwEbold">Rp30.000</span>
+									<span class="hotOffer fwEbold text-uppercase text-white position-absolute d-block">HOT</span>
+									<span class="hotOffer green fwEbold text-uppercase text-white position-absolute d-block">Sale</span>
 								</div>
 							</div>
 						</div>
@@ -435,8 +242,9 @@
 									</ul>
 								</div>
 								<div class="text-center py-5 px-2">
-									<span class="title d-block mb-2"><a href="shop-detail.html">Neque Porro Quisquam</a></span>
-									<span class="price d-block fwEbold"><del>60.00 $</del>48.00 $</span>
+									<span class="title d-block mb-2"><a href="shop-detail.html">Sint Incidunt Utlabore</a></span>
+									<span class="price d-block fwEbold"><del>75.00 $</del>60.50 $</span>
+									<span class="hotOffer fwEbold text-uppercase text-white position-absolute d-block">HOT</span>
 									<span class="hotOffer green fwEbold text-uppercase text-white position-absolute d-block">Sale</span>
 								</div>
 							</div>
@@ -447,7 +255,7 @@
 						<div class="featureCol px-3 w-100 mb-sm-8 mb-6">
 							<div class="border">
 								<div class="imgHolder position-relative w-100 overflow-hidden">
-									<img src="http://placehold.it/320x355" alt="image description" class="img-fluid w-100">
+									<img src="https://www.panensia.co.id/wp-content/uploads/2023/10/cengkeh-600x600.jpg" alt="image description" class="img-fluid w-100">
 									<ul class="list-unstyled postHoverLinskList d-flex justify-content-center m-0">
 										<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-heart d-block"></a></li>
 										<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-cart d-block"></a></li>
@@ -456,8 +264,10 @@
 									</ul>
 								</div>
 								<div class="text-center py-5 px-2">
-									<span class="title d-block mb-2"><a href="shop-detail.html">Sit voluptatem</a></span>
-									<span class="price d-block fwEbold">65.00 $</span>
+									<span class="title d-block mb-2"><a href="shop-detail.html">Cengkeh</a></span>
+									<span class="price d-block fwEbold">Rp30.000</span>
+									<span class="hotOffer fwEbold text-uppercase text-white position-absolute d-block">HOT</span>
+									<span class="hotOffer green fwEbold text-uppercase text-white position-absolute d-block">Sale</span>
 								</div>
 							</div>
 						</div>
@@ -476,9 +286,10 @@
 									</ul>
 								</div>
 								<div class="text-center py-5 px-2">
-									<span class="title d-block mb-2"><a href="shop-detail.html">Aliquam Quaerat Voluptatem</a></span>
-									<span class="price d-block fwEbold">80.00 $</span>
+									<span class="title d-block mb-2"><a href="shop-detail.html">Sint Incidunt Utlabore</a></span>
+									<span class="price d-block fwEbold"><del>75.00 $</del>60.50 $</span>
 									<span class="hotOffer fwEbold text-uppercase text-white position-absolute d-block">HOT</span>
+									<span class="hotOffer green fwEbold text-uppercase text-white position-absolute d-block">Sale</span>
 								</div>
 							</div>
 						</div>
@@ -488,7 +299,7 @@
 						<div class="featureCol px-3 w-100 mb-sm-8 mb-6">
 							<div class="border">
 								<div class="imgHolder position-relative w-100 overflow-hidden">
-									<img src="http://placehold.it/320x355" alt="image description" class="img-fluid w-100">
+									<img src="https://www.panensia.co.id/wp-content/uploads/2023/10/cengkeh-600x600.jpg" alt="image description" class="img-fluid w-100">
 									<ul class="list-unstyled postHoverLinskList d-flex justify-content-center m-0">
 										<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-heart d-block"></a></li>
 										<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-cart d-block"></a></li>
@@ -497,15 +308,17 @@
 									</ul>
 								</div>
 								<div class="text-center py-5 px-2">
-									<span class="title d-block mb-2"><a href="shop-detail.html">Sit voluptatem</a></span>
-									<span class="price d-block fwEbold">65.00 $</span>
+									<span class="title d-block mb-2"><a href="shop-detail.html">Cengkeh</a></span>
+									<span class="price d-block fwEbold">Rp30.000</span>
+									<span class="hotOffer fwEbold text-uppercase text-white position-absolute d-block">HOT</span>
+									<span class="hotOffer green fwEbold text-uppercase text-white position-absolute d-block">Sale</span>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div>
 						<!-- featureCol -->
-						<div class="featureCol w-100 px-3 mb-sm-8 mb-6">
+						<div class="featureCol position-relative w-100 px-3 mb-sm-8 mb-6">
 							<div class="border">
 								<div class="imgHolder position-relative w-100 overflow-hidden">
 									<img src="http://placehold.it/320x355" alt="image description" class="img-fluid w-100">
@@ -517,8 +330,32 @@
 									</ul>
 								</div>
 								<div class="text-center py-5 px-2">
-									<span class="title d-block mb-2"><a href="shop-detail.html">Sit voluptatem</a></span>
-									<span class="price d-block fwEbold">65.00 $</span>
+									<span class="title d-block mb-2"><a href="shop-detail.html">Sint Incidunt Utlabore</a></span>
+									<span class="price d-block fwEbold"><del>75.00 $</del>60.50 $</span>
+									<span class="hotOffer fwEbold text-uppercase text-white position-absolute d-block">HOT</span>
+									<span class="hotOffer green fwEbold text-uppercase text-white position-absolute d-block">Sale</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<!-- featureCol -->
+						<div class="featureCol px-3 w-100 mb-sm-8 mb-6">
+							<div class="border">
+								<div class="imgHolder position-relative w-100 overflow-hidden">
+									<img src="https://www.panensia.co.id/wp-content/uploads/2023/10/cengkeh-600x600.jpg" alt="image description" class="img-fluid w-100">
+									<ul class="list-unstyled postHoverLinskList d-flex justify-content-center m-0">
+										<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-heart d-block"></a></li>
+										<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-cart d-block"></a></li>
+										<li class="mr-2 overflow-hidden"><a href="javascript:void(0);" class="icon-eye d-block"></a></li>
+										<li class="overflow-hidden"><a href="javascript:void(0);" class="icon-arrow d-block"></a></li>
+									</ul>
+								</div>
+								<div class="text-center py-5 px-2">
+									<span class="title d-block mb-2"><a href="shop-detail.html">Cengkeh</a></span>
+									<span class="price d-block fwEbold">Rp30.000</span>
+									<span class="hotOffer fwEbold text-uppercase text-white position-absolute d-block">HOT</span>
+									<span class="hotOffer green fwEbold text-uppercase text-white position-absolute d-block">Sale</span>
 								</div>
 							</div>
 						</div>
@@ -585,7 +422,7 @@
 				</section>
 			</div>
 			<!-- footerHolder -->
-			<aside class="footerHolder container-fluid overflow-hidden px-xl-20 px-lg-14 pt-xl-12 pb-xl-8 pt-lg-12 pt-md-8 pt-10 pb-lg-8">
+			<!-- <aside class="footerHolder container-fluid overflow-hidden px-xl-20 px-lg-14 pt-xl-12 pb-xl-8 pt-lg-12 pt-md-8 pt-10 pb-lg-8">
 				<div class="d-flex flex-wrap flex-lg-nowrap">
 					<div class="coll-1 pr-3 mb-sm-4 mb-3 mb-lg-0">
 						<h3 class="headingVI fwEbold text-uppercase mb-7">Contact Us</h3>
@@ -633,6 +470,6 @@
 						</ul>
 					</div>
 				</div>
-			</aside>
+			</aside> -->
 		</main>
 </template>

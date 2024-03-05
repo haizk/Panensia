@@ -1,20 +1,23 @@
 <template>
     <main>
         <!-- introBannerHolder -->
-        <section class="introBannerHolder d-flex w-100 bgCover" style="background-image: url(https://img.freepik.com/free-photo/top-view-colourful-veggies-white-background-with-copy-space_23-2148290756.jpg?t=st=1709539732~exp=1709543332~hmac=bc7251d1c9e68577c73f48a0101f152ab3d1f44e1de419823687bf7cd20400eb&w=2000);">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 pt-lg-23 pt-md-15 pt-sm-10 pt-6 text-center">
-                        <h1 class="headingIV fwEbold playfair mb-4">Shop</h1>
-                        <ul class="list-unstyled breadCrumbs d-flex justify-content-center">
-                            <li class="mr-2"><a href="home.html">Home</a></li>
-                            <li class="mr-2">/</li>
-                            <li class="active">Shop</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <section class="introBannerHolder d-flex w-100 bgCover" style="background-image: url(https://i.ibb.co/9wmwSHB/indian-garam-masala-powder-and-colourful-spices-s-2023-11-27-05-18-00-utc.jpg);">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 pt-lg-23 pt-md-15 pt-sm-10 pt-6 text-center">
+						<h1 class="headingIV fwEbold playfair mb-4 text-white">Produk</h1>
+						<ul class="list-unstyled breadCrumbs d-flex justify-content-center">
+							<li class="mr-2">
+								<RouterLink to="/" class="text-white-50">Home /</RouterLink>
+							</li>
+							<li class="mr-2">
+								<RouterLink to="/produk" class="active text-white">Produk</RouterLink>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
         <!-- twoColumns -->
         <div class="twoColumns container pt-lg-23 pb-lg-20 pt-md-16 pb-md-4 pt-10 pb-4">
             <div class="row">

@@ -1,21 +1,20 @@
+
 <template>
 	<main>
 		<!-- introBannerHolder -->
-		<section class="introBannerHolder d-flex w-100 bgCover" style="background-image: url(https://img.freepik.com/free-photo/top-view-colourful-veggies-white-background-with-copy-space_23-2148290756.jpg?t=st=1709539732~exp=1709543332~hmac=bc7251d1c9e68577c73f48a0101f152ab3d1f44e1de419823687bf7cd20400eb&w=2000);">
+		<section class="introBannerHolder d-flex w-100 bgCover" style="background-image: url(https://i.ibb.co/9wmwSHB/indian-garam-masala-powder-and-colourful-spices-s-2023-11-27-05-18-00-utc.jpg);">
 			<div class="container">
 				<div class="row">
 					<div class="col-12 pt-lg-23 pt-md-15 pt-sm-10 pt-6 text-center">
-						<h1 class="headingIV fwEbold playfair mb-4">Shop</h1>
+						<h1 class="headingIV fwEbold playfair mb-4 text-white">Produk</h1>
 						<ul class="list-unstyled breadCrumbs d-flex justify-content-center">
 							<li class="mr-2">
-								<a href="home.html">Home</a>
+								<RouterLink to="/" class="text-white-50">Home /</RouterLink>
 							</li>
-							<li class="mr-2">/</li>
 							<li class="mr-2">
-								<a href="shop.html">Shop</a>
+								<RouterLink to="/produk" class="text-white-50">Produk /</RouterLink>
 							</li>
-							<li class="mr-2">/</li>
-							<li class="active">Buah Bit</li>
+							<li class="active text-white">Buah Bit</li>
 						</ul>
 					</div>
 				</div>
@@ -39,6 +38,7 @@
 						<div>
 							<img src="https://imgx.sonora.id/crop/0x2217:4000x4983/x/photo/2022/10/14/buah-bit-pexels-mali-maeder-2443-20221014041241.jpg" alt="image description" class="img-fluid w-100">
 						</div>
+						
 					</div>
 				</div>
 				<div class="col-12 col-lg-6 order-lg-3">
@@ -134,17 +134,12 @@
 						</div>
 						<div>
 							<div class="imgBlock">
-								<img src="https://www.panensia.co.id/wp-content/uploads/2023/10/buah-bit.jpg" alt="image description" class="img-fluid">
+								<img src="https://imgx.sonora.id/crop/0x2217:4000x4983/x/photo/2022/10/14/buah-bit-pexels-mali-maeder-2443-20221014041241.jpg" alt="image description" class="img-fluid">
 							</div>
 						</div>
 						<div>
 							<div class="imgBlock">
-								<img src="https://asset-a.grid.id/crop/0x0:0x0/x/photo/2019/02/25/1994610109.jpg" alt="image description" class="img-fluid">
-							</div>
-						</div>
-						<div>
-							<div class="imgBlock">
-								<img src="https://cdn0-production-images-kly.akamaized.net/FKBoddmyXUA_BJjowiRs2RfaclM=/0x0:750x1000/469x625/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4549536/original/024579300_1692809622-shutterstock_2272498457.jpg" alt="image description" class="img-fluid">
+								<img src="https://imgx.sonora.id/crop/0x2217:4000x4983/x/photo/2022/10/14/buah-bit-pexels-mali-maeder-2443-20221014041241.jpg" alt="image description" class="img-fluid">
 							</div>
 						</div>
 					</div>

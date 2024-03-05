@@ -12,7 +12,7 @@ const route = useRoute()
                 <RouterLink to="/">Home</RouterLink>
             </li>
             <li :class="{ 'navbar-dropdown active': route.path === '/about' }">
-                <RouterLink to="/about">About</RouterLink>
+                <RouterLink to="/about">Tentang Kami</RouterLink>
             </li>
             <li :class="{ 'navbar-dropdown active': route.path === '/berita' }">
               <RouterLink to="/berita">News</RouterLink>

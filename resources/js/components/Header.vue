@@ -43,7 +43,7 @@ const route = useRoute()
 								<div class="collapse navbar-collapse" id="navbarNav">
 									<ul class="navbar-nav mx-auto text-uppercase d-inline-block">
                                         <li :class="{ 'nav-item active': route.path === '/' }">
-                                            <RouterLink to="/" class="dropdown-toggle d-block" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">home</RouterLink>
+                                            <RouterLink to="/" class="dropdown-toggle d-block" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</RouterLink>
                                         </li>
                                         <li :class="{ 'nav-item active': route.path === '/produk' || route.path === '/detailproduk' }">
                                             <RouterLink to="/produk" class="dropdown-toggle d-block" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produk</RouterLink>
