@@ -1,13 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import DashboardView from '../views/admin/DashboardView.vue'
-import AdminNewsView from '../views/admin/NewsView.vue'
-import AdminNewsEditView from '../views/admin/NewsEditView.vue'
-import AdminNewsCreateView from '../views/admin/NewsCreateView.vue'
-import AdminNewsCategoriesView from '../views/admin/NewsCategoriesView.vue'
-import AdminNewsCategoriesCreateView from '../views/admin/NewsCategoriesCreateView.vue'
-import AdminNewsCategoriesEditView from '../views/admin/NewsCategoriesEditView.vue'
-import AdminImagesEditView from '../views/admin/NewsImagesEditView.vue'
 import AdminShopsView from '../views/admin/ShopsView.vue'
 import AdminShopsEditView from '../views/admin/ShopsEditView.vue'
 import AdminShopsCreateView from '../views/admin/ShopsCreateView.vue'
@@ -30,44 +23,47 @@ const router = createRouter({
                 requiresAuth: true
             }
         },
+        /* === NEWS START === */
         {
             path: '/admin/news',
             name: 'admin.news',
-            component: AdminNewsView
+            component: () => import('../views/admin/NewsView.vue')
         },
         {
             path: '/admin/news/create',
             name: 'admin.news.create',
-            component: AdminNewsCreateView
+            component: () => import('../views/admin/NewsCreateView.vue')
         },
         {
             path: '/admin/news/edit/:id',
             name: 'admin.news.edit',
-            component: AdminNewsEditView,
+            component: () => import('../views/admin/NewsEditView.vue'),
             props: true
         },
         {
             path: '/admin/news_categories',
             name: 'admin.news_categories',
-            component: AdminNewsCategoriesView
+            component: () => import('../views/admin/NewsCategoriesView.vue')
         },
         {
             path: '/admin/news_categories/create',
             name: 'admin.news_categories.create',
-            component: AdminNewsCategoriesCreateView
+            component: () => import('../views/admin/NewsCategoriesCreateView.vue')
         },
         {
             path: '/admin/news_categories/edit/:id',
             name: 'admin.news_categories.edit',
-            component: AdminNewsCategoriesEditView,
+            component: () => import('../views/admin/NewsCategoriesEditView.vue'),
             props: true
         },
         {
             path: '/admin/news_images/edit/:id',
             name: 'admin.news_images.edit',
-            component: AdminImagesEditView,
+            component: () => import('../views/admin/NewsImagesEditView.vue'),
             props: true
         },
+        /* === NEWS END === */
+        /* === SHOPS START === */
         {
             path: '/admin/shops',
             name: 'admin.shops',
@@ -137,12 +133,12 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
     const loggedIn = localStorage.getItem('loggedIn');
-    
+
     if (to.matched.some(record => record.meta.requiresSuperAdmin)) {
         if (loggedIn && localStorage.getItem('is_superAdmin') === '1') {
-        next();
+            next();
         } else {
-        next({ name: 'login' });
+            next({ name: 'login' });
         }
     } else {
         next();

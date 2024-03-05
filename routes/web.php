@@ -21,6 +21,9 @@ use App\Http\Controllers\ShopController;
 //     return view('welcome');
 // });
 
-Route::get('/{any}', function () {
-    return view('app');
-})->where('any', '.*');
+
+Route::group(['middleware' => ['visitor']], function () {
+    Route::get('/{any}', function () {
+        return view('app');
+    })->where('any', '.*');
+});
