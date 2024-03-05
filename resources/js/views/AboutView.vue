@@ -1,15 +1,15 @@
 <template>
     <main>
         <!-- introBannerHolder -->
-    <section class="introBannerHolder d-flex w-100 bgCover" style="background-image: url(https://i.pinimg.com/564x/cf/4f/0e/cf4f0e63d269af55634ac757a4d3d1cb.jpg);">
+    <section class="introBannerHolder d-flex w-100 bgCover" style="background-image: linear-gradient(to right , #ffffff,#ffffff, #5ba515);">
     <div class="container">
         <div class="row">
             <div class="col-12 pt-lg-23 pt-md-15 pt-sm-10 pt-6 text-center">
-                <h1 class="headingIV fwEbold playfair mb-4" style="color: #fff; font-size: 48px;">About Us</h1>
+                <h1 class="headingIV fwEbold playfair mb-4" style="color: #000000; font-size: 37px;">About Us</h1>
                 <ul class="list-unstyled breadCrumbs d-flex justify-content-center">
-                    <li class="mr-2"><a href="home.html" style="color: #fff; font-size: 18px;">Home</a></li>
-                    <li class="mr-2" style="color: #fff; font-size: 18px;">/</li>
-                    <li class="active" style="color: #fff; font-size: 18px;">About</li>
+                    <li class="mr-2"><a href="home.html" style="color: #000000; font-size: 18px;">Home</a></li>
+                    <li class="mr-2" style="color: #000000; font-size: 18px;">/</li>
+                    <li class="active" style="color: #000000; font-size: 18px;">About</li>
                 </ul>
             </div>
         </div>
@@ -19,10 +19,10 @@
 <section class="introBannerHolder">
     <div class="container-fluid p-0">
         <div class="row g-0">
-            <div class="col-md-6 d-flex align-items-center" style="background-color: #5ba515;">
+            <div class="col-md-6 d-flex align-items-center" >
                 <div class="p-5">
-                    <h2 class="playfair fw-bold text-white mb-4" style="font-size: 36px;">Panensia.id</h2>
-                    <p class="text-white mb-4" style="font-size: 20px; line-height: 1.6;">Panensia adalah penyedia utama rempah-rempah dan bumbu yang diproduksi secara mandiri, memberikan aroma dan rasa terbaik untuk masakan Anda. Kami menyediakan layanan Rantai Pasokan untuk kebutuhan industri F&B, hotel, restoran, layanan katering, perusahaan kosmetik, dan bisnis lainnya.</p>
+                    <h2 class="playfair fw-bold  mb-4" style="font-size: 36px; color: #5ba515;">Panensia.id</h2>
+                    <p class="text-black mb-4" style="font-size: 20px; line-height: 1.6;">Panensia adalah penyedia utama rempah-rempah dan bumbu yang diproduksi secara mandiri, memberikan aroma dan rasa terbaik untuk masakan Anda. Kami menyediakan layanan Rantai Pasokan untuk kebutuhan industri F&B, hotel, restoran, layanan katering, perusahaan kosmetik, dan bisnis lainnya.</p>
                 </div>
             </div>
             <div class="col-md-6 d-flex">
@@ -60,29 +60,29 @@
                 </div>
             </div>
         </section>
-        <section class="introSec  pt-xl-12 pb-xl-7 pt-10 pb-10" style="background-image: linear-gradient(to bottom right, #5ba515, );">
+        <section class="introSec  pt-xl-12 pb-xl-7 pt-10 pb-10" style="background-image: linear-gradient(to bottom right, #5ba515,#cbf3a5, #ffff );">
             <header class="col-12 mainHeader mb-3 text-center">
-            <h1 class="headingIV playfair fwEblod mb-4 text-white" >Cerita Kami</h1>
-            <span class="headerBorder d-block mb-5"><img src="" alt="Header Border" class="img-fluid img-bdr"></span>
+            <h1 class="headingIV playfair fwEblod mb-4 text-black" >Cerita Kami</h1>
+            <!-- <span class="headerBorder d-block mb-5"><img src="" alt="Header Border" class="img-fluid img-bdr"></span> -->
             </header>
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-lg-6 mb-lg-0 mb-6">
-                        <div class="ratio ratio-4x4">
-                        <iframe width="90%" height="100%" src="https://www.youtube.com/embed/x7PZ9hQ79xQ" frameborder="0" allowfullscreen class="frame-fluid rounded"></iframe>
+                        
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/x7PZ9hQ79xQ" frameborder="0" allowfullscreen class="frame-fluid rounded"></iframe>
+                    
                     </div>
-                    </div>
-                    <div class="col-10 col-lg-4">
+                    <div class="col-10 col-lg-6">
                         <div id="accordion" class="accordionList pt-lg-12">
                             <div class="card mb-2">
                                 <div class="card-header px-xl-5 py-xl-3" id="headingOne">
                                     <h5 class="mb-0">
-                                        <button class="btn btn-link fwEbold text-uppercase text-left w-100 p-0" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <button class="btn btn-link fwEbold text-uppercase text-left w-100 p-0" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" >
                                         connecting people <i class="fas fa-sort-down float-right"></i>
                                         </button>
                                     </h5>
                                 </div>
-                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion" >
                                     <div class="card-body px-xl-5 py-0">
                                         <p class="mb-7">To succeed you must believe. When you believe, you will succeed. Surround yourself with angels, positive energy, beautiful people, beautiful souls, clean heart, angel. Let me be clear, you have to make it through the jungle to make it to paradise, that’s the key, Lion! Lion!</p>
                                     </div>
@@ -139,7 +139,7 @@
     <div class="row">
         <header class="col-12 mainHeader mb-3 text-center">
             <h1 class="headingIV playfair fwEblod mb-4">Delivery Process</h1>
-            <span class="headerBorder d-block mb-5"><img src="" alt="Header Border" class="img-fluid img-bdr"></span>
+            <!-- <span class="headerBorder d-block mb-5"><img src="--------" alt="Header Border" class="img-fluid img-bdr"></span> -->
         </header>
     </div>
     <div class="row">
@@ -229,14 +229,14 @@
                 <div class="row">
                     <header class="col-12 mainHeader mb-9 text-center">
                         <h1 class="headingIV playfair fwEblod mb-4">Meet Our Team</h1>
-                        <span class="headerBorder d-block mb-5"><img src="" alt="Header Border" class="img-fluid img-bdr"></span>
+                        <!-- <span class="headerBorder d-block mb-5"><img src="" alt="Header Border" class="img-fluid img-bdr"></span> -->
                     </header>
                 </div>
                 <div class="row">
                     <div class="col-12 col-sm-6 col-lg-4 mb-lg-0 mb-6">
                         <article class="teamBlock overflow-hidden">
                             <span class="imgWrap position-relative d-block w-100 mb-4">
-                                <img src="http://placehold.it/370x290" class="img-fluid" alt="image description">
+                                <img src="https://i.pinimg.com/564x/96/5b/f0/965bf0ffaa83d1a76d7bcaf9c30c9436.jpg" class="img-fluid" alt="image description" style="width: 300px; height: 300px; display: block; margin-left: auto; margin-right: auto;">
                                 <ul class="list-unstyled position-absolute mb-0 d-flex justify-content-center socialNetworks">
                                     <li><a href="javascript:void(0);" class="fab fa-facebook-f"></a></li>
                                     <li><a href="javascript:void(0);" class="fab fa-twitter"></a></li>
@@ -254,7 +254,7 @@
                     <div class="col-12 col-sm-6 col-lg-4 mb-lg-0 mb-6">
                         <article class="teamBlock overflow-hidden">
                             <span class="imgWrap position-relative d-block w-100 mb-4">
-                                <img src="http://placehold.it/370x290" class="img-fluid" alt="image description">
+                                <img src="https://i.pinimg.com/564x/96/5b/f0/965bf0ffaa83d1a76d7bcaf9c30c9436.jpg" class="img-fluid" alt="image description" style="width: 300px; height: 300px; display: block; margin-left: auto; margin-right: auto;">
                                 <ul class="list-unstyled position-absolute mb-0 d-flex justify-content-center socialNetworks">
                                     <li><a href="javascript:void(0);" class="fab fa-facebook-f"></a></li>
                                     <li><a href="javascript:void(0);" class="fab fa-twitter"></a></li>
@@ -272,7 +272,7 @@
                     <div class="col-12 col-sm-6 col-lg-4 mb-lg-0 mb-6">
                         <article class="teamBlock overflow-hidden">
                             <span class="imgWrap position-relative d-block w-100 mb-4">
-                                <img src="http://placehold.it/370x290" class="img-fluid" alt="image description">
+                                <img src="https://i.pinimg.com/564x/96/5b/f0/965bf0ffaa83d1a76d7bcaf9c30c9436.jpg" class="img-fluid" alt="image description" style="width: 300px; height: 300px; display: block; margin-left: auto; margin-right: auto;">
                                 <ul class="list-unstyled position-absolute mb-0 d-flex justify-content-center socialNetworks">
                                     <li><a href="javascript:void(0);" class="fab fa-facebook-f"></a></li>
                                     <li><a href="javascript:void(0);" class="fab fa-twitter"></a></li>
@@ -295,7 +295,7 @@
             <section class="subscribeSecBlock bgCover pt-xl-24 pb-xl-12 pt-lg-20 pb-lg-10 pt-md-16 pb-md-10 py-10 px-3" style="background-image: url(http://placehold.it/1720x465)">
                 <header class="col-12 mainHeader mb-9 text-center">
                     <h1 class="headingIV playfair fwEblod mb-4">Subscribe Our Newsletter</h1>
-                    <span class="headerBorder d-block mb-5"><img src="" alt="Header Border" class="img-fluid img-bdr"></span>
+                    <!-- <span class="headerBorder d-block mb-5"><img src="" alt="Header Border" class="img-fluid img-bdr"></span> -->
                     <p class="mb-6">Enter Your email address to join our mailing list and keep yourself update</p>
                 </header>
                 <form class="emailForm1 mx-auto overflow-hidden d-flex flex-wrap">
