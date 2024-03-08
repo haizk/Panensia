@@ -8,7 +8,8 @@ use Monolog\Handler\RotatingFileHandler;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\ContactController;
-use App\Http\Controllers\AdminsController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\PasswordResetTokenController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,10 +23,27 @@ use App\Http\Controllers\AdminsController;
 */
 
 Route::post('/login', [LoginController::class,'login']);
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::post('/sendResetPasswordEmail', [PasswordResetTokenController::class,'sendResetPasswordEmail']);
+Route::get('/resetPasswordForm/{token}', [PasswordResetTokenController::class,'resetForm']);
+Route::post('/resetPassword/{token}', [PasswordResetTokenController::class,'reset']);
+
+// Protected routes
+Route::middleware('auth:sanctum')->group(function () {
+    Route::post('/logout', [LoginController::class, 'logout']);
+    Route::get('/loggedUser', [LoginController::class, 'loggedUser']);
+    Route::post('/changePassword', [LoginController::class, 'changePassword']);
+    Route::get('/user', function (Request $request) {
+        return response()->json(['user' => $request->user()]);
+    });
+
 });
-Route::get('/logout', [LoginController::class,'logout']);
+
+Route::get('/admins', [UserController::class, 'getAdmins']);
+Route::get('/admins/{id}', [UserController::class, 'getAdminById']);
+Route::post('/admins', [UserController::class, 'createAdmin']);
+Route::post('/admins/{id}', [UserController::class, 'editAdmin']);
+Route::delete('/admins/{id}', [UserController::class, 'deleteAdmin']);
+Route::delete('/admins/profile/{id}', [UserController::class, 'viewProfile']);
 
 Route::get('/getNews', [NewsController::class, 'getNews']);
 Route::get('/getNewsById/{id}', [NewsController::class, 'getNewsById']);
@@ -61,8 +79,4 @@ Route::get('/contacts', [ContactController::class, 'index']);
 Route::post('/contacts', [ContactController::class, 'store']);
 Route::get('/contacts/{contact}', [ContactController::class, 'show']);
 
-Route::get('/admins', [AdminsController::class, 'getAdmin']);
-Route::get('/admins/{id}', [AdminsController::class, 'getAdminById']);
-Route::post('/admins', [AdminsController::class, 'createAdmin']);
-Route::post('/admins/{id}', [AdminsController::class, 'editAdmin']);
-Route::delete('/admins/{id}', [AdminsController::class, 'deleteAdmin']);
+
