@@ -6,11 +6,12 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 
-class AdminsController extends Controller
+class UserController extends Controller
 {
-    public function getAdmin()
+    public function getAdmins()
     {
-        return User::latest()->get();
+        $admins = User::orderBy('id', 'desc')->get();
+        return response()->json($admins);
     }
 
     public function getAdminById($id)
@@ -47,8 +48,11 @@ class AdminsController extends Controller
         $admin = User::find($id);
         $admin->name = $request->name;
         $admin->is_superAdmin = $request->is_superAdmin;
+        if($request->filled('password')){
+            $admin->password = Hash::make($request->password);
+        }
         $admin->save();
 
-        return response()->json(['message' => 'Admin updated successfully'], 200);
+        return response()->json(['message' => 'Admin data updated successfully'], 200);
     }
 }
