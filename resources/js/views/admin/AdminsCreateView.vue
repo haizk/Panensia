@@ -6,6 +6,7 @@ import AdminNavComp from '../../components/AdminNavComp.vue';
 import AdminFooterComp from '../../components/AdminFooterComp.vue';
 
 let name = ref('');
+let phone = ref('');
 let email = ref('');
 let password = ref('');
 let is_superAdmin = ref(false);
@@ -24,8 +25,9 @@ const createAdmin = async () => {
         const response = await axios.post('/api/admins', {
             name: name.value,
             email: email.value,
+            phone: phone.value,
             password: password.value,
-            is_superAdmin: is_superAdmin.value,
+            is_superAdmin: parseInt(is_superAdmin.value),
     });
 
         console.log(response.data);
@@ -51,11 +53,17 @@ const createAdmin = async () => {
             <label>Email</label>
             <input type="email" v-model="email" />
             <br>
+            <label>Phone</label>
+            <input type="tel" v-model="phone" />
+            <br>
             <label>Password</label>
             <input type="password" v-model="password" />
             <br>
             <label>Is Super Admin?</label>
-            <input type="checkbox" v-model="is_superAdmin" />
+            <select v-model="is_superAdmin">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
             <br>
             <button @click="createAdmin">Create</button>
         </main>
