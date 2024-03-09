@@ -25,6 +25,7 @@ class UserController extends Controller
         $admin = new User();
         $admin->name = $request->name;
         $admin->email = $request->email;
+        $admin->phone = $request->phone;
         $admin->password = bcrypt($request->password);
         $admin->is_superAdmin = $request->is_superAdmin; // Add the necessary field based on your requirements
         $admin->save();
@@ -47,6 +48,7 @@ class UserController extends Controller
     {
         $admin = User::find($id);
         $admin->name = $request->name;
+        $admin->phone = $request->phone;
         $admin->is_superAdmin = $request->is_superAdmin;
         if($request->filled('password')){
             $admin->password = Hash::make($request->password);
