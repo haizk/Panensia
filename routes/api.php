@@ -35,15 +35,15 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/user', function (Request $request) {
         return response()->json(['user' => $request->user()]);
     });
-
+    Route::get('/admins', [UserController::class, 'getAdmins'])->name('admin.admins');
+    Route::post('/admins', [UserController::class, 'createAdmin'])->name('admin.admins.create');
+    Route::get('/admins/{id}', [UserController::class, 'getAdminById']);
+    Route::post('/admins/{id}', [UserController::class, 'editAdmin']);
+    Route::delete('/admins/{id}', [UserController::class, 'deleteAdmin']);
 });
 
-Route::get('/admins', [UserController::class, 'getAdmins']);
-Route::get('/admins/{id}', [UserController::class, 'getAdminById']);
-Route::post('/admins', [UserController::class, 'createAdmin']);
-Route::post('/admins/{id}', [UserController::class, 'editAdmin']);
-Route::delete('/admins/{id}', [UserController::class, 'deleteAdmin']);
-Route::delete('/admins/profile/{id}', [UserController::class, 'viewProfile']);
+// Route::delete('/admins/profile/{id}', [UserController::class, 'viewProfile']);
+
 
 Route::get('/getNews', [NewsController::class, 'getNews']);
 Route::get('/getNewsById/{id}', [NewsController::class, 'getNewsById']);
