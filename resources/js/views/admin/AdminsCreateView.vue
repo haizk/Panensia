@@ -1,16 +1,23 @@
 <script setup>
-import { ref } from 'vue'
-import axios from 'axios'
-import { useRouter } from 'vue-router'
+import { ref } from 'vue';
+import axios from 'axios';
+import { useRouter } from 'vue-router';
+import AdminNavComp from '../../components/AdminNavComp.vue';
+import AdminFooterComp from '../../components/AdminFooterComp.vue';
 
-import AdminNavComp from '../../components/AdminNavComp.vue'
-import AdminFooterComp from '../../components/AdminFooterComp.vue'
+let name = ref('');
+let email = ref('');
+let password = ref('');
+let is_superAdmin = ref(false);
+const router = useRouter();
 
-let name = ref('')
-let email = ref('')
-let password = ref('')
-let is_superAdmin = ref(false)
-const router = useRouter()
+axios.interceptors.request.use((config) => {
+    const token = localStorage.getItem('token');
+    if (token) {
+        config.headers.Authorization = `Bearer ${token}`;
+    }
+    return config;
+});
 
 const createAdmin = async () => {
     try {
@@ -19,17 +26,16 @@ const createAdmin = async () => {
             email: email.value,
             password: password.value,
             is_superAdmin: is_superAdmin.value,
-        })
+    });
 
-        console.log(response.data)
-        alert('Admin created')
-        // Redirect to AdminsView
-        router.push({ name: 'admin.admins' }) // Adjust the name based on your route configuration
+        console.log(response.data);
+        alert('Admin created');
+        router.push({ name: 'admin.admins' }); 
     } catch (error) {
-        console.error(error.response.data)
-        alert('Error creating admin')
+        console.error(error.response.data);
+        alert('Error creating admin');
     }
-}
+};
 </script>
 
 <template>

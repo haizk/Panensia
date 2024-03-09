@@ -9,8 +9,17 @@ let props = defineProps(['id'])
 let admin = ref(null)
 let name = ref('')
 let is_superAdmin = ref(0)
+let newPassword = ref('')
 
 const router = useRouter();
+
+axios.interceptors.request.use((config) => {
+  const token = localStorage.getItem('token');
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  return config;
+});
 
 const getAdminData = async () => {
     const response = await axios.get(`/api/getAdminById/${props.id}`)
@@ -24,11 +33,11 @@ const editAdmin = async () => {
         const response = await axios.post(`/api/admins/${props.id}`, {
             name: name.value,
             is_superAdmin: parseInt(is_superAdmin.value),
+            password: newPassword.value.trim() !== '' ? newPassword.value : undefined,
         });
 
         console.log(response.data);
         alert('Admin edited');
-        // Redirect or perform other actions as needed
         router.push({ name: 'admin.admins' });
     } catch (error) {
         console.error(error.response.data);
@@ -36,7 +45,6 @@ const editAdmin = async () => {
     }
 };
 
-// Fetch admin data on component mount
 onMounted(() => {
     getAdminData()
 })
@@ -56,6 +64,8 @@ onMounted(() => {
         <option value="0">No</option>
         <option value="1">Yes</option>
       </select>
+      <p>New Password</p>
+      <input type="password" v-model="newPassword" />
       <button @click="editAdmin">Edit Admin</button>
     </main>
     <AdminFooterComp />
