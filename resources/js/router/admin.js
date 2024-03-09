@@ -17,6 +17,8 @@ import AdminProductCreateView from '../views/admin/ProductCreateView.vue'
 import AdminsView from '../views/admin/AdminsView.vue'
 import AdminsCreateView from '../views/admin/AdminsCreateView.vue'
 import AdminsEditView from '../views/admin/AdminsEditView.vue'
+import AdminsProfileView from '../views/admin/AdminsProfileView.vue'
+import UnauthorizedAccessView from '../views/admin/UnauthorizedAccessView.vue'
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -25,9 +27,7 @@ const router = createRouter({
             path: '/admin',
             name: 'dashboard',
             component: DashboardView,
-            meta: {
-                requiresAuth: true
-            }
+            meta: { requiresAuth: true },
         },
         {
             path: '/admin/news',
@@ -118,28 +118,27 @@ const router = createRouter({
             path: '/admin/admins/create',
             name: 'admin.admins.create',
             component: AdminsCreateView,
+            meta: { requiresAuth: true },
         },
         {
             path: '/admin/admins/edit/:id',
             name: 'admin.admins.edit',
             component: AdminsEditView,
+            props: true,
+            meta: { requiresAuth: true },
+        },
+        {
+            path: '/admin/admins/profile/:id',
+            name: 'admin.admins.profile',
+            component: AdminsProfileView,
             props: true
-        }
+        },
+        {
+            path: '/admin/unauthorized',
+            name: 'admin.unauthorized',
+            component: UnauthorizedAccessView,
+        },
     ]
 })
 
-router.beforeEach((to, from, next) => {
-    const loggedIn = localStorage.getItem('loggedIn');
-    
-    if (to.matched.some(record => record.meta.requiresSuperAdmin)) {
-        if (loggedIn && localStorage.getItem('is_superAdmin') === '1') {
-        next();
-        } else {
-        next({ name: 'login' });
-        }
-    } else {
-        next();
-    }
-});
-
-export default router
+export default router;
