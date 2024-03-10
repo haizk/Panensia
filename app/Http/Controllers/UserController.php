@@ -13,13 +13,15 @@ class UserController extends Controller
         $admins = User::orderBy('id', 'desc')->get();
         return response()->json($admins);
     }
-
-    public function getAdminById($id)
+    
+    public function profileAdmin()
     {
-        $admin = User::find($id);
-        return response()->json(['admin' => $admin], 200);
-    }
+        $admin = auth()->user();
 
+        return response()->json([
+            'user' => $admin,
+        ]);
+    }
     public function createAdmin(Request $request)
     {
         $admin = new User();
@@ -47,14 +49,47 @@ class UserController extends Controller
     public function editAdmin(Request $request, $id)
     {
         $admin = User::find($id);
+
+        if (!$admin) {
+            return response([
+                'message' => 'User not found.',
+                'status' => 'error',
+            ], 404);
+        }
+
         $admin->name = $request->name;
         $admin->phone = $request->phone;
         $admin->is_superAdmin = $request->is_superAdmin;
+        
         if($request->filled('password')){
             $admin->password = Hash::make($request->password);
         }
         $admin->save();
 
         return response()->json(['message' => 'Admin data updated successfully'], 200);
+    }
+
+    public function changePassword(Request $request, $id)
+    {
+        $admin = User::find($id);
+
+        if (!$admin) {
+            return response([
+                'message' => 'User not found.',
+                'status' => 'error',
+            ], 404);
+        }
+
+        $request->validate([
+            'password' => 'required|confirmed',
+        ]);
+
+        $admin->password = Hash::make($request->password);
+        $admin->save();
+
+        return response([
+            'message' => 'Password changed successfully.',
+            'status' => 'success',
+        ], 200);
     }
 }
