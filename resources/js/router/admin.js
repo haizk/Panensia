@@ -11,6 +11,7 @@ import AdminResellersView from '../views/admin/ResellersView.vue'
 import AdminResellerEditView from '../views/admin/ResellerEditView.vue'
 import AdminResellerDetailView from '../views/admin/ResellerDetailView.vue'
 import AdminContactsView from '../views/admin/ContactsView.vue'
+import AdminContactDetailView from '../views/admin/ContactDetailView.vue'
 import AdminProductsView from '../views/admin/ProductsView.vue'
 import AdminProductEditView from '../views/admin/ProductEditView.vue'
 import AdminProductCreateView from '../views/admin/ProductCreateView.vue'
@@ -85,7 +86,7 @@ const router = createRouter({
         {
             path: '/admin/contacts/:id',
             name: 'admin.contacts.detail',
-            component: () => import('../views/admin/ContactDetailView.vue') // Sesuaikan dengan path yang benar
+            component: AdminContactDetailView
         },
         {
             path: '/admin/products',

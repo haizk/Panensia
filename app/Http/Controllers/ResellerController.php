@@ -65,7 +65,7 @@ class ResellerController extends Controller
      * @param \App\Models\Reseller $reseller
      * @return \Illuminate\Http\JsonResponse
      */
-    public function update(Request $request, Reseller $reseller)
+    public function edit(Request $request, Reseller $reseller)
     {
         $validator = Validator::make($request->all(), [
             'name' => 'required|string',
@@ -75,13 +75,14 @@ class ResellerController extends Controller
             'address' => 'required|string',
             'logo_path' => 'nullable|string',
             'link_social' => 'nullable|string',
+            'is_active' => 'required|boolean',
         ]);
 
         if ($validator->fails()) {
             return response()->json(['error' => $validator->errors()], 400);
         }
 
-        $reseller->update($request->all());
+        $reseller->save();
 
         return response()->json($reseller, 200);
     }
@@ -108,32 +109,6 @@ class ResellerController extends Controller
         }
 
         return response()->json(['error' => 'Logo not provided.'], 400);
-    }
-
-    /**
-     * Admin mengaktifkan reseller.
-     * 
-     * @param \App\Models\Reseller $reseller
-     * @return \Illuminate\Http\JsonResponse
-     */
-    public function activateReseller(Reseller $reseller)
-    {
-        $reseller->update(['is_active' => true]);
-
-        return response()->json($reseller, 200);
-    }
-
-    /**
-     * Admin menonaktifkan reseller.
-     * 
-     * @param \App\Models\Reseller $reseller
-     * @return \Illuminate\Http\JsonResponse
-     */
-    public function deactivateReseller(Reseller $reseller)
-    {
-        $reseller->update(['is_active' => false]);
-
-        return response()->json($reseller, 200);
     }
 
     /**

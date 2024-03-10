@@ -54,6 +54,9 @@ Route::get('/resellers', [ResellerController::class, 'index']);
 Route::post('/reseller', [ResellerController::class, 'store']);
 Route::get('/resellers/{reseller}', [ResellerController::class, 'show']);
 Route::post('/reseller/upload-logo', [ResellerController::class, 'uploadLogo']);
+Route::post('/reseller/{id}/upload-logo', [ResellerController::class, 'uploadLogo']);
+Route::put('/reseller/edit/{id}', [ResellerController::class, 'edit']);
+Route::delete('/resellers/{reseller}', [ResellerController::class, 'destroy']);
 
 Route::get('/contacts', [ContactController::class, 'index']);
 Route::post('/contacts', [ContactController::class, 'store']);

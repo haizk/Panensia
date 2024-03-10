@@ -33,6 +33,12 @@
         <label for="link_social">Social Media Link:</label>
         <input v-model="resellerData.link_social" type="text" id="link_social">
 
+        <label for="is_active">Is Active:</label>
+        <select v-model="resellerData.is_active" id="is_active">
+          <option :value="true">Yes</option>
+          <option :value="false">No</option>
+        </select>
+
         <button type="submit">Update</button>
       </form>
     </div>
@@ -67,6 +73,7 @@ export default {
         address: '',
         logo_path: '',
         link_social: '',
+        is_active: false,
       },
       uploadingLogo: false,
     };
@@ -129,6 +136,7 @@ export default {
         if (response.ok) {
           // Redirect to the Reseller list after successful update
           this.$router.push({ name: 'admin.resellers' });
+          console.log('Reseller updated successfully');
         } else {
           console.error('Failed to update reseller:', response.statusText);
         }

@@ -34,8 +34,6 @@
             <router-link :to="{ name: 'admin.reseller.edit', params: { id: reseller.id }}">Edit</router-link>
             <router-link :to="{ name: 'admin.reseller.detail', params: { id: reseller.id }}">Details</router-link>
             <button @click="deleteReseller(reseller.id)">Delete</button>
-            <button v-if="!reseller.is_active" @click="activateReseller(reseller.id)">Activate</button>
-            <button v-if="reseller.is_active" @click="deactivateReseller(reseller.id)">Deactivate</button>
           </td>
         </tr>
       </tbody>
