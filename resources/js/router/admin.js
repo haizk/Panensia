@@ -7,9 +7,9 @@ import AdminNewsCreateView from '../views/admin/NewsCreateView.vue'
 import AdminNewsCategoriesView from '../views/admin/NewsCategoriesView.vue'
 import AdminNewsCategoriesCreateView from '../views/admin/NewsCategoriesCreateView.vue'
 import AdminNewsCategoriesEditView from '../views/admin/NewsCategoriesEditView.vue'
-import AdminShopsView from '../views/admin/ShopsView.vue'
-import AdminShopsEditView from '../views/admin/ShopsEditView.vue'
-import AdminShopsCreateView from '../views/admin/ShopsCreateView.vue'
+import AdminResellersView from '../views/admin/ResellersView.vue'
+import AdminResellerEditView from '../views/admin/ResellerEditView.vue'
+import AdminResellerDetailView from '../views/admin/ResellerDetailView.vue'
 import AdminContactsView from '../views/admin/ContactsView.vue'
 import AdminProductsView from '../views/admin/ProductsView.vue'
 import AdminProductEditView from '../views/admin/ProductEditView.vue'
@@ -62,24 +62,19 @@ const router = createRouter({
             props: true
         },
         {
-            path: '/admin/shops',
-            name: 'admin.shops',
-            component: AdminShopsView
+            path: '/admin/resellers',
+            name: 'admin.resellers',
+            component: AdminResellersView
         },
         {
-            path: '/admin/shops/:id',
-            name: 'admin.shops.detail',
-            component: () => import('../views/admin/ShopDetailView.vue')
+            path: '/admin/reseller/:id',
+            name: 'admin.reseller.detail',
+            component: AdminResellerDetailView
         },
         {
-            path: '/admin/shops/create',
-            name: 'admin.shops.create',
-            component: AdminShopsCreateView
-        },
-        {
-            path: '/admin/shops/edit/:id',
-            name: 'admin.shops.edit',
-            component: AdminShopsEditView,
+            path: '/admin/reseller/edit/:id',
+            name: 'admin.reseller.edit',
+            component: AdminResellerEditView,
             props: true
         },
         {

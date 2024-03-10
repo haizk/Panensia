@@ -51,9 +51,9 @@ Route::post('/editProduct/{id}', [ProductController::class, 'editProduct']);
 Route::delete('/deleteProduct/{id}', [ProductController::class, 'deleteProduct']);
 
 Route::get('/resellers', [ResellerController::class, 'index']);
-Route::post('/resellers', [ResellerController::class, 'store']);
+Route::post('/reseller', [ResellerController::class, 'store']);
 Route::get('/resellers/{reseller}', [ResellerController::class, 'show']);
-Route::post('/resellers/upload-logo', [ResellerController::class, 'uploadLogo']);
+Route::post('/reseller/upload-logo', [ResellerController::class, 'uploadLogo']);
 
 Route::get('/contacts', [ContactController::class, 'index']);
 Route::post('/contacts', [ContactController::class, 'store']);

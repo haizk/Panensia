@@ -92,7 +92,7 @@ export default {
     },
     async saveReseller() {
       try {
-        const response = await fetch('/api/resellers', {
+        const response = await fetch('/api/reseller', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -120,7 +120,7 @@ export default {
                 const formData = new FormData();
                 formData.append('logo', file);
 
-                const response = await fetch(`/api/resellers/upload-logo`, {
+                const response = await fetch(`/api/reseller/upload-logo`, {
                     method: 'POST',
                     body: formData,
                 });
