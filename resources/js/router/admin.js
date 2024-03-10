@@ -19,6 +19,7 @@ import AdminsCreateView from '../views/admin/AdminsCreateView.vue'
 import AdminsEditView from '../views/admin/AdminsEditView.vue'
 import AdminsProfileView from '../views/admin/AdminsProfileView.vue'
 import UnauthorizedAccessView from '../views/admin/UnauthorizedAccessView.vue'
+import ChangePasswordView from '../views/admin/ChangePasswordView.vue'
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -118,25 +119,28 @@ const router = createRouter({
             path: '/admin/admins/create',
             name: 'admin.admins.create',
             component: AdminsCreateView,
-            meta: { requiresAuth: true },
         },
         {
             path: '/admin/admins/edit/:id',
             name: 'admin.admins.edit',
             component: AdminsEditView,
             props: true,
-            meta: { requiresAuth: true },
         },
         {
-            path: '/admin/admins/profile/:id',
-            name: 'admin.admins.profile',
+            path: '/admin/profile',
+            name: 'admin.profile',
             component: AdminsProfileView,
-            props: true
         },
         {
             path: '/admin/unauthorized',
             name: 'admin.unauthorized',
             component: UnauthorizedAccessView,
+        },
+        {
+            path: '/admin/changePassword/:id',
+            name: 'admin.change_password',
+            component: ChangePasswordView,
+            props: true,
         },
     ]
 })
