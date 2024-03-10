@@ -11,6 +11,12 @@ const getLoggedIn = () => {
 };
 
 const logout = async () => {
+  const confirmLogout = window.confirm('Are you sure you want to log out?');
+  
+  if(!confirmLogout){
+    return;
+  }
+  
   try {
     const response = await axios.post('/api/logout', {}, {
       headers: {
@@ -47,6 +53,7 @@ onMounted(() => {
         <RouterLink to="/admin/contacts" v-if="loggedIn">Contacts</RouterLink>
         <RouterLink to="/admin/products" v-if="loggedIn">Products</RouterLink>
         <RouterLink to="/admin/admins" v-if="loggedIn">Administrators</RouterLink>
+        <RouterLink to="/admin/profile" v-if="loggedIn">Your Profile</RouterLink>
         <RouterLink to="/login" v-if="loggedIn" @click="logout">Logout</RouterLink>
     </nav>
 </template>
