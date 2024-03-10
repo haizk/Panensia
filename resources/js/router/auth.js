@@ -9,17 +9,17 @@ const loginRouter = createRouter({
     routes: [
         {
             path: '/login',
-            name: 'login',
+            name: 'auth.login',
             component: LoginView
         },
         {
             path: '/forgotPassword',
-            name: 'forgotPassword',
+            name: 'auth.forgot_password',
             component: ForgotPasswordView,
         },
         {
             path: '/resetPasswordForm/:token',
-            name: 'resetPasswordForm',
+            name: 'auth.reset_password_form',
             component: ResetPasswordView,
             props: true,
         },
