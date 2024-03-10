@@ -1,80 +1,89 @@
-<script setup>
+<script>
 import axios from 'axios';
-import { ref, onMounted } from 'vue';
 import AdminNavComp from '../../components/AdminNavComp.vue';
 import AdminFooterComp from '../../components/AdminFooterComp.vue';
 
-const admins = ref([]);
+export default {
+    components: {
+        AdminNavComp,
+        AdminFooterComp,
+    },
+    data() {
+        return {
+        admins: [],
+        };
+    },
+    mounted() {
+        this.fetchAdmins();
+    },
+    methods: {
+        async fetchAdmins() {
+        try {
+            const response = await axios.get('/api/admins', {
+                headers: {
+                    'Authorization': `Bearer ${localStorage.getItem('token')}`,
+                },
+            });
+            this.admins = response.data;
+        } catch (error) {
+            console.error('Error fetching administrators:', error);
+            alert('Error fetching administrators');
+        }
+        },
+        async deleteAdmin(adminId) {
+        if (window.confirm('Are you sure you want to delete this admin?') === false) {
+            return;
+        }
 
-axios.interceptors.request.use((config) => {
-    const token = localStorage.getItem('token');
-    if (token) {
-        config.headers.Authorization = `Bearer ${token}`;
-    }
-    return config;
-});
-
-const fetchAdmins = async () => {
-    try {
-        const response = await axios.get('/api/admins');
-        admins.value = response.data;
-    } catch (error) {
-        console.error('Error fetching administrators:', error);
-        alert('Error fetching administrators');
-    }
-    };
-
-    const deleteAdmin = async (adminId) => {
-    if (!window.confirm('Are you sure you want to delete this admin?')) {
-        return;
-    }
-
-    try {
-        const response = await axios.delete(`/api/admins/${adminId}`);
-        if (response.status === 200) {
-            fetchAdmins();
+        try {
+            const response = await axios.delete(`/api/admins/${adminId}`, {
+            headers: {
+                'Authorization': `Bearer ${localStorage.getItem('token')}`,
+            },
+            });
+            if (response.status === 200) {
+            this.fetchAdmins();
             alert('Admin deleted');
-        } else {
+            } else {
             console.error('Failed to delete admin:', response.statusText);
             alert('Failed to delete admin');
-        }
-    } catch (error) {
-        console.error('Error deleting admin:', error);
-        alert('Error deleting admin');
-    }
-    };
-
-    onMounted(() => {
-    fetchAdmins();
-    });
-
-    // eslint-disable-next-line no-unused-vars
-    const beforeRouteEnter = (to, from, next) => {
-    if (to.matched.some(record => record.meta.requiresSuperAdmin)) {
-        const token = localStorage.getItem('token');
-        if (token) {
-        axios.get('/api/user', {
-        })
-            .then(response => {
-            const user = response.data.user;
-            if (user.is_superAdmin === 1) {
-                next();
-            } else {
-                next({ name: 'admin.unauthorized' });
             }
-            })
-            .catch(error => {
-            console.error('Error fetching user data:', error);
-            next({ name: 'admin.unauthorized' });
-            });
-        } else {
-        next({ name: 'dashboard' });
+        } catch (error) {
+            console.error('Error deleting admin:', error);
+            alert('Error deleting admin');
         }
-    } else {
-        next();
-    }
+        },
+    },
+    
+    beforeRouteEnter(to, from, next) {
+        if (to.matched.some(record => record.meta.requiresSuperAdmin)) {
+            const token = localStorage.getItem('token');
+            if (token) {
+                axios.get('/api/user', {
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                    },
+                })
+                .then(response => {
+                    const user = response.data.user;
+                    if (user.is_superAdmin === 1) {
+                        next();
+                    } else {
+                        next({ name: 'admin.unauthorized' });
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching user data:', error);
+                    next({ name: 'admin.unauthorized' });
+                });
+            } else {
+                next({ name: 'dashboard' });
+            }
+        } else {
+            next();
+        }
+    },
 };
-
 </script>
 
 <template>
@@ -92,6 +101,7 @@ const fetchAdmins = async () => {
                 <tr>
                     <th>Name</th>
                     <th>Email</th>
+                    <th>Phone</th>
                     <th>Role</th>
                     <th>Action</th>
                 </tr>
@@ -100,6 +110,7 @@ const fetchAdmins = async () => {
                 <tr v-for="admin in admins" :key="admin.id">
                     <td>{{ admin.name }}</td>
                     <td>{{ admin.email }}</td>
+                    <td>{{ admin.phone }}</td>
                     <td>{{ admin.is_superAdmin === 1 ? 'Super Admin' : 'Admin' }}</td>
                     <td>
                     <router-link :to="{ name: 'admin.admins.edit', params: { id: admin.id }}">

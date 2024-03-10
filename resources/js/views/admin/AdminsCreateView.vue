@@ -12,14 +12,6 @@ let password = ref('');
 let is_superAdmin = ref(false);
 const router = useRouter();
 
-axios.interceptors.request.use((config) => {
-    const token = localStorage.getItem('token');
-    if (token) {
-        config.headers.Authorization = `Bearer ${token}`;
-    }
-    return config;
-});
-
 const createAdmin = async () => {
     try {
         const response = await axios.post('/api/admins', {
@@ -28,11 +20,15 @@ const createAdmin = async () => {
             phone: phone.value,
             password: password.value,
             is_superAdmin: parseInt(is_superAdmin.value),
-    });
+        }, {
+            headers: {
+                'Authorization': `Bearer ${localStorage.getItem('token')}`,
+            }
+        });
 
         console.log(response.data);
         alert('Admin created');
-        router.push({ name: 'admin.admins' }); 
+        router.push({ name: 'admin.admins' });
     } catch (error) {
         console.error(error.response.data);
         alert('Error creating admin');

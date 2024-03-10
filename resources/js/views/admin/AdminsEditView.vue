@@ -5,52 +5,54 @@ import axios from 'axios'
 import AdminNavComp from '../../components/AdminNavComp.vue'
 import AdminFooterComp from '../../components/AdminFooterComp.vue'
 
-let props = defineProps(['id'])
-let admin = ref(null)
-let name = ref('')
-let phone = ref('')
-let is_superAdmin = ref(0)
-let newPassword = ref('')
+let props = defineProps(['id']);
+let admin = ref({});
+let name = ref('');
+let phone = ref('');
+let is_superAdmin = ref(0);
+let newPassword = ref('');
 
 const router = useRouter();
 
-axios.interceptors.request.use((config) => {
-    const token = localStorage.getItem('token');
-    if (token) {
-        config.headers.Authorization = `Bearer ${token}`;
-    }
-    return config;
-});
-
-
 const getAdminData = async () => {
-    const response = await axios.get(`/api/getAdminById/${props.id}`)
-    admin.value = response.data.admin
-    name.value = admin.value.name
-    phone.value = admin.value.phone
-    is_superAdmin.value = admin.value.is_superAdmin
-}
-
-const editAdmin = async () => {
-    try {
-        const response = await axios.post(`/api/admins/${props.id}`, {
-            name: name.value,
-            phone: phone.value,
-            is_superAdmin: parseInt(is_superAdmin.value),
-            password: newPassword.value.trim() !== '' ? newPassword.value : undefined,
-        });
-
-        console.log(response.data);
-        alert('Admin edited');
-        // Redirect or perform other actions as needed
-        router.push({ name: 'admin.admins' });
-    } catch (error) {
-        console.error(error.response.data);
-        alert('Error editing admin');
-    }
+  try {
+    const response = await axios.get(`/api/getAdminById/${props.id}`, {
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token')}`,
+      },
+    });
+    admin.value = response.data.admin;
+    name.value = admin.value.name;
+    phone.value = admin.value.phone;
+    is_superAdmin.value = admin.value.is_superAdmin;
+  } catch (error) {
+    console.error(error);
+  }
 };
 
-// Fetch admin data on component mount
+const editAdmin = async () => {
+  try {
+    const response = await axios.post(`/api/admins/${props.id}`, {
+      name: name.value,
+      phone: phone.value,
+      is_superAdmin: parseInt(is_superAdmin.value),
+      password: newPassword.value.trim() !== '' ? newPassword.value : undefined,
+    }, {
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token')}`,
+      },
+    });
+
+    console.log(response.data);
+    alert('Admin edited');
+    router.push({ name: 'admin.admins' });
+  } catch (error) {
+    console.error(error.response.data);
+    alert('Error editing admin');
+  }
+};
+
+
 onMounted(() => {
     getAdminData()
 })
@@ -67,7 +69,7 @@ onMounted(() => {
       <input type="text" v-model="name" />
       <br>
       <label>Phone</label>
-      <input type="number" v-model="phone" />
+      <input type="text" v-model="phone" />
       <br>
       <label>Super Admin?</label>
       <select v-model="is_superAdmin">
