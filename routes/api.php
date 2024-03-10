@@ -6,9 +6,10 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\NewsController;
 use Monolog\Handler\RotatingFileHandler;
 use App\Http\Controllers\ProductController;
-use App\Http\Controllers\ShopController;
+// use App\Http\Controllers\ShopController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AdminsController;
+use App\Http\Controllers\ResellerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,13 +50,10 @@ Route::post('/createProduct', [ProductController::class, 'createProduct']);
 Route::post('/editProduct/{id}', [ProductController::class, 'editProduct']);
 Route::delete('/deleteProduct/{id}', [ProductController::class, 'deleteProduct']);
 
-Route::get('/shops', [ShopController::class, 'index']);
-Route::post('/shops', [ShopController::class, 'store']);
-Route::get('/shops/{shop}', [ShopController::class, 'show']);
-Route::put('/shops/{shop}', [ShopController::class, 'update']);
-Route::post('/shops/{shop}/upload-logo', [ShopController::class, 'uploadLogo']);
-Route::post('/shops/upload-logo', [ShopController::class, 'uploadLogo']);
-Route::delete('/shops/{shop}', [ShopController::class, 'destroy']);
+Route::get('/resellers', [ResellerController::class, 'index']);
+Route::post('/resellers', [ResellerController::class, 'store']);
+Route::get('/resellers/{reseller}', [ResellerController::class, 'show']);
+Route::post('/resellers/upload-logo', [ResellerController::class, 'uploadLogo']);
 
 Route::get('/contacts', [ContactController::class, 'index']);
 Route::post('/contacts', [ContactController::class, 'store']);

@@ -15,7 +15,7 @@ class ProductSeeder extends Seeder
     {
         Product::create(
             [
-                'shop_id' => 1,
+                // 'shop_id' => 1,
                 'name' => 'Roti Kacang Keju',
                 'desc' => 'Roti Bakar Rasa Kacang Keju',
                 'link_tokped' => null,

@@ -8,6 +8,9 @@ use App\Models\News;
 use App\Models\NewsCategories;
 use App\Models\NewsImages;
 use App\Models\User;
+use App\Models\Contact;
+use App\Models\Reseller;
+use App\Models\Product;
 
 class DatabaseSeeder extends Seeder
 {
@@ -27,7 +30,9 @@ class DatabaseSeeder extends Seeder
             // NewsCategoriesSeeder::class,
             // NewsImagesSeeder::class,
             // NewsSeeder::class,
-            ShopSeeder::class,
+            // ShopSeeder::class,
+            ContactSeeder::class,
+            ResellerSeeder::class,
             ProductSeeder::class,
             UserSeeder::class
         ]);
