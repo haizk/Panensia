@@ -52,18 +52,4 @@ class LoginController extends Controller
             'status'=>'success',
         ], 200);
     }
-
-    public function changePassword(Request $request)
-    {
-        $request->validate([
-            'password' => 'required|confirmed',
-        ]);
-        $loggedUser = auth()->user();
-        $loggedUser->password = Hash::make($request->password);
-        $loggedUser->User::save();
-        return response([
-            'message'=>'Password changed successfully.',
-            'status'=>'success',
-        ], 200);
-    }
 }
