@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Reseller;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\DB;
 
 class ResellerController extends Controller
 {
@@ -41,7 +42,7 @@ class ResellerController extends Controller
             'name' => 'required|string',
             'phone' => 'required|string',
             'email' => 'required|email',
-            'brand' => 'required|string',
+            'brand' => 'nullable|string',
             'address' => 'required|string',
             'logo_path' => 'nullable|string',
             'link_social' => 'nullable|string',
@@ -71,7 +72,7 @@ class ResellerController extends Controller
             'name' => 'required|string',
             'phone' => 'required|string',
             'email' => 'required|email',
-            'brand' => 'required|string',
+            'brand' => 'nullable|string',
             'address' => 'required|string',
             'logo_path' => 'nullable|string',
             'link_social' => 'nullable|string',
@@ -82,7 +83,7 @@ class ResellerController extends Controller
             return response()->json(['error' => $validator->errors()], 400);
         }
 
-        $reseller->save();
+        $reseller->update($request->all());
 
         return response()->json($reseller, 200);
     }
