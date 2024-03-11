@@ -27,7 +27,7 @@ Route::post('/sendResetPasswordEmail', [PasswordResetTokenController::class,'sen
 Route::get('/resetPasswordForm/{token}', [PasswordResetTokenController::class,'resetForm']);
 Route::post('/resetPassword/{token}', [PasswordResetTokenController::class,'reset']);
 
-// Protected routes
+// Protected routes, require user login
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('/user', function (Request $request) {
         return response()->json(['user' => $request->user()]);
@@ -38,6 +38,7 @@ Route::middleware('auth:sanctum')->group(function () {
 
     Route::get('/admins', [UserController::class, 'getAdmins'])->name('admin.admins');
     Route::post('/admins', [UserController::class, 'createAdmin'])->name('admin.admins.create');
+    Route::get('/admins/{id}', [UserController::class, 'getAdminById']);
     Route::post('/admins/{id}', [UserController::class, 'editAdmin']);
     Route::delete('/admins/{id}', [UserController::class, 'deleteAdmin']);
 
