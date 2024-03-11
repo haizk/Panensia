@@ -53,6 +53,9 @@ const changePassword = async () => {
           <label>Confirm New Password:</label>
           <input v-model="confirmPassword" type="password" name="password_confirmation" required />
           <br>
+          <router-link :to="{ name: 'admin.profile' }">
+            <button type="button">Cancel</button>
+          </router-link>
           <button type="submit">Change Password</button>
         </form>
       </div>
