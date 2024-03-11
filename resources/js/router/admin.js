@@ -20,6 +20,8 @@ import AdminsEditView from '../views/admin/AdminsEditView.vue'
 import AdminsProfileView from '../views/admin/AdminsProfileView.vue'
 import UnauthorizedAccessView from '../views/admin/UnauthorizedAccessView.vue'
 import ChangePasswordView from '../views/admin/ChangePasswordView.vue'
+import AuthMiddleware from '../middleware/auth.js'
+import SuperAdminMiddleware from '../middleware/superAdmin.js'
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -27,24 +29,25 @@ const router = createRouter({
         {
             path: '/admin',
             name: 'dashboard',
-            component: DashboardView,
-            meta: { requiresAuth: true },
+            component: DashboardView
         },
         {
             path: '/admin/news',
             name: 'admin.news',
-            component: AdminNewsView
+            component: AdminNewsView,
         },
         {
             path: '/admin/news/create',
             name: 'admin.news.create',
-            component: AdminNewsCreateView
+            component: AdminNewsCreateView,
+            // meta: { requiresAuth: true },
+            // beforeEnter: AuthMiddleware
         },
         {
             path: '/admin/news/edit/:id',
             name: 'admin.news.edit',
             component: AdminNewsEditView,
-            props: true
+            props: true,
         },
         {
             path: '/admin/news_categories',
@@ -91,7 +94,7 @@ const router = createRouter({
         {
             path: '/admin/contacts/:id',
             name: 'admin.contacts.detail',
-            component: () => import('../views/admin/ContactDetailView.vue') // Sesuaikan dengan path yang benar
+            component: () => import('../views/admin/ContactDetailView.vue')
         },
         {
             path: '/admin/products',
@@ -113,36 +116,45 @@ const router = createRouter({
             path: '/admin/admins',
             name: 'admin.admins',
             component: AdminsView,
-            meta: { requiresSuperAdmin: true },
+            meta: { requiresAuth: true, requiresSuperAdmin: true },
+            beforeEnter: [ AuthMiddleware, SuperAdminMiddleware ]
         },
         {
             path: '/admin/admins/create',
             name: 'admin.admins.create',
             component: AdminsCreateView,
+            meta: { requiresAuth: true, requiresSuperAdmin: true },
+            beforeEnter: [ AuthMiddleware, SuperAdminMiddleware ]
         },
         {
             path: '/admin/admins/edit/:id',
             name: 'admin.admins.edit',
             component: AdminsEditView,
             props: true,
+            meta: { requiresAuth: true, requiresSuperAdmin: true },
+            beforeEnter: [ AuthMiddleware, SuperAdminMiddleware ]
         },
         {
             path: '/admin/profile',
             name: 'admin.profile',
             component: AdminsProfileView,
+            meta: { requiresAuth: true },
+            beforeEnter: AuthMiddleware
         },
         {
             path: '/admin/unauthorized',
             name: 'admin.unauthorized',
-            component: UnauthorizedAccessView,
+            component: UnauthorizedAccessView
         },
         {
             path: '/admin/changePassword/:id',
             name: 'admin.change_password',
             component: ChangePasswordView,
             props: true,
+            meta: { requiresAuth: true },
+            beforeEnter: AuthMiddleware,
         },
     ]
-})
+});
 
 export default router;
