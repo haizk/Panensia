@@ -6,10 +6,13 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\NewsController;
 use Monolog\Handler\RotatingFileHandler;
 use App\Http\Controllers\ProductController;
-use App\Http\Controllers\ShopController;
+// use App\Http\Controllers\ShopController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AdminsController;
+
+use App\Http\Controllers\ResellerController;
 use App\Models\Product;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -60,13 +63,13 @@ Route::post('/editProductCategory/{id}', [ProductController::class, 'editProduct
 Route::delete('/deleteProductCategory/{id}', [ProductController::class, 'deleteProductCategory']);
 
 
-Route::get('/shops', [ShopController::class, 'index']);
-Route::post('/shops', [ShopController::class, 'store']);
-Route::get('/shops/{shop}', [ShopController::class, 'show']);
-Route::put('/shops/{shop}', [ShopController::class, 'update']);
-Route::post('/shops/{shop}/upload-logo', [ShopController::class, 'uploadLogo']);
-Route::post('/shops/upload-logo', [ShopController::class, 'uploadLogo']);
-Route::delete('/shops/{shop}', [ShopController::class, 'destroy']);
+Route::get('/resellers', [ResellerController::class, 'index']);
+Route::post('/reseller', [ResellerController::class, 'store']);
+Route::get('/resellers/{reseller}', [ResellerController::class, 'show']);
+Route::post('/reseller/upload-logo', [ResellerController::class, 'uploadLogo']);
+Route::post('/reseller/{id}/upload-logo', [ResellerController::class, 'uploadLogo']);
+Route::put('/reseller/edit/{id}', [ResellerController::class, 'edit']);
+Route::delete('/resellers/{reseller}', [ResellerController::class, 'destroy']);
 
 Route::get('/contacts', [ContactController::class, 'index']);
 Route::post('/contacts', [ContactController::class, 'store']);
