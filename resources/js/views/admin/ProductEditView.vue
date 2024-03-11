@@ -7,14 +7,18 @@ import AdminNavComp from '../../components/AdminNavComp.vue'
 import AdminFooterComp from '../../components/AdminFooterComp.vue'
 
 let props = defineProps(['id'])
-let shops = ref([])
+let product_categories = ref([])
+// let shops = ref([])
 let product = ref(null)
 let files = ref(null)
 let name = ref('')
 let link_shopee = ref('')
 let link_tokped = ref('')
+let link_tiktok = ref('')
 let desc = ref('')
-let shop_id = ref('')
+let caution = ref('')
+let ingredient = ref('')
+let product_category_id = ref('')
 const router = useRouter()
 
 onMounted(async () => {
@@ -22,9 +26,13 @@ onMounted(async () => {
     product.value = productResponse.data.products
     console.log(product.value)
 
-    const shopsResponse = await axios.get('/api/getShops')
-    shops.value = shopsResponse.data.shops
-    console.log(shops)
+    const categoriesResponse = await axios.get('/api/getProductCategories')
+    product_categories.value = categoriesResponse.data.categories
+    console.log(product_categories)
+
+    // const shopsResponse = await axios.get('/api/getShops')
+    // shops.value = shopsResponse.data.shops
+    // console.log(shops)
 
     if (!product.value) {
         router.push({ name: 'product' })
@@ -32,9 +40,12 @@ onMounted(async () => {
         // Set field values with old data
         name.value = product.value.name
         desc.value = product.value.desc
-        shop_id.value = product.value.shop_id
+        ingredient.value = product.value.ingredient
+        caution.value = product.value.desc
+        product_category_id.value = product.value.product_category_id
         link_tokped.value = product.value.link_tokped
         link_shopee.value = product.value.link_shopee
+        link_tiktok.value = product.value.link_tiktok
     }
 })
 
@@ -44,9 +55,13 @@ const editproduct = async () => {
     const formData = new FormData()
     formData.append('name', name.value)
     formData.append('desc', desc.value)
-    formData.append('shop_id', shop_id.value)
+    formData.append('ingredient', ingredient.value)
+    formData.append('caution', caution.value)
+    formData.append('product_category_id', product_category_id.value)
+    // formData.append('shop_id', shop_id.value)
     formData.append('link_tokped', link_tokped.value) // Hardcoded for now
     formData.append('link_shopee', link_shopee.value) // Hardcoded for now
+    formData.append('link_tiktok', link_tiktok.value) // Hardcoded for now
 
     if (files.value) {
         for (let i = 0; i < files.value.length; i++) {
@@ -80,19 +95,32 @@ const editproduct = async () => {
         <input type="text" v-model="name" />
         <p>desc</p>
         <textarea v-model="desc"></textarea>
-        <p>Shop</p>
+        <p>ingredient</p>
+        <textarea v-model="ingredient"></textarea>
+        <p>caution</p>
+        <textarea v-model="caution"></textarea>
+        <!-- <p>Shop</p>
         <select v-if="shops.length > 0" v-model="shop_id">
             <option v-for="item in shops" :key="item.id" :value="item.id">
                 {{ item.name }}
             </option>
         </select>
-        <p v-else>No Shop</p>
-        <p>add files</p>
+        <p v-else>No Shop</p> -->
+        <p>Category</p>
+        <select v-if="product_categories.length > 0" v-model="product_category_id">
+            <option v-for="item in product_categories" :key="item.id" :value="item.id">
+                {{ item.name }}
+            </option>
+        </select>
+        <p v-else>No category</p>
+        <p>add Images</p>
         <input type="file" multiple @change="files = $event.target.files" />
         <p>Link Shopee</p>
         <input type="text" v-model="link_shopee" />
         <p>Link tokped</p>
         <input type="text" v-model="link_tokped" />
+        <p>Link tiktok</p>
+        <input type="text" v-model="link_tiktok" />
         <button @click="editproduct()">Edit</button>
     </main>
     <AdminFooterComp />

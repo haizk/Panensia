@@ -6,8 +6,12 @@ import AdminShopsEditView from '../views/admin/ShopsEditView.vue'
 import AdminShopsCreateView from '../views/admin/ShopsCreateView.vue'
 import AdminContactsView from '../views/admin/ContactsView.vue'
 import AdminProductsView from '../views/admin/ProductsView.vue'
+import AdminProductImagesView from '../views/admin/ProductImagesView.vue'
 import AdminProductEditView from '../views/admin/ProductEditView.vue'
 import AdminProductCreateView from '../views/admin/ProductCreateView.vue'
+import AdminProductCategoriesView from '../views/admin/ProductCategoryView.vue'
+import AdminProductCategoryEditView from '../views/admin/ProductCategoryEditView.vue'
+import AdminProductCategoryCreateView from '../views/admin/ProductCategoryCreateView.vue'
 import AdminsView from '../views/admin/AdminsView.vue'
 import AdminsCreateView from '../views/admin/AdminsCreateView.vue'
 import AdminsEditView from '../views/admin/AdminsEditView.vue'
@@ -112,15 +116,37 @@ const router = createRouter({
             props: true
         },
         {
+            path: '/admin/product_categories',
+            name: 'admin.product_categories',
+            component: AdminProductCategoriesView
+        },
+        {
+            path: '/admin/product_categories/create',
+            name: 'admin.product_categories.create',
+            component: AdminProductCategoryCreateView
+        },
+        {
+            path: '/admin/product_categories/edit/:id',
+            name: 'admin.product_categories.edit',
+            component: AdminProductCategoryEditView,
+            props: true
+        },
+        {
+            path: '/admin/product_images/:id',
+            name: 'admin.product_images',
+            component: AdminProductImagesView,
+            props: true
+        },
+        {
             path: '/admin/admins',
             name: 'admin.admins',
             component: AdminsView,
-            meta: { requiresSuperAdmin: true },
+            meta: { requiresSuperAdmin: true }
         },
         {
             path: '/admin/admins/create',
             name: 'admin.admins.create',
-            component: AdminsCreateView,
+            component: AdminsCreateView
         },
         {
             path: '/admin/admins/edit/:id',
@@ -141,8 +167,8 @@ router.beforeEach((to, from, next) => {
             next({ name: 'login' });
         }
     } else {
-        next();
+        next()
     }
-});
+})
 
 export default router
