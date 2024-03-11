@@ -30,16 +30,19 @@ Route::get('/logout', [LoginController::class, 'logout']);
 
 Route::get('/getNews', [NewsController::class, 'getNews']);
 Route::get('/getNewsById/{id}', [NewsController::class, 'getNewsById']);
-Route::get('/getNewsCategories', [NewsController::class, 'getNewsCategories']);
-Route::get('/getNewsCategoryById/{id}', [NewsController::class, 'getNewsCategoryById']);
-
 Route::post('/createNews', [NewsController::class, 'createNews']);
 Route::post('/editNews/{id}', [NewsController::class, 'editNews']);
 Route::delete('/deleteNews/{id}', [NewsController::class, 'deleteNews']);
 
+Route::get('/getNewsCategories', [NewsController::class, 'getNewsCategories']);
+Route::get('/getNewsCategoryById/{id}', [NewsController::class, 'getNewsCategoryById']);
 Route::post('/createNewsCategory', [NewsController::class, 'createNewsCategory']);
 Route::post('/editNewsCategory/{id}', [NewsController::class, 'editNewsCategory']);
 Route::delete('/deleteNewsCategory/{id}', [NewsController::class, 'deleteNewsCategory']);
+
+Route::get('/getNewsImageByNewsId/{id}', [NewsController::class, 'getNewsImageByNewsId']);
+Route::post('/editNewsImageOrder/{id}', [NewsController::class, 'editNewsImageOrder']);
+Route::delete('/deleteNewsImage/{id}', [NewsController::class, 'deleteNewsImage']);
 
 Route::get('/getProducts', [ProductController::class, 'getProducts']);
 Route::get('/getProductById/{id}', [ProductController::class, 'getProductById']);

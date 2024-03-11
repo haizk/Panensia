@@ -25,7 +25,7 @@ onMounted(async () => {
     console.log(news_categories)
 
     if (!news.value) {
-        router.push({ name: 'news' })
+        router.push({ name: 'admin.news' })
     }
 })
 

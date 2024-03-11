@@ -26,13 +26,9 @@ onMounted(async () => {
                     <h2>{{ item.title }}</h2>
                 </RouterLink>
                 <template v-for="image in item.news_images" :key="image.id">
-                    <img
-                        v-if="image.order === 1"
-                        :src="image.path"
-                        :alt="image.alt"
-                        width="100"
-                    /><br v-if="image.order === 1" />
+                    <img :src="`/storage/${image.path}`" width="100" />
                 </template>
+                <br />
                 <small>{{ item.news_category.name }}</small>
                 <p>{{ item.content }}</p>
                 <p>{{ item.user.name }}</p>
