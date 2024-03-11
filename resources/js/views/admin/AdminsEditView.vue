@@ -1,30 +1,23 @@
 <script setup>
-import { onMounted, ref, defineProps } from 'vue'
-import { useRouter } from 'vue-router'
-import axios from 'axios'
-import AdminNavComp from '../../components/AdminNavComp.vue'
-import AdminFooterComp from '../../components/AdminFooterComp.vue'
+import { ref, onMounted } from 'vue';
+import { useRouter } from 'vue-router';
+import axios from 'axios';
+import AdminNavComp from '../../components/AdminNavComp.vue';
+import AdminFooterComp from '../../components/AdminFooterComp.vue'; 
 
 let props = defineProps(['id']);
-let admin = ref({});
-let name = ref('');
-let phone = ref('');
-let is_superAdmin = ref(0);
-let newPassword = ref('');
-
+const admin = ref({});
 const router = useRouter();
 
 const getAdminData = async () => {
   try {
-    const response = await axios.get(`/api/getAdminById/${props.id}`, {
+    const response = await axios.get(`/api/admins/${props.id}`, {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`,
       },
     });
+
     admin.value = response.data.admin;
-    name.value = admin.value.name;
-    phone.value = admin.value.phone;
-    is_superAdmin.value = admin.value.is_superAdmin;
   } catch (error) {
     console.error(error);
   }
@@ -33,10 +26,10 @@ const getAdminData = async () => {
 const editAdmin = async () => {
   try {
     const response = await axios.post(`/api/admins/${props.id}`, {
-      name: name.value,
-      phone: phone.value,
-      is_superAdmin: parseInt(is_superAdmin.value),
-      password: newPassword.value.trim() !== '' ? newPassword.value : undefined,
+      name: admin.value.name,
+      email: admin.value.email,
+      phone: admin.value.phone,
+      is_superAdmin: parseInt(admin.value.is_superAdmin),
     }, {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`,
@@ -52,10 +45,9 @@ const editAdmin = async () => {
   }
 };
 
-
 onMounted(() => {
-    getAdminData()
-})
+  getAdminData();
+});
 </script>
 
 <template>
@@ -64,23 +56,28 @@ onMounted(() => {
       <AdminNavComp />
     </header>
     <main>
-      <h1>Admin Edit</h1>
-      <label>Name</label>
-      <input type="text" v-model="name" />
-      <br>
-      <label>Phone</label>
-      <input type="text" v-model="phone" />
-      <br>
-      <label>Super Admin?</label>
-      <select v-model="is_superAdmin">
-        <option value="0">No</option>
-        <option value="1">Yes</option>
-      </select>
-      <br>
-      <label>New Password</label>
-      <input type="password" v-model="newPassword" />
-      <br>
-      <button @click="editAdmin">Edit Admin</button>
+      <h1>Edit Admin</h1>
+      <form @submit.prevent="editAdmin">
+        <label>Name</label>
+        <input v-model="admin.name" />
+        <br>
+        <label>Email</label>
+        <input v-model="admin.email" />
+        <br>
+        <label>Phone</label>
+        <input v-model="admin.phone" />
+        <br>
+        <label>Set to Super Admin?</label>
+        <select v-model="admin.is_superAdmin">
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </select>
+        <br>
+        <router-link :to="{ name: 'admin.admins' }">
+          <button type="button">Cancel</button>
+        </router-link>
+        <button type="submit">Save</button>
+      </form>
     </main>
     <AdminFooterComp />
   </div>

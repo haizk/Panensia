@@ -55,13 +55,16 @@ const createAdmin = async () => {
             <label>Password</label>
             <input type="password" v-model="password" />
             <br>
-            <label>Is Super Admin?</label>
+            <label>Set to Super Admin?</label>
             <select v-model="is_superAdmin">
                 <option value="0">No</option>
                 <option value="1">Yes</option>
             </select>
             <br>
-            <button @click="createAdmin">Create</button>
+            <router-link :to="{ name: 'admin.admins' }">
+                <button type="button">Cancel</button>
+            </router-link>
+            <button @click="createAdmin">Save</button>
         </main>
         <AdminFooterComp />
     </div>
