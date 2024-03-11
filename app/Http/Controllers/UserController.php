@@ -22,6 +22,7 @@ class UserController extends Controller
             'user' => $admin,
         ]);
     }
+
     public function createAdmin(Request $request)
     {
         $admin = new User();
@@ -29,7 +30,7 @@ class UserController extends Controller
         $admin->email = $request->email;
         $admin->phone = $request->phone;
         $admin->password = bcrypt($request->password);
-        $admin->is_superAdmin = $request->is_superAdmin; // Add the necessary field based on your requirements
+        $admin->is_superAdmin = $request->is_superAdmin; 
         $admin->save();
 
         return response()->json([
@@ -46,8 +47,24 @@ class UserController extends Controller
             'message' => 'Admin deleted successfully'
         ], 200);
     }
+
+    public function getAdminById($id)
+    {
+        $admin = User::find($id);
+
+        return response()->json(['admin' => $admin]);
+    }
+
     public function editAdmin(Request $request, $id)
     {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|string|max:255',
+            'phone' => 'required|string|max:20',
+            'is_superAdmin' => 'required|in:0,1',
+            'password' => 'nullable|string|min:8',
+        ]);
+
         $admin = User::find($id);
 
         if (!$admin) {
@@ -58,6 +75,7 @@ class UserController extends Controller
         }
 
         $admin->name = $request->name;
+        $admin->email = $request->email;
         $admin->phone = $request->phone;
         $admin->is_superAdmin = $request->is_superAdmin;
         
