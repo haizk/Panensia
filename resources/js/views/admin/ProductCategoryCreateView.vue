@@ -19,15 +19,14 @@ const createCategory = async () => {
 
     const newsData = {
         name: name.value,
-        slug: slug,
-        user_id: 1 // Hardcoded for now
+        slug: slug
     }
 
     try {
-        const response = await axios.post('/api/createNewsCategory', newsData)
+        const response = await axios.post('/api/createProductCategory', newsData)
         console.log(response.data)
-        alert('News category created')
-        router.push('/admin/news_categories')
+        alert('Product category created')
+        router.push('/admin/product_categories')
     } catch (error) {
         console.error(error)
         alert('Error creating news category')
@@ -40,7 +39,7 @@ const createCategory = async () => {
         <AdminNavComp />
     </header>
     <main>
-        <h1>Admin Create News Category</h1>
+        <h1>Admin Create Product Category</h1>
         <p>name</p>
         <input type="text" v-model="name" />
         <button @click="createCategory()">Create</button>

@@ -12,12 +12,13 @@ class Product extends Model
     protected $guarded = ['id'];
     public $table = 'products';
 
-    // public function shop()
-    // {
-    //     return $this->belongsTo(Shop::class);
-    // }
     public function image()
     {
         return $this->hasMany(ProductImage::class);
+    }
+
+    public function productCategory()
+    {
+        return $this->belongsTo(ProductCategory::class);
     }
 }

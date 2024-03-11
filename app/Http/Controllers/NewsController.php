@@ -64,6 +64,7 @@ class NewsController extends Controller
             $newsImage->path = $path;
             $newsImage->alt = 'News image';
             $newsImage->order = $order + 1;
+            $newsImage->user_id = $news->user_id;
             $newsImage->news_id = $news->id;
             $newsImage->save();
         }
@@ -123,11 +124,43 @@ class NewsController extends Controller
         ], 200);
     }
 
+    public function getNewsImageByNewsId($id)
+    {
+        $images = NewsImages::where('news_id', $id)->get();
+        return response()->json([
+            'images' => $images
+        ], 200);
+    }
+
+    public function editNewsImageOrder(Request $request, $id)
+    {
+        $images = NewsImages::where('news_id', $id)->get();
+        foreach ($images as $index => $image) {
+            $image->order = $request->images[$index]['order'];
+            $image->save();
+        }
+
+        return response()->json([
+            'message' => 'Image order updated successfully'
+        ], 200);
+    }
+
+    public function deleteNewsImage($id)
+    {
+        $image = NewsImages::find($id);
+        $image->delete();
+
+        return response()->json([
+            'message' => 'Image deleted successfully'
+        ], 200);
+    }
+
     public function createNewsCategory(Request $request)
     {
         $newsCategory = new NewsCategories();
         $newsCategory->name = $request->name;
         $newsCategory->slug = $request->slug;
+        $newsCategory->user_id = $request->user_id;
         $newsCategory->save();
 
         return response()->json([
@@ -150,6 +183,7 @@ class NewsController extends Controller
         $newsCategory = NewsCategories::find($id);
         $newsCategory->name = $request->name;
         $newsCategory->slug = $request->slug;
+        $newsCategory->user_id = $request->user_id;
         $newsCategory->save();
 
         return response()->json([

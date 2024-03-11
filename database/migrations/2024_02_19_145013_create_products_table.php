@@ -13,11 +13,14 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            // $table->foreignId('shop_id')->constrained('shops')->onDelete('cascade');
             $table->string('name');
+            $table->foreignId('product_category_id')->constrained('product_categories')->onDelete('cascade');
             $table->text('desc');
+            $table->text('ingredient');
+            $table->text('caution');
             $table->text('link_tokped')->nullable();
             $table->text('link_shopee')->nullable();
+            $table->text('link_tiktok')->nullable();
             $table->timestamps();
         });
     }
