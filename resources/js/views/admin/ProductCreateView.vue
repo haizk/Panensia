@@ -12,6 +12,7 @@ let name = ref('')
 let desc = ref('')
 let ingredient = ref('')
 let caution = ref('')
+let price = ref('')
 let product_category_id = ref('')
 // let shop_id = ref('')
 let link_shopee = ref('')
@@ -34,6 +35,7 @@ const createProduct = async () => {
     formData.append('desc', desc.value)
     formData.append('ingredient', ingredient.value)
     formData.append('caution', caution.value)
+    formData.append('price', price.value)
     // formData.append('shop_id', shop_id.value)
     formData.append('product_category_id', product_category_id.value)
     formData.append('link_tokped', link_tokped.value)
@@ -70,11 +72,13 @@ const createProduct = async () => {
         <h1>Admin Create News</h1>
         <p>name</p>
         <input type="text" v-model="name" />
+        <p>price</p>
+        <input type="number" v-model="price" />
         <p>desc</p>
         <textarea v-model="desc"></textarea>
-        <p>desc</p>
+        <p>ingredient</p>
         <textarea v-model="ingredient"></textarea>
-        <p>desc</p>
+        <p>caution</p>
         <textarea v-model="caution"></textarea>
         <p>category</p>
         <select v-if="product_categories.length > 0" v-model="product_category_id">

@@ -18,6 +18,7 @@ return new class extends Migration
             $table->text('desc');
             $table->text('ingredient');
             $table->text('caution');
+            $table->unsignedDecimal('price', 10, 2);
             $table->text('link_tokped')->nullable();
             $table->text('link_shopee')->nullable();
             $table->text('link_tiktok')->nullable();

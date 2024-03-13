@@ -52,6 +52,7 @@ Route::get('/getProductById/{id}', [ProductController::class, 'getProductById'])
 Route::get('/getProductCategories', [ProductController::class, 'getProductCategories']);
 Route::get('/getProductCategoryById/{id}', [ProductController::class, 'getProductCategoryById']);
 Route::get('/getImagesByProductId/{id}', [ProductController::class, 'getImagesByProductId']);
+Route::post('/editProductImageOrder/{id}', [ProductController::class, 'editProductImageOrder']);
 
 Route::post('/createProduct', [ProductController::class, 'createProduct']);
 Route::post('/editProduct/{id}', [ProductController::class, 'editProduct']);
