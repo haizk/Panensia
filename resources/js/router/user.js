@@ -4,7 +4,7 @@ import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 import NewsView from '../views/user/NewsView.vue'
 import NewsDetailView from '../views/user/NewsDetailView.vue'
-import ContactsView from '../views/user/ContactsView.vue'
+import ContactView from '../views/user/ContactView.vue'
 import ResellerView from '../views/user/ResellerView.vue'
 import Produk from '../views/ProdukView.vue'
 import ProdukDetail from '../views/ProdukDetailView.vue'
@@ -40,7 +40,7 @@ const userRouter = createRouter({
         {
             path: '/contact',
             name: 'contacts.create',
-            component: ContactsView
+            component: ContactView
         },
         {
             path: '/reseller',
