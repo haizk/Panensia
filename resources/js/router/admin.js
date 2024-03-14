@@ -16,6 +16,11 @@ import AdminProductCategoryCreateView from '../views/admin/ProductCategoryCreate
 import AdminsView from '../views/admin/AdminsView.vue'
 import AdminsCreateView from '../views/admin/AdminsCreateView.vue'
 import AdminsEditView from '../views/admin/AdminsEditView.vue'
+import AdminsProfileView from '../views/admin/AdminsProfileView.vue'
+import UnauthorizedAccessView from '../views/admin/UnauthorizedAccessView.vue'
+import ChangePasswordView from '../views/admin/ChangePasswordView.vue'
+import AuthMiddleware from '../middleware/auth.js'
+import SuperAdminMiddleware from '../middleware/superAdmin.js'
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -23,10 +28,7 @@ const router = createRouter({
         {
             path: '/admin',
             name: 'dashboard',
-            component: DashboardView,
-            meta: {
-                requiresAuth: true
-            }
+            component: DashboardView
         },
         /* === NEWS START === */
         {
@@ -137,34 +139,45 @@ const router = createRouter({
             path: '/admin/admins',
             name: 'admin.admins',
             component: AdminsView,
-            meta: { requiresSuperAdmin: true }
+            meta: { requiresAuth: true, requiresSuperAdmin: true },
+            beforeEnter: [ AuthMiddleware, SuperAdminMiddleware ]
         },
         {
             path: '/admin/admins/create',
             name: 'admin.admins.create',
-            component: AdminsCreateView
+            component: AdminsCreateView,
+            meta: { requiresAuth: true, requiresSuperAdmin: true },
+            beforeEnter: [ AuthMiddleware, SuperAdminMiddleware ]
         },
         {
             path: '/admin/admins/edit/:id',
             name: 'admin.admins.edit',
             component: AdminsEditView,
-            props: true
-        }
+            props: true,
+            meta: { requiresAuth: true, requiresSuperAdmin: true },
+            beforeEnter: [ AuthMiddleware, SuperAdminMiddleware ]
+        },
+        {
+            path: '/admin/profile',
+            name: 'admin.profile',
+            component: AdminsProfileView,
+            meta: { requiresAuth: true },
+            beforeEnter: AuthMiddleware
+        },
+        {
+            path: '/admin/unauthorized',
+            name: 'admin.unauthorized',
+            component: UnauthorizedAccessView
+        },
+        {
+            path: '/admin/changePassword/:id',
+            name: 'admin.change_password',
+            component: ChangePasswordView,
+            props: true,
+            meta: { requiresAuth: true },
+            beforeEnter: AuthMiddleware,
+        },
     ]
-})
+});
 
-router.beforeEach((to, from, next) => {
-    const loggedIn = localStorage.getItem('loggedIn');
-
-    if (to.matched.some(record => record.meta.requiresSuperAdmin)) {
-        if (loggedIn && localStorage.getItem('is_superAdmin') === '1') {
-            next();
-        } else {
-            next({ name: 'login' });
-        }
-    } else {
-        next()
-    }
-})
-
-export default router
+export default router;

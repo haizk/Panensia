@@ -1,45 +1,53 @@
 <script setup>
-import { onMounted, ref, defineProps } from 'vue'
-import { useRouter } from 'vue-router'
-import axios from 'axios'
-import AdminNavComp from '../../components/AdminNavComp.vue'
-import AdminFooterComp from '../../components/AdminFooterComp.vue'
+import { ref, onMounted } from 'vue';
+import { useRouter } from 'vue-router';
+import axios from 'axios';
+import AdminNavComp from '../../components/AdminNavComp.vue';
+import AdminFooterComp from '../../components/AdminFooterComp.vue'; 
 
-let props = defineProps(['id'])
-let admin = ref(null)
-let name = ref('')
-let is_superAdmin = ref(0)
-
+let props = defineProps(['id']);
+const admin = ref({});
 const router = useRouter();
 
 const getAdminData = async () => {
-    const response = await axios.get(`/api/getAdminById/${props.id}`)
-    admin.value = response.data.admin
-    name.value = admin.value.name
-    is_superAdmin.value = admin.value.is_superAdmin
-}
+  try {
+    const response = await axios.get(`/api/admins/${props.id}`, {
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token')}`,
+      },
+    });
 
-const editAdmin = async () => {
-    try {
-        const response = await axios.post(`/api/admins/${props.id}`, {
-            name: name.value,
-            is_superAdmin: parseInt(is_superAdmin.value),
-        });
-
-        console.log(response.data);
-        alert('Admin edited');
-        // Redirect or perform other actions as needed
-        router.push({ name: 'admin.admins' });
-    } catch (error) {
-        console.error(error.response.data);
-        alert('Error editing admin');
-    }
+    admin.value = response.data.admin;
+  } catch (error) {
+    console.error(error);
+  }
 };
 
-// Fetch admin data on component mount
+const editAdmin = async () => {
+  try {
+    const response = await axios.post(`/api/admins/${props.id}`, {
+      name: admin.value.name,
+      email: admin.value.email,
+      phone: admin.value.phone,
+      is_superAdmin: parseInt(admin.value.is_superAdmin),
+    }, {
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token')}`,
+      },
+    });
+
+    console.log(response.data);
+    alert('Admin edited');
+    router.push({ name: 'admin.admins' });
+  } catch (error) {
+    console.error(error.response.data);
+    alert('Error editing admin');
+  }
+};
+
 onMounted(() => {
-    getAdminData()
-})
+  getAdminData();
+});
 </script>
 
 <template>
@@ -48,15 +56,28 @@ onMounted(() => {
       <AdminNavComp />
     </header>
     <main>
-      <h1>Admin Edit</h1>
-      <p>Name</p>
-      <input type="text" v-model="name" />
-      <p>Is Super Admin</p>
-      <select v-model="is_superAdmin">
-        <option value="0">No</option>
-        <option value="1">Yes</option>
-      </select>
-      <button @click="editAdmin">Edit Admin</button>
+      <h1>Edit Admin</h1>
+      <form @submit.prevent="editAdmin">
+        <label>Name</label>
+        <input v-model="admin.name" />
+        <br>
+        <label>Email</label>
+        <input v-model="admin.email" />
+        <br>
+        <label>Phone</label>
+        <input v-model="admin.phone" />
+        <br>
+        <label>Set to Super Admin?</label>
+        <select v-model="admin.is_superAdmin">
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </select>
+        <br>
+        <router-link :to="{ name: 'admin.admins' }">
+          <button type="button">Cancel</button>
+        </router-link>
+        <button type="submit">Save</button>
+      </form>
     </main>
     <AdminFooterComp />
   </div>

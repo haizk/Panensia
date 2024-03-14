@@ -9,42 +9,47 @@ use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
 {
-
-    // login function
-    public function login(Request $request){
+    public function login(Request $request)
+    {
         $request->validate([
-            "email"=> "required|email:dns",
-            "password"=> "required",
+            "email" => "required",
+            "password" => "required",
         ]);
 
         $user = User::where("email", $request->email)->first();
 
-        if (!$user || !Hash::check($request->password, $user->password)) {
+        if ($user && Hash::check($request->password, $user->password)) {
+            $token = $user->createToken($request->email)->plainTextToken;
             return response([
-                'success'   => false,
-                'message' => 'Login failed! Invalid credentials.',
-            ], 404);
+                'token' => $token,
+                'message' => 'Logged in successfully.',
+                'status' => 'success',
+            ], 200);
         }
-    
-        $token = $user->createToken('ApiToken')->plainTextToken;
-    
-        $response = [
-            'success'   => true,
-            'message' => 'Successfully logged in!',
-            'user'      => $user,
-            'token'     => $token
-        ];
-    
-        return response($response, 201);
+
+        return response([
+            'message' => 'Invalid credentials.',
+            'status' => 'failed',
+        ], 401);
+    }
+    public function logout(Request $request)
+    {
+        // Revoke token
+        $request->user()->currentAccessToken()->delete();
+
+        return response([
+            'message' => 'Logged out successfully.',
+            'status' => 'success',
+        ], 200);
     }
 
-    //logout function
-    public function logout()
+    public function loggedUser()
     {
-        auth()->logout();
-        return response()->json([
-            'success'    => true,
-            'message' => 'Successfully logged out!'
+        $loggedUser = auth()->user();
+        return response([
+            'user'=>$loggedUser,
+            'message'=>'Logged used data.',
+            'status'=>'success',
         ], 200);
     }
 }
