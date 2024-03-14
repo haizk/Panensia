@@ -17,14 +17,14 @@ const userRouter = createRouter({
             name: 'home',
             component: UserLayout,
             children: [
-              {
-                path: '',
-                component: HomeView
-              },
-              {
-                path: ':any',
-                component: HomeView
-              }
+                {
+                    path: '',
+                    component: HomeView
+                },
+                {
+                    path: ':any',
+                    component: HomeView
+                }
             ]
         },
         {
@@ -32,30 +32,29 @@ const userRouter = createRouter({
             name: 'about',
             component: UserLayout,
             children: [
-              {
-                path: '',
-                component: AboutView
-              },
-              {
-                path: ':any',
-                component: AboutView
-              }
+                {
+                    path: '',
+                    component: AboutView
+                },
+                {
+                    path: ':any',
+                    component: AboutView
+                }
             ]
-            
         },
         {
             path: '/news',
             name: 'news',
             component: UserLayout,
             children: [
-              {
-                path: '',
-                component: NewsView
-              },
-              {
-                path: ':any',
-                component: NewsView
-              }
+                {
+                    path: '',
+                    component: NewsView
+                },
+                {
+                    path: ':any',
+                    component: NewsView
+                }
             ]
         },
         {
@@ -73,14 +72,14 @@ const userRouter = createRouter({
             name: 'contacts.create',
             component: UserLayout,
             children: [
-              {
-                path: '',
-                component: ContactsView
-              },
-              {
-                path: ':any',
-                component: ContactsView
-              }
+                {
+                    path: '',
+                    component: ContactsView
+                },
+                {
+                    path: ':any',
+                    component: ContactsView
+                }
             ]
         },
         {
@@ -89,20 +88,20 @@ const userRouter = createRouter({
             component: ResellerView
         },
         {
-          path: '/produk',
-          name: 'produk',
-          component: UserLayout,
+            path: '/produk',
+            name: 'produk',
+            component: UserLayout,
             children: [
-              {
-                path: '',
-                component: ProdukView
-              },
-              {
-                path: ':any',
-                component: ProdukView
-              }
+                {
+                    path: '',
+                    component: ProdukView
+                },
+                {
+                    path: ':any',
+                    component: ProdukView
+                }
             ]
-      }
+        }
     ]
 })
 

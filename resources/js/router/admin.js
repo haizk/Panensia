@@ -30,30 +30,30 @@ const router = createRouter({
                 requiresAuth: true
             },
             children: [
-              {
-                path: '',
-                component: DashboardView
-              },
-              {
-                path: ':any',
-                component: DashboardView
-              }
+                {
+                    path: '',
+                    component: DashboardView
+                },
+                {
+                    path: ':any',
+                    component: DashboardView
+                }
             ]
-          },
+        },
         /* === NEWS START === */
         {
             path: '/admin/news',
             name: 'admin.news',
             component: AdminLayout,
             children: [
-              {
-                path: '',
-                component: NewsView
-              },
-              {
-                path: ':any',
-                component: NewsView
-              }
+                {
+                    path: '',
+                    component: NewsView
+                },
+                {
+                    path: ':any',
+                    component: NewsView
+                }
             ]
         },
         {
@@ -61,14 +61,14 @@ const router = createRouter({
             name: 'admin.news.create',
             component: AdminLayout,
             children: [
-              {
-                path: '',
-                component: () => import('../views/admin/NewsCreateView.vue')
-              },
-              {
-                path: ':any',
-                component: () => import('../views/admin/NewsCreateView.vue')
-              }
+                {
+                    path: '',
+                    component: () => import('../views/admin/NewsCreateView.vue')
+                },
+                {
+                    path: ':any',
+                    component: () => import('../views/admin/NewsCreateView.vue')
+                }
             ]
         },
         {
@@ -82,14 +82,14 @@ const router = createRouter({
             name: 'admin.news_categories',
             component: AdminLayout,
             children: [
-              {
-                path: '',
-                component: NewsCategoriesView
-              },
-              {
-                path: ':any',
-                component: NewsCategoriesView
-              }
+                {
+                    path: '',
+                    component: NewsCategoriesView
+                },
+                {
+                    path: ':any',
+                    component: NewsCategoriesView
+                }
             ]
         },
         {
@@ -97,16 +97,15 @@ const router = createRouter({
             name: 'admin.news_categories.create',
             component: AdminLayout,
             children: [
-              {
-                path: '',
-                component: () => import('../views/admin/NewsCategoriesCreateView.vue')
-              },
-              {
-                path: ':any',
-                component: () => import('../views/admin/NewsCategoriesCreateView.vue')
-              }
+                {
+                    path: '',
+                    component: () => import('../views/admin/NewsCategoriesCreateView.vue')
+                },
+                {
+                    path: ':any',
+                    component: () => import('../views/admin/NewsCategoriesCreateView.vue')
+                }
             ]
-            
         },
         {
             path: '/admin/news_categories/edit/:id',
@@ -121,7 +120,8 @@ const router = createRouter({
             ],
             props: true
         },
-        {   path: '/admin/news_images/edit/:id',
+        {
+            path: '/admin/news_images/edit/:id',
             name: 'admin.news_images.edit',
             component: AdminLayout,
             children: [
@@ -132,7 +132,7 @@ const router = createRouter({
                 }
             ],
             props: true
-         },
+        },
 
         /* === NEWS END === */
         /* === RESELLER START === */
@@ -141,14 +141,14 @@ const router = createRouter({
             name: 'admin.resellers',
             component: AdminLayout,
             children: [
-              {
-                path: '',
-                component: AdminResellersView
-              },
-              {
-                path: ':any',
-                component: AdminResellersView
-              }
+                {
+                    path: '',
+                    component: AdminResellersView
+                },
+                {
+                    path: ':any',
+                    component: AdminResellersView
+                }
             ]
         },
         {
@@ -182,14 +182,14 @@ const router = createRouter({
             name: 'admin.contacts',
             component: AdminLayout,
             children: [
-              {
-                path: '',
-                component: AdminContactsView
-              },
-              {
-                path: ':any',
-                component: AdminContactsView
-              }
+                {
+                    path: '',
+                    component: AdminContactsView
+                },
+                {
+                    path: ':any',
+                    component: AdminContactsView
+                }
             ]
         },
         {
@@ -210,14 +210,14 @@ const router = createRouter({
             name: 'admin.products',
             component: AdminLayout,
             children: [
-              {
-                path: '',
-                component: AdminProductsView
-              },
-              {
-                path: ':any',
-                component: AdminProductsView
-              }
+                {
+                    path: '',
+                    component: AdminProductsView
+                },
+                {
+                    path: ':any',
+                    component: AdminProductsView
+                }
             ]
         },
         {
@@ -225,42 +225,42 @@ const router = createRouter({
             name: 'admin.product.create',
             component: AdminLayout,
             children: [
-              {
-                path: '',
-                component: AdminProductCreateView
-              },
-              {
-                path: ':any',
-                component: AdminProductCreateView
-              }
+                {
+                    path: '',
+                    component: AdminProductCreateView
+                },
+                {
+                    path: ':any',
+                    component: AdminProductCreateView
+                }
             ]
         },
         {
-          path: '/admin/product/edit/:id',
-          name: 'admin.product.edit',
-          component: AdminLayout,
-          children: [
-              {
-                  path: '',
-                  component: AdminProductEditView,
-                  props: true // Menambahkan props: true di sini jika Anda ingin melewatkan params sebagai props ke komponen
-              }
-          ],
-          props: true // Jika ingin melewatkan params ke komponen AdminLayout juga
+            path: '/admin/product/edit/:id',
+            name: 'admin.product.edit',
+            component: AdminLayout,
+            children: [
+                {
+                    path: '',
+                    component: AdminProductEditView,
+                    props: true // Menambahkan props: true di sini jika Anda ingin melewatkan params sebagai props ke komponen
+                }
+            ],
+            props: true // Jika ingin melewatkan params ke komponen AdminLayout juga
         },
         {
             path: '/admin/product_categories',
             name: 'admin.product_categories',
             component: AdminLayout,
             children: [
-              {
-                path: '',
-                component: AdminProductCategoriesView
-              },
-              {
-                path: ':any',
-                component: AdminProductCategoriesView
-              }
+                {
+                    path: '',
+                    component: AdminProductCategoriesView
+                },
+                {
+                    path: ':any',
+                    component: AdminProductCategoriesView
+                }
             ]
         },
         {
@@ -268,14 +268,14 @@ const router = createRouter({
             name: 'admin.product_categories.create',
             component: AdminLayout,
             children: [
-              {
-                path: '',
-                component: AdminProductCategoryCreateView
-              },
-              {
-                path: ':any',
-                component: AdminProductCategoryCreateView
-              }
+                {
+                    path: '',
+                    component: AdminProductCategoryCreateView
+                },
+                {
+                    path: ':any',
+                    component: AdminProductCategoryCreateView
+                }
             ]
         },
         {
@@ -311,29 +311,28 @@ const router = createRouter({
             meta: { requiresSuperAdmin: true },
             children: [
                 {
-                  path: '',
-                  component: AdminsView
+                    path: '',
+                    component: AdminsView
                 },
                 {
-                  path: ':any',
-                  component: AdminsView
+                    path: ':any',
+                    component: AdminsView
                 }
-              ]
-
+            ]
         },
         {
             path: '/admin/admins/create',
             name: 'admin.admins.create',
             component: AdminLayout,
             children: [
-              {
-                path: '',
-                component: AdminsCreateView
-              },
-              {
-                path: ':any',
-                component: AdminsCreateView
-              }
+                {
+                    path: '',
+                    component: AdminsCreateView
+                },
+                {
+                    path: ':any',
+                    component: AdminsCreateView
+                }
             ]
         },
         {
@@ -353,13 +352,13 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-    const loggedIn = localStorage.getItem('loggedIn');
+    const loggedIn = localStorage.getItem('loggedIn')
 
-    if (to.matched.some(record => record.meta.requiresSuperAdmin)) {
+    if (to.matched.some((record) => record.meta.requiresSuperAdmin)) {
         if (loggedIn && localStorage.getItem('is_superAdmin') === '1') {
-            next();
+            next()
         } else {
-            next({ name: 'login' });
+            next({ name: 'login' })
         }
     } else {
         next()

@@ -1,5 +1,6 @@
 <script setup>
 import { onMounted, ref } from 'vue'
+import { useRouter } from 'vue-router'
 import axios from 'axios'
 
 import AdminNavComp from '../../components/AdminNavComp.vue'
@@ -7,13 +8,60 @@ import AdminFooterComp from '../../components/AdminFooterComp.vue'
 
 let props = defineProps(['id'])
 
-let images = ref([])
+// let images = ref([])
+
+// let props = defineProps(['id'])
+let images = ref(null)
+const router = useRouter()
 
 onMounted(async () => {
     const response = await axios.get(`/api/getImagesByProductId/${props.id}`)
     images.value = response.data.images
     console.log(images.value)
 })
+
+const editImages = async () => {
+    // Add validation / CSRF token
+
+    const formData = new FormData()
+    const orders = images.value.map((item) => item.order)
+    let thumbnail = false
+
+    // Check if there are duplicate orders
+    const hasDuplicates = orders.some((order, index) => orders.indexOf(order) !== index)
+    if (hasDuplicates) {
+        alert('Order values must be unique')
+        return
+    }
+
+    for (let i = 0; i < images.value.length; i++) {
+        formData.append(`images[${i}][order]`, images.value[i].order)
+
+        if (images.value[i].order === 1) {
+            thumbnail = true
+        }
+
+        if (images.value[i].order > images.value.length) {
+            alert('Order values must be between 1 and the number of images')
+            return
+        }
+    }
+
+    if (!thumbnail) {
+        alert('At least one image must be set as thumbnail (order = 1)')
+        return
+    }
+
+    try {
+        const response = await axios.post(`/api/editProductImageOrder/${props.id}`, formData)
+        console.log(response.data)
+        alert('Images edited')
+        router.push('/admin/products')
+    } catch (error) {
+        console.error(error.response.data)
+        alert('Error editing images')
+    }
+}
 
 const deleteImage = async (id) => {
     // Add validation / CSRF token
@@ -35,20 +83,24 @@ const deleteImage = async (id) => {
 </script>
 
 <template>
-    <!-- <main>
-        <h1>Admin product images {{ images.length }}</h1>
-        <table v-if="images.length > 0" width="100%">
+    <header>
+        <AdminNavComp />
+    </header>
+    <main>
+        <h1>Admin product images {{ props.id }}</h1>
+        <table v-if="images" width="100%">
             <thead>
                 <tr>
                     <th>Order</th>
-                    <th>Category</th>
+                    <th>Product Name</th>
+                    <!-- <th>shop</th> -->
                     <th>Images</th>
                     <th>Action</th>
                 </tr>
             </thead>
             <tbody>
                 <tr v-for="item in images" :key="item.id">
-                    <td>{{ item.order }}</td>
+                    <td><input type="number" v-model="item.order" /></td>
                     <td>{{ item.product.name }}</td>
                     <td>
                         <img :src="`/storage/${item.path}`" width="100" />
@@ -59,99 +111,7 @@ const deleteImage = async (id) => {
                 </tr>
             </tbody>
         </table>
-    </main> -->
-
-    <div class="mdk-drawer-layout__content page">
-        <div class="container-fluid page__heading-container">
-
-        <!-- Page Heding -->
-          <div class="page__heading">
-            <nav aria-label="breadcrumb">
-              <ol class="breadcrumb mb-0">
-                <li class="breadcrumb-item">
-                  <a href="/admin"
-                    ><i class="material-icons icon-20pt">home</i></a
-                  >
-                </li>
-                <li class="breadcrumb-item">Management</li>
-                <li class="breadcrumb-item active" aria-current="page">
-                  Product
-                </li>
-              </ol>
-            </nav>
-
-            <h1 class="m-0">Product</h1>
-          </div>
-          <!-- end heading -->
-
-        </div>
-
-        <!-- Content -->
-        <div class="container page__container">
-            <RouterLink to="/admin/products">
-                <button class="btn btn-warning mb-4"> <i class="fa fa-arrow-left"></i> Back</button>
-            </RouterLink>
-
-            <div class="card">
-              <div class="card-header">
-                <form class="form-inline">
-                  <label class="mr-sm-2" for="inlineFormFilterBy"
-                    >Filter by:</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control mb-2 mr-sm-2 mb-sm-0"
-                    id="inlineFormFilterBy"
-                    placeholder="Type a name"
-                  />
-                </form>
-              </div>
-  
-              <div
-                class="table-responsive border-bottom"
-                data-toggle="lists"
-                data-lists-values='["js-lists-values-employee-name"]'
-              >
-                <table class="table mb-0 thead-border-top-0" >
-                    <thead>
-                        <tr>
-                            <th>Order</th>
-                            <th>Product Name</th>
-                            <th>Images</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody class="list" id="staff02">
-                        <template v-if="images.length > 0">
-                            <tr v-for="item in images" :key="item.id">
-                                <td>{{ item.order }}</td>
-                                <td>{{ item.product.name }}</td>
-                                <td>
-                                    <img :src="`/storage/${item.path}`" width="100" />
-                                </td>
-                                <td>
-                                    <button class="btn btn-danger" @click="deleteImage(item.id)"><i class="fa fa-times"></i> Delete</button>
-                                </td>
-                            </tr>
-                        </template>
-                        <template v-else>
-                            <tr>
-                                <td colspan="7" class="text-center">Tidak ada foto produk</td>
-                            </tr>
-                        </template>
-                    </tbody>
-                </table>
-              </div>
-  
-              <!-- <div class="card-body text-right">
-                15 <span class="text-muted">of 1,430</span>
-                <a href="#" class="text-muted-light"
-                  ><i class="material-icons ml-1">arrow_forward</i></a
-                >
-              </div> -->
-            </div>
-          </div>
-        <!-- end Content -->
-
-    </div>
+        <button @click="editImages()">Edit</button>
+    </main>
+    <AdminFooterComp />
 </template>

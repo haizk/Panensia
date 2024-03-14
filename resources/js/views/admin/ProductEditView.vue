@@ -25,13 +25,14 @@ let link_tokped = ref('')
 let link_tiktok = ref('')
 let desc = ref('')
 let caution = ref('')
+let price = ref('')
 let ingredient = ref('')
 let product_category_id = ref('')
 const router = useRouter()
 
 onMounted(async () => {
     const productResponse = await axios.get(`/api/getProductById/${props.id}`)
-    product.value = productResponse.data.products
+    product.value = productResponse.data.product
     console.log(product.value)
 
     const categoriesResponse = await axios.get('/api/getProductCategories')
@@ -43,13 +44,14 @@ onMounted(async () => {
     // console.log(shops)
 
     if (!product.value) {
-        router.push({ name: 'product' })
+        router.push({ name: 'admin/products' })
     } else {
         // Set field values with old data
         name.value = product.value.name
         desc.value = product.value.desc
         ingredient.value = product.value.ingredient
-        caution.value = product.value.desc
+        caution.value = product.value.caution
+        price.value = product.value.price
         product_category_id.value = product.value.product_category_id
         link_tokped.value = product.value.link_tokped
         link_shopee.value = product.value.link_shopee
@@ -65,6 +67,7 @@ const editproduct = async () => {
     formData.append('desc', desc.value)
     formData.append('ingredient', ingredient.value)
     formData.append('caution', caution.value)
+    formData.append('price', price.value)
     formData.append('product_category_id', product_category_id.value)
     // formData.append('shop_id', shop_id.value)
     formData.append('link_tokped', link_tokped.value) // Hardcoded for now
@@ -98,6 +101,8 @@ const editproduct = async () => {
         <h1>Admin Edit product</h1>
         <p>name</p>
         <input type="text" v-model="name" />
+        <p>price</p>
+        <input type="number" v-model="price" />
         <p>desc</p>
         <textarea v-model="desc"></textarea>
         <p>ingredient</p>
