@@ -49,9 +49,10 @@ onMounted(() => {
         <RouterLink to="/admin" v-if="loggedIn">Dashboard</RouterLink>
         <RouterLink to="/admin/news" v-if="loggedIn">News</RouterLink>
         <RouterLink to="/admin/news_categories" v-if="loggedIn">News Category</RouterLink>
-        <RouterLink to="/admin/shops" v-if="loggedIn">Shops</RouterLink>
+        <RouterLink to="/admin/resellers" v-if="loggedIn">Resellers</RouterLink>
         <RouterLink to="/admin/contacts" v-if="loggedIn">Contacts</RouterLink>
         <RouterLink to="/admin/products" v-if="loggedIn">Products</RouterLink>
+        <RouterLink to="/admin/product_categories" v-if="loggedIn">Product Category</RouterLink>
         <RouterLink to="/admin/admins" v-if="loggedIn">Administrators</RouterLink>
         <RouterLink to="/admin/profile" v-if="loggedIn">Your Profile</RouterLink>
         <RouterLink to="/login" v-if="loggedIn" @click="logout">Logout</RouterLink>

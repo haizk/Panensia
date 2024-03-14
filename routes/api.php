@@ -6,10 +6,14 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\NewsController;
 use Monolog\Handler\RotatingFileHandler;
 use App\Http\Controllers\ProductController;
-use App\Http\Controllers\ShopController;
+// use App\Http\Controllers\ShopController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PasswordResetTokenController;
+
+use App\Http\Controllers\ResellerController;
+use App\Models\Product;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -48,33 +52,43 @@ Route::middleware('auth:sanctum')->group(function () {
 
 Route::get('/getNews', [NewsController::class, 'getNews']);
 Route::get('/getNewsById/{id}', [NewsController::class, 'getNewsById']);
-Route::get('/getNewsCategories', [NewsController::class, 'getNewsCategories']);
-Route::get('/getNewsCategoryById/{id}', [NewsController::class, 'getNewsCategoryById']);
-
 Route::post('/createNews', [NewsController::class, 'createNews']);
 Route::post('/editNews/{id}', [NewsController::class, 'editNews']);
 Route::delete('/deleteNews/{id}', [NewsController::class, 'deleteNews']);
 
+Route::get('/getNewsCategories', [NewsController::class, 'getNewsCategories']);
+Route::get('/getNewsCategoryById/{id}', [NewsController::class, 'getNewsCategoryById']);
 Route::post('/createNewsCategory', [NewsController::class, 'createNewsCategory']);
 Route::post('/editNewsCategory/{id}', [NewsController::class, 'editNewsCategory']);
 Route::delete('/deleteNewsCategory/{id}', [NewsController::class, 'deleteNewsCategory']);
 
+Route::get('/getNewsImageByNewsId/{id}', [NewsController::class, 'getNewsImageByNewsId']);
+Route::post('/editNewsImageOrder/{id}', [NewsController::class, 'editNewsImageOrder']);
+Route::delete('/deleteNewsImage/{id}', [NewsController::class, 'deleteNewsImage']);
+
 Route::get('/getProducts', [ProductController::class, 'getProducts']);
-Route::get('/getShops', [ProductController::class, 'getShops']);
 Route::get('/getProductById/{id}', [ProductController::class, 'getProductById']);
-Route::get('/getProductByShopId/{id}', [ProductController::class, 'getProductByShopId']);
+Route::get('/getProductCategories', [ProductController::class, 'getProductCategories']);
+Route::get('/getProductCategoryById/{id}', [ProductController::class, 'getProductCategoryById']);
+Route::get('/getImagesByProductId/{id}', [ProductController::class, 'getImagesByProductId']);
 
 Route::post('/createProduct', [ProductController::class, 'createProduct']);
 Route::post('/editProduct/{id}', [ProductController::class, 'editProduct']);
 Route::delete('/deleteProduct/{id}', [ProductController::class, 'deleteProduct']);
+Route::delete('/deleteProductImage/{id}', [ProductController::class, 'deleteProductImage']);
 
-Route::get('/shops', [ShopController::class, 'index']);
-Route::post('/shops', [ShopController::class, 'store']);
-Route::get('/shops/{shop}', [ShopController::class, 'show']);
-Route::put('/shops/{shop}', [ShopController::class, 'update']);
-Route::post('/shops/{shop}/upload-logo', [ShopController::class, 'uploadLogo']);
-Route::post('/shops/upload-logo', [ShopController::class, 'uploadLogo']);
-Route::delete('/shops/{shop}', [ShopController::class, 'destroy']);
+Route::post('/createProductCategory', [ProductController::class, 'createProductCategory']);
+Route::post('/editProductCategory/{id}', [ProductController::class, 'editProductCategory']);
+Route::delete('/deleteProductCategory/{id}', [ProductController::class, 'deleteProductCategory']);
+
+
+Route::get('/resellers', [ResellerController::class, 'index']);
+Route::post('/reseller', [ResellerController::class, 'store']);
+Route::get('/resellers/{reseller}', [ResellerController::class, 'show']);
+Route::post('/reseller/upload-logo', [ResellerController::class, 'uploadLogo']);
+Route::post('/reseller/{id}/upload-logo', [ResellerController::class, 'uploadLogo']);
+Route::put('/reseller/edit/{id}', [ResellerController::class, 'edit']);
+Route::delete('/resellers/{reseller}', [ResellerController::class, 'destroy']);
 
 Route::get('/contacts', [ContactController::class, 'index']);
 Route::post('/contacts', [ContactController::class, 'store']);

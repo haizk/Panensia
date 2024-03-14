@@ -45,10 +45,11 @@ const deleteProduct = async (id) => {
             <thead>
                 <tr>
                     <th>Name</th>
-                    <th>shop</th>
-                    <th>Images</th>
+                    <th>Category</th>
+                    <!-- <th>shop</th> -->
                     <th>Link_Tokped</th>
                     <th>Link_Shopee</th>
+                    <th>Link_Tiktok</th>
                     <th>Updated At</th>
                     <th>Action</th>
                 </tr>
@@ -56,19 +57,18 @@ const deleteProduct = async (id) => {
             <tbody>
                 <tr v-for="item in products" :key="item.id">
                     <td>{{ item.name }}</td>
-                    <td>{{ item.shop.name }}</td>
-                    <td>
-                        <span v-for="image in item.image" :key="image.id">
-                            {{ image.path }}
-                            <img :src="`/storage/${image.path}`" width="100" />
-                        </span>
-                    </td>
+                    <td>{{ item.product_category.name }}</td>
+                    <!-- <td>{{ item.shop.name }}</td> -->
                     <td>{{ item.link_tokped }}</td>
                     <td>{{ item.link_shopee }}</td>
+                    <td>{{ item.link_tiktok }}</td>
                     <td>{{ item.updated_at }}</td>
                     <td>
                         <RouterLink :to="{ name: 'admin.product.edit', params: { id: item.id } }">
                             <button>Edit</button>
+                        </RouterLink>
+                        <RouterLink :to="{ name: 'admin.product_images', params: { id: item.id } }">
+                            <button>Manage Images</button>
                         </RouterLink>
                         <button @click="deleteProduct(item.id)">Delete</button>
                     </td>

@@ -7,17 +7,17 @@ import AdminNavComp from '../../components/AdminNavComp.vue'
 import AdminFooterComp from '../../components/AdminFooterComp.vue'
 
 let props = defineProps(['id'])
-let news_categories = ref([])
+let product_categories = ref([])
 let name = ref('')
 const router = useRouter()
 
 onMounted(async () => {
-    const newsCategoryResponse = await axios.get(`/api/getNewsCategoryById/${props.id}`)
-    news_categories.value = newsCategoryResponse.data.category
-    console.log(news_categories.value)
+    const productCategoryResponse = await axios.get(`/api/getProductCategoryById/${props.id}`)
+    product_categories.value = productCategoryResponse.data.category
+    console.log(product_categories.value)
 
-    if (!news_categories.value) {
-        router.push({ name: 'admin.news_categories' })
+    if (!product_categories.value) {
+        router.push({ name: 'admin.product_categories' })
     }
 })
 
@@ -29,20 +29,19 @@ const editCategory = async () => {
         .replace(/ /g, '-')
         .replace(/[^\w-]+/g, '')
 
-    const newsData = {
+    const productData = {
         name: name.value,
-        slug: slug,
-        user_id: 1 // Hardcoded for now
+        slug: slug
     }
 
     try {
-        const response = await axios.post(`/api/editNewsCategory/${props.id}`, newsData)
+        const response = await axios.post(`/api/editProductCategory/${props.id}`, productData)
         console.log(response.data)
-        alert('News category edited')
-        router.push('/admin/news_categories')
+        alert('Product category edited')
+        router.push('/admin/product_categories')
     } catch (error) {
         console.error(error)
-        alert('Error editing news category')
+        alert('Error editing product category')
     }
 }
 </script>
@@ -52,7 +51,7 @@ const editCategory = async () => {
         <AdminNavComp />
     </header>
     <main>
-        <h1>Admin Edit News Category</h1>
+        <h1>Admin Edit Product Category</h1>
         <p>name</p>
         <input type="text" v-model="name" />
         <button @click="editCategory()">Edit</button>

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\ShopController;
+use App\Http\Controllers\ResellerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +21,9 @@ use App\Http\Controllers\ShopController;
 //     return view('welcome');
 // });
 
-Route::get('/{any}', function () {
-    return view('app');
-})->where('any', '.*');
+
+Route::group(['middleware' => ['visitor']], function () {
+    Route::get('/{any}', function () {
+        return view('app');
+    })->where('any', '.*');
+});

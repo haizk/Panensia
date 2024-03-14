@@ -5,16 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Shop extends Model
+class ProductCategory extends Model
 {
-    protected $fillable = [
-        'name', 'desc', 'logo_path', 'address', 'link_ig'
-    ];
+    use HasFactory;
 
-    public function products()
+    protected $guarded = ['id'];
+
+    public function product()
     {
         return $this->hasMany(Product::class);
     }
-
-    use HasFactory;
 }

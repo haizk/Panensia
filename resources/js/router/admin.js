@@ -1,19 +1,18 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import DashboardView from '../views/admin/DashboardView.vue'
-import AdminNewsView from '../views/admin/NewsView.vue'
-import AdminNewsEditView from '../views/admin/NewsEditView.vue'
-import AdminNewsCreateView from '../views/admin/NewsCreateView.vue'
-import AdminNewsCategoriesView from '../views/admin/NewsCategoriesView.vue'
-import AdminNewsCategoriesCreateView from '../views/admin/NewsCategoriesCreateView.vue'
-import AdminNewsCategoriesEditView from '../views/admin/NewsCategoriesEditView.vue'
-import AdminShopsView from '../views/admin/ShopsView.vue'
-import AdminShopsEditView from '../views/admin/ShopsEditView.vue'
-import AdminShopsCreateView from '../views/admin/ShopsCreateView.vue'
+import AdminResellersView from '../views/admin/ResellersView.vue'
+import AdminResellerEditView from '../views/admin/ResellerEditView.vue'
+import AdminResellerDetailView from '../views/admin/ResellerDetailView.vue'
 import AdminContactsView from '../views/admin/ContactsView.vue'
+import AdminContactDetailView from '../views/admin/ContactDetailView.vue'
 import AdminProductsView from '../views/admin/ProductsView.vue'
+import AdminProductImagesView from '../views/admin/ProductImagesView.vue'
 import AdminProductEditView from '../views/admin/ProductEditView.vue'
 import AdminProductCreateView from '../views/admin/ProductCreateView.vue'
+import AdminProductCategoriesView from '../views/admin/ProductCategoryView.vue'
+import AdminProductCategoryEditView from '../views/admin/ProductCategoryEditView.vue'
+import AdminProductCategoryCreateView from '../views/admin/ProductCategoryCreateView.vue'
 import AdminsView from '../views/admin/AdminsView.vue'
 import AdminsCreateView from '../views/admin/AdminsCreateView.vue'
 import AdminsEditView from '../views/admin/AdminsEditView.vue'
@@ -31,59 +30,61 @@ const router = createRouter({
             name: 'dashboard',
             component: DashboardView
         },
+        /* === NEWS START === */
         {
             path: '/admin/news',
             name: 'admin.news',
-            component: AdminNewsView,
+            component: () => import('../views/admin/NewsView.vue')
         },
         {
             path: '/admin/news/create',
             name: 'admin.news.create',
-            component: AdminNewsCreateView,
-            // meta: { requiresAuth: true },
-            // beforeEnter: AuthMiddleware
+            component: () => import('../views/admin/NewsCreateView.vue')
         },
         {
             path: '/admin/news/edit/:id',
             name: 'admin.news.edit',
-            component: AdminNewsEditView,
-            props: true,
+            component: () => import('../views/admin/NewsEditView.vue'),
+            props: true
         },
         {
             path: '/admin/news_categories',
             name: 'admin.news_categories',
-            component: AdminNewsCategoriesView
+            component: () => import('../views/admin/NewsCategoriesView.vue')
         },
         {
             path: '/admin/news_categories/create',
             name: 'admin.news_categories.create',
-            component: AdminNewsCategoriesCreateView
+            component: () => import('../views/admin/NewsCategoriesCreateView.vue')
         },
         {
             path: '/admin/news_categories/edit/:id',
             name: 'admin.news_categories.edit',
-            component: AdminNewsCategoriesEditView,
+            component: () => import('../views/admin/NewsCategoriesEditView.vue'),
             props: true
         },
+        {   path: '/admin/news_images/edit/:id',
+            name: 'admin.news_images.edit',
+            component: () => import('../views/admin/NewsImagesEditView.vue'),
+            props: true
+         },
+
+        /* === NEWS END === */
+        /* === RESELLER START === */
         {
-            path: '/admin/shops',
-            name: 'admin.shops',
-            component: AdminShopsView
+            path: '/admin/resellers',
+            name: 'admin.resellers',
+            component: AdminResellersView
         },
         {
-            path: '/admin/shops/:id',
-            name: 'admin.shops.detail',
-            component: () => import('../views/admin/ShopDetailView.vue')
+            path: '/admin/reseller/:id',
+            name: 'admin.reseller.detail',
+            component: AdminResellerDetailView
         },
         {
-            path: '/admin/shops/create',
-            name: 'admin.shops.create',
-            component: AdminShopsCreateView
-        },
-        {
-            path: '/admin/shops/edit/:id',
-            name: 'admin.shops.edit',
-            component: AdminShopsEditView,
+            path: '/admin/reseller/edit/:id',
+            name: 'admin.reseller.edit',
+            component: AdminResellerEditView,
             props: true
         },
         {
@@ -94,7 +95,7 @@ const router = createRouter({
         {
             path: '/admin/contacts/:id',
             name: 'admin.contacts.detail',
-            component: () => import('../views/admin/ContactDetailView.vue')
+            component: AdminContactDetailView
         },
         {
             path: '/admin/products',
@@ -110,6 +111,28 @@ const router = createRouter({
             path: '/admin/product/edit/:id',
             name: 'admin.product.edit',
             component: AdminProductEditView,
+            props: true
+        },
+        {
+            path: '/admin/product_categories',
+            name: 'admin.product_categories',
+            component: AdminProductCategoriesView
+        },
+        {
+            path: '/admin/product_categories/create',
+            name: 'admin.product_categories.create',
+            component: AdminProductCategoryCreateView
+        },
+        {
+            path: '/admin/product_categories/edit/:id',
+            name: 'admin.product_categories.edit',
+            component: AdminProductCategoryEditView,
+            props: true
+        },
+        {
+            path: '/admin/product_images/:id',
+            name: 'admin.product_images',
+            component: AdminProductImagesView,
             props: true
         },
         {

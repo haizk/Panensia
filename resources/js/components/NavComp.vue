@@ -8,5 +8,6 @@ import { RouterLink } from 'vue-router'
         <RouterLink to="/about">About</RouterLink>
         <RouterLink to="/news">News</RouterLink>
         <RouterLink to="/contact">Contact</RouterLink>
+        <RouterLink to="/reseller">Daftar Reseller</RouterLink>
     </nav>
 </template>
