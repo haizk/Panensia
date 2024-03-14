@@ -1,11 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import HomeView from '../views/user/HomeView.vue'
-import AboutView from '../views/user/AboutView.vue'
+import HomeView from '../views/HomeView.vue'
+import AboutView from '../views/AboutView.vue'
 import NewsView from '../views/user/NewsView.vue'
 import NewsDetailView from '../views/user/NewsDetailView.vue'
 import ContactsView from '../views/user/ContactsView.vue'
 import ResellerView from '../views/user/ResellerView.vue'
+import Produk from '../views/ProdukView.vue'
+import ProdukDetail from '../views/ProdukDetailView.vue'
 
 const userRouter = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -44,6 +46,17 @@ const userRouter = createRouter({
             path: '/reseller',
             name: 'reseller.create',
             component: ResellerView
+        },
+        {
+            path: '/produk',
+            name: 'produk',
+            component: Produk
+        },
+        {
+            path: '/produk/detail/:id',
+            name: 'produk.detail',
+            component: ProdukDetail,
+            props: true
         }
     ]
 })

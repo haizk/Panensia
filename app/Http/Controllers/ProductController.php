@@ -12,7 +12,7 @@ class ProductController extends Controller
 {
     public function getProductCategories()
     {
-        $categories = ProductCategory::all();
+        $categories = ProductCategory::with('product')->get();
         return response()->json([
             'categories' => $categories
         ], 200);
@@ -28,10 +28,10 @@ class ProductController extends Controller
 
     public function createProductCategory(Request $request)
     {
-        $newsCategory = new ProductCategory();
-        $newsCategory->name = $request->name;
-        $newsCategory->slug = $request->slug;
-        $newsCategory->save();
+        $productCategory = new ProductCategory();
+        $productCategory->name = $request->name;
+        $productCategory->slug = $request->slug;
+        $productCategory->save();
 
         return response()->json([
             'message' => 'Category created successfully'
@@ -40,23 +40,23 @@ class ProductController extends Controller
 
     public function deleteProductCategory($id)
     {
-        $newsCategory = ProductCategory::find($id);
-        $newsCategory->delete();
+        $productCategory = ProductCategory::find($id);
+        $productCategory->delete();
 
         return response()->json([
-            'message' => 'News category deleted successfully'
+            'message' => 'Product category deleted successfully'
         ], 200);
     }
 
     public function editProductCategory(Request $request, $id)
     {
-        $newsCategory = ProductCategory::find($id);
-        $newsCategory->name = $request->name;
-        $newsCategory->slug = $request->slug;
-        $newsCategory->save();
+        $productCategory = ProductCategory::find($id);
+        $productCategory->name = $request->name;
+        $productCategory->slug = $request->slug;
+        $productCategory->save();
 
         return response()->json([
-            'message' => 'News category updated successfully'
+            'message' => 'Product category updated successfully'
         ], 200);
     }
 
@@ -70,9 +70,9 @@ class ProductController extends Controller
 
     public function getProductById($id)
     {
-        $products = Product::with('productCategory', 'image')->find($id);
+        $product = Product::with('productCategory', 'image')->find($id);
         return response()->json([
-            'products' => $products
+            'product' => $product
         ], 200);
     }
 
@@ -84,6 +84,7 @@ class ProductController extends Controller
         $product->desc = $request->desc;
         $product->ingredient = $request->ingredient;
         $product->caution = $request->caution;
+        $product->price = $request->price;
         $product->product_category_id = $request->product_category_id;
         // $product->shop_id = $request->shop_id;
         $product->link_tokped = $request->link_tokped;
@@ -132,6 +133,7 @@ class ProductController extends Controller
         $product->desc = $request->desc;
         $product->ingredient = $request->ingredient;
         $product->caution = $request->caution;
+        $product->price = $request->price;
         $product->link_tokped = $request->link_tokped;
         $product->link_shopee = $request->link_shopee;
         $product->link_tiktok = $request->link_tiktok;
@@ -167,14 +169,6 @@ class ProductController extends Controller
         ], 200);
     }
 
-    public function getShops()
-    {
-        $shops = Shop::all();
-        return response()->json([
-            'shops' => $shops
-        ], 200);
-    }
-
     public function getImagesByProductId($id)
     {
         try {
@@ -197,6 +191,20 @@ class ProductController extends Controller
             ], 500);
         }
     }
+
+    public function editProductImageOrder(Request $request, $id)
+    {
+        $images = ProductImage::where('product_id', $id)->get();
+        foreach ($images as $index => $image) {
+            $image->order = $request->images[$index]['order'];
+            $image->save();
+        }
+
+        return response()->json([
+            'message' => 'Image order updated successfully'
+        ], 200);
+    }
+
 
     public function deleteProductImage($id)
     {

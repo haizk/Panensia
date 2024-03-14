@@ -63,11 +63,12 @@ const router = createRouter({
             component: () => import('../views/admin/NewsCategoriesEditView.vue'),
             props: true
         },
-        {   path: '/admin/news_images/edit/:id',
+        {
+            path: '/admin/news_images/edit/:id',
             name: 'admin.news_images.edit',
             component: () => import('../views/admin/NewsImagesEditView.vue'),
             props: true
-         },
+        },
 
         /* === NEWS END === */
         /* === RESELLER START === */
@@ -140,14 +141,14 @@ const router = createRouter({
             name: 'admin.admins',
             component: AdminsView,
             meta: { requiresAuth: true, requiresSuperAdmin: true },
-            beforeEnter: [ AuthMiddleware, SuperAdminMiddleware ]
+            beforeEnter: [AuthMiddleware, SuperAdminMiddleware]
         },
         {
             path: '/admin/admins/create',
             name: 'admin.admins.create',
             component: AdminsCreateView,
             meta: { requiresAuth: true, requiresSuperAdmin: true },
-            beforeEnter: [ AuthMiddleware, SuperAdminMiddleware ]
+            beforeEnter: [AuthMiddleware, SuperAdminMiddleware]
         },
         {
             path: '/admin/admins/edit/:id',
@@ -155,7 +156,7 @@ const router = createRouter({
             component: AdminsEditView,
             props: true,
             meta: { requiresAuth: true, requiresSuperAdmin: true },
-            beforeEnter: [ AuthMiddleware, SuperAdminMiddleware ]
+            beforeEnter: [AuthMiddleware, SuperAdminMiddleware]
         },
         {
             path: '/admin/profile',
@@ -175,9 +176,9 @@ const router = createRouter({
             component: ChangePasswordView,
             props: true,
             meta: { requiresAuth: true },
-            beforeEnter: AuthMiddleware,
-        },
+            beforeEnter: AuthMiddleware
+        }
     ]
-});
+})
 
-export default router;
+export default router
