@@ -102,6 +102,7 @@
 
     <div id="app">app.blade.php</div>
     @vite('resources/js/app.js')
+    
 
                 <!-- jQuery -->
     <script src=" {{ asset('assets/vendor/jquery.min.js') }} "></script>
