@@ -43,7 +43,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div>
+  <!-- <div>
     <header>
       <AdminNavComp />
     </header>
@@ -59,5 +59,60 @@ onMounted(() => {
       <button @click="editAdmin">Edit Admin</button>
     </main>
     <AdminFooterComp />
+  </div> -->
+  <div class="mdk-drawer-layout__content page">
+    <div class="container-fluid page__heading-container">
+
+    <!-- Page Heding -->
+      <div class="page__heading">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">
+              <a href="/admin">
+                <i class="material-icons icon-20pt">home</i>
+              </a>
+            </li>
+            <li class="breadcrumb-item">Management</li>
+            <li class="breadcrumb-item">
+              <a href="/admin/admins">
+                User List
+              </a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Edit user
+            </li>
+          </ol>
+        </nav>
+
+        <h1 class="m-0">Edit User</h1>
+      </div>
+      <!-- end heading -->
+
+    </div>
+
+    <!-- Content -->
+    <div class="card card-form">
+      <div class="row no-gutters">
+          <div class="col-lg-12 card-form__body card-body">
+                    <div class="form-row">
+                        <div class="col-12 col-md-12 mb-3">
+                            <label for="validationSample01">Name</label>
+                            <input v-model="name" type="text" class="form-control" id="validationSample01" placeholder="Type Admin Name.." required="" >
+                        </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="validationSample07">Is Admin</label>
+                      <select id="validationSample07" v-model="is_superAdmin" data-toggle="select" class="form-control">
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
+                      </select>
+                    </div>
+
+                <button @click="editAdmin" class="btn btn-primary">Edit User</button>
+          </div>
+      </div>
   </div>
+    <!-- end Content -->
+
+</div>
 </template>

@@ -4,9 +4,6 @@ import FooterComp from '../../components/FooterComp.vue'
 </script>
 
 <template>
-    <header>
-        <NavComp />
-    </header>
     <main>
         <h1>User</h1>
         <div>This is the home view</div>
@@ -17,5 +14,4 @@ import FooterComp from '../../components/FooterComp.vue'
         <div>This year: {{ $yearVisitors }}</div>
         <div>Total: {{ $totalVisitors }}</div>
     </main>
-    <FooterComp />
 </template>

@@ -23,7 +23,10 @@ use App\Http\Controllers\ResellerController;
 
 
 Route::group(['middleware' => ['visitor']], function () {
-    Route::get('/{any}', function () {
-        return view('app');
+    Route::get('/admin', function () { return view('admin');
+    })->where('any', '.*');
+    Route::get('/admin/{any}', function () { return view('admin');
+    })->where('any', '.*');
+    Route::get('/{any}', function () { return view('app');
     })->where('any', '.*');
 });
