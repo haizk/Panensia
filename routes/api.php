@@ -10,8 +10,8 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PasswordResetTokenController;
-
 use App\Http\Controllers\ResellerController;
+use App\Http\Controllers\VisitorController;
 use App\Models\Product;
 
 
@@ -26,10 +26,10 @@ use App\Models\Product;
 |
 */
 
-Route::post('/login', [LoginController::class,'login']);
-Route::post('/sendResetPasswordEmail', [PasswordResetTokenController::class,'sendResetPasswordEmail']);
-Route::get('/resetPasswordForm/{token}', [PasswordResetTokenController::class,'resetForm']);
-Route::post('/resetPassword/{token}', [PasswordResetTokenController::class,'reset']);
+Route::post('/login', [LoginController::class, 'login']);
+Route::post('/sendResetPasswordEmail', [PasswordResetTokenController::class, 'sendResetPasswordEmail']);
+Route::get('/resetPasswordForm/{token}', [PasswordResetTokenController::class, 'resetForm']);
+Route::post('/resetPassword/{token}', [PasswordResetTokenController::class, 'reset']);
 
 // Protected routes, require user login
 Route::middleware('auth:sanctum')->group(function () {
@@ -95,4 +95,4 @@ Route::get('/contacts', [ContactController::class, 'index']);
 Route::post('/contacts', [ContactController::class, 'store']);
 Route::get('/contacts/{contact}', [ContactController::class, 'show']);
 
-
+Route::get('/visitors', [VisitorController::class, 'getVisitors']);
