@@ -6,11 +6,9 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\NewsController;
 use Monolog\Handler\RotatingFileHandler;
 use App\Http\Controllers\ProductController;
-// use App\Http\Controllers\ShopController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PasswordResetTokenController;
-
 use App\Http\Controllers\ResellerController;
 use App\Models\Product;
 
