@@ -16,10 +16,16 @@ class VisitorMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        $visitor = $request->ip();
-        Visitor::create([
-            'ip' => $visitor
-        ]);
+        $visitorIp = $request->ip();
+        $date = now()->startOfDay();
+
+        $visitor = Visitor::where('ip', $visitorIp)
+            ->whereDate('created_at', $date)
+            ->first();
+
+        if (!$visitor) {
+            Visitor::create(['ip' => $visitorIp]);
+        }
 
         return $next($request);
     }
