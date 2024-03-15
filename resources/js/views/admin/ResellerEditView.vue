@@ -125,10 +125,12 @@ export default {
     },
     async updateReseller() {
       try {
+        const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
         const response = await fetch(`/api/reseller/edit/${this.id}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': csrfToken,
           },
           body: JSON.stringify(this.resellerData),
         });
