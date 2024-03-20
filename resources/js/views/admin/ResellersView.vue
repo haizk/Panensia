@@ -75,8 +75,12 @@ export default {
     },
     async deleteReseller(resellerId) {
       try {
+        const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
         const response = await fetch(`/api/resellers/${resellerId}`, {
           method: 'DELETE',
+          headers: {
+            'X-CSRF-TOKEN': csrfToken,
+          },
         });
         if (response.ok) {
           // Update resellers list after successful deletion

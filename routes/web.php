@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\HeadController;
-use App\Http\Controllers\kontakController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ContactController;
