@@ -8,6 +8,7 @@ import NewsDetailView from '../views/user/NewsDetailView.vue'
 import ContactsView from '../views/user/ContactsView.vue'
 import ResellerView from '../views/user/ResellerView.vue'
 import ProdukView from '../views/user/ProdukView.vue'
+import ProdukDetailView from '../views/ProdukDetailView.vue'
 
 const userRouter = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -101,6 +102,12 @@ const userRouter = createRouter({
                     component: ProdukView
                 }
             ]
+        },
+        {
+            path: '/produk/detail/:id',
+            name: 'produk.detail',
+            component: ProdukDetailView,
+            props: true
         }
     ]
 })

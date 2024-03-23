@@ -50,6 +50,8 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/changePassword/{id}', [UserController::class, 'changePassword'])->name('auth.change_password');
 });
 
+Route::get('/total', [UserController::class, 'getAdmins'])->name('total');
+
 Route::get('/getNews', [NewsController::class, 'getNews']);
 Route::get('/getNewsById/{id}', [NewsController::class, 'getNewsById']);
 Route::post('/createNews', [NewsController::class, 'createNews']);
@@ -94,5 +96,3 @@ Route::delete('/resellers/{reseller}', [ResellerController::class, 'destroy']);
 Route::get('/contacts', [ContactController::class, 'index']);
 Route::post('/contacts', [ContactController::class, 'store']);
 Route::get('/contacts/{contact}', [ContactController::class, 'show']);
-
-
