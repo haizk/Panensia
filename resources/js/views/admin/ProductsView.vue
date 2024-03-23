@@ -145,7 +145,7 @@ const deleteProduct = async (id) => {
                                                 <i class="fa fa-pencil-alt"></i>
                                             </button>
                                         </RouterLink>
-                                        <RouterLink
+                                        <!-- <RouterLink
                                             :to="{
                                                 name: 'admin.product_images',
                                                 params: { id: item.id }
@@ -154,7 +154,7 @@ const deleteProduct = async (id) => {
                                             <button class="btn btn-info mr-1">
                                                 <i class="fa fa-images"></i>
                                             </button>
-                                        </RouterLink>
+                                        </RouterLink> -->
                                         <button
                                             class="btn btn-danger"
                                             @click="deleteProduct(item.id)"
