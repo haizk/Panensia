@@ -47,14 +47,52 @@ const editCategory = async () => {
 </script>
 
 <template>
-    <header>
-        <AdminNavComp />
-    </header>
-    <main>
-        <h1>Admin Edit Product Category</h1>
-        <p>name</p>
-        <input type="text" v-model="name" />
-        <button @click="editCategory()">Edit</button>
-    </main>
-    <AdminFooterComp />
+    <div class="mdk-drawer-layout__content page">
+        <div class="container-fluid page__heading-container">
+            <!-- Page Heding -->
+            <div class="page__heading">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item">
+                            <a href="/admin">
+                                <i class="material-icons icon-20pt">home</i>
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">Management</li>
+                        <li class="breadcrumb-item">
+                            <a href="/admin/products"> Product </a>
+                        </li>
+                        <li class="breadcrumb-item">Product Categories</li>
+                        <li class="breadcrumb-item active" aria-current="page">Edit</li>
+                    </ol>
+                </nav>
+
+                <h1 class="m-0">Edit Product</h1>
+            </div>
+            <!-- end heading -->
+        </div>
+
+        <!-- Content -->
+        <div class="card card-form">
+            <div class="row no-gutters">
+                <div class="col-lg-12 card-form__body card-body">
+                    <div class="form-row">
+                        <div class="col-12 col-md-12 mb-3">
+                            <label for="validationSample01">Name</label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="name"
+                                v-model="name"
+                                required=""
+                            />
+                        </div>
+                    </div>
+
+                    <button @click="editCategory()" class="btn btn-primary">Update</button>
+                </div>
+            </div>
+        </div>
+        <!-- end Content -->
+    </div>
 </template>

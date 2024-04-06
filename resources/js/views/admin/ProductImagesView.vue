@@ -102,14 +102,10 @@ const deleteImage = async (id) => {
                 <tr v-for="item in images" :key="item.id">
                     <td><input type="number" v-model="item.order" /></td>
                     <td>{{ item.product.name }}</td>
-                    <!-- <td>{{ item.shop.name }}</td> -->
                     <td>
                         <img :src="`/storage/${item.path}`" width="100" />
                     </td>
                     <td>
-                        <!-- <RouterLink :to="{ name: 'admin.product.edit', params: { id: item.id } }">
-                            <button>Edit</button>
-                        </RouterLink> -->
                         <button @click="deleteImage(item.id)">Delete</button>
                     </td>
                 </tr>
@@ -119,16 +115,3 @@ const deleteImage = async (id) => {
     </main>
     <AdminFooterComp />
 </template>
-
-<style scoped>
-table {
-    border-collapse: collapse;
-}
-
-th,
-td {
-    border: 1px solid black;
-    text-align: center;
-    width: 16%;
-}
-</style>

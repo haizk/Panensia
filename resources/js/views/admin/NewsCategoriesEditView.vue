@@ -48,14 +48,10 @@ const editCategory = async () => {
 </script>
 
 <template>
-    <header>
-        <AdminNavComp />
-    </header>
     <main>
         <h1>Admin Edit News Category</h1>
         <p>name</p>
         <input type="text" v-model="name" />
         <button @click="editCategory()">Edit</button>
     </main>
-    <AdminFooterComp />
 </template>

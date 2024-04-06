@@ -1,7 +1,7 @@
 <script setup>
 import { onMounted, ref } from 'vue'
 import axios from 'axios'
-
+import { RouterLink } from 'vue-router'
 let products = ref([])
 let product_categories = ref([])
 

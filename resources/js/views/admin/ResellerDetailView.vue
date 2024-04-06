@@ -1,41 +1,89 @@
 <template>
-  <header>
-    <AdminNavComp />
-  </header>
-  <main>
-    <div>
-      <h2>Reseller Details</h2>
+    <div class="mdk-drawer-layout__content page">
+        <div class="container-fluid page__heading-container">
+            <div class="page__heading d-flex align-items-center">
+                <div class="flex">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb mb-0">
+                            <li class="breadcrumb-item">
+                                <a href="#"><i class="material-icons icon-20pt">home</i></a>
+                            </li>
+                            <li class="breadcrumb-item">Pages</li>
+                            <li class="breadcrumb-item active" aria-current="page">Invoice</li>
+                        </ol>
+                    </nav>
+                    <h1 class="m-0">Reseller Profile</h1>
+                </div>
+            </div>
+        </div>
 
-      <!-- Display Reseller Details -->
-      <div>
-        <div>
-          <strong>Name:</strong> {{ resellerData.name }}
+        <div class="container-fluid page__container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="px-3">
+                                <div
+                                    class="d-flex justify-content-center flex-column text-center my-5 navbar-light"
+                                >
+                                    <a
+                                        href="index.html"
+                                        class="navbar-brand d-flex flex-column m-0"
+                                        style="min-width: 0"
+                                    >
+                                        <img
+                                            class="navbar-brand-icon mb-2"
+                                            :src="resellerData.logo_path"
+                                            alt="Reseller Logo"
+                                            width="200"
+                                        />
+                                    </a>
+                                </div>
+                                <div class="row mb-5">
+                                    <div class="col-lg">
+                                        <h5 class="mb-4">
+                                            <span class="text-muted">Name : </span
+                                            ><strong class="text-body">{{
+                                                resellerData.name
+                                            }}</strong
+                                            ><br />
+                                            <span class="text-muted">Phone : </span
+                                            ><strong class="text-body">{{
+                                                resellerData.phone
+                                            }}</strong>
+                                            <br />
+                                            <span class="text-muted">Email : </span
+                                            ><strong class="text-body">{{
+                                                resellerData.email
+                                            }}</strong>
+                                            <br />
+                                            <span class="text-muted">Brand : </span
+                                            ><strong class="text-body">{{
+                                                resellerData.brand
+                                            }}</strong>
+                                            <br />
+                                            <span class="text-muted">Address : </span
+                                            ><strong class="text-body">{{
+                                                resellerData.address
+                                            }}</strong>
+                                            <br />
+                                            <span class="text-muted">Social Media Link : </span
+                                            ><strong
+                                                class="text-body"
+                                                v-if="resellerData.link_social"
+                                                >{{ resellerData.link_socials }}</strong
+                                            >
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div>
-          <strong>Phone:</strong> {{ resellerData.phone }}
-        </div>
-        <div>
-          <strong>Email:</strong> {{ resellerData.email }}
-        </div>
-        <div>
-          <strong>Brand:</strong> {{ resellerData.brand }}
-        </div>
-        <div>
-          <strong>Address:</strong> {{ resellerData.address }}
-        </div>
-        <div v-if="resellerData.logo_path">
-          <strong>Logo:</strong>
-          <img :src="resellerData.logo_path" alt="Reseller Logo" style="max-width: 200px;">
-        </div>
-        <div v-if="resellerData.link_social">
-          <strong>Social Media Link:</strong> {{ resellerData.link_social }}
-        </div>
-      </div>
     </div>
-  </main>
-  <footer>
-    <AdminFooterComp />
-  </footer>
+    <!-- // END drawer-layout__content -->
 </template>
 
 <script>
@@ -43,37 +91,37 @@ import AdminNavComp from '../../components/AdminNavComp.vue'
 import AdminFooterComp from '../../components/AdminFooterComp.vue'
 
 export default {
-  components: {
-    AdminNavComp,
-    AdminFooterComp
-  },
-  data() {
-    return {
-      resellerData: {
-        name: '',
-        phone: '',
-        email: '',
-        brand: '',
-        address: '',
-        logo_path: '',
-        link_social: '',
-      },
-    };
-  },
-  mounted() {
-    // Fetch Reseller data from API on component mount
-    this.fetchResellerData();
-  },
-  methods: {
-    async fetchResellerData() {
-      try {
-        const response = await fetch(`/api/resellers/${this.$route.params.id}`);
-        const data = await response.json();
-        this.resellerData = data;
-      } catch (error) {
-        console.error('Error fetching reseller data:', error);
-      }
+    components: {
+        AdminNavComp,
+        AdminFooterComp
     },
-  },
-};
+    data() {
+        return {
+            resellerData: {
+                name: '',
+                phone: '',
+                email: '',
+                brand: '',
+                address: '',
+                logo_path: '',
+                link_social: ''
+            }
+        }
+    },
+    mounted() {
+        // Fetch Reseller data from API on component mount
+        this.fetchResellerData()
+    },
+    methods: {
+        async fetchResellerData() {
+            try {
+                const response = await fetch(`/api/resellers/${this.$route.params.id}`)
+                const data = await response.json()
+                this.resellerData = data
+            } catch (error) {
+                console.error('Error fetching reseller data:', error)
+            }
+        }
+    }
+}
 </script>

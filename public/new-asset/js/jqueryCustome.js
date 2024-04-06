@@ -11,7 +11,7 @@ $(document).ready(function () {
     initCountDown()
     // count down init
     function initCountDown() {
-        var newDate = new Date(2024, 2, 5, 20, 0, 0) // Tanggal 6 Maret 2024 pukul 12:00:00
+        var newDate = new Date(2024, 2, 6)
 
         jQuery('#defaultCountdown').countdown({ until: newDate })
     }
@@ -377,7 +377,7 @@ jQuery(window).on('load', function () {
 /* http://keith-wood.name/countdown.html
    Countdown for jQuery v2.0.2.
    Written by Keith Wood (kbwood{at}iinet.com.au) January 2008.
-   Available under the MIT (http://keith-wood.name/licence.html) license. 
+   Available under the MIT (http://keith-wood.name/licence.html) license.
    Please attribute the author if you use it. */
 ;(function ($) {
     var w = 'countdown'

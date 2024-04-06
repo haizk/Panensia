@@ -3,8 +3,12 @@ import { useRouter } from 'vue-router'
 import { onMounted, ref } from 'vue'
 import axios from 'axios'
 
-import AdminNavComp from '../../components/AdminNavComp.vue'
-import AdminFooterComp from '../../components/AdminFooterComp.vue'
+let reloadPage = localStorage.getItem('reloadPage') !== 'true'
+
+if (reloadPage) {
+    localStorage.setItem('reloadPage', 'true')
+    window.location.reload()
+}
 
 let props = defineProps(['id'])
 let product_categories = ref([])
@@ -89,10 +93,7 @@ const editproduct = async () => {
 </script>
 
 <template>
-    <header>
-        <AdminNavComp />
-    </header>
-    <main>
+    <!-- <main>
         <h1>Admin Edit product</h1>
         <p>name</p>
         <input type="text" v-model="name" />
@@ -104,13 +105,6 @@ const editproduct = async () => {
         <textarea v-model="ingredient"></textarea>
         <p>caution</p>
         <textarea v-model="caution"></textarea>
-        <!-- <p>Shop</p>
-        <select v-if="shops.length > 0" v-model="shop_id">
-            <option v-for="item in shops" :key="item.id" :value="item.id">
-                {{ item.name }}
-            </option>
-        </select>
-        <p v-else>No Shop</p> -->
         <p>Category</p>
         <select v-if="product_categories.length > 0" v-model="product_category_id">
             <option v-for="item in product_categories" :key="item.id" :value="item.id">
@@ -127,6 +121,154 @@ const editproduct = async () => {
         <p>Link tiktok</p>
         <input type="text" v-model="link_tiktok" />
         <button @click="editproduct()">Edit</button>
-    </main>
-    <AdminFooterComp />
+    </main> -->
+    <div class="mdk-drawer-layout__content page">
+        <div class="container-fluid page__heading-container">
+            <!-- Page Heding -->
+            <div class="page__heading">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item">
+                            <a href="/admin">
+                                <i class="material-icons icon-20pt">home</i>
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">Management</li>
+                        <li class="breadcrumb-item">
+                            <a href="/admin/products"> Product </a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">Edit</li>
+                    </ol>
+                </nav>
+
+                <h1 class="m-0">Edit Product</h1>
+            </div>
+            <!-- end heading -->
+        </div>
+
+        <!-- Content -->
+        <div class="card card-form">
+            <div class="row no-gutters">
+                <div class="col-lg-12 card-form__body card-body">
+                    <div class="form-row">
+                        <div class="col-12 col-md-12 mb-3">
+                            <label for="validationSample01">Product Name</label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="validationSample01"
+                                placeholder="First name"
+                                required=""
+                                v-model="name"
+                            />
+                        </div>
+                        <div class="col-12 col-md-12 mb-3">
+                            <label for="validationSample02">Product Description</label>
+                            <textarea
+                                v-model="desc"
+                                name=""
+                                class="form-control"
+                                id="validationSample02"
+                                cols="30"
+                                rows="3"
+                                required=""
+                            ></textarea>
+                        </div>
+                        <div class="col-12 col-md-12 mb-3">
+                            <label for="validationSample02">Product Ingredients</label>
+                            <textarea
+                                v-model="ingredient"
+                                name=""
+                                class="form-control"
+                                id="validationSample02"
+                                cols="30"
+                                rows="3"
+                                required=""
+                            ></textarea>
+                        </div>
+                        <div class="col-12 col-md-12 mb-3">
+                            <label for="validationSample02">Product Caution</label>
+                            <textarea
+                                v-model="caution"
+                                name=""
+                                class="form-control"
+                                id="validationSample02"
+                                cols="30"
+                                rows="3"
+                                required=""
+                            ></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="select01">Product Category</label>
+                        <select
+                            id="select01"
+                            v-if="product_categories.length > 0"
+                            v-model="product_category_id"
+                            data-toggle="select"
+                            class="form-control"
+                        >
+                            <option value="" disabled>Select a category</option>
+                            <option
+                                v-for="item in product_categories"
+                                :key="item.id"
+                                :value="item.id"
+                            >
+                                {{ item.name }}
+                            </option>
+                        </select>
+                        <p v-else>No category</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="dropfile">Images</label>
+                        <input
+                            type="file"
+                            class="form-control"
+                            id="dropfile"
+                            multiple
+                            @change="files = $event.target.files"
+                        />
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-12 col-md-12 mb-3">
+                            <label for="validationSample04">Link Shopee</label>
+                            <input
+                                v-model="link_shopee"
+                                type="text"
+                                class="form-control"
+                                id="validationSample04"
+                                placeholder="https://shopee.co.id/.."
+                                required=""
+                            />
+                        </div>
+                        <div class="col-12 col-md-12 mb-3">
+                            <label for="validationSample05">Link Tokopedia</label>
+                            <input
+                                v-model="link_tokped"
+                                type="text"
+                                class="form-control"
+                                id="validationSample05"
+                                placeholder="https://www.tokopedia.com/.."
+                                required=""
+                            />
+                        </div>
+                        <div class="col-12 col-md-12 mb-3">
+                            <label for="validationSample06">Link Tiktop Shop</label>
+                            <input
+                                v-model="link_tiktok"
+                                type="text"
+                                class="form-control"
+                                id="validationSample06"
+                                placeholder="https://vt.tokopedia.com/.."
+                                required=""
+                            />
+                        </div>
+                    </div>
+                    <button @click="createProduct()" class="btn btn-primary">Create Product</button>
+                </div>
+            </div>
+        </div>
+        <!-- end Content -->
+    </div>
 </template>
