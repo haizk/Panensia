@@ -61,7 +61,7 @@ const route = useRoute()
                                             </ul>
                                         </li> -->
                                         <li :class="{ 'nav-item active': route.path === '/kontak' }">
-                                            <RouterLink to="/kontak" class="d-block">Kontak</RouterLink>
+                                            <RouterLink to="/contact" class="d-block">Kontak</RouterLink>
                                         </li>
                                     </ul>
 								</div>

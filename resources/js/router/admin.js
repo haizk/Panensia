@@ -4,7 +4,7 @@ import DashboardView from '../views/admin/DashboardView.vue'
 import AdminResellersView from '../views/admin/ResellersView.vue'
 import AdminResellerEditView from '../views/admin/ResellerEditView.vue'
 import AdminResellerDetailView from '../views/admin/ResellerDetailView.vue'
-import AdminContactsView from '../views/admin/ContactsView.vue'
+import AdminContactView from '../views/admin/ContactView.vue'
 import AdminContactDetailView from '../views/admin/ContactDetailView.vue'
 import AdminProductsView from '../views/admin/ProductsView.vue'
 import AdminProductImagesView from '../views/admin/ProductImagesView.vue'
@@ -91,7 +91,7 @@ const router = createRouter({
         {
             path: '/admin/contacts',
             name: 'admin.contacts',
-            component: AdminContactsView
+            component: AdminContactView
         },
         {
             path: '/admin/contacts/:id',
