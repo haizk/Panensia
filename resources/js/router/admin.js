@@ -17,6 +17,11 @@ import AdminProductCategoryCreateView from '../views/admin/ProductCategoryCreate
 import AdminsView from '../views/admin/AdminsView.vue'
 import AdminsCreateView from '../views/admin/AdminsCreateView.vue'
 import AdminsEditView from '../views/admin/AdminsEditView.vue'
+import AdminsProfileView from '../views/admin/AdminsProfileView.vue'
+import UnauthorizedAccessView from '../views/admin/UnauthorizedAccessView.vue'
+import ChangePasswordView from '../views/admin/ChangePasswordView.vue'
+import AuthMiddleware from '../middleware/auth.js'
+import SuperAdminMiddleware from '../middleware/superAdmin.js'
 import NewsView from '../views/admin/NewsView.vue'
 import NewsCategoriesView from '../views/admin/NewsCategoriesView.vue'
 
@@ -304,6 +309,7 @@ const router = createRouter({
             ],
             props: true // Jika ingin melewatkan params ke komponen AdminLayout juga
         },
+        /* === SUPER ADMIN START === */
         {
             path: '/admin/admins',
             name: 'admin.admins',
@@ -338,15 +344,34 @@ const router = createRouter({
         {
             path: '/admin/admins/edit/:id',
             name: 'admin.admins.edit',
-            component: AdminLayout,
-            children: [
-                {
-                    path: '',
-                    component: AdminsEditView,
-                    props: true // Menambahkan props: true di sini jika Anda ingin melewatkan params sebagai props ke komponen
-                }
-            ],
-            props: true // Jika ingin melewatkan params ke komponen AdminLayout juga
+            component: AdminsEditView,
+            props: true,
+            meta: { requiresAuth: true, requiresSuperAdmin: true },
+            beforeEnter: [AuthMiddleware, SuperAdminMiddleware]
+        },
+        /* === SUPER ADMIN END === */
+        /* === PROFILE START === */
+        {
+            path: '/admin/profile',
+            name: 'admin.profile',
+            component: AdminsProfileView,
+            meta: { requiresAuth: true },
+            beforeEnter: AuthMiddleware
+        },
+        {
+            path: '/admin/unauthorized',
+            name: 'admin.unauthorized',
+            component: UnauthorizedAccessView
+        },
+        /* === PROFILE END === */
+        /* === UNAUTHORIZED PAGE === */
+        {
+            path: '/admin/changePassword/:id',
+            name: 'admin.change_password',
+            component: ChangePasswordView,
+            props: true,
+            meta: { requiresAuth: true },
+            beforeEnter: AuthMiddleware
         }
     ]
 })
