@@ -136,6 +136,7 @@ const router = createRouter({
             component: AdminProductImagesView,
             props: true
         },
+        /* === SUPER ADMIN START === */
         {
             path: '/admin/admins',
             name: 'admin.admins',
@@ -158,6 +159,8 @@ const router = createRouter({
             meta: { requiresAuth: true, requiresSuperAdmin: true },
             beforeEnter: [AuthMiddleware, SuperAdminMiddleware]
         },
+        /* === SUPER ADMIN END === */
+        /* === PROFILE START === */
         {
             path: '/admin/profile',
             name: 'admin.profile',
@@ -170,6 +173,8 @@ const router = createRouter({
             name: 'admin.unauthorized',
             component: UnauthorizedAccessView
         },
+        /* === PROFILE END === */
+        /* === UNAUTHORIZED PAGE === */
         {
             path: '/admin/changePassword/:id',
             name: 'admin.change_password',
@@ -178,6 +183,7 @@ const router = createRouter({
             meta: { requiresAuth: true },
             beforeEnter: AuthMiddleware
         }
+        
     ]
 })
 
