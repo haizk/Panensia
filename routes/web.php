@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\HeadController;
-use App\Http\Controllers\kontakController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ContactController;
@@ -25,7 +24,10 @@ use App\Http\Controllers\ResellerController;
 
 
 Route::group(['middleware' => ['visitor']], function () {
-    Route::get('/{any}', function () {
-        return view('app');
+    Route::get('/admin', function () { return view('admin');
+    })->where('any', '.*');
+    Route::get('/admin/{any}', function () { return view('admin');
+    })->where('any', '.*');
+    Route::get('/{any}', function () { return view('app');
     })->where('any', '.*');
 });

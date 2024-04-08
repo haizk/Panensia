@@ -6,7 +6,6 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\NewsController;
 use Monolog\Handler\RotatingFileHandler;
 use App\Http\Controllers\ProductController;
-// use App\Http\Controllers\ShopController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PasswordResetTokenController;
@@ -31,7 +30,7 @@ Route::post('/sendResetPasswordEmail', [PasswordResetTokenController::class, 'se
 Route::get('/resetPasswordForm/{token}', [PasswordResetTokenController::class, 'resetForm']);
 Route::post('/resetPassword/{token}', [PasswordResetTokenController::class, 'reset']);
 
-// Protected routes, require user login
+// Middleware API - Auth
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('/user', function (Request $request) {
         return response()->json(['user' => $request->user()]);
@@ -40,15 +39,20 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/logout', [LoginController::class, 'logout']);
     Route::get('/loggedUser', [LoginController::class, 'loggedUser']);
 
+    Route::post('/profile', [UserController::class, 'profileAdmin'])->name('admin.admins.profile');
+    Route::post('/changePassword/{id}', [UserController::class, 'changePassword'])->name('auth.change_password');
+});
+
+// Middleware API - SuperAdmin
+Route::middleware(['auth:sanctum', 'superAdmin'])->group(function () {
     Route::get('/admins', [UserController::class, 'getAdmins'])->name('admin.admins');
     Route::post('/admins', [UserController::class, 'createAdmin'])->name('admin.admins.create');
     Route::get('/admins/{id}', [UserController::class, 'getAdminById']);
     Route::post('/admins/{id}', [UserController::class, 'editAdmin']);
     Route::delete('/admins/{id}', [UserController::class, 'deleteAdmin']);
-
-    Route::post('/profile', [UserController::class, 'profileAdmin'])->name('admin.admins.profile');
-    Route::post('/changePassword/{id}', [UserController::class, 'changePassword'])->name('auth.change_password');
 });
+
+Route::get('/total', [UserController::class, 'getAdmins'])->name('total');
 
 Route::get('/getNews', [NewsController::class, 'getNews']);
 Route::get('/getNewsById/{id}', [NewsController::class, 'getNewsById']);

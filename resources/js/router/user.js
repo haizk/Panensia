@@ -1,13 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import HomeView from '../views/HomeView.vue'
-import AboutView from '../views/AboutView.vue'
+import UserLayout from '../layout/UserLay.vue'
+import HomeView from '../views/user/HomeView.vue'
+import AboutView from '../views/user/AboutView.vue'
 import NewsView from '../views/user/NewsView.vue'
 import NewsDetailView from '../views/user/NewsDetailView.vue'
-import ContactsView from '../views/user/ContactsView.vue'
+import ContactView from '../views/user/ContactView.vue'
 import ResellerView from '../views/user/ResellerView.vue'
-import Produk from '../views/ProdukView.vue'
-import ProdukDetail from '../views/ProdukDetailView.vue'
+import ProdukView from '../views/user/ProdukView.vue'
+import ProdukDetailView from '../views/ProdukDetailView.vue'
 
 const userRouter = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -15,17 +16,47 @@ const userRouter = createRouter({
         {
             path: '/',
             name: 'home',
-            component: HomeView
+            component: UserLayout,
+            children: [
+                {
+                    path: '',
+                    component: HomeView
+                },
+                {
+                    path: ':any',
+                    component: HomeView
+                }
+            ]
         },
         {
             path: '/about',
             name: 'about',
-            component: AboutView
+            component: UserLayout,
+            children: [
+                {
+                    path: '',
+                    component: AboutView
+                },
+                {
+                    path: ':any',
+                    component: AboutView
+                }
+            ]
         },
         {
             path: '/news',
             name: 'news',
-            component: NewsView
+            component: UserLayout,
+            children: [
+                {
+                    path: '',
+                    component: NewsView
+                },
+                {
+                    path: ':any',
+                    component: NewsView
+                }
+            ]
         },
         {
             path: '/news/detail/:id',
@@ -40,7 +71,17 @@ const userRouter = createRouter({
         {
             path: '/contact',
             name: 'contacts.create',
-            component: ContactsView
+            component: UserLayout,
+            children: [
+                {
+                    path: '',
+                    component: ContactView
+                },
+                {
+                    path: ':any',
+                    component: ContactView
+                }
+            ]
         },
         {
             path: '/reseller',
@@ -50,12 +91,22 @@ const userRouter = createRouter({
         {
             path: '/produk',
             name: 'produk',
-            component: Produk
+            component: UserLayout,
+            children: [
+                {
+                    path: '',
+                    component: ProdukView
+                },
+                {
+                    path: ':any',
+                    component: ProdukView
+                }
+            ]
         },
         {
             path: '/produk/detail/:id',
             name: 'produk.detail',
-            component: ProdukDetail,
+            component: ProdukDetailView,
             props: true
         }
     ]
